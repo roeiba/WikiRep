@@ -17,7 +17,7 @@ stop_words = [ 'i', 'in', 'a', 'to', 'the', 'it', 'have', 'haven\'t', 'was', 'bu
 splitter=re.compile ( "[a-z\-']+", re.I )
 stemmer=porter.PorterStemmer()
 
-def add_word(word,d):
+def _add_word(word,d):
     """
     Adds a word the a dictionary for words/count
     first checks for stop words
@@ -29,9 +29,9 @@ def add_word(word,d):
         d.setdefault(ws,0)
         d[ws] += 1
 
-def doc_vec(doc,key_idx):
+def classify(text,key_idx):
     v=zeros(len(key_idx))
-    for word in splitter.findall(doc):
+    for word in splitter.findall(text):
         keydata=key_idx.get(stemmer.stem(word,0,len(word)-1).lower(), None)
         if keydata: v[keydata[0]] = 1
     return v
@@ -43,7 +43,7 @@ def compare(doc1,doc2):
     """
     all_words=dict()
     for dat in [doc1,doc2]:
-        [add_word(w,all_words) for w in splitter.findall(dat)]
+        [_add_word(w,all_words) for w in splitter.findall(dat)]
  
     print all_words
     
@@ -58,8 +58,8 @@ def compare(doc1,doc2):
     del all_words
     
     
-    v1=doc_vec(doc1,key_idx)
-    v2=doc_vec(doc2,key_idx)
+    v1=classify(doc1,key_idx)
+    v2=classify(doc2,key_idx)
     
     print v1
     print v2

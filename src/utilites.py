@@ -1,13 +1,4 @@
 
-class VectorComparer(object):
-    def compare_vectors(self, weighted_vector_1, weighted_vector_2):
-        """ Gets two texts and returns the relatedness vector
-        """
-        raise NotImplemented("Abstract class")
-    
-class CosineMeasureComparer(VectorComparer):
-    
-
 def load_db_from_file(filepath):
     pass
 

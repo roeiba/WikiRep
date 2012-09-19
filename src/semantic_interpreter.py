@@ -8,3 +8,5 @@ class SemanticInterpreter(object):
     def build_weighted_vector(self, text):
         """ Gets a text and returns its weighted vector according the database """
         pass 
+    
+    
