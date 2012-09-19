@@ -45,7 +45,9 @@ def compare(doc1,doc2):
     for dat in [doc1,doc2]:
         [add_word(w,all_words) for w in splitter.findall(dat)]
  
- # build an index of keys so that we know the word positions for the vector
+    print all_words
+    
+    # build an index of keys so that we know the word positions for the vector
     key_idx=dict() # key-> ( position, count )
     keys=all_words.keys()
     keys.sort()
@@ -58,6 +60,10 @@ def compare(doc1,doc2):
     
     v1=doc_vec(doc1,key_idx)
     v2=doc_vec(doc2,key_idx)
+    
+    print v1
+    print v2
+    
     return float(dot(v1,v2) / (norm(v1) * norm(v2)))
  
  
