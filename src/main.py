@@ -1,4 +1,5 @@
 from semantic_interpreter import SemanticInterpreter
+import compare_methods
 import utilites
 
 
@@ -9,7 +10,8 @@ text_2 = ""
 
 def main():
     #load database 
-    database = utilites.load_db_from_file(filepath)
+    #database = utilites.load_db_from_file(filepath)
+    database = utilites.load_db_stub(filepath)
     
     #init interpreter
     semantic_interpreter = SemanticInterpreter(database)
@@ -19,7 +21,7 @@ def main():
     w_vector_2 = semantic_interpreter.build_weighted_vector(text_2)
     
     #compare vectors
-    correlation = utilites.compare_vectors(w_vector_1, w_vector_2)
+    correlation = compare_methods.cosine_metrics(w_vector_1, w_vector_2)
     print "correlation is: {}".format(correlation)
     
 if __name__ == '__main__':
