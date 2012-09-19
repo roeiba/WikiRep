@@ -15,19 +15,61 @@ stop_words = [ 'i', 'in', 'a', 'to', 'the', 'it', 'have', 'haven\'t', 'was', 'bu
 #print stop_words
 
 splitter=re.compile ( "[a-z\-']+", re.I )
-stemmer=porter.PorterStemmer()
 
-def add_word(word,d):
-    """
-    Adds a word the a dictionary for words/count
-    first checks for stop words
-	the converts word to stemmed version
-    """
-    w=word.lower() 
-    if w not in stop_words:
-        ws=stemmer.stem(w,0,len(w)-1)
-        d.setdefault(ws,0)
-        d[ws] += 1
+
+def text_to_wordlist(text):
+    return splitter.findall(text)
+
+
+class WordsDb(object):
+    def __init__(self, stemmer):
+        self.stemmer = stemmer
+        self.all_words = {}
+        
+    def _stem(self,word):
+        return self.stemmer.stem(word,0,len(word)-1)
+
+    def add_article(self,text):
+        for word in text_to_wordlist(text):
+            self.add_word(word)
+    
+    def add_word(self,word):
+        """
+        Adds a word the a dictionary for words/count
+        first checks for stop words
+    	the converts word to stemmed version
+        """
+        word=word.lower() 
+        if word not in stop_words:
+            steamed_word = self._stem(word) 
+            self.all_words.setdefault(steamed_word,0)
+            self.all_words[steamed_word] += 1
+
+    def bulid(self):
+        
+        print self.all_words
+        
+        # build an index of words_arr so that we know the word positions for the vector
+        self.word_idx=dict() # word-> ( position, count )
+        words_arr= self.all_words.keys()
+        words_arr.sort()
+        
+        #print words_arr
+        for i in range(len(words_arr)):
+            worddata = WordData( word=words_arr[i], index=i, count=self.all_words[words_arr[i]])
+            self.word_idx[words_arr[i]] = worddata
+        
+        del words_arr
+        
+        print self.word_idx
+
+    def doc_vec(self,doc):
+        v=zeros(len(self.word_idx) )
+        for word in text_to_wordlist(doc):
+            keydata=self.word_idx.get(self._stem(word).lower(), None)
+            if keydata: v[keydata.index] = 1
+        return v
+
 
 
 class WordData(object):
@@ -37,39 +79,32 @@ class WordData(object):
         self.count = count
         
     def __str__(self):
-        return "{} => count: {}; index: {}".format(self.word, self.count, self.index)
+        return "{} => count: {}; index: {}\n".format(self.word, self.count, self.index)
+    
+    def __repr__(self):
+        return self.__str__()
         
 
-def doc_vec(doc,key_idx):
-    v=zeros(len(key_idx))
-    for word in splitter.findall(doc):
-        keydata=key_idx.get(stemmer.stem(word,0,len(word)-1).lower(), None)
-        if keydata: v[keydata.index] = 1
-    return v
 
 def compare(doc1,doc2):
     """ strip all punctuation but - and '
         convert to lower case
         store word/occurance in dict
     """
-    all_words=dict()
-    for dat in [doc1,doc2]:
-        [add_word(w,all_words) for w in splitter.findall(dat)]
+    
+    words_db = WordsDb(stemmer=porter.PorterStemmer())
+
+    for text in [doc1,doc2]:
+        words_db.add_article(text) 
+        
+    words_db.bulid()
  
- # build an index of keys so that we know the word positions for the vector
-    key_idx=dict() # key-> ( position, count )
-    keys=all_words.keys()
-    keys.sort()
-    #print keys
-    for i in range(len(keys)):
-        worddata = WordData( word=keys[i], index=i, count=all_words[keys[i]])
-        key_idx[keys[i]] = worddata
-    del keys
-    del all_words
+    v1 = words_db.doc_vec(doc1)
+    v2 = words_db.doc_vec(doc2)
+
+    print v1
+    print v2
     
-    
-    v1=doc_vec(doc1,key_idx)
-    v2=doc_vec(doc2,key_idx)
     return float(dot(v1,v2) / (norm(v1) * norm(v2)))
  
  
