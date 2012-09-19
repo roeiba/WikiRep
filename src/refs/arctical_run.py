@@ -29,7 +29,7 @@ class WordsDb(object):
     def _stem(self,word):
         return self.stemmer.stem(word,0,len(word)-1)
 
-    def add_article(self,text):
+    def add_concept(self,concept,text):
         for word in _text_to_wordlist(text):
             self._add_word(word)
     
