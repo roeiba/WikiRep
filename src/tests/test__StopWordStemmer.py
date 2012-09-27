@@ -6,7 +6,7 @@ Created on Sep 27, 2012
 from stop_words_stemmer import StopWordsStemmer
 import unittest
 from test_utils import TestBase
-
+ 
 class Test__StopWordStemmer(TestBase):
 
     def test_empty_list(self):

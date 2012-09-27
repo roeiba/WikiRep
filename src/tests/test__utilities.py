@@ -5,8 +5,8 @@ Created on Sep 27, 2012
 '''
 import unittest
 import numpy
-#from test_utils import TestBase
-import test_utils
+
+import test_utils 
 import math_utils
 
 class TestUtils(test_utils.TestBase):
