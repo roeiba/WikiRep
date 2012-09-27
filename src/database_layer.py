@@ -19,6 +19,7 @@ class WordsDb(object):
         stemmer.setdefault(porter.PorterStemmer())
         self.stemmer = stemmer
         self.all_words = {}
+        self.words_concepts_table = {}
         self.splitter=re.compile ( "[a-z\-']+", re.I ) 
         
     def _stem(self,word):
@@ -41,10 +42,10 @@ class WordsDb(object):
         word=word.lower() 
         if word not in stop_words:
             steamed_word = self._stem(word) 
-            if self.all_words.has_key(steamed_word):
+            if self.words_concepts_table.has_key(steamed_word):
                 raise Exception("Word already exist")
             
-            self.all_words[steamed_word] = self._get_word_concepts_dict(word)
+            self.words_concepts_table[steamed_word] = self._get_word_concepts_dict(word)
             
     def _get_word_concepts_dict(self, word):
         word_dict = {}
