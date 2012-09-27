@@ -3,7 +3,7 @@ Created on Sep 27, 2012
 
 @author: roeib
 '''
-from stop_words_stemmer import StopWordsStemmer as Stemmer
+from stop_words_stemmer import StopWordsStemmer
 import unittest
 from test_utils import TestBase
 
@@ -11,7 +11,7 @@ class Test__StopWordStemmer(TestBase):
 
     def test_empty_list(self):
         text = 'a b c'
-        stemmer = Stemmer([])
+        stemmer = StopWordsStemmer([])
         
         expected = ['a','b','c']
         actual = stemmer.process_text(text)

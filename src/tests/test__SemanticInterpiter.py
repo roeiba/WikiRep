@@ -4,18 +4,10 @@ Created on Sep 19, 2012
 import semantic_interpreter
 import unittest
 import numpy as np
-from collections import namedtuple
-import utilities as utils
 from test_utils import TestBase
-
-
-
+ 
 #model
 from stop_words_stemmer import StopWordsStemmer
-
-
-#DataBaseWrapperStub = namedtuple('DdWrapperStub','word_index concept_index wieght_matrix')
-
 
 class Test__SemanticInterpiter(TestBase):
 
