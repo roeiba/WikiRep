@@ -1,6 +1,6 @@
 from semantic_interpreter import SemanticInterpreter
 import compare_methods
-import utilites
+import utilities as utils
 
 
 filepath = ""
@@ -11,7 +11,7 @@ text_2 = ""
 def main():
     #load database 
     #database = utilites.load_db_from_file(filepath)
-    database = utilites.load_db_stub(filepath)
+    database = utils.load_db_stub(filepath)
     
     #init interpreter
     semantic_interpreter = SemanticInterpreter(database)
