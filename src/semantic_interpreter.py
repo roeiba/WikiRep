@@ -39,6 +39,3 @@ class SemanticInterpreter(object):
             words_vectors.append(word_wieght_vec)
         return utils.get_vectors_centroid(words_vectors)
         
-            
-    
-    
