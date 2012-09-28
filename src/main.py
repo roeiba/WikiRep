@@ -1,7 +1,6 @@
 from semantic_interpreter import SemanticInterpreter
-import compare_methods
 import utilities as utils
-
+import math_utils
 filepath = ""
 text_1 = ""
 text_2 = ""
@@ -20,7 +19,7 @@ def main():
     w_vector_2 = semantic_interpreter.build_weighted_vector(text_2)
     
     #compare vectors
-    correlation = compare_methods.cosine_metrics(w_vector_1, w_vector_2)
+    correlation = math_utils.cosine_metrics(w_vector_1, w_vector_2)
     print "correlation is: {}".format(correlation)
     
 if __name__ == '__main__':

@@ -22,5 +22,5 @@ class DatabaseWrapper(object):
         self.wieght_matrix = wieght_matrix
         self.title_index = map(lambda c: c.title,self.concepts_index)
     
-    def get_titels_index(self):
+    def get_titles_index(self):
         return self.title_index

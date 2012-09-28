@@ -3,8 +3,8 @@
 
 import re
 from refs import porter
-from numpy import zeros,dot
-from numpy.linalg import norm
+#from numpy import zeros,dot
+#from numpy.linalg import norm
 
 __all__=['compare']
 

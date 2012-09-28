@@ -6,7 +6,6 @@ Created on Sep 28, 2012
 import unittest
 from db_builder import DbBuilder
 from stop_words_stemmer import StopWordsStemmer
-import numpy as np
 import test_utils
 
 class DocumentStub(object):

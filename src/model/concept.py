@@ -32,7 +32,7 @@ class Concept(object):
     
     def get_tf(self,word):
         "returns tf as described in 2009_full article at page 6"
-        wc = self.get_word_ocurences(self,word)
+        wc = self.get_word_ocurences(word)
         tf = 1 + log10(wc) if wc > 0 else 0
         return tf
     
