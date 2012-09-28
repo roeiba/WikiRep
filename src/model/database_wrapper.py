@@ -20,4 +20,7 @@ class DatabaseWrapper(object):
         self.words_index = words_index
         self.words_num = len(self.words_index)
         self.wieght_matrix = wieght_matrix
+        self.title_index = map(lambda c: c.title,self.concepts_index)
     
+    def get_titels_index(self):
+        return self.title_index
