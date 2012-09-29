@@ -102,7 +102,7 @@ class DbBuilder(object):
         # wieght table not normilized
         T = _build_wieght_table(df_vec, index_by_word, self.concepts_list)
         
-        #TODO add normalization
+        #TODO: add normalization
         db = DatabaseWrapper(T, self.concepts_list, word_index)
         
         return db

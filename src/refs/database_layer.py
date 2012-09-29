@@ -26,7 +26,7 @@ class WordsDb(object):
         return self.stemmer.stem(word,0,len(word)-1)
 
     def add_concept(self,concept):
-        #TODO: check if already exist
+        #TODO check if already exist
         new_id = self.generate_concept_id()
         self.concepts[new_id] = concept
         
