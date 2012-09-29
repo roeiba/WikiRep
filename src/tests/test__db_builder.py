@@ -4,8 +4,8 @@ Created on Sep 28, 2012
 @author: roeib
 '''
 import unittest
-from db_builder import DbBuilder
-from stop_words_stemmer import StopWordsStemmer
+from model.db_builder import DbBuilder
+from model.stop_words_stemmer import StopWordsStemmer
 import test_utils
 
 class DocumentStub(object):

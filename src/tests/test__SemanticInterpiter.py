@@ -1,13 +1,13 @@
 '''
 Created on Sep 19, 2012
 '''
-import semantic_interpreter
+from model import semantic_interpreter
 import unittest
 import numpy as np
 from test_utils import TestBase
  
 #model
-from stop_words_stemmer import StopWordsStemmer
+from model.stop_words_stemmer import StopWordsStemmer
 
 class Test__SemanticInterpiter(TestBase):
 

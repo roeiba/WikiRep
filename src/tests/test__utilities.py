@@ -7,7 +7,7 @@ import unittest
 import numpy
 
 import test_utils 
-import math_utils
+from model import math_utils
 
 class TestUtils(test_utils.TestBase):
 

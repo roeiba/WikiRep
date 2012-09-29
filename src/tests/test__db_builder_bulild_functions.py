@@ -4,8 +4,8 @@ Created on Sep 28, 2012
 @author: inesmeya
 '''
 import unittest
-import db_builder as dbb
-from concept import Concept
+import model.db_builder as dbb
+from model.concept import Concept
 
 class Test__DbBuilderPrivates(unittest.TestCase):
 

@@ -1,6 +1,6 @@
-from semantic_interpreter import SemanticInterpreter
+from model.semantic_interpreter import SemanticInterpreter
 import utilities as utils
-import math_utils
+from model import math_utils
 filepath = ""
 text_1 = ""
 text_2 = ""
