@@ -46,7 +46,6 @@ Options:
 """
 
 import sys
-import gc
 import getopt
 import urllib
 import re
@@ -106,9 +105,9 @@ version = '2.1'
 
 ##### Main function ###########################################################
 
-def WikiDocument(out, id, title, text):
+def WikiDocument(out, cid, title, text):
     url = guess_url(title, prefix)
-    header = '<doc id="%s" url="%s" title="%s">' % (id, url, title)
+    header = '<doc cid="%s" url="%s" title="%s">' % (cid, url, title)
     # Separate header from text with a newline.
     header += title + '\n'
     header = header.encode('utf-8')
@@ -141,40 +140,40 @@ placeholder_tags = {'math':'formula', 'code':'codice'}
 ##
 # Normalize title
 def normalizeTitle(title):
-  # remove leading whitespace and underscores
-  title = title.strip(' _')
-  # replace sequences of whitespace and underscore chars with a single space
-  title = re.compile(r'[\s_]+').sub(' ', title)
-
-  m = re.compile(r'([^:]*):(\s*)(\S(?:.*))').match(title)
-  if m:
-      prefix = m.group(1)
-      if m.group(2):
-          optionalWhitespace = ' '
-      else:
-          optionalWhitespace = ''
-      rest = m.group(3)
-
-      ns = prefix.capitalize()
-      if ns in acceptedNamespaces:
-          # If the prefix designates a known namespace, then it might be
-          # followed by optional whitespace that should be removed to get
-          # the canonical page name
-          # (e.g., "Category:  Births" should become "Category:Births").
-          title = ns + ":" + rest.capitalize()
-      else:
-          # No namespace, just capitalize first letter.
-      # If the part before the colon is not a known namespace, then we must
-          # not remove the space after the colon (if any), e.g.,
-          # "3001: The_Final_Odyssey" != "3001:The_Final_Odyssey".
-          # However, to get the canonical page name we must contract multiple
-          # spaces into one, because
-          # "3001:   The_Final_Odyssey" != "3001: The_Final_Odyssey".
-          title = prefix.capitalize() + ":" + optionalWhitespace + rest
-  else:
-      # no namespace, just capitalize first letter
-      title = title.capitalize();
-  return title
+    # remove leading whitespace and underscores
+    title = title.strip(' _')
+    # replace sequences of whitespace and underscore chars with a single space
+    title = re.compile(r'[\s_]+').sub(' ', title)
+    
+    m = re.compile(r'([^:]*):(\s*)(\S(?:.*))').match(title)
+    if m:
+        prefix = m.group(1)
+        if m.group(2):
+            optionalWhitespace = ' '
+        else:
+            optionalWhitespace = ''
+        rest = m.group(3)
+    
+        ns = prefix.capitalize()
+        if ns in acceptedNamespaces:
+            # If the prefix designates a known namespace, then it might be
+            # followed by optional whitespace that should be removed to get
+            # the canonical page name
+            # (e.g., "Category:  Births" should become "Category:Births").
+            title = ns + ":" + rest.capitalize()
+        else:
+            # No namespace, just capitalize first letter.
+        # If the part before the colon is not a known namespace, then we must
+            # not remove the space after the colon (if any), e.g.,
+            # "3001: The_Final_Odyssey" != "3001:The_Final_Odyssey".
+            # However, to get the canonical page name we must contract multiple
+            # spaces into one, because
+            # "3001:   The_Final_Odyssey" != "3001: The_Final_Odyssey".
+            title = prefix.capitalize() + ":" + optionalWhitespace + rest
+    else:
+        # no namespace, just capitalize first letter
+        title = title.capitalize();
+    return title
 
 ##
 # Removes HTML or XML character references and entities from a text string.
@@ -258,10 +257,10 @@ def dropNested(text, openDelim, closeDelim):
     if not start:
         return text
     end = closeRE.search(text, start.end())
-    next = start
+    nnext = start
     while end:
-        next = openRE.search(text, next.end())
-        if not next:            # termination
+        nnext = openRE.search(text, nnext.end())
+        if not nnext:            # termination
             while nest:         # close all pending
                 nest -=1
                 end0 = closeRE.search(text, end.end())
@@ -271,7 +270,7 @@ def dropNested(text, openDelim, closeDelim):
                     break
             matches.append((start.start(), end.end()))
             break
-        while end.end() < next.start():
+        while end.end() < nnext.start():
             # { } {
             if nest:
                 nest -= 1
@@ -287,11 +286,11 @@ def dropNested(text, openDelim, closeDelim):
                     break
             else:
                 matches.append((start.start(), end.end()))
-                # advance start, find next close
-                start = next
-                end = closeRE.search(text, next.end())
+                # advance start, find nnext close
+                start = nnext
+                end = closeRE.search(text, nnext.end())
                 break           # { }
-        if next != start:
+        if nnext != start:
             # { { }
             nest += 1
     # collect text outside partitions
@@ -432,7 +431,8 @@ def compact(text):
     page = []                   # list of paragraph
     headers = {}                # Headers for unfilled sections
     emptySection = False        # empty sections are discarded
-    inList = False              # wheter opened <UL>
+    #TODO: why 'inList' not in use?:
+    #inList = False              # wheter opened <UL>
 
     for line in text.split('\n'):
 
@@ -561,13 +561,13 @@ class OutputSplitter:
 
 tagRE = re.compile(r'(.*?)<(/?\w+)[^>]*>(?:([^<]*)(<.*>)?)?')
 
-def process_data(input, output):
+def process_data(input_stream, output_stream):
 
     page = []
-    id = None
+    cid = None
     inText = False
     redirect = False
-    for line in input:
+    for line in input_stream:
         line = line.decode('utf-8')
         m = tagRE.search(line)
         if m:
@@ -577,8 +577,8 @@ def process_data(input, output):
         if tag == 'page':
             page = []
             redirect = False
-        elif tag == 'id' and not id:
-            id = m.group(3)
+        elif tag == 'cid' and not cid:
+            cid = m.group(3)
         elif tag == 'title':
             title = m.group(3)
         elif tag == 'redirect':
@@ -600,12 +600,12 @@ def process_data(input, output):
             if (colon < 0 or title[:colon] in acceptedNamespaces) and \
                     not redirect:
                 if not StdOut:
-                    print id, title.encode('utf-8')
+                    print cid, title.encode('utf-8')
                 sys.stdout.flush()
-                WikiDocument(output, id, title, ''.join(page))
+                WikiDocument(output_stream, cid, title, ''.join(page))
                 if StdOut:
                     sys.stdout.flush()
-            id = None
+            cid = None
             page = []
 
 ### CL INTERFACE ############################################################
@@ -704,4 +704,5 @@ def run(input_str, keep_links=None, keep_sections=None, wiki_prefix=None):
     return  str_res  
     
 if __name__ == '__main__':
+    print "X"
     main()
