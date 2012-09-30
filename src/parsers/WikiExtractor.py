@@ -4,7 +4,7 @@
 # =============================================================================
 #  Version: 2.1 (June 28, 2012)
 #  Author: Giuseppe Attardi (attardi@di.unipi.it), University of Pisa
-#	   Antonio Fuschetto (fuschett@di.unipi.it), University of Pisa
+#      Antonio Fuschetto (fuschett@di.unipi.it), University of Pisa
 # =============================================================================
 #  Copyright (c) 2009. Giuseppe Attardi (attardi@di.unipi.it).
 # =============================================================================
@@ -27,7 +27,7 @@
 Extracts and cleans text from Wikipedia database dump and stores output in a
 number of files of similar size in a given directory.
 Each file contains several documents in Tanl document format:
-	<doc id="" url="" title="">
+    <doc id="" url="" title="">
         ...
         </doc>
 
@@ -41,7 +41,7 @@ Options:
   -o, --output= dir     : place output files in specified directory (default
                           current)
   -l, --link            : preserve links
-  -s, --sections	: preserve sections
+  -s, --sections    : preserve sections
   --help                : display this help and exit
 """
 
@@ -56,7 +56,7 @@ from htmlentitydefs import name2codepoint
 
 ### PARAMS ####################################################################
 
-prefix = 'http://it.wikipedia.org/wiki/'
+prefix = 'http://en.wikipedia.org/wiki/'
 
 ##
 # Whether to preseve links in output
@@ -67,6 +67,8 @@ keepLinks = False
 # Whether to transform sections into HTML
 #
 keepSections = False
+
+StdOut = False
 
 ##
 # Recognize onlyy these namespaces
@@ -162,7 +164,7 @@ def normalizeTitle(title):
           title = ns + ":" + rest.capitalize()
       else:
           # No namespace, just capitalize first letter.
-	  # If the part before the colon is not a known namespace, then we must
+      # If the part before the colon is not a known namespace, then we must
           # not remove the space after the colon (if any), e.g.,
           # "3001: The_Final_Odyssey" != "3001:The_Final_Odyssey".
           # However, to get the canonical page name we must contract multiple
@@ -490,6 +492,27 @@ def handle_unicode(entity):
     return unichr(numeric_code)
 
 #------------------------------------------------------------------------------
+class StdOutputSplitter:
+    def __init__(self,out_stream):
+        self.out_stream = out_stream
+        
+    def reserve(self, size):
+        pass
+
+    def write(self, text):
+        self.out_stream.write(text)
+
+    def close(self):
+        self.out_stream.close()
+
+    def open_next_file(self):
+        pass
+
+    def dir_name(self):
+        return 'uf'
+
+    def file_name(self):
+        return 'u.f'
 
 class OutputSplitter:
     def __init__(self, compress, max_file_size, path_name):
@@ -576,9 +599,12 @@ def process_data(input, output):
             colon = title.find(':')
             if (colon < 0 or title[:colon] in acceptedNamespaces) and \
                     not redirect:
-                print id, title.encode('utf-8')
+                if not StdOut:
+                    print id, title.encode('utf-8')
                 sys.stdout.flush()
                 WikiDocument(output, id, title, ''.join(page))
+                if StdOut:
+                    sys.stdout.flush()
             id = None
             page = []
 
@@ -595,16 +621,16 @@ def show_usage(script_name):
 minFileSize = 200 * 1024
 
 def main():
-    global keepLinks, keepSections, prefix
+    global keepLinks, keepSections, prefix, StdOut
     script_name = os.path.basename(sys.argv[0])
 
     try:
-        long_opts = ['help', 'compress', 'bytes=', 'basename=','links', 'sections', 'output=', 'version']
+        long_opts = ['help', 'compress', 'bytes=', 'basename=','links', 'sections', 'output=', 'version','stdout']
         opts, args = getopt.gnu_getopt(sys.argv[1:], 'cb:lo:B:sv', long_opts)
     except getopt.GetoptError:
         show_usage(script_name)
         sys.exit(1)
-
+    
     compress = False
     file_size = 500 * 1024
     output_dir = '.'
@@ -613,6 +639,8 @@ def main():
         if opt == '--help':
             show_help()
             sys.exit()
+        elif opt in ('--stdout'):
+            StdOut=True
         elif opt in ('-c', '--compress'):
             compress = True
         elif opt in ('-l', '--links'):
@@ -640,20 +668,40 @@ def main():
                 print 'WikiExtractor.py version:', version
                 sys.exit(0)
 
-    if len(args) > 0:
+    if len(args) < 0:
         show_usage(script_name)
         sys.exit(4)
-
-    if not os.path.isdir(arg):
-        try:
-            os.makedirs(output_dir)
-        except:
-            print >> sys.stderr, 'Could not create: ', output_dir
-            return
-
-    output_splitter = OutputSplitter(compress, file_size, output_dir)
+    
+    output_splitter = None
+    if StdOut:
+        output_splitter = StdOutputSplitter(sys.stdout)
+    else:
+        if not os.path.isdir(output_dir):
+            try:
+                os.makedirs(output_dir)
+            except:
+                print >> sys.stderr, 'Could not create: ', output_dir
+                return
+        output_splitter = OutputSplitter(compress, file_size, output_dir)
     process_data(sys.stdin, output_splitter)
     output_splitter.close()
 
+def run(input_str, keep_links=None, keep_sections=None, wiki_prefix=None): 
+    import StringIO
+    global keepLinks, keepSections, prefix, StdOut
+    if not keep_links is None: keepLinks = keep_links
+    if not keep_sections is None: keepSections = keep_sections
+    if not wiki_prefix is None: prefix = wiki_prefix
+    StdOut = True
+    
+    output = StringIO.StringIO()
+    intput = StringIO.StringIO(input_str)
+    output_splitter = StdOutputSplitter(output)
+    process_data(intput, output_splitter)
+    
+    str_res = output.getvalue()
+    output.close()
+    return  str_res  
+    
 if __name__ == '__main__':
     main()
