@@ -9,7 +9,7 @@ import unittest
 
 
 class Test__WikiExtractor(unittest.TestCase):
-
+   
     def test_wiki_extractor_simple(self):
         import parsers.WikiExtractor as extractor
         #source = "http://en.wikipedia.org/wiki/Jack_Guynn"
