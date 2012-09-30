@@ -107,7 +107,7 @@ version = '2.1'
 
 def WikiDocument(out, cid, title, text):
     url = guess_url(title, prefix)
-    header = '<doc cid="%s" url="%s" title="%s">' % (cid, url, title)
+    header = '<doc id="%s" url="%s" title="%s">' % (cid, url, title)
     # Separate header from text with a newline.
     header += title + '\n'
     header = header.encode('utf-8')
@@ -577,7 +577,7 @@ def process_data(input_stream, output_stream):
         if tag == 'page':
             page = []
             redirect = False
-        elif tag == 'cid' and not cid:
+        elif tag == 'id' and not cid:
             cid = m.group(3)
         elif tag == 'title':
             title = m.group(3)
