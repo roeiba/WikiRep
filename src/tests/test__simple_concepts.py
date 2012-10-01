@@ -4,9 +4,9 @@ from model.concept import Concept
 import unittest
 from tests import test_utils
 from model import db_builder
-from model.stop_words_stemmer import StopWordsStemmer
+from model.stop_words_stemmer import StopWordsStemmer, get_stemmer
 from model.semantic_interpreter import SemanticInterpreter
-
+from model.simple_splitter import SimpleSplitter
 
 #those concepts have distinct set of words
 distinct_concepts = [
@@ -102,7 +102,23 @@ class TestSimpleConcepts(test_utils.TestBase):
             for f,val in zip(expected,actual):
                 f(val)
         
+    def test_intersection_concepts(self):
+        #splitter = SimpleSplitter()
         
+        stemmer = get_stemmer()
+        
+        tech_set = set(stemmer.process_text(technology_text))
+        busi_set = set(stemmer.process_text(business_text))
+        ente_set = set(stemmer.process_text(entertainment_text))
+        
+        tech_busi = tech_set.intersection(busi_set)
+        tech_ente = tech_set.intersection(ente_set)
+        busi_busi = tech_set.intersection(ente_set)
+         
+        print "tech_busi", len(tech_busi), tech_busi
+        print "tech_ente", len(tech_ente), tech_ente
+        print "busi_busi", len(busi_busi), busi_busi        
+           
 if __name__ == "__main__":
     #import sys;sys.argv = ['', 'Test.testName']
     unittest.main()
