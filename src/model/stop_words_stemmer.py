@@ -14,11 +14,11 @@ class StopWordsStemmer(object):
     '''
     filters words
     '''
-    def __init__(self,stop_words_list=default_stop_words_list):
+    def __init__(self,stop_words_list=None):
         '''
         @param stop_words_list: list of words to drop
         '''
-        self.stop_words_list = stop_words_list                                     
+        self.stop_words_list = stop_words_list or []                                    
         self.splitter = SimpleSplitter()
             
     def process_text(self,raw_text):
