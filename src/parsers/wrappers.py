@@ -3,8 +3,8 @@ Created on Oct 1, 2012
 
 @author: roeib
 '''
-import runpy
-from subprocess import *
+#import runpy
+from subprocess import Popen, PIPE
 import WikiExtractor 
 # ===================  wiki ===============================
 

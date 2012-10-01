@@ -6,7 +6,7 @@ Created on Oct 1, 2012
 import os 
 import unittest
 
-import test_utils 
+import tests.test_utils as test_utils
 from parsers import wrappers
 
 class TestWikiParser(test_utils.TestBase):
@@ -27,7 +27,7 @@ class TestWikiParser(test_utils.TestBase):
         
         self.assertEqual(actual_doc.tag, 'doc', "Root element is expected to 'doc'")
         
-        for key,val in expected_doc.attrib.items():
+        for key in expected_doc.attrib.keys():
             self.assertEqual(expected_doc.attrib[key], actual_doc.attrib[key], 
                 "mismatch value at attribute {}.\nExpected: {}\nActual: {}".format(key, expected_doc, actual_doc))
             
