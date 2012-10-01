@@ -7,7 +7,7 @@ import os
 import unittest
 
 import test_utils 
-from wiki_parser import wrappers
+from parsers import wrappers
 
 class TestWikiParser(test_utils.TestBase):
 
