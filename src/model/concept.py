@@ -16,11 +16,11 @@ class Concept(object):
     '''
     def __init__(self, cid, title, word_list):
         '''
-        Creates object, calculates words occurences 
+        Creates object, calculates words occurrences 
         
-        @param cid: id of the concept
+        @param cid: id of the concept (preferred the real Wikipedia ID)
         @param title: documents unique title
-        @param word_list: list of words after steamming
+        @param word_list: list of words after stemming
         '''
         self.id = cid
         self.title = title

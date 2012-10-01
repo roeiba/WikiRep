@@ -90,7 +90,7 @@ class DbBuilder(object):
          
     def build(self):
         
-        #uniqe enumeration of words
+        #unique enumeration of words
         word_index = _bulid_word_index(self.concepts_list)
         
         #word => index in word_index
@@ -99,7 +99,7 @@ class DbBuilder(object):
         # docs per word
         df_vec = _build_df(index_by_word, self.concepts_list)
         
-        # wieght table not normilized
+        # weight table not normalized
         T = _build_wieght_table(df_vec, index_by_word, self.concepts_list)
         
         #TODO: add normalization
