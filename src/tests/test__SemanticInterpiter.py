@@ -55,14 +55,13 @@ class Test__SemanticInterpiter(TestBase):
         # arrange
         db = self.getSimpleDb()
         
-        text = "x y z"
+        text = "x y z" # no x,y, z in the corpus
         stemmer = StopWordsStemmer([])
         si = semantic_interpreter.SemanticInterpreter(db, stemmer)
            
-        # expected = np.array([1.7/3, 1.3/3])
-        # 
-        actual  = si.build_weighted_vector(text)
-        #self.assert_almost_equals(expected, actual, "wrong centroid")
+        #act
+        si.build_weighted_vector(text)
+        # no exception => test passed
         
                  
 

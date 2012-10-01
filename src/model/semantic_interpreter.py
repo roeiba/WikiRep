@@ -18,10 +18,10 @@ class SemanticInterpreter(object):
         """ Gets a text and returns its weighted vector according the database """
         words_vectors = []
         words = self.stemmer.process_text(text)
-        print words
+
         for word in words:
             word_wieght_vec = self.get_weight_vector(word)
             words_vectors.append(word_wieght_vec)
-            print word_wieght_vec
+            
         return math_utils.get_vectors_centroid(words_vectors)
         
