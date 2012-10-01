@@ -30,7 +30,7 @@ class Test__SemanticInterpiter(TestBase):
 
 # ------------------------   Tests -----------------------------------
 
-    def test_Init(self):
+    def test_init(self):
         # arrange
         db = self.getSimpleDb()
         
@@ -38,7 +38,7 @@ class Test__SemanticInterpiter(TestBase):
         semantic_interpreter.SemanticInterpreter(db, StopWordsStemmer([]))
         
 
-    def test_Build(self):
+    def test_simple(self):
         # arrange
         db = self.getSimpleDb()
         
@@ -51,7 +51,20 @@ class Test__SemanticInterpiter(TestBase):
         actual  = si.build_weighted_vector(text)
         self.assert_almost_equals(expected, actual, "wrong centroid")
         
+    def test_words_not_in_corpus(self):
+        # arrange
+        db = self.getSimpleDb()
         
+        text = "x y z"
+        stemmer = StopWordsStemmer([])
+        si = semantic_interpreter.SemanticInterpreter(db, stemmer)
+           
+        #expected = np.array([1.7/3, 1.3/3])
+        # act
+        actual  = si.build_weighted_vector(text)
+        #self.assert_almost_equals(expected, actual, "wrong centroid")
+        
+                 
 
 if __name__ == "__main__":
     #import sys;sys.argv = ['', 'Test.testName']

@@ -9,7 +9,7 @@ from math import log10
 from database_wrapper import DatabaseWrapper
 
 
-def _build_index_by_words(word_list):
+def build_index_by_words(word_list):
     ''' converts list of word to dictionary {word => it's index} '''
     index_by_word = dict([(word,i) for i,word in enumerate(word_list)])
     return index_by_word
@@ -94,7 +94,7 @@ class DbBuilder(object):
         word_index = _bulid_word_index(self.concepts_list)
         
         #word => index in word_index
-        index_by_word = _build_index_by_words(word_index)
+        index_by_word = build_index_by_words(word_index)
         
         # docs per word
         df_vec = _build_df(index_by_word, self.concepts_list)

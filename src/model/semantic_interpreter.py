@@ -1,19 +1,18 @@
 import math_utils 
 from database_wrapper import DatabaseWrapper
 
-        
 class SemanticInterpreter(object):
     def __init__(self, database, stemmer):
         assert type(database) == DatabaseWrapper, "DatabaseWrapper class is expected as database" 
         self.db = database
         self.stemmer = stemmer
-        
+
     def get_weight_vector(self, word):
         """ Return:
                 row representation of the word in Wiki concepts
         """
-        index = self.db.words_index.index(word)
-        return self.db.wieght_matrix[index, :]
+        #if word is not in corpus: 
+        return self.db.get_word_vector(word)
     
     def build_weighted_vector(self, text):
         """ Gets a text and returns its weighted vector according the database """

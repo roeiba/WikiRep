@@ -5,6 +5,7 @@ import unittest
 from tests import test_utils
 from model import db_builder
 from model.stop_words_stemmer import StopWordsStemmer
+
 concepts = [
       
     Concept(1, "Technology", 

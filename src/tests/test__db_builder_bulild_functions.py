@@ -12,13 +12,13 @@ class Test__DbBuilderPrivates(unittest.TestCase):
     def test_build_index_by_words_not_empty(self):
         word_list = ['a', 'd', 'b']
         expected = { 'a': 0, 'd':1, 'b':2}
-        actual = dbb._build_index_by_words(word_list)
+        actual = dbb.build_index_by_words(word_list)
         self.assertEqual(expected, actual)
         
     def test_build_index_by_wordsempty(self):
         word_list = []
         expected = {}
-        actual = dbb._build_index_by_words(word_list)
+        actual = dbb.build_index_by_words(word_list)
         self.assertEqual(expected, actual)    
 
     def test_bulid_word_index(self):
