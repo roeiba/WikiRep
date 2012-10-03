@@ -31,8 +31,13 @@ class TestWikiParser(test_utils.TestBase):
             self.assertEqual(expected_doc.attrib[key], actual_doc.attrib[key], 
                 "mismatch value at attribute {}.\nExpected: {}\nActual: {}".format(key, expected_doc, actual_doc))
             
-        self.assertEqual(expected_doc.text, actual_doc.text, 
-                "mismatch inner text.\nExpected: {}\nActual: {}".format(expected_doc.text, actual_doc.text))
+        if expected_doc.text != actual_doc.text:
+            import difflib
+            s = difflib.SequenceMatcher(a=expected_doc.text, b=actual_doc.text)
+            for block in s.get_matching_blocks():
+                print "match at a[%d] and b[%d] of length %d" % block
+            self.fail()
+#            print "mismatch inner text.\nExpected: {}\nActual: {}".format(expected_doc.text, actual_doc.text))
 
     def test__get_wiki_page_clean(self):
         pass
@@ -40,3 +45,4 @@ class TestWikiParser(test_utils.TestBase):
 
 if __name__ == "__main__":
     unittest.main()
+
