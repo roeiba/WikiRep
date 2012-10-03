@@ -7,6 +7,7 @@ import unittest
 from model.db_builder import DbBuilder
 from model.stop_words_stemmer import StopWordsStemmer
 import test_utils
+import math
 
 class DocumentStub(object):
     raw_text = None 
@@ -16,13 +17,12 @@ class Test(test_utils.TestBase):
     def setUp(self):
         stemmer = StopWordsStemmer([])
         self.db_builder = DbBuilder(stemmer)
+        self.doc = DocumentStub() 
         
-        
-    def test__single_doc(self):
-        doc = DocumentStub()
-        doc.title = "Testing"
-        doc.raw_text = "The eagle has landed"
-        self.db_builder.add_document(doc)
+    def test__simple_doc(self):
+        self.doc.title = "Testing"
+        self.doc.raw_text = "The eagle has landed"
+        self.db_builder.add_document(self.doc)
         
         expected_titles_index = ["Testing"]
         expected_words_index = ["The", "eagle", "has", "landed"]
@@ -31,8 +31,51 @@ class Test(test_utils.TestBase):
         #create db
         actual_db = self.db_builder.build()
         self.assert_dbs_equal(actual_db, expected_titles_index, expected_words_index, expceted_wieghts_matrix)
+    
+    def tfidf(self, counter):
+        return (1 + math.log(counter)) if counter else 0
+     
+    def test__advanced_doc(self):
+        #first doc
+        self.doc.title = "Testing advanced"
+        self.doc.raw_text = "a b c c c d d d d e"
+        self.db_builder.add_document(self.doc)
+
+        #second doc
+        self.doc.title = "Testing advanced 2"
+        self.doc.raw_text = "a a a a a b c c c d d d e e"
+        self.db_builder.add_document(self.doc)
         
+        #third doc
+        self.doc.title = "Testing advanced 3"
+        self.doc.raw_text = "b b b b f f f f"
+        self.db_builder.add_document(self.doc)
         
+        docs_num = 3
+        expected_titles_index = ["Testing advanced", "Testing advanced 2", "Testing advanced 3"]
+        expected_words_index = ['a', 'b', 'c', 'd', 'e', 'f']
+        wieghts_matrix = [ 
+            [self.tfidf(counter) * math.log(docs_num / 2.0) for counter in [1, 5, 0]], #a 
+            [self.tfidf(counter) * math.log(docs_num / 3.0) for counter in [1, 1, 4]], #b 
+            [self.tfidf(counter) * math.log(docs_num / 2.0) for counter in [3, 3, 0]], #c 
+            [self.tfidf(counter) * math.log(docs_num / 2.0) for counter in [4, 3, 0]], #d 
+            [self.tfidf(counter) * math.log(docs_num / 2.0) for counter in [1, 2, 0]], #e 
+            [self.tfidf(counter) * math.log(docs_num / 1.0) for counter in [0, 0, 4]], #f 
+            ]
+        
+        #cosine normalization
+        expceted_wieghts_matrix = []
+        for row in wieghts_matrix:
+            norm = math.sqrt( sum([t**2 for t in row]) )
+            normalized_row = [norm * t for t in row]
+            expceted_wieghts_matrix.append(normalized_row)
+            
+        #create db
+        actual_db = self.db_builder.build()
+        self.assert_dbs_equal(actual_db, expected_titles_index, expected_words_index, wieghts_matrix)
+        
+        #TODO: use the normalized matrix for comparison once db_builder supports normalization
+        #self.assert_dbs_equal(actual_db, expected_titles_index, expected_words_index, expceted_wieghts_matrix)
         
     def assert_dbs_equal(self, actual_db, expected_titles_index, expected_words_index, expceted_wieghts_matrix):
         #validate results
@@ -50,7 +93,7 @@ class Test(test_utils.TestBase):
                 actual_word_index = actual_db.words_index.index(expected_word)
                 actual_concept_index = actual_db.get_titles_index().index(title)
                 actual_wieght = actual_db.wieght_matrix[actual_word_index][actual_concept_index]
-                self.assertAlmostEqual(expected_wieght, actual_wieght, "Wrong table value at [{}, {}]".format(expected_word, title))
+                self.assertAlmostEqual(expected_wieght, actual_wieght, msg="Wrong table value at word/concept [{}, {}]".format(expected_word, title))
                 
                 
     def test__parsing_fails_on_duplicated_title(self):

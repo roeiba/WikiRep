@@ -6,7 +6,7 @@ Created on Sep 28, 2012
 import numpy as np
 from concept import Concept 
 from math import log10
-from database_wrapper import DatabaseWrapper
+from model.database_wrapper import DatabaseWrapper
 
 
 def build_index_by_words(word_list):
