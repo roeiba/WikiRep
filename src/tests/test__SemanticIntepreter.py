@@ -9,7 +9,7 @@ from test_utils import TestBase
 #model
 from model.stop_words_stemmer import StopWordsStemmer
 
-class Test__SemanticInterpiter(TestBase):
+class TestSemanticIntepreter(TestBase):
 
     def setUp(self):
         pass
