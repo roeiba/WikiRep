@@ -4,7 +4,7 @@ Created on Sep 28, 2012
 @author: inesmeya
 '''
 import unittest
-import model.db_builder as dbb
+import model.build_utils as dbb
 from model.concept import Concept
 
 class Test__DbBuilderPrivates(unittest.TestCase):
@@ -29,13 +29,13 @@ class Test__DbBuilderPrivates(unittest.TestCase):
             ]
         
         expected =['a', 'b', 'c', 'x']
-        actual = dbb._bulid_word_index(concepts_list)
+        actual = dbb.bulid_word_index(concepts_list)
         
         self.assertEqual(set(expected), set(actual))    
 
     def test_bulid_word_index_empty(self):
         expected =[]
-        actual = dbb._bulid_word_index([])
+        actual = dbb.bulid_word_index([])
         
         self.assertEqual(expected, actual) 
    
@@ -48,7 +48,7 @@ class Test__DbBuilderPrivates(unittest.TestCase):
         index_by_word={'a':0, 'b':1, 'c':2, 'x':3 }
                 
         expected =[1,2,3,1]
-        actual = dbb._build_df(index_by_word,concepts_list)
+        actual = dbb.build_df(index_by_word,concepts_list)
         self.assertEqual(expected, actual) 
 
 

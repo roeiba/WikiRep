@@ -2,6 +2,7 @@ from numpy import dot
 from numpy.linalg import norm
 
 import numpy as np
+from math import log
 '''
 Created on Sep 19, 2012
 
@@ -22,3 +23,7 @@ def get_vectors_centroid(list_of_vectors):
         ret_vec += vector
     ret_vec *= (1.0 / n) 
     return ret_vec 
+
+def count_to_tf(count):
+    if count == 0: return 0
+    else:          return 1 + log(count)

@@ -4,8 +4,18 @@ Created on Sep 28, 2012
 @author: inesmeya
 '''
 
-from collections import Counter
-from math import log10
+from collections import Counter, OrderedDict
+from math_utils import count_to_tf
+
+class OrderedCounter(Counter, OrderedDict):
+    '''Counter that remembers the order elements are first encountered'''
+
+    def __repr__(self):
+        return '%s(%r)' % (self.__class__.__name__, OrderedDict(self))
+
+    def __reduce__(self):
+        return self.__class__, (OrderedDict(self),)
+    
 
 class Concept(object):
     '''
@@ -24,7 +34,9 @@ class Concept(object):
         '''
         self.id = cid
         self.title = title
-        self._words_occurenece = Counter(word_list)
+        self._words_occurenece = OrderedCounter()
+        for word in word_list:
+            self._words_occurenece[word]+=1
         
     def get_word_ocurences(self,word):
         """number of times the word appears in the document"""
@@ -33,12 +45,12 @@ class Concept(object):
     def get_tf(self,word):
         "returns tf as described in 2009_full article at page 6"
         wc = self.get_word_ocurences(word)
-        tf = 1 + log10(wc) if wc > 0 else 0
+        tf = count_to_tf(wc)
         return tf
     
     def get_all_words(self):
         """ @return: set of all words
         """
-        return set(self._words_occurenece.keys())
+        return self._words_occurenece.keys()
 
     
