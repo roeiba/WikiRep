@@ -21,6 +21,7 @@ class TestGetXmlPage(unittest.TestCase):
 
     def test_wget(self):
         #we don't expect to find wget on windows station
+        # lower is good
         osname = os.name.lower()
         if osname.find('win') > -1 or osname.find('nt') > -1:
             return
