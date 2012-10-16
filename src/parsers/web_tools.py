@@ -14,7 +14,7 @@ def get_article_xml_url(article_title):
 
 def get_wiki_xmlpage_wget(article_title):
     url = get_article_xml_url(article_title)
-    cmd = ["/usr/local/bin/wget", '-qO-', '-S', url]
+    cmd = ["wget", '-qO-', '-S', url]
     p = Popen(cmd, stdout=PIPE, stderr=PIPE)
     output, errors = p.communicate()
     if p.returncode:
