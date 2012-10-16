@@ -9,9 +9,6 @@ import StringIO
 import xml.etree.ElementTree as etree
 import os
 
-WindowsError = None
-
-
 class TestGetXmlPage(unittest.TestCase):
     def gen_test_wiki_xmlpage(self, get_func):
         xml = get_func('Southern_Cross_Expedition')
