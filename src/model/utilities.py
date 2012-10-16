@@ -1,12 +1,9 @@
-#import numpy
+import parsers.parse_tools as pt
 
-def load_db_from_file(filepath):
-    pass
-
-def load_db_stub():
-    print "Running Test..." 
-    doc1="I like to eat chicken\nnoodle soup."
-    doc2="I have read the book \"Chicken noodle soup for the soul\"."
-    print "Using Doc1: %s\n\nUsing Doc2: %s\n" % ( doc1, doc2 )
-    return 
-
+def print_xmldump_statistics(file_like):
+    template = "{:<12}{:<30}{:>12}"
+    print template.format('id', ' title', 'length')
+    print '----------------------------------------------------------------------'
+    
+    for tid, title, text, _ in pt.extract_pages(file_like):
+        print template.format(tid, title, len(text))

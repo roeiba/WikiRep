@@ -5,6 +5,7 @@ Created on Oct 1, 2012
 '''
 #import runpy
 from subprocess import Popen, PIPE
+from web_tools import get_wiki_xmlpage 
 import WikiExtractor 
 # ===================  wiki ===============================
 
@@ -20,7 +21,7 @@ def get_wiki_page(article_title):
         return str(output)
 
 def get_wiki_page_clean(article_title):
-    xml_str = get_wiki_page(article_title)
+    xml_str = get_wiki_xmlpage(article_title)
     clean_str =  WikiExtractor.run(xml_str,keep_sections=False,keep_links=True)
     return clean_str 
 
