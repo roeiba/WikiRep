@@ -4,15 +4,12 @@ Created on Oct 15, 2012
 @author: inesmeya
 '''
 import unittest
+#import parsers.parse_tools as pt
 import parsers.parse_tools as pt
 from os.path import dirname, join 
 
 
 class Test(unittest.TestCase):
-
-
-
-
 
     def test_extract_pages(self):
         '''regression check that extract_pages works well'''
