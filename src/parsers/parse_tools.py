@@ -6,6 +6,7 @@ Created on Oct 15, 2012
 
 import xml.etree.ElementTree as etree
 import parsers.web_tools as wt
+import gzip
 
 _PAGE_TAG = wt.mk_tag('page')
 
@@ -31,6 +32,8 @@ def extract_pages(f):
     """
     
     # get an iterable
+    if f.endswith(".gzip"):
+        f = gzip.open(f)
     context = etree.iterparse(f, events=["end"], parser=etree.XMLParser(encoding='utf-8'))
     
     # turn it into an iterator
@@ -50,3 +53,9 @@ def extract_pages(f):
             
             elem.clear()     
             root.clear()
+
+def parse(filename): 
+    if filename.endswith(".gzip"):
+        filename = gzip.open(filename)
+    return etree.parse(filename)
+    
