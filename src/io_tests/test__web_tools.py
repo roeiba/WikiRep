@@ -12,7 +12,8 @@ import os
 
 class TestGetXmlPage(unittest.TestCase):
     def gen_test_wiki_xmlpage(self, get_func):
-        xml = get_func('Southern_Cross_Expedition')
+        url = webtools.get_article_xml_url('Southern_Cross_Expedition')
+        xml = get_func(url)
         r = xml.index('<title>Southern Cross Expedition</title>')
         self.assertIsNotNone(r)
 

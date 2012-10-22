@@ -4,6 +4,7 @@ Created on Oct 15, 2012
 @author: inesmeya
 '''
 from subprocess import Popen, PIPE
+import gzip
 import urllib2 
 
 base_xml_url = "http://en.wikipedia.org/wiki/Special:Export/"
@@ -14,24 +15,30 @@ def get_article_xml_url(article_title):
 
 def get_wiki_xmlpage_wget(article_title):
     url = get_article_xml_url(article_title)
-    cmd = ["wget", '-qO-', '-S', url]
-    p = Popen(cmd, stdout=PIPE, stderr=PIPE)
+    try:
+        cmd = ["wget", '-qO-', '-S', url]
+        p = Popen(cmd, stdout=PIPE, stderr=PIPE)
+    except:
+        "retry on macOS"
+        cmd = ["/usr/local/bin/wget", '-qO-', '-S', url]
+        p = Popen(cmd, stdout=PIPE, stderr=PIPE)
+        
     output, errors = p.communicate()
     if p.returncode:
         raise Exception(errors)
     else:
         return str(output) # Print stdout from cmd call
 
-def get_wiki_xmlpage_urllib(article_title):
+def get_wiki_xmlpage_urllib(url):
     ''' note on using urllib 
     [http://meta.wikimedia.org/wiki/Bot_policy#Unacceptable_usage]
-    Wikipedias stance is:
+    Wikipedia's stance is:
         Data retrieval: Bots may not be used to retrieve bulk content
         for any use not directly related to an approved bot task.
         This includes dynamically loading pages from another website,
         which may result in the website being blacklisted and permanently denied access.
         If you would like to download bulk content or mirror a project, 
-        please do so by downloading or hosting your own copy of our database.
+        please do so by download or hosting your own copy of our database.
 
     That is why Python is blocked. You're supposed to download data dumps.
     
@@ -39,7 +46,6 @@ def get_wiki_xmlpage_urllib(article_title):
         http://stackoverflow.com/questions/3336549/pythons-urllib2-why-do-i-get-error-403-when-i-urlopen-a-wikipedia-page
 
     '''
-    url = get_article_xml_url(article_title)
     req = urllib2.Request(url, headers={'User-Agent' : "Wikip Browser"})     
     
     file_handler = urllib2.urlopen(req)
@@ -47,17 +53,21 @@ def get_wiki_xmlpage_urllib(article_title):
     file_handler.close()
     return xml_text
 
-def get_wiki_xmlpage(article_title):
+def get_wiki_xmlpage(url):
     try:
-        return get_wiki_xmlpage_urllib(article_title)
+        return get_wiki_xmlpage_urllib(url)
     except:
-        return get_wiki_xmlpage_wget(article_title)
-        
+        print "Failed to get wiki page using urllib, trying using wget"
+        return get_wiki_xmlpage_wget(url)
+
+def get_article_xmlpage(artice_title):
+    url = get_article_xml_url(artice_title)
+    return get_wiki_xmlpage(url)
 
 def make_articles_dump(titles, outstream):
     first=True    
     for title in titles:
-        xml = get_wiki_xmlpage(title)
+        xml = get_article_xmlpage(title)
         if first:
             end = xml.find('</mediawiki>')
             outstream.write(xml[:end])
@@ -73,9 +83,17 @@ def mk_tag(tag):
     return "{%s}%s" % (_NS, tag)
 
 
-def articles_dump_to_file(titles, filename):
-    dump = open(filename,'w')
-    make_articles_dump(titles,dump)
+def articles_dump_to_file(titles, filename, compress=False, compresslevel=9):
+    """
+    The compresslevel argument is an integer from 1 to 9 controlling the
+    level of compression; 1 is fastest and produces the least compression,
+    and 9 is slowest and produces the most compression.  The default here is 9.
+    """
+    if compress: 
+        dump = gzip.open(filename + "xml.gzip", 'w', compresslevel=compresslevel) 
+    else:
+        dump = open(filename + ".xml",'w')
+    make_articles_dump(titles, dump)
     dump.flush()
     dump.close()
 
