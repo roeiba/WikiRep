@@ -13,7 +13,7 @@ default_stop_words_list = stop_words = [
     'because', 'end', 'since', 'get', 'you', 'has', 'its', 'will',  's', 'are'
 ]
 
-def get_stemmer():
+def get_default_stemmer():
     return ComplexStemmer(LowerStemmer(), StopWordsStemmer(default_stop_words_list), PorterStemmer())
 
 class BaseStemmer(object):

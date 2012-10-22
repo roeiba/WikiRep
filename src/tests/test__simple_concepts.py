@@ -4,7 +4,8 @@ from model.concept import Concept
 import unittest
 from tests import test_utils
 from model import db_builder
-from model.stop_words_stemmer import StopWordsStemmer, get_stemmer
+from model import stop_words_stemmer
+from model.stop_words_stemmer import StopWordsStemmer
 from model.semantic_interpreter import SemanticInterpreter
 from model.simple_splitter import SimpleSplitter
 
@@ -105,7 +106,7 @@ class TestSimpleConcepts(test_utils.TestBase):
     def test_intersection_concepts(self):
         #splitter = SimpleSplitter()
         
-        stemmer = get_stemmer()
+        stemmer = stop_words_stemmer.get_default_stemmer()
         
         tech_set = set(stemmer.process_text(technology_text))
         busi_set = set(stemmer.process_text(business_text))
