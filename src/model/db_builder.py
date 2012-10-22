@@ -38,24 +38,25 @@ class DbBuilder(object):
     def build(self,wf=None):
         #unique enumeration of words
         word_index = bulid_word_index(self.concepts_list)
-        if wf: wf.word_index = word_index
         
         #word => index in word_index
         index_by_word = build_index_by_words(word_index)
         
         # docs per word
         df_vec = build_df(index_by_word, self.concepts_list)
-        if wf: wf.df_vec = df_vec
         
         # weight table not normalized
         T = build_wieght_table(df_vec, index_by_word, self.concepts_list)
-        if wf: wf.wieghts_mat = T
         
         #DEBUG: if wf: wf.tf_mat = _build_wieght_table_tfi_only(df_vec, index_by_word, self.concepts_list)
         
         #TODO: add normalization
         db = DatabaseWrapper(T, self.concepts_list, word_index)
         
+        if wf: 
+            wf.word_index = word_index
+            wf.df_vec = df_vec
+            wf.wieghts_mat = T
         return db 
 
         
