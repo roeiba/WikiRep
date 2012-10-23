@@ -50,7 +50,6 @@ class WikiKnowledge(object):
         
         xml_pages = self.parse(src)
         for doc_id, title, text, rev_id in xml_pages:
-            
             doc = WikiDocument(doc_id=doc_id, title=title, raw_text=text, rev_id=rev_id)
             db_builder.add_document(doc)
         db = db_builder.build()
@@ -74,7 +73,7 @@ class WikiKnowledge(object):
         #compare vectors
         if compare_method is None: compare_method = self.default_compare
         correlation = compare_method(w_vector_1, w_vector_2)
-        INFO( "correlation is: {}".format(correlation) )
+        DEBUG( "correlation is: {}".format(correlation) )
         return correlation
         
     def get_text_value(self, text):
