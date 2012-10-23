@@ -12,11 +12,11 @@ class WikiDocument(object):
         retval = """
             doc_id = {id} 
             title = {title} 
-            raw_text = {raw_text}... 
+            raw_text = {raw_text} 
             rev_id = {rev_id}""".format(
                    id=self.id, 
                    title=self.title,
-                   raw_text=self.raw_text[:70], 
+                   raw_text=log_text(self.raw_text), 
                    rev_id=self.rev_id)
         return retval 
     
