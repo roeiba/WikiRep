@@ -8,6 +8,7 @@ import xml.etree.ElementTree as etree
 import parsers.web_tools as wt
 import WikiExtractor 
 import gzip
+from model.logger import *
 
 _PAGE_TAG = wt.mk_tag('page')
 
@@ -61,8 +62,17 @@ def extract_clean_pages(src_wiki_dump, keep_sections=False,keep_links=False):
     @param keep_links: preserve links
     """
     for tid, title, text, rev_id in extract_pages(src_wiki_dump):
-        clean_text =  WikiExtractor.run(text,keep_sections=keep_sections,keep_links=keep_links)
-        
+        clean_text =  WikiExtractor.clean(text)
+        DEBUG("""
+        Original text:
+        {separator} Start {separator}
+        {text} 
+        {separator} END {separator}
+        Clean text:
+        {separator} Start {separator}
+        {clean_text}
+        {separator} END {separator} 
+        """.format(separator = "-"*20, text=log_text(text) , clean_text=log_text(clean_text)))
         yield tid, title, clean_text, rev_id
         
         
