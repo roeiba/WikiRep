@@ -6,6 +6,8 @@ Created on Oct 15, 2012
 from subprocess import Popen, PIPE
 import gzip
 import urllib2 
+from model.logger import *
+
 
 base_xml_url = "http://en.wikipedia.org/wiki/Special:Export/"
 
@@ -57,7 +59,8 @@ def get_wiki_xmlpage(url):
     try:
         return get_wiki_xmlpage_urllib(url)
     except:
-        print "Failed to get wiki page using urllib, trying using wget"
+        WARNING("Failed to get wiki page using urllib, trying using wget\n{}".format(url))
+        
         return get_wiki_xmlpage_wget(url)
 
 def get_article_xmlpage(artice_title):
