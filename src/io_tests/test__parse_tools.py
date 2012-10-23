@@ -25,7 +25,7 @@ class Test(unittest.TestCase):
                   for tid, title, text, _ 
                   in pt.extract_pages(test__parse_tools_xml)]        
 
-        self.assertSequenceEqual(actual, expected)
+        self.assertSequenceEqual(actual, expected, "Assertion failure: \nActual={}\nExpected={}".format(actual, expected))
 
 if __name__ == "__main__":
     #import sys;sys.argv = ['', 'Test.testName']
