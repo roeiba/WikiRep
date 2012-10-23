@@ -78,7 +78,7 @@ def make_articles_dump(titles, outstream):
             outstream.write(xml[start:end])
     outstream.write('\n</mediawiki>\n')
 
-_NS = 'http://www.mediawiki.org/xml/export-0.7/'
+_NS = 'http://www.mediawiki.org/xml/export-0.8/'
 def mk_tag(tag):
     return "{%s}%s" % (_NS, tag)
 
@@ -90,9 +90,9 @@ def articles_dump_to_file(titles, filename, compress=False, compresslevel=9):
     and 9 is slowest and produces the most compression.  The default here is 9.
     """
     if compress: 
-        dump = gzip.open(filename + "xml.gzip", 'w', compresslevel=compresslevel) 
+        dump = gzip.open(filename + ".gzip", 'w', compresslevel=compresslevel) 
     else:
-        dump = open(filename + ".xml",'w')
+        dump = open(filename ,'w')
     make_articles_dump(titles, dump)
     dump.flush()
     dump.close()
