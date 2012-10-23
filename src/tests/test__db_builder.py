@@ -12,6 +12,7 @@ import math
 class DocumentStub(object):
     raw_text = None 
     title = None
+    rev_id = None
     
 class Test(test_utils.TestBase):
     def setUp(self):

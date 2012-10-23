@@ -49,6 +49,7 @@ class WorkFlow(object):
 class DocumentStub(object):
     raw_text = None 
     title = None
+    rev_id = None
     
     def __init__(self, title, raw_text):
         self.title = title
