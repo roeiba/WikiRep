@@ -24,16 +24,17 @@ class Concept(object):
         Name: Wikipedia-based Semantic Interpretation for Natural Language Processing
         Short name: 2009_full
     '''
-    def __init__(self, cid, title, word_list):
+    def __init__(self, concept_id, title, word_list, revision_id=None):
         '''
         Creates object, calculates words occurrences 
         
-        @param cid: id of the concept (preferred the real Wikipedia ID)
+        @param id: id of the concept (preferred the real Wikipedia ID)
         @param title: documents unique title
         @param word_list: list of words after stemming
         '''
-        self.id = cid
+        self.id = concept_id
         self.title = title
+        self.revision_id = revision_id
         self._words_occurenece = OrderedCounter()
         for word in word_list:
             self._words_occurenece[word]+=1

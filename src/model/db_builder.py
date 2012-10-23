@@ -32,7 +32,7 @@ class DbBuilder(object):
         """
         cid = self._generate_concept_id()
         word_list = self.stemmer.process_text(doc.raw_text)
-        new_concept = Concept(cid, doc.title, word_list)
+        new_concept = Concept(cid, doc.title, word_list, doc.rev_id)
         self.concepts_list.append(new_concept)
          
     def build(self,wf=None):
