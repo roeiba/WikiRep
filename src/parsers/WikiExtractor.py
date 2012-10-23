@@ -422,6 +422,7 @@ def clean(text):
     text = re.sub(u'(\[\(«) ', r'\1', text)
     text = re.sub(r'\n\W+?\n', '\n', text) # lines with only punctuations
     text = text.replace(',,', ',').replace(',.', '.')
+    text = text.lstrip()
     return text
 
 section = re.compile(r'(==+)\s*(.*?)\s*\1')
