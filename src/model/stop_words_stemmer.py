@@ -46,7 +46,7 @@ class StopWordsStemmer(BaseStemmer):
         '''
         self.stop_words_list = stop_words_list or []                                    
         
-    def process_word(self,word):
+    def process_word(self, word):
         """ @return: None if word in stop_word_list, otherwise word itself
         """
         return None if word in self.stop_words_list else word
