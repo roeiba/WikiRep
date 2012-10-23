@@ -5,6 +5,7 @@ from model.semantic_interpreter import SemanticInterpreter
 from model import math_utils
 from parsers import web_tools
 from parsers import parse_tools
+from logger import *
 
 class WikiKnowledge(object):
     def __init__(self, 
@@ -14,14 +15,15 @@ class WikiKnowledge(object):
         self.default_compare = compare_method
         if stemmer is None: stemmer = stop_words_stemmer.get_default_stemmer()
         self.default_stemmer = stemmer
+        self.semantic_intepreter = None
         
-    def make_dump(self, wiki_dump, compressed=False, *articles):
+    def make_dump(self, wiki_dump, *articles, **kwargs):
         """ Download specified articles from Wikipedia site, 
             merges them into one file, compresses it as Wikipedia dump file
             @param articles: article's canonic name on Wikipedia web page
             @param wiki_dump: output filename (if not specified default is used)
         """
-        web_tools.articles_dump_to_file(articles, wiki_dump, compressed=compressed)
+        web_tools.articles_dump_to_file(articles, wiki_dump, **kwargs)
     
     def download_all(self, wiki_dump=None):
         """ Download whole wikipedia into dump file.
@@ -30,13 +32,13 @@ class WikiKnowledge(object):
         """
         raise Exception("Not yet implemented")
     
-    def parse(self, wiki_dump, output):
+    def parse(self, src_wiki_dump, output=None):
         """ Parses wiki_dump.
             @param wiki_dump: input wikipedia dump filename  
-            @param output: output xml filename
+            @param output: output xml filename 
+            @return: parsed xml pages
         """
-        #TODO: define and implement
-        raise Exception("Not yet implemented - what exactly this method do?")
+        return parse_tools.extract_clean_pages(src_wiki_dump, keep_sections=False, keep_links=False)
         
     def build(self, src, output, stemmer=None):
         """ builds WikiRep database.
@@ -46,7 +48,9 @@ class WikiKnowledge(object):
         if stemmer is None: stemmer = self.default_stemmer
         db_builder = DbBuilder(stemmer)
         
-        for doc_id, title, text, rev_id in parse_tools.extract_pages(src):
+        xml_pages = self.parse(src)
+        for doc_id, title, text, rev_id in xml_pages:
+            
             doc = WikiDocument(doc_id=doc_id, title=title, raw_text=text, rev_id=rev_id)
             db_builder.add_document(doc)
         db = db_builder.build()
@@ -59,20 +63,29 @@ class WikiKnowledge(object):
         """
         #semantic_interpreter = SemanticInterpreter(database)
         #generate weighted vectors
+        msg_format = "Text: {text}\nWieght vector: {vector}"
+        
         w_vector_1 = self.get_text_value(text1)
-        w_vector_2 = self.get_text_value(text1)
+        DEBUG( msg_format.format(text=text1, vector=w_vector_1) )
+        
+        w_vector_2 = self.get_text_value(text2)
+        DEBUG( msg_format.format(text=text2, vector=w_vector_2) )
         
         #compare vectors
         if compare_method is None: compare_method = self.default_compare
         correlation = compare_method(w_vector_1, w_vector_2)
-        print "correlation is: {}".format(correlation)
+        INFO( "correlation is: {}".format(correlation) )
         return correlation
         
     def get_text_value(self, text):
         """
             returns the text vector in wikipedia space.
         """
-        return self.semantic_intepreter.build_weighted_vector(text)
+        if self.semantic_intepreter is None:
+            raise Exception("Semantic interpreter is not initialized! Make sure to use build().")
+        retval = self.semantic_intepreter.build_weighted_vector(text)
+        DEBUG("text vector: {}".format(retval))
+        return retval
     
     def analize(self, text1, db):
         """
