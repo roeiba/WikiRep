@@ -12,11 +12,11 @@ def build_index_by_words(word_list):
     return index_by_word
 
 
-def bulid_word_index_back(concepts_list):
+def build_word_index_back(concepts_list):
     """
     returns list of unique words from all concepts
     
-    this method is identical to bulid_word_index
+    this method is identical to build_word_index
     #TODO: compare methods
     """
     words_set = set()
@@ -25,11 +25,11 @@ def bulid_word_index_back(concepts_list):
         words_set.update(words)
     return list(words_set)
 
-def bulid_word_index(concepts_list):
+def build_word_index(concepts_list):
     """
     returns list of unique words from all concepts
     
-    this method is identical to bulid_word_index_back
+    this method is identical to build_word_index_back
     #TODO: compare methods
     """
     words_set = set()

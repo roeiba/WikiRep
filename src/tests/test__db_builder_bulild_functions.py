@@ -29,13 +29,13 @@ class Test__DbBuilderPrivates(unittest.TestCase):
             ]
         
         expected =['a', 'b', 'c', 'x']
-        actual = dbb.bulid_word_index(concepts_list)
+        actual = dbb.build_word_index(concepts_list)
         
         self.assertEqual(set(expected), set(actual))    
 
-    def test_bulid_word_index_empty(self):
+    def test_build_word_index_empty(self):
         expected =[]
-        actual = dbb.bulid_word_index([])
+        actual = dbb.build_word_index([])
         
         self.assertEqual(expected, actual) 
    

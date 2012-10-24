@@ -6,7 +6,7 @@ Created on Sep 28, 2012
 
 from concept import Concept 
 from model.database_wrapper import DatabaseWrapper
-from model.build_utils import bulid_word_index, build_index_by_words, build_df, build_wieght_table
+from model.build_utils import build_word_index, build_index_by_words, build_df, build_wieght_table
 from model.logger import *
 
 class DbBuilder(object):
@@ -52,7 +52,7 @@ class DbBuilder(object):
          
     def build(self,wf=None):
         #unique enumeration of words
-        word_index = bulid_word_index(self.concepts_list)
+        word_index = build_word_index(self.concepts_list)
         
         #word => index in word_index
         index_by_word = build_index_by_words(word_index)
