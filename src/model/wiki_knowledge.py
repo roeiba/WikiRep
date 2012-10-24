@@ -9,14 +9,35 @@ from logger import *
 
 
 class WikiKnowledge(object):
+    """
+        Example
+        --------
+        >>> wiki_knowledge = WikiKnowledge()
+        
+        >>> wiki_knowledge.make_dump(dump_file, *articles, compress=False)            
+                create dump from articles list (if a dump already exist, this step may be skipped)
+        
+        >>> wiki_knowledge.build(dump_file, None)
+                builds SemanticIntepreter according to dump file
+                
+        >>> wiki_knowledge.compare(text1, text2)
+                Compares two texts in wikipedia space.
+
+        >>> wiki_knowledge.get_text_value(text)
+                returns the text vector in wikipedia space. 
+    """
     def __init__(self, 
                  stemmer=None, 
                  compare_method=None):
-        if compare_method is None: compare_method = math_utils.cosine_metrics
+        self.stemmer = stemmer
         self.default_compare = compare_method
-        if stemmer is None: stemmer = stop_words_stemmer.get_default_stemmer()
-        self.default_stemmer = stemmer
+        self.init()
+
+    def init(self):
+        if self.default_compare is None: self.default_compare = math_utils.cosine_metrics
+        if self.stemmer is None: self.stemmer = stop_words_stemmer.get_default_stemmer()
         self.semantic_intepreter = None
+        self.db_builder = DbBuilder(self.stemmer)
         
     def make_dump(self, wiki_dump, *articles, **kwargs):
         """ Download specified articles from Wikipedia site, 
@@ -45,15 +66,13 @@ class WikiKnowledge(object):
         """ builds WikiRep database.
             @param src: Wikipedia source xml (etc. wikiparsed.xml)
         """
-        if stemmer is None: stemmer = self.default_stemmer
-        db_builder = DbBuilder(stemmer)
         
         xml_pages = self.parse(src)
         for doc_id, title, text, rev_id in xml_pages:
             doc = WikiDocument(doc_id=doc_id, title=title, raw_text=text, rev_id=rev_id)
-            db_builder.add_document(doc)
-        db = db_builder.build()
-        self.semantic_intepreter = SemanticInterpreter(db, stemmer)
+            self.db_builder.add_document(doc)
+        self._build_semantic_interpreter()
+
             
     def compare(self, text1, text2, compare_method=None):
         """
@@ -91,7 +110,12 @@ class WikiKnowledge(object):
             Saves the SemanticInterpreter database to disk
             @param output: WikiRep database output file
         """
-        raise NotImplemented()
+        self.db_builder.save(output)
+    
+    def load_from_disk(self, src):
+        self.init()
+        self.db_builder.load_concepts(src)
+        self._build_semantic_interpreter()
     
     def analize(self, text1, db):
         """
@@ -99,3 +123,7 @@ class WikiKnowledge(object):
             @param db: WikiRep database filename
         """
         pass
+    
+    def _build_semantic_interpreter(self):
+        db = self.db_builder.build()
+        self.semantic_intepreter = SemanticInterpreter(db, self.stemmer)

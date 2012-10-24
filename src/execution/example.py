@@ -34,8 +34,6 @@ class Test(unittest.TestCase):
         text_value = wiki_knowledge.get_text_value(text)
         INFO(test_utils.get_text_value_message(text, text_value))
 
-#    def test__make_dump(self):
-#        pass
 #    
 #    def test__download(self):
 #        pass

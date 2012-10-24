@@ -32,7 +32,15 @@ class DocumentStub(object):
     def __init__(self, title=None, raw_text=None):
         self.title = title
         self.raw_text = raw_text
-        
+
+def get_db_builder(dump_file, stemmer):
+    db_builder = DbBuilder(stemmer)
+    xml_pages = parse_tools.extract_clean_pages(dump_file, keep_sections=False, keep_links=False)
+    for doc_id, title, text, rev_id in xml_pages:
+        doc = WikiDocument(doc_id=doc_id, title=title, raw_text=text, rev_id=rev_id)
+        db_builder.add_document(doc)
+    return db_builder
+    
 def get_concepts_list(dump_file):
     """ 
         Generated list of Concepts from dump file
@@ -40,12 +48,7 @@ def get_concepts_list(dump_file):
         @return: List of Concepts extracted from the dump
     """
     stemmer = StopWordsStemmer([])
-    db_builder = DbBuilder(stemmer)
-    xml_pages = parse_tools.extract_clean_pages(dump_file, keep_sections=False, keep_links=False)
-    for doc_id, title, text, rev_id in xml_pages:
-        doc = WikiDocument(doc_id=doc_id, title=title, raw_text=text, rev_id=rev_id)
-        db_builder.add_document(doc)
-    return db_builder.get_concepts_list()
+    return get_db_builder(dump_file, stemmer).get_concepts_list()
 
 # - - - - - Messages and formats - - - - - - - 
 
