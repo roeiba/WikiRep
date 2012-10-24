@@ -75,6 +75,7 @@ class DbBuilder(object):
         return db 
 
         
-        
+    def get_concepts_list(self):
+        return self.concepts_list
         
                 
