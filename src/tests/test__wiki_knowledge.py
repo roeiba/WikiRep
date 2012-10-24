@@ -41,7 +41,7 @@ class Test(unittest.TestCase):
              text = log_text(text), 
              text_value = text_value))
         
-    def test__all_at_once(self):
+    def test__execution(self):
         """ This is not exactly a test, but a program execution..."""
         articles = ['Southern_Cross_Expedition', 'Knowledge', 'Love', 'War', 'Hypertext_Transfer_Protocol'
                         'Government', 'Peace', 'Fame', 'Shame', 'School', 'Cat', 'Dog', 'House']

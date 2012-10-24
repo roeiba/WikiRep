@@ -7,33 +7,48 @@ Created on Sep 28, 2012
 from concept import Concept 
 from model.database_wrapper import DatabaseWrapper
 from model.build_utils import bulid_word_index, build_index_by_words, build_df, build_wieght_table
+from model.logger import *
 
 class DbBuilder(object):
     '''
-    Current implementation doesn't check for concept duplications
+        Not allowing duplications of IDs
+        For testability - if the id is None, it will be auto generated.
     '''
 
     def __init__(self,stemmer):
         '''
         Constructor
         '''
-        self._last_id = -1
+        self._last_generated_id = 1
         self.stemmer = stemmer
         self.concepts_list = []
+        self.ids = set()
 
-    def _generate_concept_id(self):
-        ''' @return: sequential id's for concepts '''
-        self._last_id+=1
-        return self._last_id
+    def _generate_concept_id(self, doc):
+        ''' 
+        @return: sequential id's for concepts 
+        '''
+        #for testability purposes
+        if doc.id is None:
+            while (self._last_generated_id in self.ids):
+                self._last_generated_id += 1
+            doc.id = self._last_generated_id
+        
+        if doc.id in self.ids:
+            ERROR("id duplication:\n{}".format(doc))
+            raise Exception("Document id already exist!")
+        
+        return doc.id
         
     def add_document(self,doc):
         """ Converts document to concept 
-            @param doc: sould have title and raw_text
+            @param doc: should have doc_id, rev_id, title and raw_text
         """
-        cid = self._generate_concept_id()
+        cid = self._generate_concept_id(doc)
         word_list = self.stemmer.process_text(doc.raw_text)
         new_concept = Concept(cid, doc.title, word_list, doc.rev_id)
         self.concepts_list.append(new_concept)
+        self.ids.add(doc.id)
          
     def build(self,wf=None):
         #unique enumeration of words

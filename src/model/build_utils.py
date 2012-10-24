@@ -11,8 +11,14 @@ def build_index_by_words(word_list):
     index_by_word = dict([(word,i) for i,word in enumerate(word_list)])
     return index_by_word
 
+
 def bulid_word_index_back(concepts_list):
-    "returns list of unique words from all concepts"
+    """
+    returns list of unique words from all concepts
+    
+    this method is identical to bulid_word_index
+    #TODO: compare methods
+    """
     words_set = set()
     for concept in concepts_list:
         words = concept.get_all_words()
@@ -20,7 +26,12 @@ def bulid_word_index_back(concepts_list):
     return list(words_set)
 
 def bulid_word_index(concepts_list):
-    "returns list of unique words from all concepts"
+    """
+    returns list of unique words from all concepts
+    
+    this method is identical to bulid_word_index_back
+    #TODO: compare methods
+    """
     words_set = set()
     words_list = []
     for concept in concepts_list:

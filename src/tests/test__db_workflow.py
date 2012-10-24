@@ -12,6 +12,7 @@ import inspect
 from model.db_builder import DbBuilder
 from model.stop_words_stemmer import StopWordsStemmer
 import model.math_utils as math_utils
+import test_utils
 
 class WorkFlow(object):
     docs = None
@@ -46,16 +47,8 @@ class WorkFlow(object):
     def __str__(self):
         return self.__repr__()
         
-class DocumentStub(object):
-    raw_text = None 
-    title = None
-    rev_id = None
-    
-    def __init__(self, title, raw_text):
-        self.title = title
-        self.raw_text = raw_text
         
-Doc = DocumentStub          
+Doc = test_utils.DocumentStub          
 
 
      

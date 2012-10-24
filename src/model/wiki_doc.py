@@ -8,7 +8,7 @@ class WikiDocument(object):
         self.rev_id = rev_id
         DEBUG("Created WikiDocument: {}".format(self))
     
-    def __str__(self):
+    def __repr__(self):
         retval = """
             doc_id = {id} 
             title = {title} 

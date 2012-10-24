@@ -9,21 +9,15 @@ from model.stop_words_stemmer import StopWordsStemmer
 import test_utils
 import math
 
-class DocumentStub(object):
-    raw_text = None 
-    title = None
-    rev_id = None
     
 class Test(test_utils.TestBase):
     def setUp(self):
         stemmer = StopWordsStemmer([])
         self.db_builder = DbBuilder(stemmer)
-        self.doc = DocumentStub() 
         
     def test__simple_doc(self):
-        self.doc.title = "Testing"
-        self.doc.raw_text = "The eagle has landed"
-        self.db_builder.add_document(self.doc)
+        doc = test_utils.DocumentStub(title = "Testing",raw_text = "The eagle has landed")
+        self.db_builder.add_document(doc)
         
         expected_titles_index = ["Testing"]
         expected_words_index = ["The", "eagle", "has", "landed"]
@@ -38,19 +32,16 @@ class Test(test_utils.TestBase):
      
     def test__advanced_doc(self):
         #first doc
-        self.doc.title = "Testing advanced"
-        self.doc.raw_text = "a b c c c d d d d e"
-        self.db_builder.add_document(self.doc)
+        doc = test_utils.DocumentStub(title = "Testing advanced",raw_text = "a b c c c d d d d e")
+        self.db_builder.add_document(doc)
 
         #second doc
-        self.doc.title = "Testing advanced 2"
-        self.doc.raw_text = "a a a a a b c c c d d d e e"
-        self.db_builder.add_document(self.doc)
+        doc = test_utils.DocumentStub(title = "Testing advanced 2",raw_text = "a a a a a b c c c d d d e e")
+        self.db_builder.add_document(doc)
         
         #third doc
-        self.doc.title = "Testing advanced 3"
-        self.doc.raw_text = "b b b b f f f f"
-        self.db_builder.add_document(self.doc)
+        doc = test_utils.DocumentStub(title = "Testing advanced 3",raw_text = "b b b b f f f f")
+        self.db_builder.add_document(doc)
         
         docs_num = 3
         expected_titles_index = ["Testing advanced", "Testing advanced 2", "Testing advanced 3"]
