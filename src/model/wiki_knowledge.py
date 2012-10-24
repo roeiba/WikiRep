@@ -7,6 +7,7 @@ from parsers import web_tools
 from parsers import parse_tools
 from logger import *
 
+
 class WikiKnowledge(object):
     def __init__(self, 
                  stemmer=None, 
@@ -30,7 +31,7 @@ class WikiKnowledge(object):
             @param src_url: url of dump file (if not specified default is used)
             @param wiki_dump: output dump filename, etc. wikidump.bz2 (if not specified default is used)
         """
-        raise Exception("Not yet implemented")
+        raise NotImplemented()
     
     def parse(self, src_wiki_dump, output=None):
         """ Parses wiki_dump.
@@ -40,10 +41,9 @@ class WikiKnowledge(object):
         """
         return parse_tools.extract_clean_pages(src_wiki_dump, keep_sections=False, keep_links=False)
         
-    def build(self, src, output, stemmer=None):
+    def build(self, src, stemmer=None):
         """ builds WikiRep database.
             @param src: Wikipedia source xml (etc. wikiparsed.xml)
-            @param output: WikiRep database output file
         """
         if stemmer is None: stemmer = self.default_stemmer
         db_builder = DbBuilder(stemmer)
@@ -85,6 +85,13 @@ class WikiKnowledge(object):
         retval = self.semantic_intepreter.build_weighted_vector(text)
         DEBUG("text vector: {}".format(retval))
         return retval
+    
+    def save_to_disk(self, output):
+        """
+            Saves the SemanticInterpreter database to disk
+            @param output: WikiRep database output file
+        """
+        raise NotImplemented()
     
     def analize(self, text1, db):
         """
