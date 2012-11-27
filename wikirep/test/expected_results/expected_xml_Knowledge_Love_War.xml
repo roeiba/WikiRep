@@ -2,7 +2,7 @@
   <siteinfo>
     <sitename>Wikipedia</sitename>
     <base>http://en.wikipedia.org/wiki/Main_Page</base>
-    <generator>MediaWiki 1.21wmf2</generator>
+    <generator>MediaWiki 1.21wmf4</generator>
     <case>first-letter</case>
     <namespaces>
       <namespace key="-2" case="first-letter">Media</namespace>
@@ -29,6 +29,8 @@
       <namespace key="109" case="first-letter">Book talk</namespace>
       <namespace key="446" case="first-letter">Education Program</namespace>
       <namespace key="447" case="first-letter">Education Program talk</namespace>
+      <namespace key="710" case="first-letter">TimedText</namespace>
+      <namespace key="711" case="first-letter">TimedText talk</namespace>
     </namespaces>
   </siteinfo>
   <page>
@@ -36,16 +38,16 @@
     <ns>0</ns>
     <id>243391</id>
     <revision>
-      <id>519521554</id>
-      <parentid>516888806</parentid>
-      <timestamp>2012-10-24T06:17:13Z</timestamp>
+      <id>524609892</id>
+      <parentid>524608391</parentid>
+      <timestamp>2012-11-24T06:35:01Z</timestamp>
       <contributor>
-        <username>Gregbard</username>
-        <id>1193764</id>
+        <username>Snowded</username>
+        <id>1988889</id>
       </contributor>
-      <comment>External links</comment>
-      <text xml:space="preserve" bytes="22818">{{other uses}}
-{{pp-move|small=yes}}{{pp-semi-protected|small=yes}}
+      <comment>no reason given for removing a reference</comment>
+      <text xml:space="preserve" bytes="22802">{{other uses}}
+{{pp-move|small=yes}}
 [[File:Efez Celsus Library 5 RB.jpg|thumb|upright|Personification of knowledge ([[Greek language|Greek]] ''Επιστημη'', [[Episteme]]) in [[Celsus Library]] in [[Ephesus]], Turkey.]]
 '''Knowledge''' is a familiarity with someone or something, which can include [[fact]]s, [[information]],  [[description]]s,  or [[skills]] acquired through [[experience]] or [[education]]. It can refer to the theoretical or practical understanding of a subject. It can be implicit (as with practical skill or expertise) or explicit (as with the theoretical understanding of a subject); it can be more or less formal or systematic.&lt;ref&gt;http://oxforddictionaries.com/view/entry/m_en_us1261368#m_en_us1261368&lt;/ref&gt; In [[philosophy]], the study of knowledge is called [[epistemology]]; the philosopher [[Plato]] famously defined knowledge as &quot;[[justified true belief]].&quot; However, no single agreed upon definition of knowledge exists, though there are numerous theories to explain it. The following quote from Bertrand Russell's &quot;Theory of Knowledge&quot; illustrates the difficulty in defining knowledge: &quot;The question how knowledge should be defined is perhaps the most important and difficult of the three with which we shall deal. This may seem surprising: at first sight it might be thought that knowledge might be defined as belief which is in agreement with the facts. The trouble is that no one knows what a belief is, no one knows what a fact is, and no one knows what sort of agreement between them would make a belief true. Let us begin with belief.&quot;
 
@@ -169,6 +171,7 @@ In [[Jewish]] tradition, knowledge ([[Hebrew]]: דעת ''da'ath'') is considered
 
 {{Philosophy topics}}
 {{epistemology}}
+{{Positivism}}
 
 [[Category:Knowledge| ]]
 [[Category:Concepts in epistemology]]
@@ -267,7 +270,7 @@ In [[Jewish]] tradition, knowledge ([[Hebrew]]: דעת ''da'ath'') is considered
 [[yi:וויסן]]
 [[zh-yue:知識]]
 [[zh:知识]]</text>
-      <sha1>j5cfiez7bv5gqgyb4vililrum18wxo3</sha1>
+      <sha1>2sx3h1trdsb3gz73g4k5ucfg8e1hinu</sha1>
       <model>wikitext</model>
       <format>text/x-wiki</format>
     </revision>
@@ -277,18 +280,18 @@ In [[Jewish]] tradition, knowledge ([[Hebrew]]: דעת ''da'ath'') is considered
     <ns>0</ns>
     <id>17547</id>
     <revision>
-      <id>517624777</id>
-      <parentid>516435500</parentid>
-      <timestamp>2012-10-13T20:29:00Z</timestamp>
+      <id>524099514</id>
+      <parentid>523078439</parentid>
+      <timestamp>2012-11-20T23:03:26Z</timestamp>
       <contributor>
-        <username>Tim bates</username>
-        <id>793325</id>
+        <username>AlwaysUnite</username>
+        <id>14095792</id>
       </contributor>
-      <comment>/* Persian */ not referenced</comment>
-      <text xml:space="preserve" bytes="52886">{{About}}
+      <comment>/* Free love */</comment>
+      <text xml:space="preserve" bytes="53203">{{About}}
 {{pp-semi-indef}}{{pp-move-indef}}
 [[File:DickseeRomeoandJuliet.jpg|thumb|upright|Archetypal lovers [[Romeo and Juliet]] portrayed by [[Frank Bernard Dicksee|Frank Dicksee]]]]
-'''Love''' is an [[emotion]] of a strong [[affection]] and personal [[attachment (psychology)|attachment]].&lt;ref name=&quot;oxford&quot;&gt;''Oxford Illustrated American Dictionary'' (1998) + ''Merriam-Webster Collegiate Dictionary'' (2000)&lt;/ref&gt; Love is also said to be a [[virtue]] representing all of human [[kindness]], [[compassion]], and affection —&quot;the unselfish loyal and benevolent concern for the good of another&quot;.&lt;ref&gt;[http://www.merriam-webster.com/dictionary/love Merriam Webster Dictionary]&lt;/ref&gt; Love may describe compassionate and affectionate actions towards other humans, one's self or animals. &lt;ref name=&quot;Fromm, Erich 1956&quot;&gt;Fromm, Erich; &quot;The Art of Loving&quot;, Harper Perennial (1956), Original English Version, ISBN 978-0-06-095828-2&lt;/ref&gt;
+'''Love''' is an [[emotion]] of a strong [[affection]] and personal [[attachment (psychology)|attachment]].&lt;ref name=&quot;oxford&quot;&gt;''Oxford Illustrated American Dictionary'' (1998) + ''Merriam-Webster Collegiate Dictionary'' (2000)&lt;/ref&gt; Love is also said to be a [[virtue]] representing all of human [[kindness]], [[compassion]], and affection —&quot;the unselfish loyal and benevolent concern for the good of another&quot;.&lt;ref&gt;[http://www.merriam-webster.com/dictionary/love Merriam Webster Dictionary]&lt;/ref&gt; Love may describe compassionate and affectionate actions towards other humans, one's self or animals.&lt;ref name=&quot;Fromm, Erich 1956&quot;&gt;Fromm, Erich; &quot;The Art of Loving&quot;, Harper Perennial (1956), Original English Version, ISBN 978-0-06-095828-2&lt;/ref&gt;
 
 In English, love refers to a variety of different feelings, states, and attitudes, ranging from pleasure (&quot;I loved that meal&quot;) to [[interpersonal attraction]] (&quot;I love my partner&quot;). &quot;Love&quot; may refer specifically to the passionate desire and intimacy of [[romance (love)|romantic love]], to the sexual love of [[eros (concept)|eros]], to the emotional closeness of [[familial love|familial]] love, to the [[platonic love]] that defines [[friendship]],&lt;ref name=&quot;PlatonicSchool&quot;&gt;{{cite book |last=Kristeller |first=Paul Oskar |title=Renaissance Thought and the Arts: Collected Essays |publisher=Princeton University |year=1980 |isbn=0-691-02010-8}}&lt;/ref&gt; or to the profound [[Henosis|oneness]] or devotion of [[Religious views on love|religious love]]&lt;ref name=&quot;Gita&quot;&gt;{{cite book |last= Mascaró |first=Juan |title=The Bhagavad Gita |publisher=Penguin Classics |year=2003 |isbn=0-14-044918-3}} (J. Mascaró, translator)&lt;/ref&gt;, or to a concept of '''love''' that encompasses all of those feelings. This diversity of uses and meanings, combined with the complexity of the feelings involved, makes love unusually difficult to consistently define,  compared to other emotional states.
 
@@ -327,7 +330,7 @@ Because of the complex and abstract nature of love, discourse on love is commonl
 |last=Leibniz
 |title=Confessio philosophi
 |publisher=Wikisource edition
-|accessdate=Mar 25, 2009}}&lt;/ref&gt;
+|accessdate=Mar 25, 2009}}&lt;/ref&gt; Biologist [[Jeremy Griffith]] defines love as &quot;unconditional selflessness&quot;.&lt;ref&gt;http://www.worldtransformation.com/what-is-love/ ''What is love?''. In ''The Book of Real Answers to Everything!'' Griffith, J. 2011. ISBN 9781741290073.&lt;/ref&gt;
 
 Love is sometimes referred to as being the &quot;international language&quot;, overriding cultural and linguistic divisions.
 
@@ -339,7 +342,7 @@ Interpersonal love refers to love between human beings. It is a more potent sent
 [[File:Gothaer Liebespaar.jpg|thumb|180px|''Pair of Lovers''. 1480-1485]]
 Throughout history, [[philosophy]] and [[religion]] have done the most speculation on the phenomenon of love. In the last century, the science of [[psychology]] has written a great deal on the subject. In recent years, the sciences of [[psychology]], [[anthropology]], [[neuroscience]], and [[biology]] have added to the understanding of the nature and function of love. 
 
-People with  [[histrionic personality disorder]] and [[narcissism]] may have a limited or minimal capability for experiencing love.&lt;ref&gt;[http://books.google.co.uk/books?id=PB2BVBcyb9oC&amp;pg=PA74&amp;dq=&amp;hl=en&amp;sa=X&amp;ei=aAc0T5aNH-er0QX8s8WvAg&amp;ved=0CEMQ6AEwAg#v=onepage&amp;q=&amp;f=false Personality Disorders: Recognition and Clinical Management] retrieved 9 February 2012, Jonathan H. Dowson, Adrian T. Grounds, page 74&lt;/ref&gt;&lt;ref&gt;[http://books.google.co.uk/books?id=OFn_7aBm-5oC&amp;pg=PA89&amp;dq=&amp;hl=en&amp;sa=X&amp;ei=xIVcT8HTDebN0QXykoXLDQ&amp;ved=0CH4Q6AEwDQ#v=onepage&amp;q=&amp;f=false Women and borderline personality disorder: symptoms and stories] page 89, retrieved 10 February 2012&lt;/ref&gt;&lt;ref&gt;[http://books.google.co.uk/books?hl=en&amp;lr=&amp;id=NSyiH7xM7FQC&amp;oi=fnd&amp;pg=PA257&amp;dq=&amp;ots=fifDbBTb3o&amp;sig=xPh6nNAnxBozgtlwiwm2jrdKFCI#v=onepage&amp;q&amp;f=false Psychodynamic Psychotherapy for Personality Disorders: A Clinical Handbook] Narcissistic personality disorder, page 263&lt;/ref&gt;&lt;ref&gt;[http://books.google.co.uk/books?id=wAU9UCI1V6kC&amp;pg=PA243&amp;dq=&amp;hl=en&amp;sa=X&amp;ei=xIVcT8HTDebN0QXykoXLDQ&amp;ved=0CJYBEOgBMBE#v=onepage&amp;q=&amp;f=false Introduction to Psychology] Ann L. Weber, Joseph Johnson, page 243&lt;/ref&gt;
+People with  [[histrionic personality disorder]] and [[narcissism]] may have a limited or minimal capability for experiencing love.&lt;ref&gt;[http://books.google.co.uk/books?id=PB2BVBcyb9oC&amp;pg=PA74&amp;dq=&amp;hl=en&amp;sa=X&amp;ei=aAc0T5aNH-er0QX8s8WvAg&amp;ved=0CEMQ6AEwAg#v=onepage&amp;q=&amp;f=false Personality Disorders: Recognition and Clinical Management] retrieved 9 February 2012, Jonathan H. Dowson, Adrian T. Grounds, page 74&lt;/ref&gt;&lt;ref&gt;[http://books.google.co.uk/books?id=OFn_7aBm-5oC&amp;pg=PA89&amp;dq=&amp;hl=en&amp;sa=X&amp;ei=xIVcT8HTDebN0QXykoXLDQ&amp;ved=0CH4Q6AEwDQ#v=onepage&amp;q=&amp;f=false Women and borderline personality disorder: symptoms and stories] page 89, retrieved 10 February 2012&lt;/ref&gt;&lt;ref&gt;[http://books.google.co.uk/books?hl=en&amp;lr=&amp;id=NSyiH7xM7FQC&amp;oi=fnd&amp;pg=PA257&amp;dq=&amp;ots=fifDbBTb3o&amp;sig=xPh6nNAnxBozgtlwiwm2jrdKFCI#v=onepage&amp;q&amp;f=false Psychodynamic Psychotherapy for Personality Disorders: A Clinical Handbook] Narcissistic personality disorder, page 263&lt;/ref&gt;&lt;ref&gt;[http://books.google.co.uk/books?id=wAU9UCI1V6kC&amp;pg=PA243&amp;dq=&amp;hl=en&amp;sa=X&amp;ei=xIVcT8HTDebN0QXykoXLDQ&amp;ved=0CJYBEOgBMBE#v=onepage&amp;q=&amp;f=false Introduction to Psychology] Ann L. Weber, Joseph Johnson, page 243&lt;/ref&gt;{{not in citation|date=November 2012}}
 
 ===Biological basis===
 {{Main|Biological basis of love}}
@@ -517,7 +520,7 @@ Many people in the early 19th century believed that marriage was an important as
 
 While the phrase ''free love'' is often associated with [[promiscuity]] in the popular imagination, especially in reference to the [[counterculture of the 1960s]] and 1970s, historically the free-love movement has not advocated multiple sexual partners or short-term sexual relationships. Rather, it has argued that love relations that are freely entered into should not be regulated by law.
 
-The term &quot;'''sex radical'''&quot; is also used interchangeably with the term &quot;free lover&quot;, and was the preferred term by advocates because of the negative connotations of &quot;free love&quot;.{{Citation needed|date=February 2010}} By whatever name, advocates had two strong beliefs: opposition to the idea of forceful sexual activity in a relationship and advocacy for a woman to use her body in any way that she pleases.&lt;ref name=&quot;Passet, Joanne E 2003&quot;&gt;Passet, Joanne E. Sex Radicals and the Quest for Women's Equality. Chicago,IL: U of Illinois P, 2003.&lt;/ref&gt;
+The term &quot;'''sex radical'''&quot; is also used interchangeably with the term &quot;free lover&quot;, and was the preferred term by advocates because of the negative connotations of &quot;free love&quot;.{{Citation needed|date=February 2010}} By whatever name, advocates had two strong beliefs: opposition to the idea of forceful sexual activity in a relationship and advocacy for a woman to use her body in any way that she pleases.&lt;ref name=&quot;Passet, Joanne E 2003&quot;&gt;Passet, Joanne E. Sex Radicals and the Quest for Women's Equality. Chicago,IL: U of Illinois P, 2003.&lt;/ref&gt; These are also beliefs of [[Feminism]].
 
 Laws of particular concern to free love movements have included those that prevent an unmarried couple from living together, and those that regulate [[adultery]] and [[divorce]], as well as [[age of consent]], [[birth control]], [[homosexuality]], [[abortion]], and sometimes [[prostitution]]; although not all free love advocates agree on these issues. The abrogation of individual rights in marriage is also a concern—for example, some jurisdictions do not recognize [[spousal rape]] or treat it less seriously than non-spousal rape. Free-love movements since the 19th century have also defended the right to publicly discuss sexuality and have battled [[obscenity]] laws.
 
@@ -671,7 +674,7 @@ There are many different theories which attempt to [[explanation|explain]] what 
 [[zh-yue:愛]]
 [[bat-smg:Meilė]]
 [[zh:愛]]</text>
-      <sha1>crgmfiv6uo5p7vokz6nhbfvnx5w4kmy</sha1>
+      <sha1>892koxjn38dreh8rc7cdic78wag37i8</sha1>
       <model>wikitext</model>
       <format>text/x-wiki</format>
     </revision>
@@ -680,18 +683,20 @@ There are many different theories which attempt to [[explanation|explain]] what 
     <ns>0</ns>
     <id>33158</id>
     <revision>
-      <id>519328765</id>
-      <parentid>518781700</parentid>
-      <timestamp>2012-10-23T04:21:17Z</timestamp>
+      <id>525078982</id>
+      <parentid>525078961</parentid>
+      <timestamp>2012-11-27T04:18:51Z</timestamp>
       <contributor>
-        <ip>70.194.3.145</ip>
+        <username>ClueBot NG</username>
+        <id>13286072</id>
       </contributor>
-      <comment>/* Evolutionary */</comment>
-      <text xml:space="preserve" bytes="101404">{{Use dmy dates|date=September 2012}}
+      <minor/>
+      <comment>Reverting possible vandalism by [[Special:Contributions/DigiSword|DigiSword]] to version by 213.246.93.141. False positive? [[User:ClueBot NG/FalsePositives|Report it]]. Thanks, [[User:ClueBot NG|ClueBot NG]]. (1360028) (Bot)</comment>
+      <text xml:space="preserve" bytes="102075">{{Use dmy dates|date=September 2012}}
 {{About|war in general||War (disambiguation)|and|The War (disambiguation)}}
 {{War}}'''War''' is an organized, armed, and, often, a prolonged conflict that is carried on between [[State (polity)|states]], [[nation]]s, or other parties typified by extreme [[aggression]], [[Society|social]] disruption, and usually high mortality.&lt;ref name=AHD&gt;{{cite web|url=http://www.thefreedictionary.com/War |title=American Heritage Dictionary: War |publisher=Thefreedictionary.com |accessdate=2011-01-24}}&lt;/ref&gt;&lt;ref name=MWD&gt;{{cite web|url=http://www.merriam-webster.com/dictionary/war |title=Merriam Webster's Dictionary: War |publisher=Merriam-Webster |date=13 August 2010 |accessdate=2011-01-24}}&lt;/ref&gt; War should be understood as an actual, intentional and widespread armed conflict between political communities, and therefore is defined as a form of [[political violence]].&lt;ref name=AHD /&gt;&lt;ref&gt;{{cite web|url=http://plato.stanford.edu/entries/war/ |title=Stanford Encyclopedia of Philosophy}}&lt;/ref&gt; The set of techniques used by a group to carry out war is known as '''warfare'''. An absence of war (and other violence) is usually called [[peace]].
 
-In 2003, Nobel Laureate [[Richard E. Smalley]] identified war as the sixth (of ten) biggest problems facing the society of mankind for the next fifty years.&lt;ref&gt;{{cite web |title=Smalley Institute Grand Challenges |first=Richard E. |last=Smalley |publisher=[[Rice University]] |year=2008 |accessdate=24 April 2011 |url=http://cnst.rice.edu/content.aspx?id=246}}&lt;/ref&gt; In the 1832 [[treatise]] ''[[On War]]'', Prussian military general and theoretician [[Carl von Clausewitz]] defined war as follows: &quot;War is thus an act of force to compel our enemy to do our will.&quot;&lt;ref&gt;{{cite book |last1= Clausewitz|first1= Carl von|authorlink1= Carl Von Clausewitz|editor1-first= Michael|editor1-last= Howard|editor1-link=Peter Paret|editor2-first= Peter|editor2-last= Paret |title= On War|trans_title= Vom Krieg |edition= Indexed |year= 1984 |origyear= 1832|publisher= Princeton University Press|location= New Jersey |isbn= 978-0-691-01854-6|page= 75}} Italics in original.&lt;/ref&gt;
+In 2003, Nobel Laureate [[Richard E. Smalley]] identified war as the sixth (of ten) biggest problem facing the society of mankind for the next fifty years.&lt;ref&gt;{{cite web |title=Smalley Institute Grand Challenges |first=Richard E. |last=Smalley |publisher=[[Rice University]] |year=2008 |accessdate=24 April 2011 |url=http://cnst.rice.edu/content.aspx?id=246}}&lt;/ref&gt; In the 1832 [[treatise]] ''[[On War]]'', Prussian military general and theoretician [[Carl von Clausewitz]] defined war as follows: &quot;War is thus an act of force to compel our enemy to do our will.&quot;&lt;ref&gt;{{cite book |last1= Clausewitz|first1= Carl von|authorlink1= Carl Von Clausewitz|editor1-first= Michael|editor1-last= Howard|editor1-link=Peter Paret|editor2-first= Peter|editor2-last= Paret |title= On War|trans_title= Vom Krieg |edition= Indexed |year= 1984 |origyear= 1832|publisher= Princeton University Press|location= New Jersey |isbn= 978-0-691-01854-6|page= 75}} Italics in original.&lt;/ref&gt;
 
 While some scholars see warfare as an inescapable and integral aspect of human culture, others argue that it is only inevitable under certain socio-cultural or ecological circumstances. Some scholars argue that the practice of war is not linked to any single type of political organization or society. Rather, as discussed by [[John Keegan]] in his ''History of Warfare'', war is a universal phenomenon whose form and scope is defined by the society that wages it.&lt;ref&gt;Keegan, John, (1901) ''A History of Warfare'', (Pimlico)&lt;/ref&gt; Another argument suggests that since there are human societies in which warfare does not exist, humans may not be naturally disposed for warfare, which emerges under particular circumstances.&lt;ref&gt;Societies at Peace (Howell and Willis 1989)&lt;/ref&gt; The ever changing technologies and potentials of war extend along a historical continuum. At the one end lies the [[endemic warfare]] of the [[Paleolithic]]{{Citation needed|date=July 2011}} with its stones and clubs, and the naturally limited loss of life associated with the use of such weapons. Found at the other end of this continuum is [[nuclear warfare]], along with the recently developed possible outcome of its use, namely the potential risk of the complete [[human extinction|extinction of the human species]].
 
@@ -700,20 +705,22 @@ While some scholars see warfare as an inescapable and integral aspect of human c
 The English word ''war'' derives from the late [[Old English]] (c.1050) words ''wyrre'' and ''werre''; the [[Old French|Old North French]] ''werre''; the [[Franks|Frankish]] ''werra''; and the [[Proto-Germanic language|Proto-Germanic]] ''werso''. The denotation of ''war'' derives from the [[Old Saxon]] ''werran'', [[Old High German]] ''werran'', and the German ''verwirren'': “to confuse”, “to perplex”, and “to bring into confusion”.&lt;ref&gt;{{cite web |title=war |publisher=Online Etymology Dictionary |url=http://www.etymonline.com/index.php?term=war |year=2010 |accessdate=24 April 2011}}&lt;/ref&gt; Another posited derivation is from the [[Ancient Greek]] ''barbaros'', the [[Old Persian]] ''varhara'', and the Sanskrit ''varvar'' and ''barbara''. In German, the equivalent is ''Krieg''; the equivalent Spanish, [[Portuguese language|Portuguese]], and Italian words for &quot;war&quot; is ''guerra'', derived from the Germanic ''werra'' (“fight”, “tumult”).&lt;ref&gt;''Diccionario de la Lengua Española'', 21&lt;sup&gt;a&lt;/sup&gt; edición (1992) p. 1071&lt;/ref&gt; Etymologic legend has it that the Romanic peoples adopted a foreign, Germanic word for &quot;war&quot;, to avoid using the [[Latin]] ''bellum'', because, when sounded, it tended to merge with the sound of the word ''bello'' (&quot;beautiful&quot;)
 
 ==History of warfare==
-{{Main|History of war}}
+{{Main|Military history}}
+[[File:War deaths caused by warfare.svg|thumb|right|300px|The percentages of men killed in war in eight tribal societies, and Europe and the U.S. in the 20th century. (Lawrence H. Keeley, Archeologist)]]
 Before the dawn of civilization, war likely consisted of small-scale raiding. One half of the people found in a [[Nubia]]n cemetery dating to as early as 12,000 years ago had died of violence.&lt;ref name=&quot;Keeley&quot;&gt;Keeley: ''War before civilization: The myth of the peaceful savage''&lt;/ref&gt; Since the rise of the [[State (polity)|state]] some 5,000 years ago,&lt;ref&gt;Diamond, Jared, Guns, Germs and Steel&lt;/ref&gt; military activity has occurred over much of the globe. The advent of [[gunpowder]] and the acceleration of technological advances led to modern warfare. According to Conway W. Henderson, &quot;One source claims 14,500 wars have taken place between 3500 BC and the late 20th century, costing 3.5 billion lives, leaving only 300 years of peace (Beer 1981: 20).&quot;&lt;ref&gt;{{cite book|author=Conway W. Henderson|title=Understanding International Law|url=http://books.google.com/books?id=AwMovLqKw2oC&amp;pg=PA212|accessdate=31 May 2012|date=9 February 2010|publisher=John Wiley &amp; Sons|isbn=978-1-4051-9764-9|pages=212–}}&lt;/ref&gt;
 
-In ''[[War Before Civilization]]'', Lawrence H. Keeley, a professor at the [[University of Illinois at Urbana-Champaign|University of Illinois]], says that approximately 90–95% of known societies throughout history engaged in at least occasional warfare,&lt;ref&gt;{{cite web|url=http://brneurosci.org/reviews/war.html |title=Review: War Before Civilization |publisher=Brneurosci.org |date=4 September 2006 |accessdate=2011-01-24}}&lt;/ref&gt; and many fought constantly.&lt;ref&gt;{{cite news|url=http://www.atimes.com/atimes/Front_Page/HG04Aa02.html|title=The fraud of primitive authenticity|last=Spengler|date=4 July 2006|work=Asia Times Online|accessdate=2009-06-08}}&lt;/ref&gt;
-[[File:War deaths caused by warfare.svg|thumb|right|300px|The percentages of men killed in war in eight tribal societies, and Europe and the U.S. in the 20th century. (Lawrence H. Keeley, Archeologist)]]
+In ''[[War Before Civilization]]'', Lawrence H. Keeley, a professor at the [[University of Illinois at Urbana–Champaign|University of Illinois]], says that approximately 90–95% of known societies throughout history engaged in at least occasional warfare,&lt;ref&gt;{{cite web|url=http://brneurosci.org/reviews/war.html |title=Review: War Before Civilization |publisher=Brneurosci.org |date=4 September 2006 |accessdate=2011-01-24}}&lt;/ref&gt; and many fought constantly.&lt;ref&gt;{{cite news|url=http://www.atimes.com/atimes/Front_Page/HG04Aa02.html|title=The fraud of primitive authenticity|last=Spengler|date=4 July 2006|work=Asia Times Online|accessdate=2009-06-08}}&lt;/ref&gt;
+[[File:MokoShuraiE-Kotoba IV.jpg|thumb|250px|Japanese [[samurai]] attacking a [[Mongol Empire|Mongol]] ship, 13th century]]
+
 Keeley explained several styles of primitive combat such as, small raids, large raids, and massacres. All of these forms of warfare were perpetrated by primitive societies. The use of the massacre by pre-state societies can be exhibited by the [[Dogrib people|Dogrib]] tribes of the subarctic in North America. The Dogrib tribe eventually destroyed the Yellowknife tribe by killing 4 men, 13 women, and 17 children which accounted for 20 percent of the population.&lt;ref name=&quot;Keeley&quot;/&gt; This was a devastating blow from which the Yellowknife tribe never recovered. Keeley further explains how small raids are not organized due to the lack of leadership and any formal training. This causes raids to be short and quick with relatively low numerical casualties but may significantly damage a percentage of a population. The deficit of resources also can account for a lack of fortifications and defensive structures in primitive prestate societies. The protection provided by a defensive could not justify the valuable resources used and labor implemented to build it.&lt;ref name=&quot;Keeley&quot;/&gt;
 
 [[William Rubinstein]] wrote that &quot;Pre-literate societies, even those organised in a relatively advanced way, were renowned for their studied cruelty ... 'archaeology yields evidence of prehistoric massacres more severe than any recounted in ethnography [ie, after the coming of the Europeans]'. At [[Crow Creek massacre|Crow Creek]], South Dakota, as noted, archaeologists found a [[mass grave]] of 'more than 500 men, women, and children who had been slaughtered, scalped, and mutilated during an attack on their village a century and a half before Columbus's arrival (ca. AD 1325)' &quot;.&lt;ref&gt;{{cite book|author=W. D. Rubinstein|title=Genocide: A History|url=http://books.google.com/books?id=nMMAk4VwLLwC&amp;pg=PA22|accessdate=31 May 2012|year=2004|publisher=Pearson Longman|isbn=978-0-582-50601-5|pages=22–50}}&lt;/ref&gt;
 
 In Western Europe, since the late 18th century, more than 150 conflicts and about 600 battles have taken place.&lt;ref name=War&gt;[http://www.ralphmag.org/CG/world-war-one2.html World War One – A New Kind of War | Part II], From ''14 – 18 Understanding the Great War'', by Stéphane Audoin-Rouzeau, Annette Becker&lt;/ref&gt;
-[[File:MokoShuraiE-Kotoba IV.jpg|thumb|250px|Japanese [[samurai]] attacking a [[Mongol Empire|Mongol]] ship, 13th century]]
+[[File:Custer Massacre At Big Horn, Montana June 25 1876.jpg|thumb|250px|According to the U.S. Bureau of the Census (1894), the [[American Indian Wars|Indian Wars]] of the 19th century cost the lives of about 19,000 whites and 30,000 Indians.&lt;ref&gt;Thornton, Russell (1990). ''American Indian Holocaust and Survival: A Population History since 1492''. University of Oklahoma Press. p. 48. ISBN 978-0-8061-2220-5&lt;/ref&gt;]]
 The [[Human Security Report 2005]] documented a significant decline in the number and severity of armed conflicts since the end of the [[Cold War]] in the early 1990s. However, the evidence examined in the 2008 edition of the Center for International Development and Conflict Management's &quot;Peace and Conflict&quot; study indicated that the overall decline in conflicts had stalled.&lt;ref&gt;Hewitt, Joseph, J. Wilkenfield and T. nevertheless the concept war is more than just a word but a signification to the meaning Death. Gurr ''[http://www.cidcm.umd.edu/pc/ Peace and Conflict 2008]'', Paradigm Publishers, 2007&lt;/ref&gt;
 
-Recent rapid increases in the technologies of war, and therefore in its destructiveness (see [[Mutual assured destruction]]), have caused widespread public concern, and have in all probability forestalled, and may hopefully altogether prevent the outbreak of a nuclear World War III. At the end of each of the last two World Wars, concerted and popular efforts were made to come to a greater understanding of the underlying dynamics of war and to thereby hopefully reduce or even eliminate it all together. These efforts materialized in the forms of the [[League of Nations]], and its successor, the United Nations.
+Recent rapid increases in the technologies of war, and therefore in its destructiveness (see [[Mutual assured destruction]]), have caused widespread public concern, and have in all probability forestalled, and may altogether prevent the outbreak of a nuclear World War III. At the end of each of the last two World Wars, concerted and popular efforts were made to come to a greater understanding of the underlying dynamics of war and to thereby hopefully reduce or even eliminate it all together. These efforts materialized in the forms of the [[League of Nations]], and its successor, the United Nations.
 
 Shortly after [[World War II]], as a token of support for this concept, most nations joined the United Nations. During this same post-war period, with the aim of further delegitimizing war as an acceptable and logical extension of foreign policy{{Citation needed|date=April 2011}}, most national governments also renamed their Ministries or Departments of War as their Ministries or Departments of Defense, for example, the former US Department of War was renamed as the [[US Department of Defense]].
 
@@ -723,7 +730,7 @@ In 1947, in view of the rapidly increasingly destructive consequences of modern 
 | title= Albert Einstein: Man of Imagination
 | accessdate = 2010-02-03}} Nuclear Age Peace Foundation paper
 &lt;/ref&gt;
-Fortunately, the anticipated costs of a possible third world war are currently no longer deemed as acceptable by most, thus little motivation currently seems to exist on an international level for such a war.
+The anticipated costs of a possible third world war are currently no longer deemed as acceptable by most, thus little motivation currently seems to exist on an international level for such a war.
 
 Still since the close of World War II, limited non-nuclear conflicts continue, and surprisingly enough, some outspoken celebrities and politicians have even advocated for the proclamation of another world war.&lt;ref name = &quot;NewsCommentators&quot;&gt;{{cite web
 | year = 2006
@@ -742,7 +749,7 @@ File:Bad-war.jpg|[[Swiss mercenaries|Swiss]] and [[Landsknecht]] pikemen fight a
 File:Battle of Orsha (1514-09-08).jpg|Russo-Polish war, ''[[Battle of Orsha]]'' in 1514
 File:Battle of Lepanto 1571.jpg|The Spanish naval victory of the ''[[Battle of Lepanto (1571)|Battle of Lepanto]]'', 1571, the last battle to be fought primarily between [[galley]]s
 File:Schlacht am Weißen Berg C-K 063.jpg|''[[Battle of White Mountain]]'', 1620, an early battle in the [[Thirty Years' War]]
-File:Van Soest, Four Days Battle.jpg|''The [[Four Days' Battle]], 1–4 June 1666'', during the [[Second Anglo–Dutch War]]
+File:Van Soest, Four Days Battle.jpg|''The [[Four Days' Battle]], 1–4 June 1666'', during the [[Second Anglo-Dutch War]]
 File:Marten's Poltava.jpg|The ''[[Battle of Poltava]]'' (1709), a decisive battle between Russian and Swedish troops
 File:Charge of the French Cuirassiers at Waterloo.jpg|Depicting French Cuirassiers charging onto the British squares during the ''[[Battle of Waterloo]]''
 File:Inkermann.jpg|The [[Lancashire Fusiliers|20th Foot]] at the ''[[Battle of Inkerman]]'', Crimean War, 1854
@@ -751,7 +758,7 @@ File:Crossingtherhine.jpg|US Army's [[89th Infantry Division (United States)|89t
 &lt;/gallery&gt;
 &lt;/div&gt;
 
-==Ten largest wars (by death toll)==
+==Nine largest wars (by death toll)==
 {{Main|List of wars by death toll}}
 Three of the ten most costly wars, in terms of loss of life, have been waged in the last century. These are of course the two World Wars, then followed by the [[Second Sino-Japanese War]] (which is sometimes considered part of [[World War II]], or overlapping with that war). Most of the others involved China or neighboring peoples. The death toll of World War II, being 60 million plus, surpasses all other war-death-tolls by a factor of two. This may be due to significant recent advances in weapons technologies, as well as recent increases in the overall human population.
 
@@ -764,7 +771,7 @@ Three of the ten most costly wars, in terms of loss of life, have been waged in 
 |-
 | 36 || 755–763 || [[An Shi Rebellion]]  (number exaggerated based on census system,but not considering the territorial shrink and inefficient census system afterwar）&lt;ref&gt;{{cite web|url=http://users.erols.com/mwhite28/warstat0.htm#AnLushan |title=Selected Death Tolls for Wars, Massacres and Atrocities Before the 20th Century |publisher=Users.erols.com |accessdate=2011-01-24}}&lt;/ref&gt;
 |-
-| 30–60 || 13th century || [[Mongol Empire|Mongol Conquests]] (see [[Mongol Conquests|Mongol invasions]] and [[Tatar invasions]])&lt;ref&gt;Ping-ti Ho, &quot;An Estimate of the Total Population of Sung-Chin China&quot;, in ''Études Song'', Series 1, No 1, (1970) pp. 33–53.&lt;/ref&gt;&lt;ref&gt;{{cite web|url=http://users.erols.com/mwhite28/warstat0.htm#Mongol |title=Mongol Conquests |publisher=Users.erols.com |accessdate=2011-01-24}}&lt;/ref&gt;&lt;ref&gt;{{cite news|url=http://findarticles.com/p/articles/mi_m1510/is_1987_Fall/ai_5151514/pg_2 |title=The world's worst massacres Whole Earth Review |publisher=Findarticles.com |accessdate=2011-01-24 |year=1987}}&lt;/ref&gt;
+| 30–60 || 13th century || [[Mongol Empire|Mongol Conquests]] (see [[Mongol conquests|Mongol invasions]] and [[Tatar invasions]])&lt;ref&gt;Ping-ti Ho, &quot;An Estimate of the Total Population of Sung-Chin China&quot;, in ''Études Song'', Series 1, No 1, (1970) pp. 33–53.&lt;/ref&gt;&lt;ref&gt;{{cite web|url=http://users.erols.com/mwhite28/warstat0.htm#Mongol |title=Mongol Conquests |publisher=Users.erols.com |accessdate=2011-01-24}}&lt;/ref&gt;&lt;ref&gt;{{cite news|url=http://findarticles.com/p/articles/mi_m1510/is_1987_Fall/ai_5151514/pg_2 |title=The world's worst massacres Whole Earth Review |publisher=Findarticles.com |accessdate=2011-01-24 |year=1987}}&lt;/ref&gt;
 |- 25 || 1616–1662 || [[Qing dynasty]] conquest of [[Ming Dynasty|Ming dynasty]]&lt;ref&gt;McFarlane, Alan: ''The Savage Wars of Peace: England, Japan and the Malthusian Trap'', Blackwell 2003, ISBN 0-631-18117-2,
 ISBN 978-0-631-18117-0 – cited by [http://users.erols.com/mwhite28/warstat0.htm#Manchu17c White]&lt;/ref&gt;
 |-
@@ -784,7 +791,7 @@ ISBN 978-0-631-18117-0 – cited by [http://users.erols.com/mwhite28/warstat0.ht
 ==Types of warfare==
 {{Original research|section|date=January 2010}}
 War, to become known as one, must entail some degree of confrontation using weapons and other [[military technology and equipment]] by armed forces employing [[military tactics]] and [[operational art]] within the broad [[military strategy]] subject to [[military logistics]]. [[War Studies]] by military theorists throughout [[military history]] have sought to identify the [[philosophy of war]], and to reduce it to a [[military science]].
-[[File:Bundesarchiv Bild 183-H25224, Guernica, Ruinen.jpg|thumb|Ruins of [[Guernica]] (1937). The [[Spanish civil war]] was one of Europe's bloodiest and most brutal civil wars.]]
+[[File:Bundesarchiv Bild 183-H25224, Guernica, Ruinen.jpg|thumb|Ruins of [[Guernica]] (1937). The [[Spanish Civil War]] was one of Europe's bloodiest and most brutal civil wars.]]
 In general, modern military science considers several factors before a [[Defence policy|National defence policy]] is created to allow a war to commence: the environment in the area(s) of combat operations, the posture national forces will adopt on the commencement of a war, and the type of warfare troops will be engaged in.
 
 [[Conventional warfare]] is an attempt to reduce an opponent's military capability through open battle. It is a declared war between existing states in which nuclear, biological, or chemical weapons are not used or only see limited deployment in support of conventional military goals and maneuvers.
@@ -800,14 +807,14 @@ Civil war is a war where the forces in conflict belong to the same nation or pol
 Intentional air pollution in combat is one of a collection of techniques collectively called [[chemical warfare]]. Poison gas as a [[Chemical warfare|chemical weapon]] was principally used during [[World War I]], and resulted in an estimated 91,198 deaths and 1,205,655 injuries.{{Citation needed|date=June 2008}} Various treaties have sought to ban its further use. Non-lethal chemical weapons, such as [[tear gas]] and [[pepper spray]], are widely used, sometimes with deadly effect.
 
 ===Warfare environment===
-The environment in which a war is fought has a significant impact on the type of combat which takes place, and can include within its area different types of terrain. This, in turn, means that soldiers have to be trained to fight in a specific types of environments and terrains that generally reflects troops' mobility limitations or enablers.
-These don't include :
+The environment in which a war is fought has a significant impact on the type of combat which takes place, and can include within its area different types of terrain. This, in turn, means that soldiers have to be trained to fight in a specific types of environments and terrains that generally reflects troops' mobility and limitations.
+===Types of warfare===
 {{col-begin}}
 {{col-2}}
 [[File:British Paratroops inside one of the C-47 transport aircraft.jpg|thumb|200px|British [[paratroopers]] inside one of the C-47 transport aircraft, September 1944]]
 '''Warfare by objective''':
 * [[Strategic defence|Defensive warfare]]
-* [[Strategic offensive|Offensive warfare]]
+* [[Offensive (military)|Offensive warfare]]
 
 '''Warfare by doctrine''':
 * [[Attrition warfare]]/[[Fabian strategy|Fabian warfare]]
@@ -815,7 +822,7 @@ These don't include :
 * [[Guerrilla warfare|Guerilla warfare]]
 * [[Static warfare]]/[[Positional warfare]]
 * [[Insurgency]] warfare
-* [[Counterinsurgency]] warfare
+* [[Counter-insurgency]] warfare
 [[File:Marine-raiders.jpg|thumb|200px|U.S. [[Marine Raiders]] gathered in front of a Japanese dugout, January 1944]]
 '''Warfare by terrain''':
 * [[Jungle warfare]]
@@ -825,7 +832,7 @@ These don't include :
 * [[Naval warfare]]
 * [[Littoral warfare]]
 * [[Urban warfare]]
-* [[Amphibious Warfare]]
+* [[Amphibious warfare]]
 {{col-end}}
 
 ===Behaviour and conduct in war===
@@ -903,7 +910,7 @@ The political and economic circumstances, in the peace that follows war, usually
 
 A warring party that [[surrender (military)|surrenders]] or [[capitulation (surrender)|capitulates]] may have little negotiating power, with the victorious side either imposing a settlement or dictating most of the terms of any treaty. A common result is that conquered territory is brought under the dominion of the stronger military power. An [[unconditional surrender]] is made in the face of overwhelming military force as an attempt to prevent further harm to life and property. For example, the [[Empire of Japan]] gave an unconditional surrender to the [[Allies of World War II]] after the [[atomic bombings of Hiroshima and Nagasaki]] (see [[Surrender of Japan]]), the preceding massive strategic bombardment of Japan and declaration of war and the immediate invasion of Manchuria by the Soviet Union. A settlement or surrender may also be obtained through [[deception]] or bluffing.
 
-Many other wars, however, have ended in complete destruction of the opposing territory, such as the [[Battle of Carthage (c. 149 BCE)|Battle of Carthage]] of the [[Third Punic War]] between the [[Phoenicia]]n city of [[Carthage]] and Ancient Rome in 149 BC. In 146 BC the Romans burned the city, enslaved its citizens, and razed the buildings.
+Many other wars, however, have ended in complete destruction of the opposing territory, such as the [[Battle of Carthage (c. 149 BC)|Battle of Carthage]] of the [[Third Punic War]] between the [[Phoenicia]]n city of [[Carthage]] and Ancient Rome in 149 BC. In 146 BC the Romans burned the city, enslaved its citizens, and razed the buildings.
 
 Some wars or aggressive actions end when the military objective of the victorious side has been achieved. Others do not, especially in cases where the state structures do not exist, or have collapsed prior to the victory of the conqueror. In such cases, disorganised [[Guerrilla warfare|guerilla warfare]] may continue for a considerable period. In cases of complete surrender conquered territories may be brought under the permanent dominion of the victorious side. A raid for the purposes of [[looting]] may be completed with the successful capture of goods. In other cases an aggressor may decide to end hostilities to avoid continued losses and cease hostilities without obtaining the original objective, such as happened in the [[Iran–Iraq War]].
 
@@ -930,7 +937,7 @@ Conflicts in the following list are currently causing at least 1,000 violent dea
 | 1,000+&lt;ref&gt;{{cite web|url=http://www.colombiareports.com/colombia-news/news/17441-military-claims-to-have-killed-3500-criminals-in-2011.html |title=Colombian military claims to have killed 3,500 criminals in 2011 – Colombia news |publisher=Colombia Reports |date=6 July 2011 |accessdate=2011-10-23}}&lt;/ref&gt;
 |-
 | align=center | 1967
-| [[Naxalite-Maoist insurgency]]
+| [[Naxalite–Maoist insurgency]]
 | {{flag|India}}
 | ~11,200
 | 1,174+&lt;ref&gt;{{cite news| url=http://news.bbc.co.uk/2/hi/south_asia/8529124.stm |work=BBC News | title=India's Maoists offer ceasefire | date=22 February 2010 | accessdate=2010-05-08}}&lt;/ref&gt;
@@ -1004,14 +1011,14 @@ An interpretation of the ancient Jewish commentary (BeReshit Rabbah) on the figh
 [[File:Szigetvar 1566.jpg|thumb|200px|The [[List of campaigns of Suleiman the Magnificent|Ottoman campaign]] for territorial [[Ottoman wars in Europe|expansion in Europe]] in 1566, Crimean Tatars as vanguard. The Tatars essentially sought booty, especially [[Slavery in the Ottoman Empire|slaves]].]]
 In ''Why Nations Go to War'', by [[John G. Stoessinger]], the author points out that both sides will claim that morality justifies their fight. He also states that the rationale for beginning a war depends on an overly optimistic assessment of the outcome of hostilities (casualties and costs), and on [[Fundamental attribution error|misperceptions of the enemy's intentions]].
 
-As the strategic and tactical aspects of warfare are always changing, theories and doctrines relating to warfare are often reformulated before, during, and after every major war. [[Carl Von Clausewitz]] said, 'Every age had its own kind of war, its own limiting conditions, and its own peculiar preconceptions.'&lt;ref&gt;Clausewitz, Carl Von (1976), On War (Princeton University Press) p.593&lt;/ref&gt; The one constant factor is war’s employment of organized violence and the resultant destruction of property and/ or lives that necessarily follows.
+As the strategic and tactical aspects of warfare are always changing, theories and doctrines relating to warfare are often reformulated before, during, and after every major war. [[Carl von Clausewitz]] said, 'Every age had its own kind of war, its own limiting conditions, and its own peculiar preconceptions.'&lt;ref&gt;Clausewitz, Carl Von (1976), On War (Princeton University Press) p.593&lt;/ref&gt; The one constant factor is war’s employment of organized violence and the resultant destruction of property and/ or lives that necessarily follows.
 
 ===Psychoanalytic psychology===
 Dutch psychoanalyst [[Joost Meerloo]] held that, &quot;War is often...a mass discharge of accumulated internal rage (where)...the inner fears of mankind are discharged in mass destruction.&quot;&lt;ref name = &quot;meerloo&quot;&gt;
 | A. M. Meerloo, M.D. ''The Rape of the Mind'' (2009) p.134, Progressive Press, ISBN 978-1-61577-376-3
 &lt;/ref&gt; Thus war can sometimes be a means by which man's own frustration at his inability to master his own self is expressed and temporarily relieved via his unleashing of destructive behavior upon ''others.'' In this destructive scenario, these ''others'' are made to serve as the scapegoat of man's own unspoken and subconscious frustrations and fears.
 
-Other psychoanalysts such as E.F.M. Durban and [[John Bowlby]] have argued that human beings are [[Inheritance|inherently]] violent.&lt;ref&gt;Durbin, E.F.L. and John Bowlby. ''Personal Aggressiveness and War'' 1939.&lt;/ref&gt; This aggressiveness is fueled by [[displacement (psychology)|displacement]] and [[Psychological projection|projection]] where a person transfers his or her grievances into bias and hatred against other [[Race (classification of human beings)|races]], religions, nations or [[Ideology|ideologies]]. By this theory, the nation state preserves order in the local society while creating an outlet for aggression through warfare. If war is innate to human nature, as is presupposed and predetermined by many psychological theories, then there is little hope of ever escaping it.
+Other psychoanalysts such as E.F.M. Durban and [[John Bowlby]] have argued that human beings are [[Inheritance|inherently]] violent.&lt;ref&gt;Durbin, E.F.L. and John Bowlby. ''Personal Aggressiveness and War'' 1939.&lt;/ref&gt; This aggressiveness is fueled by [[displacement (psychology)|displacement]] and [[Psychological projection|projection]] where a person transfers his or her grievances into bias and hatred against other [[race (human classification)|races]], religions, nations or [[Ideology|ideologies]]. By this theory, the nation state preserves order in the local society while creating an outlet for aggression through warfare. If war is innate to human nature, as is presupposed and predetermined by many psychological theories, then there is little hope of ever escaping it.
 
 The Italian psychoanalyst Franco Fornari, a follower of [[Melanie Klein]], thought that war was the paranoid or projective “elaboration” of mourning.&lt;ref&gt;(Fornari 1975)&lt;/ref&gt; Fornari thought that war and violence develop out of our “love need”: our wish to preserve and defend the sacred object to which we are attached, namely our early mother and our fusion with her. For the adult, nations are the sacred objects that generate warfare. Fornari focused upon sacrifice as the essence of war: the astonishing willingness of human beings to die for their country, to give over their bodies to their nation.
 
@@ -1023,6 +1030,7 @@ Despite Fornari's theory that man's altruistic desire for self-sacrifice for a n
 ===Evolutionary ===
 {{POV-section|date=October 2011}}
 {{Disputed-section|date=October 2011}}
+[[File:Reproduction of Bonampak murals (panorama).JPG|thumb|280px|Increasing population and constant warfare among the [[Maya warfare|Maya]] city-states over resources may have contributed to the eventual [[Classic Maya collapse|collapse]] of the [[Maya civilization]] by AD 900.]]
 Several theories concern the evolutionary origins of warfare. There are two main schools: One sees organized warfare as emerging only in the mesolithic, as a result of the emergence of complex social organization, higher population density and political organization and competition over resources. The other school tends to see human warfare simply as an extension of animal behavior, such as territoriality and sexual competition.&lt;ref&gt;Peter Meyer. Social Evolution in Franz M. Wuketits and Christoph Antweiler (eds.) Handbook of Evolution The Evolution of Human Societies and Cultures Wiley-VCH Verlag&lt;/ref&gt;
 
 This school argues that since organized warlike behavior patterns are also found in many other primate species such as [[chimpanzee]]s,&lt;ref name = &quot;ApesWar&quot;&gt;{{cite news
@@ -1041,9 +1049,10 @@ as well as in many [[ant]] species,&lt;ref name = &quot;AntsLandmines&quot;&gt;{
 | title= Warrior Ants: The Enduring Threat of the Small War and the Land-mine
 }} Scholarly comparisons between human and ant wars
 &lt;/ref&gt; this suggests that between group conflict is a general feature of animal social behavior. Biologists studying primate behavior have added to the debate, documenting warlike activities among several primate species and seeing similarities to humans.&lt;ref&gt;Crofoot, Margaret C. and Richard W. Wrangham, 2010 &quot;Intergroup Aggression in Primates and Humans: The Case for a Unified Theory&quot; in Kappeler, Thomas M &amp; Joan B Silk (eds) ''Mind the Gap – tracing the origins of human universals''. Springer.&lt;/ref&gt; Others argue that while war may be a natural phenomenon, the development of technology and complex social organization has accelerated the scale of warfare to exceptional levels among modern humans, starting at some point in the mesolithic, and escalating with the development of weaponry and large-scale state formations.&lt;ref&gt;Johan M.G. van der Dennen. 1995. The Origin of War: Evolution of a Male-Coalitional Reproductive Strategy. Origin Press, Groningen, 1995 chapters 1 &amp; 2&lt;/ref&gt;
-[[File:COLLECTIE TROPENMUSEUM Een Ibu Dajak krijger uit Long Nawan Z. en O. afdeling Borneo. TMnr 60034031.jpg|thumb|[[Dayak people|Dayak]] headhunters in Borneo, ca. 1927]]
+
 One line of evidence for violent conflict among the ancestors of humans is [[sexual dimorphism]]. In species that have high levels of male competition over females, males tend to be larger and stronger than females. Humans have considerable sexual dimorphism, although lower than our nearest primate relatives.&lt;ref&gt;Roger Lewin and Robert Foley. 2004 Principles of human evolution, 2nd ed.p. 182-3&lt;/ref&gt; The strength difference is greater for upper-body strength than for lower-body strength. Men are in general terms also larger, faster, and more aggressive. Their skeleton, especially in the vulnerable face, is more robust. This suggests that male competition has been an important factor in human evolution.&lt;ref&gt;{{cite doi|10.1016/j.evolhumbehav.2010.02.005}}&lt;/ref&gt;
 
+[[File:COLLECTIE TROPENMUSEUM Een Ibu Dajak krijger uit Long Nawan Z. en O. afdeling Borneo. TMnr 60034031.jpg|thumb|[[Dayak people|Dayak]] headhunters in Borneo, ca. 1927]]
 [[Steven Pinker]] in his book ''[[The Blank Slate]]'' argues that raiding or warfare between groups of humans in the ancestral environment was often beneficial for the victors. This includes gaining control over scarce resources as well as the women of the defeated or raided group. Various features of modern warfare such as alliances between groups and [[preemptive war]]s were likely part of these conflicts. In order to have a credible [[deterrence theory|deterrence]] against other groups (as well as on an individual level), it was important to have a reputation for retaliation, causing humans to develop instincts for [[revenge]] as well as for protecting a group's (or an individual's) reputation (&quot;[[honor]]&quot;). Pinker argues that the development of the state and the police have dramatically reduced the level of warfare and violence compared to the ancestral environment. Whenever the state breaks down, which can be very locally such as in poor areas of a city, humans again organize in groups for protection and aggression and concepts such as violent revenge and protecting honor again become extremely important.
 
 [[Ashley Montagu]] strongly denied universalistic instinctual arguments, arguing that social factors and childhood socialization are important in determining the nature and presence of warfare. Thus, he argues, while human aggression may be a universal occurrence, warfare is not, and would appear to have been a historical invention, associated with certain types of human societies.&lt;ref&gt;Montagu, Ashley (1976), ''The Nature of Human Aggression'' (Oxford University Press)&lt;/ref&gt; This argument has been supported by ethnographic research conducted in societies where the concept of aggression seems to be entirely absent, e.g., the [[Chewong language|Chewong]] of the Malay peninsula.&lt;ref&gt;Howell, Signe and Roy Willis, eds. (1989) Societies at Peace: Anthropological Perspectives. London: Routledge&lt;/ref&gt; Crofoot and Wrangham have instead argued that warfare, if defined as group interactions in which &quot;coalitions attempt to aggressively dominate or kill members of other groups&quot;, is a characteristic of most human societies. Those in which it has been lacking &quot;tend to be societies that were politically dominated by their neighbors&quot;.&lt;ref name=HumanPrimateAggression&gt;&quot;Mind the Gap: Tracing the Origins of Human Universals&quot; By Peter M. Kappeler, Joan B. Silk, 2009, Chapter 8, &quot;Intergroup Aggression in Primates and Humans; The Case for a Unified Theory&quot;, Margaret C. Crofoot and Richard W. Wrangham&lt;/ref&gt;
@@ -1061,11 +1070,11 @@ War can be seen as a growth of economic competition in a competitive internation
 {{quote|For the corporation executives, the military metaphysic often coincides with their interest in a stable and planned flow of profit; it enables them to have their risk underwritten by public money; it enables them reasonably to expect that they can exploit for private profit now and later, the risky research developments paid for by public money. It is, in brief, a mask of the subsidized capitalism from which they extract profit and upon which their power is based.
 – [[C. Wright Mills]], ''Causes of World War 3'', 1960.}}
 
-{{quote|In the councils of government, we must guard against the acquisition of unwarranted influence, whether sought or unsought, by the [[military-industrial complex]]. The potential for disastrous rise of misplaced power exists and will persist.
+{{quote|In the councils of government, we must guard against the acquisition of unwarranted influence, whether sought or unsought, by the [[military–industrial complex]]. The potential for disastrous rise of misplaced power exists and will persist.
 – [[Dwight D. Eisenhower|Dwight Eisenhower]], Farewell Address, January 17, 1961.}}
 
 ===Marxist ===
-The [[Marxism|Marxist]] theory of war is quasi-economic in that it states that all modern wars are caused by competition for resources and markets between great ([[Imperialism|imperialist]]) powers, claiming these wars are a natural result of the [[free market]] and [[Social class|class system]]. Part of the theory is that war will only disappear once a [[world revolution]], over-throwing free markets and class systems, has occurred. Marxist philosopher [[Rosa Luxembourg]] theorized that [[imperialism]] was the result of capitalist countries needing new [[economic market|markets]]. Expansion of the [[means of production]] is only possible if there is a corresponding growth in [[consumer demand]]. Since the workers in a [[capitalist economy]] would be unable to fill the demand, producers must expand into non-capitalist markets to find consumers for their goods, hence driving imperialism.&lt;ref&gt;{{cite web |url=http://www.marxists.org/archive/mandel/1955/08/imp-crit.html |title=The Marxist Theory of Imperialism and its Critics |first=Einde |last=O'Callaghan |publisher=[[Marxist Internet Archive]] |date=25 October 2007 |accessdate=24 April 2011}}&lt;/ref&gt;
+The [[Marxism|Marxist]] theory of war is quasi-economic in that it states that all modern wars are caused by competition for resources and markets between great ([[Imperialism|imperialist]]) powers, claiming these wars are a natural result of the [[free market]] and [[Social class|class system]]. Part of the theory is that war will only disappear once a [[world revolution]], over-throwing free markets and class systems, has occurred. Marxist philosopher [[Rosa Luxemburg]] theorized that [[imperialism]] was the result of capitalist countries needing new [[economic market|markets]]. Expansion of the [[means of production]] is only possible if there is a corresponding growth in [[consumer demand]]. Since the workers in a [[capitalist economy]] would be unable to fill the demand, producers must expand into non-capitalist markets to find consumers for their goods, hence driving imperialism.&lt;ref&gt;{{cite web |url=http://www.marxists.org/archive/mandel/1955/08/imp-crit.html |title=The Marxist Theory of Imperialism and its Critics |first=Einde |last=O'Callaghan |publisher=[[Marxists Internet Archive]] |date=25 October 2007 |accessdate=24 April 2011}}&lt;/ref&gt;
 
 ===Demographic===&lt;!-- This section is linked from [[The Clash of Civilizations|Clash of Civilizations]] --&gt;
 
@@ -1076,7 +1085,7 @@ Demographic theories can be grouped into two classes, Malthusian theories and [[
 Malthusian theories see expanding population and scarce resources as a source of violent conflict.
 
 [[Pope Urban II]] in 1095, on the eve of the [[First Crusade]], spoke:
-{{quote|For this land which you now inhabit, shut in on all sides by the sea and the mountain peaks, is too narrow for your large population; it scarcely furnishes food enough for its cultivators. Hence it is that you murder and devour one another, that you wage wars, and that many among you perish in civil strife. Let hatred, therefore, depart from among you; let your quarrels end. Enter upon the road to the Holy Sepulchre; wrest that land from a wicked race, and subject it to yourselves.&lt;ref&gt;{{cite book |title=Lend me your ears: great speeches in history |first=William |last=Safire |publisher=[[W. W. Norton &amp; Company]] |year=200] |isbn=978-0-393-05931-1 |page=94}}&lt;/ref&gt;}}
+{{quote|For this land which you now inhabit, shut in on all sides by the sea and the mountain peaks, is too narrow for your large population; it scarcely furnishes food enough for its cultivators. Hence it is that you murder and devour one another, that you wage wars, and that many among you perish in civil strife. Let hatred, therefore, depart from among you; let your quarrels end. Enter upon the road to the Holy Sepulchre; wrest that land from a wicked race, and subject it to yourselves.&lt;ref&gt;{{cite book |title=Lend me your ears: great speeches in history |first=William |last=Safire |publisher=[[W. W. Norton &amp; Company]] |year=2004 |isbn=978-0-393-05931-1 |page=94}}&lt;/ref&gt;}}
 
 This is one of the earliest expressions of what has come to be called the Malthusian theory of war, in which wars are caused by expanding populations and limited resources. [[Thomas Malthus]] (1766–1834) wrote that populations always increase until they are limited by war, disease, or [[famine]].&lt;ref&gt;{{cite book |title=Geography: an integrated approach |first=David |last=Waugh |publisher=[[Nelson Thornes]] |year=2000 |isbn=978-0-17-444706-1 |page=378}}&lt;/ref&gt;
 
@@ -1136,7 +1145,7 @@ A bigger branch of the theory, advanced by scholars of international relations s
 
 Some go further and say that there is a problem of information asymmetry with incentives to misrepresent. The two countries may not agree on who would win a war between them, or whether victory would be overwhelming or merely eked out, because each side has military secrets about its own capabilities. They will not avoid the bargaining [[failure]] by sharing their secrets, since they cannot trust each other not to lie and exaggerate their strength to extract more concessions. For example, Sweden made efforts to deceive Nazi Germany that it would resist an attack fiercely, partly by playing on the myth of Aryan superiority and by making sure that [[Hermann Göring]] only saw elite troops in action, often dressed up as regular soldiers, when he came to visit.
 
-The American decision to enter the [[Vietnam War]] was made with the full knowledge that the communist forces would resist them, but did not believe that the guerrillas had the capability to long oppose [[United States armed forces|American forces]].
+The American decision to enter the [[Vietnam War]] was made with the full knowledge that the communist forces would resist them, but did not believe that the guerrillas had the capability to long oppose [[United States Armed Forces|American forces]].
 
 Thirdly, bargaining may fail due to the states' inability to make credible commitments.&lt;ref&gt;Powell, Robert. 2002. &quot;Bargaining Theory and International Conflict.&quot; ''Annual Review of Political Science'' 5: 1–30.&lt;/ref&gt; In this scenario, the two countries might be able to come to a bargain that would avert war if they could stick to it, but the benefits of the bargain will make one side more powerful and lead it to demand even more in the future, so that the weaker side has an incentive to make a stand now.
 
@@ -1176,7 +1185,7 @@ The Just War standard is as old as Western Civilization itself, and still has si
 
 These two positions generally cover the broad philosophical and ethical bents mainstream society. However, there are several theories on and about War which are in the minority in culture, but which, because of the influence they have had in recent history, demand mention here. These strains of thought on human society and war can be broken up into two main camps: [[Marxist]] and Fascist, both of which view war as purely practical.
 
-Marxism, and other such [[historicist]] ideals, hold that history advances through a set of [[dialectics]] (as stated by [[Heinrich Moritz Chalybäus]]: thesis, antithesis, synthesis). Marx, and his followers, in particular held that history advances through violence. [[Marxism-Leninism]], in fact, held the belief that outright incitement to violence and war was necessary to topple Capitalism and free the [[proletariat]]. In these theories, the question of ethics has no place, as the value of the war is entirely dependent on whether it advances the revolution or synthesis.
+Marxism, and other such [[historicist]] ideals, hold that history advances through a set of [[dialectics]] (as stated by [[Heinrich Moritz Chalybäus]]: thesis, antithesis, synthesis). Marx, and his followers, in particular held that history advances through violence. [[Marxism–Leninism]], in fact, held the belief that outright incitement to violence and war was necessary to topple Capitalism and free the [[proletariat]]. In these theories, the question of ethics has no place, as the value of the war is entirely dependent on whether it advances the revolution or synthesis.
 
 Fascism, and the ideals it encompasses, such as [[Pragmatism]], Racism, and [[Social Darwinism]], hold that violence is good.&lt;ref&gt;{{cite book|last=Griffin and Feldman, eds|first=Roger and Matthew|title=Fascism: Fascism and Culture|year=2004|publisher=Routledge|page=185}}&lt;/ref&gt;&lt;ref&gt;{{cite book|last=Woodley|first=Daniel|title=Fascism and political theory critical perspectives on fascist ideology|year=2010|publisher=Routledge|location=London|isbn=0-203-87157-X|page=276|url=http://wxy.seu.edu.cn/humanities/sociology/htmledit/uploadfile/system/20100724/20100724163537707.pdf}}&lt;/ref&gt; Pragmatism holds that war and violence can be good if it serves the ends of the people, without regard for universal morality. Racism holds that violence is good so that a master race can be established, or to purge an inferior race from the earth, or both. Social Darwinism thinks that violence is sometimes necessary to weed the unfit from society so that civilization can flourish. These are broad [[archetypes]] for the general position that [[the ends justify the means]].
 
@@ -1399,7 +1408,7 @@ Fascism, and the ideals it encompasses, such as [[Pragmatism]], Racism, and [[So
 [[zh-yue:打仗]]
 [[bat-smg:Vaina]]
 [[zh:战争]]</text>
-      <sha1>6fct5ndgnwpi0md5tf1wai71b9y8t8q</sha1>
+      <sha1>55dyfdxa3hovfjwwqgcz68ldgozwjpr</sha1>
       <model>wikitext</model>
       <format>text/x-wiki</format>
     </revision>

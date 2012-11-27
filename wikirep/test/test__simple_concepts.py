@@ -2,7 +2,7 @@
 
 from model.concept import Concept
 import unittest
-from tests import test_utils
+import test_utils
 from model import db_builder
 from model import stop_words_stemmer
 from model.stop_words_stemmer import StopWordsStemmer

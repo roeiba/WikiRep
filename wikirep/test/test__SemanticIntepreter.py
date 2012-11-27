@@ -1,7 +1,8 @@
 '''
 Created on Sep 19, 2012
 '''
-from model import semantic_interpreter
+from model.semantic_interpreter import SemanticInterpreter
+from model.database_wrapper import DatabaseWrapper
 import unittest
 import numpy as np
 from test_utils import TestBase
@@ -25,7 +26,7 @@ class TestSemanticIntepreter(TestBase):
                [0.2, 0.8],
                [1.0, 0.0]])
         print type(wieght_matrix)
-        db = semantic_interpreter.DatabaseWrapper( wieght_matrix, concepts_index, words_index)
+        db = DatabaseWrapper( wieght_matrix, concepts_index, words_index)
         return db
 
 # ------------------------   Tests -----------------------------------
@@ -35,7 +36,7 @@ class TestSemanticIntepreter(TestBase):
         db = self.getSimpleDb()
         
         # act
-        semantic_interpreter.SemanticInterpreter(db, StopWordsStemmer([]))
+        SemanticInterpreter(db, StopWordsStemmer([]))
         
 
     def test_simple(self):
@@ -44,7 +45,7 @@ class TestSemanticIntepreter(TestBase):
         
         text = "a b c"
         stemmer = StopWordsStemmer([])
-        si = semantic_interpreter.SemanticInterpreter(db, stemmer)
+        si = SemanticInterpreter(db, stemmer)
            
         expected = np.array([1.7/3, 1.3/3])
         # act
@@ -57,7 +58,7 @@ class TestSemanticIntepreter(TestBase):
         
         text = "x y z" # no x,y, z in the corpus
         stemmer = StopWordsStemmer([])
-        si = semantic_interpreter.SemanticInterpreter(db, stemmer)
+        si = SemanticInterpreter(db, stemmer)
            
         #act
         si.build_weighted_vector(text)

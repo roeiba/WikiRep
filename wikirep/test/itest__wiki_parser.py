@@ -6,7 +6,7 @@ Created on Oct 1, 2012
 import os 
 import unittest
 
-import tests.test_utils as test_utils
+import test_utils as test_utils
 from parsers import wrappers
 
 class TestWikiParser(test_utils.TestBase):
