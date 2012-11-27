@@ -39,13 +39,13 @@ class WikiKnowledge(object):
         self.semantic_intepreter = None
         self.db_builder = DbBuilder(self.stemmer)
         
-    def make_dump(self, wiki_dump, *articles, **kwargs):
+    def make_dump(self, wiki_dump, *articles_titles, **kwargs):
         """ Download specified articles from Wikipedia site, 
             merges them into one file, compresses it as Wikipedia dump file
-            @param articles: article's canonic name on Wikipedia web page
+            @param articles_titles: article's canonic name on Wikipedia web page
             @param wiki_dump: output filename (if not specified default is used)
         """
-        web_tools.articles_dump_to_file(articles, wiki_dump, **kwargs)
+        web_tools.articles_dump_to_file(articles_titles, wiki_dump, **kwargs)
     
     def download_all(self, wiki_dump=None):
         """ Download whole wikipedia into dump file.
@@ -127,3 +127,13 @@ class WikiKnowledge(object):
     def _build_semantic_interpreter(self):
         db = self.db_builder.build()
         self.semantic_intepreter = SemanticInterpreter(db, self.stemmer)
+        
+#==========================================================================================
+
+_defaultWikiKnowledge = WikiKnowledge()
+
+def getWikiKnowledge():
+    return _defaultWikiKnowledge
+    
+
+        
