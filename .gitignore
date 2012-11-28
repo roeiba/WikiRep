@@ -1,5 +1,4 @@
 *.pyc
-io_tests/data_output/*
-data_output/*
-data_output/wikidump.xml
-data_output/*
+*/data_output/*
+
+

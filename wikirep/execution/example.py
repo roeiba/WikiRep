@@ -7,9 +7,9 @@ import unittest
 import os
 
 from model.wiki_knowledge import WikiKnowledge
-from stop_words_stemmer import StopWordsStemmer
+from model.stop_words_stemmer import StopWordsStemmer
 from model.logger import *
-from tests import test_utils
+import test.test_utils as test_utils
 
 class Test(unittest.TestCase):
     def setUp(self):

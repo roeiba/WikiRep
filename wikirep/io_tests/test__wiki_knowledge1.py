@@ -9,12 +9,14 @@ import os
 from model.wiki_knowledge import WikiKnowledge
 from model.stop_words_stemmer import StopWordsStemmer
 from model.logger import *
-import test_utils
+import test.test_utils as test_utils
+from io_test_utils import getOutputFile
 
 class Test(unittest.TestCase):
     def setUp(self):
-        self.tmp_dump_file = os.path.abspath("wiki_knowledge_output.xml")
-        self.tmp_wdb_file = os.path.abspath("wiki_knowledge_output.wdb")
+        self.tmp_dump_file = getOutputFile("wiki_knowledge_output.xml")
+        self.tmp_wdb_file = getOutputFile("wiki_knowledge_output.wdb")
+        
         self.expected_articles = ['Knowledge', 'Love', 'War'] 
         self.expected_xml_path = os.path.join(os.path.dirname(__file__) ,"expected_results/expected_xml_Knowledge_Love_War.xml")
         self.expected_wdb_path = os.path.join(os.path.dirname(__file__) ,"expected_results/expected_Knowledge_Love_War.wdb")

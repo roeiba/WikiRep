@@ -63,7 +63,8 @@ def extract_clean_pages(src_wiki_dump, keep_sections=False,keep_links=False):
     @param keep_sections: preserve sections
     @param keep_links: preserve links
     """
-    for tid, title, text, rev_id in extract_pages(src_wiki_dump):
+    for wdoc in extract_pages(src_wiki_dump):
+        tid, title, text, rev_id = wdoc.id, wdoc.title, wdoc.raw_text, wdoc.rev_id
         clean_text =  WikiExtractor.clean(text)
         DEBUG("""
         Original text:

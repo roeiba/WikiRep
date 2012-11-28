@@ -29,8 +29,8 @@ In contrast to this approach, [[Ludwig Wittgenstein|Wittgenstein]] observed, fol
 [[Symbolic linguistic representation|Symbolic representation]]s can be used to indicate meaning and can be thought of as a dynamic process. Hence the transfer of the symbolic representation can be viewed as one [[wikt:ascription|ascription]] process whereby knowledge can be transferred. Other forms of communication include observation and imitation, verbal exchange, and audio and video recordings. Philosophers of language and [[semioticians]] construct and analyze theories of knowledge transfer or communication.{{Citation needed|date=September 2007}}
 """
         
-        clean_text = wp.clean_wiki_text_text_only(text)
-        print clean_text
+        #clean_text = wp.clean_wiki_text_text_only(text)
+        #print clean_text
         #links_gen = wp.get_links(text)
         #for link in links_gen:
         #   print link
