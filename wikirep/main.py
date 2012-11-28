@@ -1,16 +1,15 @@
 #!/usr/bin/env python2.7
 from model.wiki_knowledge import WikiKnowledge
-import handlers
+import handlers 
 import sys
 import logging
+from scipy.lib.decorator import DEF
 
-default_config = dict(
-    dump_path = "/tmp/123.txt",
-    wdb_path = "/tmp/wikibuild.wdb",
-    articles = ['Knowledge'],
-    words_db = "/path/to/words/db"
-    )
-         
+class DConfig:
+    dump_path = "data/wikidump.xml"
+    parsed_path ="data/wikiparsed.xml"
+    wdb_path = "data/wikibuild.wdb"
+                  
 class colors(object):
     BLUE = '\x1b[34m'
     RESET = '\x1b[39m'
@@ -24,12 +23,14 @@ class colors(object):
     
 def makedump_parser(subparsers):
     # create the parser for the "make" command
-    parser_makedump = subparsers.add_parser('makedump', help="Download specified articles from wikipedia site," + 
-                        "merges them into one file and compress it as wikipedia dump file")
+    parser_makedump = subparsers.add_parser('makedump', 
+                        help="Download specified articles from wikipedia site," + 
+                             "merges them into one file and compress it as wikipedia dump file")
     parser_makedump.add_argument("article", nargs="+", help="List of articles for download" )
-    parser_makedump.add_argument("-dump", type=str, default=default_config['dump_path'],
+    parser_makedump.add_argument("-dump", type=str, default=DConfig.dump_path,
                         help="output file name", dest="dumpfile")
     parser_makedump.set_defaults(func=handlers.makedump)
+
 
 def download_parser(subparsers):
     # create the parser for the "download" command
@@ -46,23 +47,23 @@ def parse_parser(subparsers):
         title: Wikipedia concept's title
         text: - Clean text 
         rev_id: - Wikipedia concept's revision""")
-    parser_parse.add_argument("-d", "--dump", type=str, help='input dump file path')
-    parser_parse.add_argument("-o", "--output", type=str, help='output XML file path')
+    parser_parse.add_argument("-d", "--dump",   help='input dump file path', default=DConfig.dump_path)
+    parser_parse.add_argument("-o", "--output", help='output XML file path',default=DConfig.parsed_path)
     parser_parse.set_defaults(func=handlers.parse)
 
 def build_parser(subparsers):
     # create the parser for the "build" command
     parser_build = subparsers.add_parser('build', 
         help="Iterates all WikiDocuments found in src and builds a words database (DatabaseWrapper) and saves it to dst")
-    parser_build.add_argument("src", type=str, nargs=1, help='input dump file path')
-    parser_build.add_argument("dst", type=str, nargs=1, help='output XML file path', default=default_config['wdb_path'])
+    parser_build.add_argument("src", type=str, help='input parsed file path', default=DConfig.parsed_path)
+    parser_build.add_argument("dst", type=str, help='output wdb filename',default=DConfig.wdb_path)
     parser_build.set_defaults(func=handlers.build)
     
 def compare_parser(subparsers):
     # create the parser for the "compare" command
     parser_compare = subparsers.add_parser('compare', 
         help="Compares two texts according to words database at 'wikibuild.wdb'")
-    parser_compare.add_argument("--word-db", type=str, nargs=1, default=default_config['words_db'],
+    parser_compare.add_argument("--word-db", type=str, nargs=1, default=DConfig.wdb_path,
         help='word database path')
     parser_compare.add_argument("--text1", type=str, nargs='*', help='first text')
     parser_compare.add_argument("--text2", type=str, nargs='*', help='second text')
@@ -72,7 +73,7 @@ def get_value_parser(subparsers):
     # create the parser for the "get_value" command
     parser_get_value = subparsers.add_parser('get_value', 
         help="Calculates the text vector in Wikipedia concepts space according to workds database at 'wikibuild.wdb'")
-    parser_get_value.add_argument("--word-db", type=str, nargs=1, default=default_config['words_db'],
+    parser_get_value.add_argument("--word-db", type=str, nargs=1, default=DConfig.wdb_path,
         help='word database path')
     parser_get_value.add_argument("text", type=str, nargs='*', help='text for value calculation')
     parser_get_value.set_defaults(func=handlers.get_value) 

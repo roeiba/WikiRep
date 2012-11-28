@@ -1,3 +1,4 @@
+import bz2
 from model.db_builder import DbBuilder
 from model import stop_words_stemmer
 from model.wiki_doc import WikiDocument
@@ -5,9 +6,11 @@ from model.semantic_interpreter import SemanticInterpreter
 from model import math_utils
 from parsers import web_tools
 from parsers import parse_tools
+from parsers.wikitext_processor import  WikiTextProcessor
 from logger import *
 
-
+from model.wiki_doc import WdNames
+ 
 class WikiKnowledge(object):
     """
         Example
@@ -61,6 +64,47 @@ class WikiKnowledge(object):
             @return: parsed xml pages
         """
         return parse_tools.extract_clean_pages(src_wiki_dump, keep_sections=False, keep_links=False)
+    
+    
+    
+    def _parse_dump(self,dump_reader,parsed_xml_writer):
+        """ Parses wiki_dump.
+            @param dump_reader: file-like stream with wikipedia dump open
+            @param output: output xml filename 
+            @return: parsed xml pages
+        """
+        for wdoc in parse_tools.extract_pages(dump_reader):
+            wp = WikiTextProcessor(wdoc.raw_text)
+            wdoc.meta[WdNames.CLEAN_TEXT] = wp.get_clean_text()
+            wdoc.meta[WdNames.LINKS] =      wp.get_links()
+            xml_repr = wdoc.to_xml()
+            parsed_xml_writer.write(xml_repr)
+                
+    
+    def parse_dump(self, wiki_dump_path, parsed_xml_path):
+        """ Parses wiki_dump.
+            @param wiki_dump: input wikipedia dump filename  
+            @param parsed_xml_path: output xml filename 
+        """
+        #open wikipedia dump according to format (compressed or not)
+        if wiki_dump_path.endswith('.bz2'):
+            dump_file = bz2.BZ2File(wiki_dump_path, 'r')
+        else:
+            dump_file = open(wiki_dump_path, 'r')
+        #open parsed wikipedia
+        parsed_xml = open(parsed_xml_path,'w')
+        #parse all pages
+        
+        parsed_xml.write('<?xml version="1.0" ?>\n')
+        parsed_xml.write('<wikirep>\n')
+        self._parse_dump(dump_file,parsed_xml)
+        parsed_xml.write('</wikirep>\n')
+        
+        #close files
+        dump_file.close()
+        parsed_xml.close()
+        
+        
         
     def build(self, src, stemmer=None):
         """ builds WikiRep database.

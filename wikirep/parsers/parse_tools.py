@@ -8,6 +8,7 @@ import xml.etree.ElementTree as etree
 import parsers.web_tools as wt
 import WikiExtractor 
 import gzip
+from  model.wiki_doc import WikiDocument
 from model.logger import *
 
 _PAGE_TAG = wt.mk_tag('page')
@@ -30,12 +31,9 @@ def extract_pages(f):
     Returns
     -------
     pages : iterable over (int, str, str)
-        Generates (page_id, title, content) triples.
+        Generates (page_id, title, content, revision_id) triples.
     """
     
-    # get an iterable
-    if f.endswith(".gzip"):
-        f = gzip.open(f)
     context = etree.iterparse(f, events=["end"], parser=etree.XMLParser(encoding='utf-8'))
     
     # turn it into an iterator
@@ -51,10 +49,14 @@ def extract_pages(f):
             text   = my_xfind(elem,'./revision/text').text   
             rev_id = my_xfind(elem,'./revision/id').text         
             
-            yield (tid, title, text,rev_id)
+            wk_doc = WikiDocument(int(tid), title, text,int(rev_id))
+            
+            yield wk_doc
             
             elem.clear()     
             root.clear()
+
+
 
 def extract_clean_pages(src_wiki_dump, keep_sections=False,keep_links=False):
     """ Wrapper for extract_pages that output clean text according to parameters

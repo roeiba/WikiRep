@@ -1,6 +1,7 @@
 from model.logger import *
 from model.wiki_knowledge import getWikiKnowledge
 
+
 def makedump(args):
     DEBUG("run with args={}".format(args))
     INFO('Executing makedump process on articles: {}'.format(args.article))
@@ -15,14 +16,18 @@ def build(args):
     INFO('Executing makedump process on articles: {}'.format(args.article))
     INFO('Dump path: {}'.format(args.dumpfile))
 
-    wiki_knowledge = getWikiKnowledge()    
-    wiki_knowledge.build(args.src)      
-    wiki_knowledge.save_to_disk(args.dst)
-    
-        
     
 def parse(args):
-    pass
+    DEBUG("run with args={}".format(args))
+    INFO('Executing parse process on dump: {}'.format(args.dump))
+    INFO('Output to Dump path: {}'.format(args.output))
+    
+    wiki_knowledge = getWikiKnowledge()
+    pages = wiki_knowledge.parse(args.dump, args.output)
+    for p in pages:
+        print p
+    
+    
 def download(args):
     pass
 def compare(args):

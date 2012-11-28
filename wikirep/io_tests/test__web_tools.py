@@ -16,7 +16,7 @@ class TestGetXmlPage(unittest.TestCase):
         # lower is good
         osname = os.name.lower()
         if osname.find('win') > -1 or osname.find('nt') > -1:
-            self.skip("Cannot run wget under windows or NT")
+            self.skipTest("Cannot run wget under windows or NT")
         
     def gen_test_wiki_xmlpage(self, get_func):
         url = webtools.get_article_xml_url('Southern_Cross_Expedition')
@@ -69,8 +69,9 @@ class TestMakeDump(unittest.TestCase):
         self.assertEqual(content.count('<page>'), len(titles))
 
     def test__string_dump__valid_xml(self):
-        titles = ['Ross_Ice_Shelf', 'Southern_Cross_Expedition', ' Ice_shelf']
+        titles = ['Ross_Ice_Shelf', 'Southern_Cross_Expedition', 'Ice_shelf']
         output = StringIO.StringIO()
+        
         webtools.make_articles_dump(titles, output)
         content = output.getvalue()
         output.close()

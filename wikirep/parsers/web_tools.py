@@ -7,7 +7,7 @@ from subprocess import Popen, PIPE
 import gzip
 import urllib2 
 from model.logger import *
-
+ 
 
 base_xml_url = "http://en.wikipedia.org/wiki/Special:Export/"
 
@@ -48,7 +48,7 @@ def get_wiki_xmlpage_urllib(url):
         http://stackoverflow.com/questions/3336549/pythons-urllib2-why-do-i-get-error-403-when-i-urlopen-a-wikipedia-page
 
     '''
-    req = urllib2.Request(url, headers={'User-Agent' : "Wikip Browser"})     
+    req = urllib2.Request(url, headers={'User-Agent' : "Wikip Browsers"})     
     
     file_handler = urllib2.urlopen(req)
     xml_text = file_handler.read()
@@ -57,9 +57,11 @@ def get_wiki_xmlpage_urllib(url):
 
 def get_wiki_xmlpage(url):
     try:
+        DEBUG("Try using get_wiki_xmlpage_urllib:{}".format(url))
         return get_wiki_xmlpage_urllib(url)
-    except:
-        WARNING("Failed to get wiki page using urllib, trying using wget\n{}".format(url))
+    except Exception as e:
+        WARNING("Failed to get wiki page using urllib.\n Reason: {}".format(e))
+        WARNING("trying using wget")
         
         return get_wiki_xmlpage_wget(url)
 

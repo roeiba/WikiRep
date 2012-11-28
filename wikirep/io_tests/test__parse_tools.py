@@ -6,7 +6,7 @@ Created on Oct 15, 2012
 import unittest
 #import parsers.parse_tools as pt
 import parsers.parse_tools as pt
-from os.path import dirname, join 
+from io_test_utils import getInputFile, FilesList
 
 
 class Test(unittest.TestCase):
@@ -19,10 +19,11 @@ class Test(unittest.TestCase):
             (18798090,    'Southern Cross Expedition',            39110),
             (343246,      'Ice shelf',                             8262)
         ]
-        test__parse_tools_xml =  join(dirname(__file__),'test__parse_tools.xml')
         
-        actual = [(int(tid), title, len(text)) 
-                  for tid, title, text, _ 
+        test__parse_tools_xml =  getInputFile(FilesList.test__parse_tools)
+        
+        actual = [(wdoc.id, wdoc.title, len(wdoc.raw_text)) 
+                  for wdoc
                   in pt.extract_pages(test__parse_tools_xml)]        
 
         self.assertSequenceEqual(actual, expected, "Assertion failure: \nActual={}\nExpected={}".format(actual, expected))
