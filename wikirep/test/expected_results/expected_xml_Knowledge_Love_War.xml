@@ -38,14 +38,14 @@
     <ns>0</ns>
     <id>243391</id>
     <revision>
-      <id>524609892</id>
-      <parentid>524608391</parentid>
-      <timestamp>2012-11-24T06:35:01Z</timestamp>
+      <id>525220898</id>
+      <parentid>525217356</parentid>
+      <timestamp>2012-11-27T22:30:09Z</timestamp>
       <contributor>
-        <username>Snowded</username>
-        <id>1988889</id>
+        <username>Just plain Bill</username>
+        <id>715696</id>
       </contributor>
-      <comment>no reason given for removing a reference</comment>
+      <comment>Reverted 1 edit by [[Special:Contributions/66.240.14.5|66.240.14.5]] ([[User talk:66.240.14.5|talk]]): Philosophy game. Restore the order given in the source. ([[WP:TW|TW]])</comment>
       <text xml:space="preserve" bytes="22802">{{other uses}}
 {{pp-move|small=yes}}
 [[File:Efez Celsus Library 5 RB.jpg|thumb|upright|Personification of knowledge ([[Greek language|Greek]] ''Επιστημη'', [[Episteme]]) in [[Celsus Library]] in [[Ephesus]], Turkey.]]
@@ -683,20 +683,21 @@ There are many different theories which attempt to [[explanation|explain]] what 
     <ns>0</ns>
     <id>33158</id>
     <revision>
-      <id>525078982</id>
-      <parentid>525078961</parentid>
-      <timestamp>2012-11-27T04:18:51Z</timestamp>
+      <id>525258590</id>
+      <parentid>525252817</parentid>
+      <timestamp>2012-11-28T03:35:25Z</timestamp>
       <contributor>
-        <username>ClueBot NG</username>
-        <id>13286072</id>
+        <ip>192.17.213.63</ip>
       </contributor>
-      <minor/>
-      <comment>Reverting possible vandalism by [[Special:Contributions/DigiSword|DigiSword]] to version by 213.246.93.141. False positive? [[User:ClueBot NG/FalsePositives|Report it]]. Thanks, [[User:ClueBot NG|ClueBot NG]]. (1360028) (Bot)</comment>
-      <text xml:space="preserve" bytes="102075">{{Use dmy dates|date=September 2012}}
+      <text xml:space="preserve" bytes="103020">{{Use dmy dates|date=September 2012}}
 {{About|war in general||War (disambiguation)|and|The War (disambiguation)}}
 {{War}}'''War''' is an organized, armed, and, often, a prolonged conflict that is carried on between [[State (polity)|states]], [[nation]]s, or other parties typified by extreme [[aggression]], [[Society|social]] disruption, and usually high mortality.&lt;ref name=AHD&gt;{{cite web|url=http://www.thefreedictionary.com/War |title=American Heritage Dictionary: War |publisher=Thefreedictionary.com |accessdate=2011-01-24}}&lt;/ref&gt;&lt;ref name=MWD&gt;{{cite web|url=http://www.merriam-webster.com/dictionary/war |title=Merriam Webster's Dictionary: War |publisher=Merriam-Webster |date=13 August 2010 |accessdate=2011-01-24}}&lt;/ref&gt; War should be understood as an actual, intentional and widespread armed conflict between political communities, and therefore is defined as a form of [[political violence]].&lt;ref name=AHD /&gt;&lt;ref&gt;{{cite web|url=http://plato.stanford.edu/entries/war/ |title=Stanford Encyclopedia of Philosophy}}&lt;/ref&gt; The set of techniques used by a group to carry out war is known as '''warfare'''. An absence of war (and other violence) is usually called [[peace]].
 
+When war is brought upon two different groups of people there is usually always a mission to achieve to feel as if war has been won on either side of the conflict. This can be a variety of missions taken during war like changing the government of a nation or state, eliminating a certain person, or defending the nation or state under attack.
+
 In 2003, Nobel Laureate [[Richard E. Smalley]] identified war as the sixth (of ten) biggest problem facing the society of mankind for the next fifty years.&lt;ref&gt;{{cite web |title=Smalley Institute Grand Challenges |first=Richard E. |last=Smalley |publisher=[[Rice University]] |year=2008 |accessdate=24 April 2011 |url=http://cnst.rice.edu/content.aspx?id=246}}&lt;/ref&gt; In the 1832 [[treatise]] ''[[On War]]'', Prussian military general and theoretician [[Carl von Clausewitz]] defined war as follows: &quot;War is thus an act of force to compel our enemy to do our will.&quot;&lt;ref&gt;{{cite book |last1= Clausewitz|first1= Carl von|authorlink1= Carl Von Clausewitz|editor1-first= Michael|editor1-last= Howard|editor1-link=Peter Paret|editor2-first= Peter|editor2-last= Paret |title= On War|trans_title= Vom Krieg |edition= Indexed |year= 1984 |origyear= 1832|publisher= Princeton University Press|location= New Jersey |isbn= 978-0-691-01854-6|page= 75}} Italics in original.&lt;/ref&gt;
+
+War can affect people around the dilemma in many ways good and bad. People that deal with loves one’s going off to war can get very stressed and emotional because the chances of death happening to a soldier. Soldiers can also become mentally ill during war and can lead to symptoms of combat stress reaction because some get traumatized from the violence they see during battles. On the other hand, war can affect people positively because individuals could get saved from a much disrupted society. Also, people can get very content when war is won on their side of the conflict.
 
 While some scholars see warfare as an inescapable and integral aspect of human culture, others argue that it is only inevitable under certain socio-cultural or ecological circumstances. Some scholars argue that the practice of war is not linked to any single type of political organization or society. Rather, as discussed by [[John Keegan]] in his ''History of Warfare'', war is a universal phenomenon whose form and scope is defined by the society that wages it.&lt;ref&gt;Keegan, John, (1901) ''A History of Warfare'', (Pimlico)&lt;/ref&gt; Another argument suggests that since there are human societies in which warfare does not exist, humans may not be naturally disposed for warfare, which emerges under particular circumstances.&lt;ref&gt;Societies at Peace (Howell and Willis 1989)&lt;/ref&gt; The ever changing technologies and potentials of war extend along a historical continuum. At the one end lies the [[endemic warfare]] of the [[Paleolithic]]{{Citation needed|date=July 2011}} with its stones and clubs, and the naturally limited loss of life associated with the use of such weapons. Found at the other end of this continuum is [[nuclear warfare]], along with the recently developed possible outcome of its use, namely the potential risk of the complete [[human extinction|extinction of the human species]].
 
@@ -1333,6 +1334,7 @@ Fascism, and the ideals it encompasses, such as [[Pragmatism]], Racism, and [[So
 [[id:Perang]]
 [[ia:Guerra]]
 [[iu:ᐊᑭᕋᖅᑑᑎᔪᑦ]]
+[[xh:Imfazwe]]
 [[is:Stríð]]
 [[it:Guerra]]
 [[he:מלחמה]]
@@ -1392,6 +1394,7 @@ Fascism, and the ideals it encompasses, such as [[Pragmatism]], Racism, and [[So
 [[sv:Krig]]
 [[tl:Digmaan]]
 [[ta:போர்]]
+[[tt:Сугыш]]
 [[te:యుద్ధం]]
 [[th:สงคราม]]
 [[tr:Savaş]]
@@ -1402,13 +1405,12 @@ Fascism, and the ideals it encompasses, such as [[Pragmatism]], Racism, and [[So
 [[fiu-vro:Sõda]]
 [[wa:Guere]]
 [[war:Gerá]]
-[[xh:Imfazwe]]
 [[yi:מלחמה]]
 [[yo:Ogun]]
 [[zh-yue:打仗]]
 [[bat-smg:Vaina]]
 [[zh:战争]]</text>
-      <sha1>55dyfdxa3hovfjwwqgcz68ldgozwjpr</sha1>
+      <sha1>jp7lazyoqj3mharalvv9aopncxjth2v</sha1>
       <model>wikitext</model>
       <format>text/x-wiki</format>
     </revision>
