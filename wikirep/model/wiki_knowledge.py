@@ -97,7 +97,10 @@ class WikiKnowledge(object):
             @param output: output xml filename 
             @return: parsed xml pages
         """
+        doc_number = 0
         for wdoc in parse_tools.extract_pages(dump_reader):
+            doc_number += 1
+            
             wp = WikiTextProcessor(wdoc.raw_text)
             #wdoc.raw_text = wp.get_clean_text()
             wdoc.raw_text = wp.get_text_only()
@@ -106,7 +109,8 @@ class WikiKnowledge(object):
             #serialize to xml
             xml_repr = wiki_doc_to_xml(wdoc)
             parsed_xml_writer.write(xml_repr)
-                
+            INFO("Done parsing document #{}:{}".format(doc_number, wdoc.title))
+        INFO("Finish parsing. Total documents: #{}".format(doc_number))        
     
     def parse_dump(self, wiki_dump_path, parsed_xml_path):
         """ Parses wiki_dump.
