@@ -4,15 +4,16 @@ Created on Oct 4, 2012
 @author: inesmeya
 '''
 import unittest
-from numpy import array
-from numpy import vectorize
-from numpy import log
+from scipy import vectorize
+from scipy import log
 from numpy.testing import assert_allclose
 import inspect
 from model.db_builder import DbBuilder
 from model.stop_words_stemmer import StopWordsStemmer
 import model.math_utils as math_utils
 import test_utils
+from scipy.sparse import csr_matrix as matrix
+from numpy import array
 
 class WorkFlow(object):
     docs = None
@@ -84,7 +85,7 @@ def simple_wf():
     wf.df_vec       = array([2.0, 3.0, 2.0, 2.0, 2.0, 1.0])
     wf.idf_vec      = wf.n_docs / wf.df_vec
     wf.log_idf_vec  = log(wf.idf_vec)
-    wf.wieghts_mat  = wf.tf_mat * wf.log_idf_vec[:,None]
+    wf.wieghts_mat  = matrix(wf.tf_mat * wf.log_idf_vec[:,None])
     
     return wf
 
@@ -93,7 +94,7 @@ class Test(unittest.TestCase):
     def test_migration(self):
         """tests that new form of test equals to old one  from test__advanced_doc"""
 
-        expected = array([
+        expected = matrix([
         [ 0.40546511,  1.05803603,  0.        ],
         [ 0.        ,  0.        ,  0.        ],
         [ 0.85091406,  0.85091406,  0.        ],
@@ -104,7 +105,7 @@ class Test(unittest.TestCase):
         wf = simple_wf()
         actual = wf.wieghts_mat
         
-        assert_allclose(actual, expected)
+        assert_allclose(actual.todense(), expected.todense())
         #print wf
         
     def test__advanced_doc(self):
@@ -119,23 +120,15 @@ class Test(unittest.TestCase):
         actual_wf = WorkFlow()
         
         builder.build(actual_wf) 
-        
-        assert_allclose(actual_wf.df_vec,expected_wf.df_vec)    
-        assert_allclose(actual_wf.wieghts_mat, expected_wf.wieghts_mat)
+        #workaround to handle dimensions mismatch
+        expected_wf.df_vec = matrix(expected_wf.df_vec)
+        assert_allclose(actual_wf.df_vec.todense(), expected_wf.df_vec.todense())    
+        assert_allclose(actual_wf.wieghts_mat.todense(), expected_wf.wieghts_mat.todense())
 
     
 
 if __name__ == "__main__":
     unittest.main()
-
-
-
-
-
-
-
-
-
 
 
 #for colname,col in Listing.columns:

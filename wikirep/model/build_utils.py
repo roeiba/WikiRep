@@ -3,8 +3,10 @@ Created on Oct 4, 2012
 
 @author: inesmeya
 '''
-import numpy as np
+import scipy as np
 from math import log
+from scipy.sparse import csr_matrix as matrix
+
 
 def build_index_by_words(word_list):
     ''' converts list of word to dictionary {word => it's index} '''
@@ -56,7 +58,7 @@ def build_df(index_by_word,concepts_list):
         for word in words:
             i = index_by_word[word]
             df_vec[i]+=1
-    return df_vec 
+    return df_vec
 
 
 def build_wieght_table(df_vec,index_by_word,concepts_list):
@@ -68,7 +70,7 @@ def build_wieght_table(df_vec,index_by_word,concepts_list):
     
     n = float(len(concepts_list))
     m = len(df_vec)
-    T = np.zeros(shape=(m,n))
+    T = matrix((m,n))
     for j, concept in enumerate(concepts_list):
         words = concept.get_all_words()
         for word in words:

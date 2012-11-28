@@ -101,7 +101,8 @@ class TestSimpleConcepts(test_utils.TestBase):
         # assert:
         for expected,actual in zip(expected_vectors, actual_vectors):
             for f,val in zip(expected,actual):
-                f(val)
+                #workaround to handle that x is a sparse matrix
+                f(val[0,0])
         
     def test_intersection_concepts(self):
         #splitter = SimpleSplitter()

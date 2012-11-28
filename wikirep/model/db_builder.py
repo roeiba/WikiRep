@@ -8,6 +8,7 @@ from concept import Concept
 from model.database_wrapper import DatabaseWrapper
 from model.build_utils import build_word_index, build_index_by_words, build_df, build_wieght_table
 from model.logger import *
+from scipy.sparse import csr_matrix as matrix
 
 class DbBuilder(object):
     '''
@@ -70,7 +71,8 @@ class DbBuilder(object):
         
         if wf: 
             wf.word_index = word_index
-            wf.df_vec = df_vec
+            #workaround to force returned wf to be sparse
+            wf.df_vec = matrix(df_vec)
             wf.wieghts_mat = T
         return db 
 

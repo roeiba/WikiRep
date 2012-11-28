@@ -75,6 +75,7 @@ class Test(test_utils.TestBase):
         self.assertEqual(actual_db.get_titles_index(), expected_titles_index, "Mismatch concepts index")
         
         #validate db_matrix content
+        
         for j in range(len(expected_titles_index)):
             for i in range(len(expected_words_index)):
                 title = expected_titles_index[j]
@@ -84,7 +85,7 @@ class Test(test_utils.TestBase):
                 
                 actual_word_index = actual_db.words_index.index(expected_word)
                 actual_concept_index = actual_db.get_titles_index().index(title)
-                actual_wieght = actual_db.wieght_matrix[actual_word_index][actual_concept_index]
+                actual_wieght = actual_db.wieght_matrix[actual_word_index,actual_concept_index]
                 self.assertAlmostEqual(expected_wieght, actual_wieght, msg="Wrong table value at word/concept [{}, {}]".format(expected_word, title))
                 
                 

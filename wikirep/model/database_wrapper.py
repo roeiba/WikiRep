@@ -3,13 +3,17 @@ Created on Sep 27, 2012
 
 @author: roeib
 '''
-import numpy
+import scipy
 from build_utils import build_index_by_words
+from scipy.sparse import csr_matrix as matrix
+from model.logger import *
 
 class DatabaseWrapper(object):
     def __init__(self, wieght_matrix, concepts_index, words_index):
         #input validations
-        assert type(wieght_matrix) == numpy.ndarray, "wieght_matrix is expected to be numpy.matrix"
+        #if type(wieght_matrix) == matrix:
+        #    WARNING("wieght_matrix is expected to be scipy.sprase.csr_matrix, and not {}".format(type(wieght_matrix)))
+            
         words_num = wieght_matrix.shape[0] #number of rows
         concepts_num = wieght_matrix.shape[1] #number of columns
         assert words_num == len(words_index), "Words index doesn't match matrix dimensions"
@@ -37,5 +41,5 @@ class DatabaseWrapper(object):
             vector = self.wieght_matrix[index, :]
         else:
             #if word is not in corpus: return empty vector            
-            vector = numpy.zeros(self.concepts_num)
+            vector = matrix((1,self.concepts_num))
         return vector

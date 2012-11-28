@@ -4,9 +4,10 @@ Created on Sep 19, 2012
 from model.semantic_interpreter import SemanticInterpreter
 from model.database_wrapper import DatabaseWrapper
 import unittest
-import numpy as np
+import numpy
 from test_utils import TestBase
- 
+from scipy.sparse import csr_matrix as matrix
+
 #model
 from model.stop_words_stemmer import StopWordsStemmer
 
@@ -21,11 +22,10 @@ class TestSemanticIntepreter(TestBase):
     def getSimpleDb(self):
         concepts_index=['c1','c2']
         words_index=['a','b','c']
-        wieght_matrix =np.array(
+        wieght_matrix =matrix(
               [[0.5, 0.5],
                [0.2, 0.8],
                [1.0, 0.0]])
-        print type(wieght_matrix)
         db = DatabaseWrapper( wieght_matrix, concepts_index, words_index)
         return db
 
@@ -47,10 +47,10 @@ class TestSemanticIntepreter(TestBase):
         stemmer = StopWordsStemmer([])
         si = SemanticInterpreter(db, stemmer)
            
-        expected = np.array([1.7/3, 1.3/3])
+        expected = matrix([1.7/3, 1.3/3])
         # act
         actual  = si.build_weighted_vector(text)
-        self.assert_almost_equals(expected, actual, "wrong centroid")
+        numpy.testing.assert_array_almost_equal(expected.todense(), actual.todense(), err_msg="wrong centroid")
         
     def test_words_not_in_corpus(self):
         # arrange
