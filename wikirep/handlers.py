@@ -1,12 +1,12 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 from model.logger import *
 from model.wiki_knowledge import getWikiKnowledge
 
 
 def makedump(args):
-    DEBUG("run with args={}".format(args))
-    INFO('Executing makedump process on articles: {}'.format(args.article))
-    INFO('Dump path: {}'.format(args.dumpfile))
-    
+    DEBUG("run makedump with args={}".format(args))
+
     wiki_knowledge = getWikiKnowledge()
     wiki_knowledge.make_dump(args.dumpfile, *args.article)
 
@@ -19,13 +19,11 @@ def build(args):
     
 def parse(args):
     DEBUG("run with args={}".format(args))
-    INFO('Executing parse process on dump: {}'.format(args.dump))
-    INFO('Output to Dump path: {}'.format(args.output))
+
     
     wiki_knowledge = getWikiKnowledge()
-    pages = wiki_knowledge.parse(args.dump, args.output)
-    for p in pages:
-        print p
+    wiki_knowledge.parse_dump(args.dump, args.output)
+
     
     
 def download(args):

@@ -4,6 +4,7 @@ Created on Nov 28, 2012
 @author: inesmeya
 '''
 import mwparserfromhell
+import model.logger as _log
 
 class WikiTextProcessor(object):
     
@@ -14,19 +15,21 @@ class WikiTextProcessor(object):
         
     def get_clean_text(self):
         '''returns text includes links and sections'''
-        clean_text = self.wikicode.strip_code(self.normalize, self.collapse)
+        _log.INFO("Retrive Clean text. ={}".format(self.normalize))
+        clean_text = self.wikicode.strip_code(normalize=self.normalize, collapse=self.collapse)
+
         return clean_text
         
     def get_text_only(self):
         '''returns only text nodes'''
-        nodes = self.wikicode.ifilter_text()
+        _log.INFO("Retrive text_only.") 
+        text = "".join((n.value for n in self.wikicode.ifilter_text()))
+        
         if self.collapse:
-            stripped = "".join(nodes).strip("\n")
-            while "\n\n\n" in stripped:
-                stripped = stripped.replace("\n\n\n", "\n\n")
-            return stripped
-        else:
-            return "".join(nodes)
+            while "\n\n" in text:
+                text = text.replace("\n\n", "\n")
+        return text
+    
     
     def get_links(self):
         return self.wikicode.ifilter_links()

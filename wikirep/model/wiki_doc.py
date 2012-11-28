@@ -1,3 +1,5 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 from model.logger import *
 
 class WdNames:
@@ -26,13 +28,9 @@ class WikiDocument(object):
                    rev_id=self.rev_id)
         return retval 
     
-    def to_xml(self):
-        smxl = """
-< doc id="{}" title="{}" rev_id="{}"> 
-       {} 
-</doc>
-""".format(self.id, self.title, self.rev_id, self.raw_text)
-        return smxl
+    def __str__(self):
+        return self.__repr__()
+    
         
         
         

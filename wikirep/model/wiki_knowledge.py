@@ -1,3 +1,6 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
 import bz2
 from model.db_builder import DbBuilder
 from model import stop_words_stemmer
@@ -7,9 +10,27 @@ from model import math_utils
 from parsers import web_tools
 from parsers import parse_tools
 from parsers.wikitext_processor import  WikiTextProcessor
+import codecs
 from logger import *
+import StringIO
 
 from model.wiki_doc import WdNames
+import xml.etree.ElementTree as etxml
+
+def wiki_doc_to_xml(wiki_doc):
+    el_doc = etxml.Element('doc')
+    el_doc.attrib['id']=str(wiki_doc.id)
+    el_doc.attrib['title']=wiki_doc.title
+    el_doc.attrib['rev_id']=str(wiki_doc.rev_id)
+    el_doc.text = wiki_doc.raw_text
+    output = StringIO.StringIO()
+    etxml.ElementTree(el_doc).write(output)
+    
+    string = output.getvalue() + "\n"
+    output.close()
+    return string
+
+
  
 class WikiKnowledge(object):
     """
@@ -48,6 +69,9 @@ class WikiKnowledge(object):
             @param articles_titles: article's canonic name on Wikipedia web page
             @param wiki_dump: output filename (if not specified default is used)
         """
+        INFO('Executing makedump process on articles: {}'.format(articles_titles))
+        INFO('Dump path: {}'.format(wiki_dump))
+    
         web_tools.articles_dump_to_file(articles_titles, wiki_dump, **kwargs)
     
     def download_all(self, wiki_dump=None):
@@ -75,9 +99,12 @@ class WikiKnowledge(object):
         """
         for wdoc in parse_tools.extract_pages(dump_reader):
             wp = WikiTextProcessor(wdoc.raw_text)
-            wdoc.meta[WdNames.CLEAN_TEXT] = wp.get_clean_text()
+            #wdoc.raw_text = wp.get_clean_text()
+            wdoc.raw_text = wp.get_text_only()
             wdoc.meta[WdNames.LINKS] =      wp.get_links()
-            xml_repr = wdoc.to_xml()
+            
+            #serialize to xml
+            xml_repr = wiki_doc_to_xml(wdoc)
             parsed_xml_writer.write(xml_repr)
                 
     
@@ -86,13 +113,16 @@ class WikiKnowledge(object):
             @param wiki_dump: input wikipedia dump filename  
             @param parsed_xml_path: output xml filename 
         """
+        INFO('Executing parse process on dump: {}'.format(wiki_dump_path))
+        INFO('Output to Dump path: {}'.format(parsed_xml_path))
         #open wikipedia dump according to format (compressed or not)
         if wiki_dump_path.endswith('.bz2'):
             dump_file = bz2.BZ2File(wiki_dump_path, 'r')
         else:
             dump_file = open(wiki_dump_path, 'r')
         #open parsed wikipedia
-        parsed_xml = open(parsed_xml_path,'w')
+        
+        parsed_xml = codecs.open(parsed_xml_path, 'w',encoding="UTF-8") 
         #parse all pages
         
         parsed_xml.write('<?xml version="1.0" ?>\n')

@@ -6,9 +6,9 @@ import logging
 from scipy.lib.decorator import DEF
 
 class DConfig:
-    dump_path = "data/wikidump.xml"
-    parsed_path ="data/wikiparsed.xml"
-    wdb_path = "data/wikibuild.wdb"
+    dump_path = "data_output/wikidump.xml"
+    parsed_path ="data_output/wikiparsed.xml"
+    wdb_path = "data_output/wikibuild.wdb"
                   
 class colors(object):
     BLUE = '\x1b[34m'
