@@ -10,20 +10,21 @@ def makedump(args):
     wiki_knowledge = getWikiKnowledge()
     wiki_knowledge.make_dump(args.dumpfile, *args.article)
 
+def parse(args):
+    DEBUG("run with args={}".format(args))
+
+    wiki_knowledge = getWikiKnowledge()
+    wiki_knowledge.parse_dump(args.dump, args.output)
 
 def build(args):
     DEBUG("run with args={}".format(args))
     INFO('Executing makedump process on articles: {}'.format(args.article))
     INFO('Dump path: {}'.format(args.dumpfile))
-
     
-def parse(args):
-    DEBUG("run with args={}".format(args))
-
+    wn = getWikiKnowledge()
+    wn.build(args.src)
     
-    wiki_knowledge = getWikiKnowledge()
-    wiki_knowledge.parse_dump(args.dump, args.output)
-
+    
     
     
 def download(args):

@@ -19,6 +19,13 @@ import StringIO
 from model.wiki_doc import WdNames
 import xml.etree.ElementTree as etxml
 
+import os
+def ensure_dir(f):
+    d = os.path.dirname(f)
+    if not os.path.exists(d):
+        os.makedirs(d)
+
+
 def wiki_doc_to_xml(wiki_doc):
     el_doc = etxml.Element('doc')
     el_doc.attrib['id']=str(wiki_doc.id)
@@ -121,16 +128,19 @@ class WikiKnowledge(object):
         """
         INFO('Executing parse process on dump: {}'.format(wiki_dump_path))
         INFO('Output to Dump path: {}'.format(parsed_xml_path))
-        #open wikipedia dump according to format (compressed or not)
+ 
+        ensure_dir(parsed_xml_path)
+ 
+        #open wikipedia dump according to format (compressed or not)       
         if wiki_dump_path.endswith('.bz2'):
             dump_file = bz2.BZ2File(wiki_dump_path, 'r')
         else:
             dump_file = open(wiki_dump_path, 'r')
+        
         #open parsed wikipedia
-        
         parsed_xml = codecs.open(parsed_xml_path, 'w',encoding="UTF-8") 
-        #parse all pages
         
+        #parse all pages
         parsed_xml.write('<?xml version="1.0" ?>\n')
         parsed_xml.write('<wikirep>\n')
         self._parse_dump(dump_file,parsed_xml)
@@ -142,16 +152,26 @@ class WikiKnowledge(object):
         
         
         
-    def build(self, src, stemmer=None):
+    def build(self, parsed_dump, builed_wdb, stemmer=None):
         """ builds WikiRep database.
-            @param src: Wikipedia source xml (etc. wikiparsed.xml)
+            @param parsed_dump: Wikipedia source xml (etc. wikiparsed.xml)
         """
+        if not os.path.isfile(parsed_dump):
+            raise Exception("File ")
+                
+        #TODO: add parsed page reader
+        xml_pages = None
         
-        xml_pages = self.parse(src)
         for doc_id, title, text, rev_id in xml_pages:
             doc = WikiDocument(doc_id=doc_id, title=title, raw_text=text, rev_id=rev_id)
             self.db_builder.add_document(doc)
-        self._build_semantic_interpreter()
+        db = self.db_builder.build()
+        ensure_dir(builed_wdb)
+        
+        #TODO: add save method
+        db.save(builed_wdb)
+        
+        #self._build_semantic_interpreter()
 
             
     def compare(self, text1, text2, compare_method=None):

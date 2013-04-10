@@ -43,3 +43,9 @@ class DatabaseWrapper(object):
             #if word is not in corpus: return empty vector            
             vector = matrix((1,self.concepts_num))
         return vector
+    
+    def save(self, output):
+        pass
+    
+    def load(self, src):
+        pass

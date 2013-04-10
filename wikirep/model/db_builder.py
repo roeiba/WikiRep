@@ -52,6 +52,9 @@ class DbBuilder(object):
         self.ids.add(doc.id)
          
     def build(self,wf=None):
+        ''' Builds DatabaseWrapper according to algorithm
+        @param wf: workflow for denug purpuses
+        '''
         #unique enumeration of words
         word_index = build_word_index(self.concepts_list)
         
@@ -80,8 +83,5 @@ class DbBuilder(object):
     def get_concepts_list(self):
         return self.concepts_list
         
-    def save(self, output):
-        pass
-    def load(self, src):
-        pass
+
                 
