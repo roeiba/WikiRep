@@ -112,6 +112,7 @@ class WikiKnowledge(object):
             
             wp = WikiTextProcessor(wdoc.raw_text)
             #wdoc.raw_text = wp.get_clean_text()
+            #todo: do not override the raw_text, instead use different properties names and delete what is not neccessary
             wdoc.raw_text = wp.get_text_only()
             wdoc.meta[WdNames.LINKS] =      wp.get_links()
             

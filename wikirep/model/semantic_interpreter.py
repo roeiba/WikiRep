@@ -3,6 +3,10 @@ from database_wrapper import DatabaseWrapper
 
 class SemanticInterpreter(object):
     def __init__(self, database, stemmer):
+        """
+        @param DatabaseWrapper database: Words inverted table
+        @param stemmer: Used for stemming input text when weight vector is caluclated.
+        """
         assert type(database) == DatabaseWrapper, "DatabaseWrapper class is expected as database" 
         self.db = database
         self.stemmer = stemmer

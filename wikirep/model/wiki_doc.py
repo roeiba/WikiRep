@@ -8,6 +8,9 @@ class WdNames:
  
 
 class WikiDocument(object):
+    """ 
+    This class represents a document from wikipedia.
+    """
     def __init__(self, doc_id, title, raw_text, rev_id=None):
         self.id = doc_id
         self.title = title

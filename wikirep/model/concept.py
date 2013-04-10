@@ -19,7 +19,8 @@ class OrderedCounter(Counter, OrderedDict):
 
 class Concept(object):
     '''
-    Contains info of processed document
+    Represents a document as bag of words. 
+
     Related Article
         Name: Wikipedia-based Semantic Interpretation for Natural Language Processing
         Short name: 2009_full

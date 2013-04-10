@@ -12,8 +12,15 @@ from scipy.sparse import csr_matrix as matrix
 
 class DbBuilder(object):
     '''
-        Not allowing duplications of IDs
+    This class builds a database (word inverted index) from wiki documents 
+    General usage is:
+        * Repeat Add document
+        * build the database
+    When a document is added, it is converted to a Concept, which is just a bag of word representing the corresponding document.
+    
+    Each Concept has unique ID, and we do not allow Concept IDs duplications    
         For testability - if the id is None, it will be auto generated.
+    
     '''
 
     def __init__(self,stemmer):
