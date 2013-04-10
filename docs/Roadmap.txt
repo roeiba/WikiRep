@@ -1,0 +1,51 @@
+Tasks to be completed for first phase 
+=====================================
+1. Complete all TODO's from github
+2. Complete all TODO's in code
+3. Serializing/DeSerializing DatabaseWrapper
+5. Download and use the original wiki dump, which was used for the article
+6. Download the texts benchmark (bunch of texts manually compared by person)
+7. Run Empirical evalution 
+
+Future Roadmap
+================= 
+* Use real database
+* Research:
+	* Stemmer 
+		Which should be used (such that the results are optimized, compared to human judgement)
+	* Pruning
+		Check how different pruning affect results
+	* Vectors comparison
+		Which method should be used ?
+
+
+
+System description
+====================
+
+main modules
+--------------
+* WikiKnowledge
+	The most high level class in the system. 
+	It is initiated with a wiki dump file, and creates a SemanticIntepreter from the dump, by doing:
+		- Create dump from articles list (if a dump already exist, this step may be skipped)
+			- Iterate all wiki documents in the dump file, for each do:
+				- use parse_tools in order to generate a priminilary WikiDocument
+				- use WikiTextProcessor in order to extract the links and text from the raw document (the raw is formatted in wiki markup)
+				- serialize the created WikiDocument into an element in the current opened XML
+		- Build SemanticIntepreter from the XML file
+			- for each wiki element in the input XML
+				- Create WikiDocument 
+				- Add the WikiDocument to the DbBuilder
+					- Apply text stemming on the wiki document
+					- Use the stemmed text to create a wiki concept
+						A concept is just a bag of words, which represent the corresponding wikipedia page
+					- Add the concept to DB concept list
+			- build the DB
+				- build word_index (iterate all concepts and create the overall words index)
+				- build index_by_word 
+				- build wieght table
+		- Use SemanticIntepreter in order to calucalte a given text vector according to the created words database
+			- Note the SemanticIntepreter is created with a stemmer, which will be used for stemming the input text
+			  The stemmer used here is unrelated to stemmer used for building the database
+			   
