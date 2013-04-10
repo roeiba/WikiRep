@@ -1,4 +1,6 @@
-import parsers.parse_tools as pt
+import parse_tools as pt
+import os
+
 
 def print_xmldump_statistics(file_like):
     template = "{:<12}{:<30}{:>12}"

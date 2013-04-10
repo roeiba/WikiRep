@@ -24,7 +24,7 @@ class WikiDocument(object):
             rev_id = {rev_id}""".format(
                    id=self.id, 
                    title=self.title,
-                   raw_text=log_text(self.raw_text), 
+                   raw_text=(self.raw_text)[:80], 
                    rev_id=self.rev_id)
         return retval 
     

@@ -1,17 +1,19 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-
+ 
 import bz2
 from model.db_builder import DbBuilder
 from model import stop_words_stemmer
 from model.wiki_doc import WikiDocument
 from model.semantic_interpreter import SemanticInterpreter
 from model import math_utils
+
 from parsers import web_tools
 from parsers import parse_tools
 from parsers.wikitext_processor import  WikiTextProcessor
 import codecs
-from logger import *
+
+from model.logger import *
 import StringIO
 
 from model.wiki_doc import WdNames

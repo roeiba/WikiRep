@@ -1,5 +1,5 @@
 #!/usr/bin/env python2.7
-from model.wiki_knowledge import WikiKnowledge
+from wiki_knowledge import WikiKnowledge
 import handlers 
 import sys
 import logging

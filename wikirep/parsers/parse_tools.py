@@ -1,15 +1,19 @@
-'''
-Created on Oct 15, 2012
-
-@author: inesmeya
-'''
-
 import xml.etree.ElementTree as etree
-import parsers.web_tools as wt
+#import parsers.web_tools as wt
+import web_tools as wt
+
 import WikiExtractor 
 import gzip
 from  model.wiki_doc import WikiDocument
-from model.logger import *
+
+import logging
+_log = logging.getLogger(__name__)
+
+# for log purpurses
+def _cut_text(text):
+    ''' text will be cut to fit screen'''
+    return text[:80] + "... total chars {}".format(len(text))
+
 
 _PAGE_TAG = wt.mk_tag('page')
 
@@ -51,12 +55,11 @@ def extract_pages(f):
             
             wk_doc = WikiDocument(int(tid), title, text,int(rev_id))
             
+            _log.info("page extracted: {}".format(title) )
             yield wk_doc
             
             elem.clear()     
             root.clear()
-
-
 
 def extract_clean_pages(src_wiki_dump, keep_sections=False,keep_links=False):
     """ Wrapper for extract_pages that output clean text according to parameters
@@ -66,7 +69,8 @@ def extract_clean_pages(src_wiki_dump, keep_sections=False,keep_links=False):
     for wdoc in extract_pages(src_wiki_dump):
         tid, title, text, rev_id = wdoc.id, wdoc.title, wdoc.raw_text, wdoc.rev_id
         clean_text =  WikiExtractor.clean(text)
-        DEBUG("""
+        
+        _log.debug("""
         Original text:
         {separator} Start {separator}
         {text} 
@@ -75,7 +79,11 @@ def extract_clean_pages(src_wiki_dump, keep_sections=False,keep_links=False):
         {separator} Start {separator}
         {clean_text}
         {separator} END {separator} 
-        """.format(separator = "-"*20, text=log_text(text) , clean_text=log_text(clean_text)))
+        """.format(separator = "-"*20, 
+                   text=_cut_text(text) , 
+                   clean_text=_cut_text(clean_text))
+        )
+        
         yield tid, title, clean_text, rev_id
         
         

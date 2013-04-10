@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 from model.logger import *
-from model.wiki_knowledge import getWikiKnowledge
+from wiki_knowledge import getWikiKnowledge
 
 
 def makedump(args):

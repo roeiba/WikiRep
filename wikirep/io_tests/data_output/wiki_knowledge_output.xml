@@ -2,7 +2,7 @@
   <siteinfo>
     <sitename>Wikipedia</sitename>
     <base>http://en.wikipedia.org/wiki/Main_Page</base>
-    <generator>MediaWiki 1.21wmf4</generator>
+    <generator>MediaWiki 1.22wmf1</generator>
     <case>first-letter</case>
     <namespaces>
       <namespace key="-2" case="first-letter">Media</namespace>
@@ -31,6 +31,8 @@
       <namespace key="447" case="first-letter">Education Program talk</namespace>
       <namespace key="710" case="first-letter">TimedText</namespace>
       <namespace key="711" case="first-letter">TimedText talk</namespace>
+      <namespace key="828" case="first-letter">Module</namespace>
+      <namespace key="829" case="first-letter">Module talk</namespace>
     </namespaces>
   </siteinfo>
   <page>
@@ -38,15 +40,15 @@
     <ns>0</ns>
     <id>243391</id>
     <revision>
-      <id>525220898</id>
-      <parentid>525217356</parentid>
-      <timestamp>2012-11-27T22:30:09Z</timestamp>
+      <id>547936509</id>
+      <parentid>547859226</parentid>
+      <timestamp>2013-03-31T05:22:47Z</timestamp>
       <contributor>
-        <username>Just plain Bill</username>
-        <id>715696</id>
+        <username>Snowded</username>
+        <id>1988889</id>
       </contributor>
-      <comment>Reverted 1 edit by [[Special:Contributions/66.240.14.5|66.240.14.5]] ([[User talk:66.240.14.5|talk]]): Philosophy game. Restore the order given in the source. ([[WP:TW|TW]])</comment>
-      <text xml:space="preserve" bytes="22802">{{other uses}}
+      <comment>Might warrant a paragraph somewhere but not a whole section</comment>
+      <text xml:space="preserve" bytes="25191">{{other uses}}
 {{pp-move|small=yes}}
 [[File:Efez Celsus Library 5 RB.jpg|thumb|upright|Personification of knowledge ([[Greek language|Greek]] ''Επιστημη'', [[Episteme]]) in [[Celsus Library]] in [[Ephesus]], Turkey.]]
 '''Knowledge''' is a familiarity with someone or something, which can include [[fact]]s, [[information]],  [[description]]s,  or [[skills]] acquired through [[experience]] or [[education]]. It can refer to the theoretical or practical understanding of a subject. It can be implicit (as with practical skill or expertise) or explicit (as with the theoretical understanding of a subject); it can be more or less formal or systematic.&lt;ref&gt;http://oxforddictionaries.com/view/entry/m_en_us1261368#m_en_us1261368&lt;/ref&gt; In [[philosophy]], the study of knowledge is called [[epistemology]]; the philosopher [[Plato]] famously defined knowledge as &quot;[[justified true belief]].&quot; However, no single agreed upon definition of knowledge exists, though there are numerous theories to explain it. The following quote from Bertrand Russell's &quot;Theory of Knowledge&quot; illustrates the difficulty in defining knowledge: &quot;The question how knowledge should be defined is perhaps the most important and difficult of the three with which we shall deal. This may seem surprising: at first sight it might be thought that knowledge might be defined as belief which is in agreement with the facts. The trouble is that no one knows what a belief is, no one knows what a fact is, and no one knows what sort of agreement between them would make a belief true. Let us begin with belief.&quot;
@@ -61,28 +63,32 @@ Knowledge acquisition involves complex [[Cognition|cognitive]] processes: percep
 
 The  definition of knowledge is a matter of on-going [[debate]] among [[philosopher]]s in the field of [[epistemology]]. The classical definition, described but not ultimately endorsed by [[Plato]],&lt;ref&gt;In Plato's ''[[Theaetetus (dialogue)|Theaetetus]]'', Socrates and Theaetetus discuss three definitions of ''knowledge'': knowledge as nothing but perception, knowledge as true judgment, and, finally, knowledge as a true judgment with an account. Each of these definitions is shown to be unsatisfactory.&lt;/ref&gt; specifies that a [[statement (logic)|statement]] must meet three [[wikt:criterion|criteria]] in order to be considered knowledge: it must be [[theory of justification|justified]], [[truth|true]], and [[belief|believed]]. Some claim that these conditions are not sufficient, as [[Gettier case]] examples allegedly demonstrate. There are a number of alternatives proposed, including [[Robert Nozick]]'s arguments for a requirement that knowledge 'tracks the truth' and [[Simon Blackburn|Simon Blackburn's]] additional requirement that we do not want to say that those who meet any of these conditions 'through a defect, flaw, or failure' have knowledge. [[Richard Kirkham]] suggests that our definition of knowledge requires that the evidence for the belief necessitates its truth.&lt;ref&gt;http://www.centenary.edu/attachments/philosophy/aizawa/courses/epistemologyf2008/kirkham1984.pdf&lt;/ref&gt;
 
-In contrast to this approach, [[Ludwig Wittgenstein|Wittgenstein]] observed, following [[Moore's paradox]], that one can say &quot;He believes it, but it isn't so&quot;, but not &quot;He knows it, but it isn't so&quot;.&lt;ref&gt;[[Ludwig Wittgenstein]], ''[[On Certainty]]'', remark 42&lt;/ref&gt; He goes on to argue that these do not correspond to distinct mental states, but rather to distinct ways of talking about conviction. What is different here is not the mental state of the speaker, but the activity in which they are engaged. For example, on this account, to ''know'' that the kettle is boiling is not to be in a particular state of mind, but to perform a particular task with the statement that the kettle is boiling. Wittgenstein sought to bypass the difficulty of definition by looking to the way &quot;knowledge&quot; is used in natural languages. He saw knowledge as a case of a [[family resemblance]]. Following this idea, &quot;knowledge&quot; has been reconstructed as a cluster concept that points out relevant features but that is not adequately captured by any definition.&lt;ref&gt;Gottschalk-Mazouz, N. (2008): &quot;Internet and the flow of knowledge&quot;, in: Hrachovec, H.; Pichler, A. (Hg.): Philosophy of the Information Society. Proceedings of the 30. International Ludwig Wittgenstein Symposium Kirchberg am Wechsel, Austria 2007. Volume 2, Frankfurt, Paris, Lancaster, New Brunswik: Ontos, S. 215–232. http://www.uni-stuttgart.de/philo/fileadmin/doc/pdf/gottschalk/ngm-internetflow-2008.pdf&lt;/ref&gt;
+In contrast to this approach, [[Ludwig Wittgenstein|Wittgenstein]] observed, following [[Moore's paradox]], that one can say &quot;He believes it, but it isn't so,&quot; but not &quot;He knows it, but it isn't so.&quot; &lt;ref&gt;[[Ludwig Wittgenstein]], ''[[On Certainty]]'', remark 42&lt;/ref&gt; He goes on to argue that these do not correspond to distinct mental states, but rather to distinct ways of talking about conviction. What is different here is not the mental state of the speaker, but the activity in which they are engaged. For example, on this account, to ''know'' that the kettle is boiling is not to be in a particular state of mind, but to perform a particular task with the statement that the kettle is boiling. Wittgenstein sought to bypass the difficulty of definition by looking to the way &quot;knowledge&quot; is used in natural languages. He saw knowledge as a case of a [[family resemblance]]. Following this idea, &quot;knowledge&quot; has been reconstructed as a cluster concept that points out relevant features but that is not adequately captured by any definition.&lt;ref&gt;Gottschalk-Mazouz, N. (2008): &quot;Internet and the flow of knowledge,&quot; in: Hrachovec, H.; Pichler, A. (Hg.): Philosophy of the Information Society. Proceedings of the 30. International Ludwig Wittgenstein Symposium Kirchberg am Wechsel, Austria 2007. Volume 2, Frankfurt, Paris, Lancaster, New Brunswik: Ontos, S. 215–232. http://www.uni-stuttgart.de/philo/fileadmin/doc/pdf/gottschalk/ngm-internetflow-2008.pdf&lt;/ref&gt;
 
 ==Communicating knowledge==
 [[File:Los portadores de la antorcha.jpg|thumb|''Los portadores de la antorcha'' &lt;br&gt; Sculpture by [[Anna Hyatt Huntington]] about the transmission of knowledge from one generation to the next &lt;br&gt;([[Complutense University of Madrid|Ciudad Universitaria, Madrid, Spain]])]]
 [[Symbolic linguistic representation|Symbolic representation]]s can be used to indicate meaning and can be thought of as a dynamic process. Hence the transfer of the symbolic representation can be viewed as one [[wikt:ascription|ascription]] process whereby knowledge can be transferred. Other forms of communication include observation and imitation, verbal exchange, and audio and video recordings. Philosophers of language and [[semioticians]] construct and analyze theories of knowledge transfer or communication.{{Citation needed|date=September 2007}}
 
-While many would agree that one of the most universal and significant tools for the transfer of knowledge is writing (of many kinds), argument over the usefulness of the written word exists nonetheless, with some scholars skeptical of its impact on societies. In his collection of essays ''[[Technopoly: the Surrender of Culture to Technology|Technopoly]]'' Neil Postman demonstrates the argument against the use of writing through an excerpt from Plato's work ''[[Phaedrus (dialogue)|Phaedrus]]'' (Postman, Neil (1992) ''Technopoly'', Vintage, New York, pp 73). In this excerpt the scholar [[Socrates]] recounts the story of Thamus, the Egyptian king and Theuth the inventor of the written word. In this story, Theuth presents his new invention &quot;writing&quot; to King Thamus, telling Thamus that his new invention &quot;will improve both the wisdom and memory of the Egyptians&quot; (Postman, Neil (1992) Technopoly, Vintage, New York, pp 74). King Thamus is skeptical of this new invention and rejects it as a tool of recollection rather than retained knowledge. He argues that the written word will infect the Egyptian people with fake knowledge as they will be able to attain facts and stories from an external source and will no longer be forced to mentally retain large quantities of knowledge themselves (Postman, Neil (1992) ''Technopoly'', Vintage, New York,pp 74).
+While many would agree that one of the most universal and significant tools for the transfer of knowledge is writing (of many kinds), argument over the usefulness of the written word exists nonetheless, with some scholars skeptical of its impact on societies. In his collection of essays ''[[Technopoly: the Surrender of Culture to Technology|Technopoly]]'', Neil Postman demonstrates the argument against the use of writing through an excerpt from Plato's work ''[[Phaedrus (dialogue)|Phaedrus]]'' (Postman, Neil (1992) ''Technopoly'', Vintage, New York, pp 73). In this excerpt the scholar [[Socrates]] recounts the story of Thamus, the Egyptian king and Theuth the inventor of the written word. In this story, Theuth presents his new invention &quot;writing&quot; to King Thamus, telling Thamus that his new invention &quot;will improve both the wisdom and memory of the Egyptians&quot; (Postman, Neil (1992) Technopoly, Vintage, New York, pp 74). King Thamus is skeptical of this new invention and rejects it as a tool of recollection rather than retained knowledge. He argues that the written word will infect the Egyptian people with fake knowledge as they will be able to attain facts and stories from an external source and will no longer be forced to mentally retain large quantities of knowledge themselves (Postman, Neil (1992) ''Technopoly'', Vintage, New York,pp 74).
 
 Andrew Robinson also highlights, in his work ''The Origins of Writing'', the possibility for writing to be used to spread false information and therefore the ability of the written word to decrease social knowledge (Robinson, Andrew (2003) ''The Origins of Writing'' in Crowley and Heyer (eds) Communication in History: Technology, Culture, Society, Boston pp 34). People are often internalizing new information which they perceive to be knowledge but in reality fill their minds with false knowledge.  
 
 The above points are moot in the modern world. Verbal communication lends itself to the spread of falsehoods much more so than written, as there is no record of exactly what was said or who originally said it (usually neither the source nor the content can be verified). Gossip and rumors are common examples.  As to value of writing, the extent of human knowledge is now so great that it is only possible to record it and to communicate it through writing. Major libraries today can have millions of books of knowledge (in addition to works of fiction). It is only recently that audio and video technology for recording knowledge have become available and the use of these still requires replay equipment and electricity.  Verbal teaching and handing down of knowledge is limited to those few who would have contact with the transmitter person - far too limited for today's world.  Writing is still the most available and most universal of all forms of recording and transmitting knowledge.  It stands unchallenged as mankind's primary technology of knowledge transfer down through the ages and to all cultures and languages of the world.
 
 ==Situated knowledge==
-Situated knowledge is knowledge specific to a particular situation.&lt;ref&gt;Haraway, Donna 1998. ''Situated Knowledges: The Science Question in Feminism and the Privilege of Partial Perspective''.&lt;/ref&gt;
+Situated knowledge is knowledge specific to a particular situation. It is a term coined by [[Donna Haraway]] as an extension of the [[Feminism|feminist]] approaches of “successor science” suggested by [[Sandra Harding]], one which “offers a more adequate, richer, better account of a world, in order to live in it well and in critical, reflexive relation to our own as well as others’ practices of domination and the unequal parts of privilege and oppression that makes up all positions.”&lt;ref name=&quot;Haraway1988&quot;&gt;&quot;Situated Knowledges: The Science Question in Feminism and the Privilege of Partial Perspective&quot;. Haraway, Donna. ''Feminist Studies'' Vol. 14, No. 3. pp. 575-599. 1988.&lt;/ref&gt; This situation partially transforms science into a [[narrative]], which [[Arturo Escobar (anthropologist)|Arturo Escobar]] explains as, “neither fictions nor supposed facts.” This narrative of situation is historical textures woven of fact and fiction, and as Escobar explains further, “even the most neutral scientific domains are narratives in this sense,” insisting that rather than a purpose dismissing science as a trivial matter of contingency, “it is to treat (this narrative) in the most serious way, without succumbing to its mystification as ‘the truth’ or to the ironic [[skepticism]] common to many critiques.”&lt;ref&gt;&quot;Introduction: Development and the Anthropology of Modernity&quot;. Escobar, Arturo. ''Encountering Development: The Making and Unmaking of the Third World''.&lt;/ref&gt;
+
+Haraway’s argument stems from the limitations of the human [[perception]], as well as the overemphasis of the [[Visual perception|sense of vision]] in [[science]]. According to Haraway, [[Visual perception|vision]] in [[science]] has been, “used to signify a leap out of the marked body and into a conquering gaze from nowhere.” This is the “gaze that mythically inscribes all the marked bodies, that makes the unmarked category claim the power to see and not be seen, to represent while escaping representation.”&lt;ref name=&quot;Haraway1988&quot;&gt;&quot;Situated Knowledges: The Science Question in Feminism and the Privilege of Partial Perspective&quot;. Haraway, Donna. ''Feminist Studies'' Vol. 14, No. 3. pp. 575-599 1988.&lt;/ref&gt; This causes a limitation of views in the position of [[science]] itself as a potential player in the creation of knowledge, resulting in a position of “modest witness”. This is what Haraway terms a “god trick”, or the aforementioned representation while escaping representation.&lt;ref&gt;Chapter 1. Haraway, Donna. ''Modest_Witness@Second_Millennium. FemaleMan© Meets_OncoMouse2. Feminism and Technoscience''. 1997.&lt;/ref&gt; In order to avoid this, “Haraway perpetuates a tradition of thought which emphasizes the important of the [[subject]] in terms of both ethical and political accountability”.&lt;ref&gt;&quot;Posthuman, All Too Human: Towards a New Process Ontology&quot;. Braidotti, Rosi. ''Theory Culture'' Vol. 23. pp. 197-208. 2006.&lt;/ref&gt;
 
 Some methods of generating knowledge, such as [[trial and error]], or learning from [[experience]], tend to create highly situational knowledge. One of the main attributes of the [[scientific method]] is that the theories it generates are much less situational than knowledge gained by other methods.{{Citation needed|date=September 2007}}
-Situational knowledge is often embedded in language, culture, or traditions.{{Citation needed|date=September 2007}}
+Situational knowledge is often embedded in language, culture, or traditions. This integration of situational knowledge is an allusion to the community, and its attempts at collecting subjective perspectives into an embodiment “of views from somewhere.” &lt;ref&gt;&quot;Situated Knowledges: The Science Question in Feminism and the Privilege of Partial Perspective&quot;. Haraway, Donna. ''Feminist Studies'' Vol. 14, No. 3. pp. 575-599 1988.&lt;/ref&gt;
 
-Knowledge generated through experience is called knowledge &quot;a posteriori&quot;, meaning afterwards. The pure existence of a term like &quot;a posteriori&quot; means this also has a counterpart. In this case that is knowledge &quot;a priori&quot;, meaning before. The knowledge prior to any experience means that there are certain &quot;assumptions&quot; that one takes for granted. For example if you are being told about a [[chair]] it is clear to you that the chair is in [[space]], that it is [[three dimensional space|3D]]. This knowledge is not knowledge that one can &quot;forget&quot;, even someone suffering from amnesia experiences the world in 3D. See also: ''[[A priori and a posteriori (philosophy)|a priori and a posteriori]]''.{{Citation needed|date=September 2007}}
+Knowledge generated through experience is called knowledge &quot;a posteriori&quot;, meaning afterwards. The pure existence of a term like &quot;a posteriori&quot; means this also has a counterpart. In this case that is knowledge &quot;a priori&quot;, meaning before. The knowledge prior to any experience means that there are certain &quot;assumptions&quot; that one takes for granted. For example if you are being told about a [[chair]] it is clear to you that the chair is in [[space]], that it is [[three dimensional space|3D]]. This knowledge is not knowledge that one can &quot;forget&quot;, even someone suffering from amnesia experiences the world in 3D.{{Citation needed|date=September 2007}} 
+
+Even though Haraway’s arguments are largely based on [[Feminism|feminist studies]],&lt;ref name=&quot;Haraway1988&quot;&gt;&quot;Situated Knowledges: The Science Question in Feminism and the Privilege of Partial Perspective&quot;. Haraway, Donna. ''Feminist Studies'' Vol. 14, No. 3. pp. 575-599. 1988.&lt;/ref&gt; this idea of different worlds, as well as the [[Skepticism|skeptic]] stance of situated knowledge is present in the main arguments of [[post-structuralism]]. Fundamentally, both argue the [[contingency]] of knowledge on the presence of [[history]]; [[Power (social and political)|power]], and [[geography]], as well as the rejection of universal rules or laws or elementary structures; and the idea of [[Power (social and political)|power]] as an inherited trait of [[objectification]].&lt;ref&gt;&quot;The Subject and Power&quot;. Foucault, Michel. ''Critical Inquiry'' Volume 9, No. 4. pp. 777-795. 1982&lt;/ref&gt;
 
 ==Partial knowledge==
-One discipline of [[epistemology]] focuses on [[dispersed knowledge|partial knowledge]]. In most cases, it is not possible to understand an information domain exhaustively; our knowledge is always ''incomplete'' or partial. Most real problems have to be solved by taking advantage of a partial understanding of the problem context and problem data, unlike the typical math problems one might solve at school, where all data is given and one is given a complete understanding of formulas necessary to solve them.{{Citation needed|date=September 2007}}
+One discipline of [[epistemology]] focuses on [[partial knowledge]]. In most cases, it is not possible to understand an information domain exhaustively; our knowledge is always ''incomplete'' or partial. Most real problems have to be solved by taking advantage of a partial understanding of the problem context and problem data, unlike the typical math problems one might solve at school, where all data is given and one is given a complete understanding of formulas necessary to solve them.{{Citation needed|date=September 2007}}
 
 This idea is also present in the concept of [[bounded rationality]] which assumes that in real life situations people often have a limited amount of information and make decisions accordingly.
 
@@ -121,7 +127,7 @@ The [[Old Testament]]'s [[tree of the knowledge of good and evil]] contained the
 In [[Gnosticism]] divine knowledge or [[gnosis]] is hoped to be attained. In [[Thelema]] knowledge and conversation with one's Holy Guardian Angel is the purpose of life.{{citation needed|date=January 2012}}
 
 विद्या दान (Vidya Daan) i.e. knowledge sharing is a major part of [[Dāna|Daan]], a [[Niyama|tenet]] of all [[Indian religions|Dharmic Religions]].&lt;ref&gt;[http://vhp.org/news/news-regional/delhi-seva Knowledge Donation is the primary donation]&lt;/ref&gt;
-[[Hindu]] Scriptures present two kinds of knowledge, ''Paroksh Gyan'' and ''Prataksh Gyan''. ''Paroksh Gyan'' (also spelled ''Paroksha-Jnana'') is secondhand knowledge: knowledge obtained from books, hearsay, etc. ''Prataksh Gyan'' (also spelled ''Prataksha-Jnana'') is the knowledge borne of direct experience, i.e., knowledge that one discovers for oneself.&lt;ref&gt;{{cite web
+[[Hindu]] Scriptures present two kinds of knowledge, ''Paroksh Gyan'' and ''Prataksh Gyan''. ''Paroksh Gyan'' (also spelled ''[[Paroksha]]-Jnana'') is secondhand knowledge: knowledge obtained from books, hearsay, etc. ''Prataksh Gyan'' (also spelled ''Prataksha-Jnana'') is the knowledge borne of direct experience, i.e., knowledge that one discovers for oneself.&lt;ref&gt;{{cite web
 |url=http://www.swami-krishnananda.org/panch/panch_07.html
 |title=Chapter 7
 |work=The Philosophy of the Panchadasi
@@ -136,7 +142,9 @@ In [[Jewish]] tradition, knowledge ([[Hebrew]]: דעת ''da'ath'') is considered
 ==See also==
 {{portal|Epistemology}}
 {{Wikipedia books|Epistemology}}
-{{div col}}
+
+* [[Outline of knowledge]] - guide to the subject of knowledge presented as a [[tree structure]]d list of its subtopics.
+* ''[[A priori and a posteriori (philosophy)|a priori and a posteriori]]''
 * [[Analytic-synthetic distinction]]
 * [[Descriptive knowledge]]
 * [[Epistemic logic]]
@@ -151,11 +159,11 @@ In [[Jewish]] tradition, knowledge ([[Hebrew]]: דעת ''da'ath'') is considered
 * [[Learning]]
 * [[Metaknowledge]]
 * [[Philosophical skepticism]]
+* [[Post-structuralism]]
 * [[Procedural knowledge]]
 * [[Society for the Diffusion of Useful Knowledge]]
 * [[Tacit knowledge]]
 * [[Wisdom]]
-{{div col end}}
 
 ==References==
 {{reflist|2}}
@@ -173,104 +181,9 @@ In [[Jewish]] tradition, knowledge ([[Hebrew]]: דעת ''da'ath'') is considered
 {{epistemology}}
 {{Positivism}}
 
-[[Category:Knowledge| ]]
 [[Category:Concepts in epistemology]]
-
-[[ar:معرفة]]
-[[an:Conoiximiento]]
-[[ast:Conocencia]]
-[[az:Bilik]]
-[[bn:জ্ঞান]]
-[[zh-min-nan:Tì-sek]]
-[[be:Веды]]
-[[be-x-old:Веды]]
-[[bg:Знание]]
-[[bs:Znanje]]
-[[br:Gouiziegezh]]
-[[ca:Coneixement]]
-[[cv:Пĕлӳ]]
-[[cs:Poznatek]]
-[[sn:Ruzivo]]
-[[da:Viden]]
-[[de:Wissen]]
-[[et:Teadmine]]
-[[el:Γνώση]]
-[[es:Conocimiento]]
-[[eo:Scio]]
-[[eu:Ezaguera]]
-[[fa:دانش]]
-[[hif:Jankari]]
-[[fr:Connaissance]]
-[[fy:Kennis]]
-[[gl:Coñecemento]]
-[[gan:知識]]
-[[ko:지식]]
-[[hi:विद्या]]
-[[hr:Znanje]]
-[[io:Savo]]
-[[id:Pengetahuan]]
-[[ia:Cognoscentia]]
-[[is:Þekking]]
-[[it:Conoscenza]]
-[[he:ידע]]
-[[kn:ಜ್ಞಾನ]]
-[[ka:ცოდნა]]
-[[kk:Білім]]
-[[ht:Knowledge]]
-[[ku:Zanîn]]
-[[ky:Билим]]
-[[la:Gnaritas]]
-[[lv:Zināšanas]]
-[[lb:Wëssen]]
-[[lt:Žinios]]
-[[hu:Ismeret]]
-[[mk:Знаење]]
-[[ml:അറിവ്]]
-[[mr:ज्ञान]]
-[[ms:Ilmu]]
-[[mwl:Coincimiento]]
-[[nah:Machiliztli]]
-[[nl:Kennis]]
-[[new:ज्ञान]]
-[[ja:知識]]
-[[no:Kunnskap]]
-[[nn:Kunnskap]]
-[[oc:Coneissença]]
-[[pnb:جانکاری]]
-[[ps:پوهه]]
-[[pl:Wiedza]]
-[[pt:Conhecimento]]
-[[kaa:Bilim]]
-[[ro:Cunoaștere]]
-[[ru:Знание]]
-[[sah:Билии]]
-[[sa:विद्या]]
-[[sq:Dituria]]
-[[scn:Canuscenza]]
-[[simple:Knowledge]]
-[[sk:Vedenie (filozofia)]]
-[[sl:Znanje]]
-[[ckb:زانین]]
-[[sr:Знање]]
-[[sh:Znanje]]
-[[su:Pangaweruh]]
-[[fi:Tieto]]
-[[sv:Kunskap]]
-[[tl:Kaalaman]]
-[[ta:அறிவு]]
-[[tt:Белем]]
-[[th:ความรู้]]
-[[chr:ᎥᎦᏔᎲᎢ]]
-[[tr:Bilgi]]
-[[uk:Знання]]
-[[ur:دانش]]
-[[za:Caiz]]
-[[vi:Tri thức]]
-[[war:Kaaradman]]
-[[yi:וויסן]]
-[[zh-yue:知識]]
-[[zh:知识]]</text>
-      <sha1>2sx3h1trdsb3gz73g4k5ucfg8e1hinu</sha1>
+[[Category:Knowledge| ]]</text>
+      <sha1>mmzso0c0aar85l2ci1mvriaf8wdy5ne</sha1>
       <model>wikitext</model>
       <format>text/x-wiki</format>
     </revision>
@@ -280,27 +193,29 @@ In [[Jewish]] tradition, knowledge ([[Hebrew]]: דעת ''da'ath'') is considered
     <ns>0</ns>
     <id>17547</id>
     <revision>
-      <id>524099514</id>
-      <parentid>523078439</parentid>
-      <timestamp>2012-11-20T23:03:26Z</timestamp>
+      <id>545186131</id>
+      <parentid>544555966</parentid>
+      <timestamp>2013-03-18T09:05:36Z</timestamp>
       <contributor>
-        <username>AlwaysUnite</username>
-        <id>14095792</id>
+        <username>Nataev</username>
+        <id>10600670</id>
       </contributor>
-      <comment>/* Free love */</comment>
-      <text xml:space="preserve" bytes="53203">{{About}}
+      <minor/>
+      <text xml:space="preserve" bytes="50965">{{About}}
 {{pp-semi-indef}}{{pp-move-indef}}
 [[File:DickseeRomeoandJuliet.jpg|thumb|upright|Archetypal lovers [[Romeo and Juliet]] portrayed by [[Frank Bernard Dicksee|Frank Dicksee]]]]
-'''Love''' is an [[emotion]] of a strong [[affection]] and personal [[attachment (psychology)|attachment]].&lt;ref name=&quot;oxford&quot;&gt;''Oxford Illustrated American Dictionary'' (1998) + ''Merriam-Webster Collegiate Dictionary'' (2000)&lt;/ref&gt; Love is also said to be a [[virtue]] representing all of human [[kindness]], [[compassion]], and affection —&quot;the unselfish loyal and benevolent concern for the good of another&quot;.&lt;ref&gt;[http://www.merriam-webster.com/dictionary/love Merriam Webster Dictionary]&lt;/ref&gt; Love may describe compassionate and affectionate actions towards other humans, one's self or animals.&lt;ref name=&quot;Fromm, Erich 1956&quot;&gt;Fromm, Erich; &quot;The Art of Loving&quot;, Harper Perennial (1956), Original English Version, ISBN 978-0-06-095828-2&lt;/ref&gt;
+The English word '''love''' can refer to a variety of different feelings, states, and attitudes, ranging from pleasure (&quot;I loved that meal&quot;) to [[interpersonal attraction]] (&quot;I love my partner&quot;). It can refer to an [[emotion]] of a strong [[affection]] and personal [[attachment (psychology)|attachment]].&lt;ref name=&quot;oxford&quot;&gt;''Oxford Illustrated American Dictionary'' (1998) + ''Merriam-Webster Collegiate Dictionary'' (2000)&lt;/ref&gt; It can also be a [[virtue]] representing human [[kindness]], [[compassion]], and affection—&quot;the unselfish loyal and benevolent concern for the good of another&quot;.&lt;ref&gt;[http://www.merriam-webster.com/dictionary/love Merriam Webster Dictionary]&lt;/ref&gt; And it may describe compassionate and affectionate actions towards other humans, one's self or animals.&lt;ref name=&quot;Fromm, Erich 1956&quot;&gt;Fromm, Erich; ''The Art of Loving'', Harper Perennial (1956), Original English Version, ISBN 978-0-06-095828-2&lt;/ref&gt;
 
-In English, love refers to a variety of different feelings, states, and attitudes, ranging from pleasure (&quot;I loved that meal&quot;) to [[interpersonal attraction]] (&quot;I love my partner&quot;). &quot;Love&quot; may refer specifically to the passionate desire and intimacy of [[romance (love)|romantic love]], to the sexual love of [[eros (concept)|eros]], to the emotional closeness of [[familial love|familial]] love, to the [[platonic love]] that defines [[friendship]],&lt;ref name=&quot;PlatonicSchool&quot;&gt;{{cite book |last=Kristeller |first=Paul Oskar |title=Renaissance Thought and the Arts: Collected Essays |publisher=Princeton University |year=1980 |isbn=0-691-02010-8}}&lt;/ref&gt; or to the profound [[Henosis|oneness]] or devotion of [[Religious views on love|religious love]]&lt;ref name=&quot;Gita&quot;&gt;{{cite book |last= Mascaró |first=Juan |title=The Bhagavad Gita |publisher=Penguin Classics |year=2003 |isbn=0-14-044918-3}} (J. Mascaró, translator)&lt;/ref&gt;, or to a concept of '''love''' that encompasses all of those feelings. This diversity of uses and meanings, combined with the complexity of the feelings involved, makes love unusually difficult to consistently define,  compared to other emotional states.
+In terms of interpersonal attraction, four forms of love have traditionally been distinguished, based on ancient Greek precedent: the love of kinship or [[familial love|familiarity]] (in [[Ancient Greek|Greek]], ''[[storge]]''), the love of [[friendship]] (''[[philia]]''), the love of sexual and/or [[romance (love)|romantic desire]] (''[[eros (concept)|eros]]''), and [[Kenosis|self-emptying]] or divine love (''[[agape]]'').&lt;ref&gt;C.S. Lewis, ''[[The Four Loves]]'', 1960.&lt;/ref&gt;
+&lt;ref name=&quot;PlatonicSchool&quot;&gt;{{cite book |last=Kristeller |first=Paul Oskar |title=Renaissance Thought and the Arts: Collected Essays |publisher=Princeton University |year=1980 |isbn=0-691-02010-8}}&lt;/ref&gt; Modern authors have distinguished further varieties of romantic love.&lt;ref&gt;[[Stendhal]], in his book ''On Love'' (Paris, 1822), distinguished carnal love, passionate love, a kind of uncommitted love that he called &quot;taste-love&quot;, and love of vanity. [[Denis de Rougemont]] in his book ''Love in the Western World'' traced the story of passionate love (''l'amour-passion'') from its courtly to its romantic forms. [[Benjamin Péret]], in the introduction to his ''Anthology of Sublime Love'' (Paris, 1956), further distinguished &quot;sublime love&quot;, a state of realized idealisation perhaps equatable with the romantic form of passionate love.&lt;/ref&gt;
+Non-Western traditions have also distinguished [[Religious views on love|variants or symbioses of these states]].&lt;ref name=&quot;Gita&quot;&gt;{{cite book |last= Mascaró |first=Juan |title=The Bhagavad Gita |publisher=Penguin Classics |year=2003 |isbn=0-14-044918-3}} (J. Mascaró, translator)&lt;/ref&gt; This diversity of uses and meanings, combined with the complexity of the feelings involved, makes love unusually difficult to consistently define,  compared to other emotional states.
 
-Love in its various forms acts as a major facilitator of [[interpersonal relationship]]s and, owing to its central psychological importance, is one of the most common themes in the [[creative arts]].&lt;ref&gt;{{cite web|title=Article On Love|url=http://www.slideshare.net/azharabbas/just-love|accessdate=2011-09-13}}&lt;/ref&gt;
+Love in its various forms acts as a major facilitator of [[interpersonal relationship]]s and, owing to its central psychological importance, is one of the most common themes in the [[creative arts]].&lt;ref&gt;{{cite web |title=Article On Love|url=http://www.slideshare.net/azharabbas/just-love|accessdate=2011-09-13}}&lt;/ref&gt;
 
 Love may be understood as part of the survival instinct, a function to keep human beings together against menaces and to facilitate the continuation of the species.&lt;ref name=&quot;Fisher&quot;&gt;Helen Fisher. ''Why we love: the nature and chemistry of romantic love''. 2004.&lt;/ref&gt;
 
 ==Definitions==
-{{Love table}}
+{{Love sidebar}}
 The word &quot;love&quot; can have a variety of related but distinct meanings in different contexts. Often, other languages use multiple words to express some of the different concepts that English relies mainly on &quot;love&quot; to encapsulate; one example is the plurality of [[Greek words for love|Greek words for &quot;love.&quot;]] [[Cultural identity|Cultural differences]] in conceptualizing love thus make it doubly difficult to establish any universal definition.&lt;ref&gt;{{cite journal
 |last=Kay
 |first=Paul
@@ -318,13 +233,13 @@ The word &quot;love&quot; can have a variety of related but distinct meanings in
 
 Although the nature or [[essence]] of love is a subject of frequent debate, different aspects of the word can be clarified by determining what ''isn't'' love. As a general expression of positive sentiment (a stronger form of ''like''), love is commonly contrasted with [[hate]] (or neutral [[apathy]]); as a less sexual and more emotionally intimate form of romantic attachment, love is commonly contrasted with [[lust]]; and as an interpersonal relationship with romantic overtones, love is sometimes contrasted with [[friendship]], although the word ''love'' is often applied to close friendships.
 
-[[Image:Columpio Veracruz 059.jpg|thumb|left|Fraternal love (Prehispanic sculpture from 250–900 A.D., of [[Huastec civilization|Huastec]] origin). [[Museo de Antropología de Xalapa|Museum of Anthropology]] in [[Xalapa]], [[Veracruz]], [[Mexico]].]]
+[[File:Columpio Veracruz 059.jpg|thumb|left|Fraternal love (Prehispanic sculpture from 250–900 A.D., of [[Huastec civilization|Huastec]] origin). [[Museo de Antropología de Xalapa|Museum of Anthropology]] in [[Xalapa]], [[Veracruz]], [[Mexico]].]]
 
 When discussed in the abstract, ''love'' usually refers to interpersonal love, an experience felt by a person for another person. Love often involves caring for or identifying with a person or thing (cf. [[vulnerability and care theory of love]]), including oneself (cf. [[narcissism]]). In addition to cross-cultural differences in understanding love, ideas about love have also changed greatly over time. Some historians date modern conceptions of romantic love to courtly Europe during or after [[Middle Ages|the Middle Ages]], although the prior existence of romantic attachments is attested by ancient love poetry.&lt;ref&gt;{{cite web
 |url=http://www.TrueOpenLove.org/reference/AncientLovePoetry.html
 |title=Ancient Love Poetry}}&lt;/ref&gt;
 
-Because of the complex and abstract nature of love, discourse on love is commonly reduced to a [[thought-terminating cliché]], and there are a number of common [[proverb]]s regarding love, from [[Virgil|Virgil's]] &quot;[[Amor Vincit Omnia (Caravaggio)|Love conquers all]]&quot; to [[The Beatles]]' &quot;[[All You Need Is Love]]&quot;. [[St. Thomas Aquinas]], following [[Aristotle]], defines love as &quot;to will the good of another.&quot;&lt;ref name=&quot;newadvent.org&quot;&gt;{{cite web|url=http://www.newadvent.org/summa/2026.htm#article4 |title=St. Thomas Aquinas, STh I-II, 26, 4, corp. art |publisher=Newadvent.org |date= |accessdate=2010-10-30}}&lt;/ref&gt; [[Bertrand Russell]] describes love as a condition of &quot;absolute value,&quot; as opposed to [[relative value (economics)|relative value]].{{citation needed|date=October 2012}} Philosopher [[Gottfried Leibniz]] said that love is &quot;to be delighted by the happiness of another.&quot;&lt;ref&gt;{{cite web
+Because of the complex and abstract nature of love, discourse on love is commonly reduced to a [[thought-terminating cliché]], and there are a number of common [[proverb]]s regarding love, from [[Virgil|Virgil's]] &quot;[[Amor Vincit Omnia (Caravaggio)|Love conquers all]]&quot; to [[The Beatles]]' &quot;[[All You Need Is Love]]&quot;. [[St. Thomas Aquinas]], following [[Aristotle]], defines love as &quot;to will the good of another.&quot;&lt;ref name=&quot;newadvent.org&quot;&gt;{{cite web |url=http://www.newadvent.org/summa/2026.htm#article4 |title=St. Thomas Aquinas, STh I-II, 26, 4, corp. art |publisher=Newadvent.org |date= |accessdate=2010-10-30}}&lt;/ref&gt; [[Bertrand Russell]] describes love as a condition of &quot;absolute value,&quot; as opposed to [[relative value (economics)|relative value]].{{citation needed|date=October 2012}} Philosopher [[Gottfried Leibniz]] said that love is &quot;to be delighted by the happiness of another.&quot;&lt;ref&gt;{{cite web
 |url=http://la.wikisource.org/wiki/Confessio_philosophi
 |first=Gottfried
 |last=Leibniz
@@ -335,20 +250,18 @@ Because of the complex and abstract nature of love, discourse on love is commonl
 Love is sometimes referred to as being the &quot;international language&quot;, overriding cultural and linguistic divisions.
 
 ==Impersonal love==
-A person can be said to love an object, principle, or goal if they value it greatly and are deeply committed to it. Similarly, compassionate outreach and volunteer workers' &quot;love&quot; of their cause may sometimes be born not of interpersonal love, but impersonal love coupled with [[altruism]] and strong spiritual or political convictions.&lt;ref name=&quot;Fromm, Erich 2000&quot;&gt;Fromm, Erich; &quot;The Art of Loving&quot;, Harper Perennial (September 5, 2000), Original English Version, ISBN 978-0-06-095828-2&lt;/ref&gt; People can also &quot;love&quot; material objects, animals, or activities if they invest themselves in bonding or otherwise identifying with those things. If sexual passion is also involved, this condition is called [[paraphilia]].&lt;ref&gt;{{cite web | last = DiscoveryHealth | first = | title = Paraphilia | url=http://health.discovery.com/centers/sex/sexpedia/paraphilia.html | accessdate = 2007-12-16}}&lt;/ref&gt;
+A person can be said to love an object, principle, or goal if they value it greatly and are deeply committed to it. Similarly, compassionate outreach and volunteer workers' &quot;love&quot; of their cause may sometimes be born not of interpersonal love, but impersonal love coupled with [[altruism]] and strong spiritual or political convictions.&lt;ref name=&quot;Fromm, Erich 2000&quot;&gt;Fromm, Erich; ''The Art of Loving'', Harper Perennial (September 5, 2000), Original English Version, ISBN 978-0-06-095828-2&lt;/ref&gt; People can also &quot;love&quot; material objects, animals, or activities if they invest themselves in bonding or otherwise identifying with those things. If sexual passion is also involved, this condition is called [[paraphilia]].&lt;ref&gt;{{cite web | last = DiscoveryHealth | first = | title = Paraphilia | url=http://health.discovery.com/centers/sex/sexpedia/paraphilia.html | accessdate = 2007-12-16}}&lt;/ref&gt;
 
 ==Interpersonal love==
 Interpersonal love refers to love between human beings. It is a more potent sentiment than a simple ''liking'' for another. [[Unrequited love]] refers to those feelings of love that are not reciprocated. Interpersonal love is most closely associated with [[interpersonal relationships]].&lt;ref name=&quot;Fromm, Erich 2000&quot;/&gt; Such love might exist between family members, friends, and couples. There are also a number of psychological disorders related to love, such as [[erotomania]].
 [[File:Gothaer Liebespaar.jpg|thumb|180px|''Pair of Lovers''. 1480-1485]]
-Throughout history, [[philosophy]] and [[religion]] have done the most speculation on the phenomenon of love. In the last century, the science of [[psychology]] has written a great deal on the subject. In recent years, the sciences of [[psychology]], [[anthropology]], [[neuroscience]], and [[biology]] have added to the understanding of the nature and function of love. 
-
-People with  [[histrionic personality disorder]] and [[narcissism]] may have a limited or minimal capability for experiencing love.&lt;ref&gt;[http://books.google.co.uk/books?id=PB2BVBcyb9oC&amp;pg=PA74&amp;dq=&amp;hl=en&amp;sa=X&amp;ei=aAc0T5aNH-er0QX8s8WvAg&amp;ved=0CEMQ6AEwAg#v=onepage&amp;q=&amp;f=false Personality Disorders: Recognition and Clinical Management] retrieved 9 February 2012, Jonathan H. Dowson, Adrian T. Grounds, page 74&lt;/ref&gt;&lt;ref&gt;[http://books.google.co.uk/books?id=OFn_7aBm-5oC&amp;pg=PA89&amp;dq=&amp;hl=en&amp;sa=X&amp;ei=xIVcT8HTDebN0QXykoXLDQ&amp;ved=0CH4Q6AEwDQ#v=onepage&amp;q=&amp;f=false Women and borderline personality disorder: symptoms and stories] page 89, retrieved 10 February 2012&lt;/ref&gt;&lt;ref&gt;[http://books.google.co.uk/books?hl=en&amp;lr=&amp;id=NSyiH7xM7FQC&amp;oi=fnd&amp;pg=PA257&amp;dq=&amp;ots=fifDbBTb3o&amp;sig=xPh6nNAnxBozgtlwiwm2jrdKFCI#v=onepage&amp;q&amp;f=false Psychodynamic Psychotherapy for Personality Disorders: A Clinical Handbook] Narcissistic personality disorder, page 263&lt;/ref&gt;&lt;ref&gt;[http://books.google.co.uk/books?id=wAU9UCI1V6kC&amp;pg=PA243&amp;dq=&amp;hl=en&amp;sa=X&amp;ei=xIVcT8HTDebN0QXykoXLDQ&amp;ved=0CJYBEOgBMBE#v=onepage&amp;q=&amp;f=false Introduction to Psychology] Ann L. Weber, Joseph Johnson, page 243&lt;/ref&gt;{{not in citation|date=November 2012}}
+Throughout history, [[philosophy]] and [[religion]] have done the most speculation on the phenomenon of love. In the last century, the science of [[psychology]] has written a great deal on the subject. In recent years, the sciences of [[psychology]], [[anthropology]], [[neuroscience]], and [[biology]] have added to the understanding of the nature and function of love.
 
 ===Biological basis===
 {{Main|Biological basis of love}}
 Biological models of sex tend to view love as a [[mammal]]ian drive, much like [[hunger]] or [[thirst]].&lt;ref name=&quot;Lewis&quot;&gt;{{cite book | last = Lewis | first = Thomas | coauthors = Amini, F., &amp; Lannon, R. | title = [[A General Theory of Love]] | publisher = Random House | year = 2000 |isbn=0-375-70922-3}}&lt;/ref&gt; [[Helen Fisher (anthropologist)|Helen Fisher]], a leading expert in the topic of love, divides the experience of love into three partly overlapping stages: lust, attraction, and attachment. Lust is the feeling of sexual desire; romantic attraction determines what partners mates find attractive and pursue, conserving time and energy by choosing; and attachment involves sharing a home, parental duties, mutual defense, and in humans involves feelings of safety and security.&lt;ref name=&quot;brain systems&quot;&gt;
 http://homepage.mac.com/helenfisher/archives_of_sex_beh.pdf Deﬁning the Brain Systems of Lust, Romantic Attraction,
-and Attachment by Fisher et. al&lt;/ref&gt; Three distinct neural circuitries, including neurotransmitters, and also three behavioral patterns, are associated with these three romantic styles.&lt;ref name=&quot;brain systems&quot; /&gt;
+and Attachment by Fisher et. al&lt;/ref&gt; Three distinct neural circuitries, including neurotransmitters, and three behavioral patterns, are associated with these three romantic styles.&lt;ref name=&quot;brain systems&quot; /&gt;
 
 [[Lust]] is the initial passionate sexual desire that promotes [[mating]], and involves the increased release of chemicals such as [[testosterone]] and [[estrogen]]. These effects rarely last more than a few weeks or months. [[Interpersonal attraction|Attraction]] is the more individualized and romantic desire for a specific candidate for mating, which develops out of lust as commitment to an individual mate forms. Recent studies in [[neuroscience]] have indicated that as people fall in love, the brain consistently releases a certain set of chemicals, including [[pheromones]], [[dopamine]], [[norepinephrine]], and [[serotonin]], which act in a manner similar to [[amphetamine]]s, stimulating the brain's [[pleasure center]] and leading to side effects such as increased [[heart rate]], [[Anorexia (symptom)|loss of appetite]] and sleep, and an intense feeling of excitement. Research has indicated that this stage generally lasts from one and a half to three years.&lt;ref name=&quot;human&quot;&gt;{{cite book
 |last=Winston
@@ -369,7 +282,7 @@ Since the lust and attraction stages are both considered temporary, a third stag
 
 ===Psychological basis===
 {{further2|[[Human bonding]]}}
-Psychology depicts love as a cognitive and social phenomenon. [[Psychologist]] [[Robert Sternberg]] formulated a [[triangular theory of love]] and argued that love has three different components: intimacy, commitment, and passion. Intimacy is a form in which two people share confidences and various details of their personal lives, and is usually shown in friendships and romantic love affairs. Commitment, on the other hand, is the expectation that the relationship is permanent. The last and most common form of love is sexual attraction and passion. Passionate love is shown in infatuation as well as romantic love. All forms of love are viewed as varying combinations of these three components. Non-love does not include any of these components. Liking only includes intimacy. Infatuated love only includes passion. Empty love only includes commitment. Romantic love includes both intimacy and passion. Companionate love includes intimacy and commitment. Fatuous love includes passion and commitment. Lastly, consummate love includes all three. &lt;ref&gt;Sternberg, R.J. (1986). &quot;A triangular theory of love&quot;. Psychological Review 93 (2): 119–135. doi:10.1037/0033-295X.93.2.&lt;/ref&gt;American psychologist [[Zick Rubin]] sought to define ''love'' by [[psychometrics]] in the 1970s. His work states that three factors constitute love: attachment, caring, and intimacy.&lt;ref&gt;{{cite journal
+Psychology depicts love as a cognitive and social phenomenon. [[Psychologist]] [[Robert Sternberg]] formulated a [[triangular theory of love]] and argued that love has three different components: intimacy, commitment, and passion. Intimacy is a form in which two people share confidences and various details of their personal lives, and is usually shown in friendships and romantic love affairs. Commitment, on the other hand, is the expectation that the relationship is permanent. The last and most common form of love is sexual attraction and passion. Passionate love is shown in infatuation as well as romantic love. All forms of love are viewed as varying combinations of these three components. Non-love does not include any of these components. Liking only includes intimacy. Infatuated love only includes passion. Empty love only includes commitment. Romantic love includes both intimacy and passion. Companionate love includes intimacy and commitment. Fatuous love includes passion and commitment. Lastly, consummate love includes all three.&lt;ref&gt;Sternberg, R.J. (1986). &quot;A triangular theory of love&quot;. Psychological Review 93 (2): 119–135. doi:10.1037/0033-295X.93.2.&lt;/ref&gt; American psychologist [[Zick Rubin]] sought to define ''love'' by [[psychometrics]] in the 1970s. His work states that three factors constitute love: attachment, caring, and intimacy.&lt;ref&gt;{{cite journal
 |last=Rubin
 |first=Zick
 |title=Measurement of Romantic Love
@@ -392,13 +305,13 @@ Psychology depicts love as a cognitive and social phenomenon. [[Psychologist]] [
 Following developments in electrical theories such as [[Coulomb's law]], which showed that positive and negative charges attract, analogs in human life were developed, such as &quot;opposites attract.&quot; Over the last century, research on the nature of human mating has generally found this not to be true when it comes to character and personality—people tend to like people similar to themselves. However, in a few unusual and specific domains, such as [[immune system]]s, it seems that humans prefer others who are unlike themselves (e.g., with an orthogonal immune system), since this will lead to a baby that has the best of both worlds.&lt;ref&gt;{{cite book | last = Berscheid | first = Ellen | authorlink = Ellen S. Berscheid | coauthors = Walster, Elaine, H.| title = Interpersonal Attraction | publisher = Addison-Wesley Publishing Co | year = 1969 | id = CCCN 69-17443 | isbn = 0-201-00560-3 }}&lt;/ref&gt; In recent years, various [[human bonding]] theories have been developed, described in terms of attachments, ties, bonds, and affinities.
 Some Western authorities disaggregate into two main components, the altruistic and the narcissistic. This view is represented in the works of [[M. Scott Peck|Scott Peck]], whose work in the field of [[applied psychology]] explored the definitions of love and evil. Peck maintains that love is a combination of the &quot;concern for the spiritual growth of another,&quot; and simple narcissism.&lt;ref name=&quot;peck&quot;&gt;{{cite book | title=The Road Less Traveled | isbn=0-671-25067-1 | last=Peck | first=Scott | publisher=Simon &amp; Schuster | year=1978 | page=169}}&lt;/ref&gt; In combination, love is an ''activity'', not simply a feeling.
 
-Psychologist [[Erich Fromm]] maintained in his book &quot;[[The art of loving]]&quot; that love is not merely a feeling but is also actions, and that in fact, the &quot;feeling&quot; of love is superficial in comparison to ones commitment to love via a series of loving actions over time.&lt;ref name=&quot;Fromm, Erich 2000&quot;/&gt; In this sense, Fromm held that love is ultimately not a feeling at all, but rather is a commitment to, and adherence to, loving actions towards another, ones self, or many others, over a sustained duration.&lt;ref name=&quot;Fromm, Erich 2000&quot;/&gt; Fromm also described Love as a conscious choice that in its early stages might originate as an involuntary feeling, but which then later no longer depends on those feelings, but rather depends only on conscious commitment.&lt;ref name=&quot;Fromm, Erich 2000&quot;/&gt;
+Psychologist [[Erich Fromm]] maintained in his book ''[[The Art of Loving]]'' that love is not merely a feeling but is also actions, and that in fact, the &quot;feeling&quot; of love is superficial in comparison to ones commitment to love via a series of loving actions over time.&lt;ref name=&quot;Fromm, Erich 2000&quot;/&gt; In this sense, Fromm held that love is ultimately not a feeling at all, but rather is a commitment to, and adherence to, loving actions towards another, ones self, or many others, over a sustained duration.&lt;ref name=&quot;Fromm, Erich 2000&quot;/&gt; Fromm also described Love as a conscious choice that in its early stages might originate as an involuntary feeling, but which then later no longer depends on those feelings, but rather depends only on conscious commitment.&lt;ref name=&quot;Fromm, Erich 2000&quot;/&gt;
 
 ===Evolutionary basis===
 [[Evolutionary psychology]] has attempted to provide various reasons for love as a survival tool. Humans are dependent on parental help for a large portion of their lifespans comparative to other mammals. Love has therefore been seen as a mechanism to promote parental support of children for this extended time period. Another factor may be that [[sexually transmitted disease]]s can cause, among other effects, permanently reduced [[fertility]], injury to the fetus, and increase complications during [[childbirth]]. This would favor monogamous relationships over polygamy.&lt;ref&gt;The Handbook of Evolutionary Psychology, edited by David M. Buss, John Wiley &amp; Sons, Inc., 2005. Chapter 14, Commitment, Love, and Mate Retention by Lorne Campbell and Bruce J. Ellis.&lt;/ref&gt;
 
 ===Comparison of scientific models===
-Biological models of love tend to see it as a mammalian drive, similar to [[hunger]] or [[thirst]].&lt;ref name=&quot;Lewis&quot;/&gt; Psychology sees love as more of a social and cultural phenomenon. There are probably elements of truth in both views. Certainly love is influenced by [[hormone]]s (such as [[oxytocin]]), [[neurotrophins]] (such as [[Nerve Growth Factor|NGF]]), and [[pheromone]]s, and how people think and behave in love is influenced by their conceptions of love. The conventional view in [[biology]] is that there are two major drives in love: [[sexual attraction]] and [[attachment theory|attachment]]. Attachment between adults is presumed to work on the same principles that lead an infant to become attached to its mother. The traditional psychological view sees love as being a combination of [[companionate love]] and passionate love. Passionate love is intense longing, and is often accompanied by [[physiological arousal]] (shortness of breath, rapid heart rate); companionate love is affection and a feeling of intimacy not accompanied by physiological arousal.
+Biological models of love tend to see it as a mammalian drive, similar to [[hunger]] or [[thirst]].&lt;ref name=&quot;Lewis&quot;/&gt; Psychology sees love as more of a social and cultural phenomenon. Certainly love is influenced by [[hormone]]s (such as [[oxytocin]]), [[neurotrophins]] (such as [[Nerve Growth Factor|NGF]]), and [[pheromone]]s, and how people think and behave in love is influenced by their conceptions of love. The conventional view in [[biology]] is that there are two major drives in love: [[sexual attraction]] and [[attachment theory|attachment]]. Attachment between adults is presumed to work on the same principles that lead an infant to become attached to its mother. The traditional psychological view sees love as being a combination of [[companionate love]] and passionate love. Passionate love is intense longing, and is often accompanied by [[physiological arousal]] (shortness of breath, rapid heart rate); companionate love is affection and a feeling of intimacy not accompanied by physiological arousal.
 
 ==Cultural views==
 {{Refimprove section|date=January 2012}}
@@ -417,12 +330,12 @@ Biological models of love tend to see it as a mammalian drive, similar to [[hung
 ''[[Xenia (Greek)|Xenia]]'' (ξενία ''xenía''), hospitality, was an extremely important practice in [[Ancient Greece]]. It was an almost ritualized friendship formed between a host and his guest, who could previously have been strangers. The host fed and provided quarters for the guest, who was expected to repay only with gratitude. The importance of this can be seen throughout [[Greek mythology]]—in particular, [[Homer|Homer's]] ''[[Iliad]]'' and ''[[Odyssey]]''.
 
 ===Ancient Roman (Latin)===
-The [[Latin|Latin language]] has several different verbs corresponding to the English word &quot;love.&quot; ''[[wikt:amo#Latin|amō]]'' is the basic verb meaning ''I love'', with the infinitive ''[[wikt:amare#Italian|amare]]'' (“to love”) as it still is in [[Italian language|Italian]] today. The Romans used it both in an affectionate sense as well as in a romantic or sexual sense. From this verb come ''amans''—a lover, amator, &quot;professional lover,&quot; often with the accessory notion of lechery—and ''amica'', &quot;girlfriend&quot; in the English sense, often as well being applied euphemistically to a prostitute. The corresponding noun is ''amor'' (the significance of this term for the Romans is well illustrated in the fact, that the name of the City, [[Rome]]—in Latin: ''Roma''—can be viewed as an [[anagram]] for ''amor'', which was used as the secret name of the City in wide circles in ancient times),&lt;ref&gt;Thomas Köves-Zulauf, Reden und Schweigen, Munich, 1972.&lt;/ref&gt; which is also used in the plural form to indicate love affairs or sexual adventures. This same root also produces ''amicus''—&quot;friend&quot;—and ''amicitia'', &quot;friendship&quot; (often based to mutual advantage, and corresponding sometimes more closely to &quot;indebtedness&quot; or &quot;influence&quot;). Cicero wrote a treatise called ''On Friendship'' (''de Amicitia''), which discusses the notion at some length. Ovid wrote a guide to dating called [[Art of Love|''Ars Amatoria'']] (''The Art of Love''), which addresses, in depth, everything from [[Affair|extramarital affairs]] to overprotective parents.
+The [[Latin|Latin language]] has several different verbs corresponding to the English word &quot;love.&quot; ''[[wikt:amo#Latin|amō]]'' is the basic verb meaning ''I love'', with the infinitive ''[[wikt:amare#Italian|amare]]'' (“to love”) as it still is in [[Italian language|Italian]] today. The Romans used it both in an affectionate sense as well as in a romantic or sexual sense. From this verb come ''amans''—a lover, amator, &quot;professional lover,&quot; often with the accessory notion of lechery—and ''amica'', &quot;girlfriend&quot; in the English sense, often as well being applied euphemistically to a prostitute. The corresponding noun is ''amor'' (the significance of this term for the Romans is well illustrated in the fact, that the name of the City, [[Rome]]—in Latin: ''Roma''—can be viewed as an [[anagram]] for ''amor'', which was used as the secret name of the City in wide circles in ancient times),&lt;ref&gt;Thomas Köves-Zulauf, Reden und Schweigen, Munich, 1972.&lt;/ref&gt; which is also used in the plural form to indicate love affairs or sexual adventures. This same root also produces ''amicus''—&quot;friend&quot;—and ''amicitia'', &quot;friendship&quot; (often based to mutual advantage, and corresponding sometimes more closely to &quot;indebtedness&quot; or &quot;influence&quot;). Cicero wrote a treatise called ''On Friendship'' (''de Amicitia''), which discusses the notion at some length. Ovid wrote a guide to dating called ''[[Ars Amatoria]]'' (''The Art of Love''), which addresses, in depth, everything from [[Affair|extramarital affairs]] to overprotective parents.
 
 Latin sometimes uses ''amāre'' where English would simply say ''to like''. This notion, however, is much more generally expressed in Latin by ''placere'' or ''delectāre'', which are used more colloquially, the latter used frequently in the love poetry of [[Catullus]]. ''Diligere'' often has the notion &quot;to be affectionate for,&quot; &quot;to esteem,&quot; and rarely if ever is used for romantic love. This word would be appropriate to describe the friendship of two men. The corresponding noun ''diligentia'', however, has the meaning of &quot;diligence&quot; or &quot;carefulness,&quot; and has little semantic overlap with the verb. ''Observare'' is a synonym for ''diligere''; despite the cognate with English, this verb and its corresponding noun, ''observantia'', often denote &quot;esteem&quot; or &quot;affection.&quot; ''[[Charity (virtue)|Caritas]]'' is used in Latin translations of the Christian Bible to mean &quot;charitable love&quot;; this meaning, however, is not found in Classical pagan [[Latin literature|Roman literature]]. As it arises from a conflation with a Greek word, there is no corresponding verb.
 
 ===Chinese and other Sinic cultures===
-[[Image:Love-zh.svg|thumb|upright|&quot;Ai,&quot; the traditional [[Chinese character]] for love (愛) consists of a [[heart]] (middle) inside of &quot;accept,&quot; &quot;feel,&quot; or &quot;perceive,&quot; which shows a graceful emotion. It can also be interpreted as a hand offering ones heart to another hand.]]
+[[File:Love-zh.svg|thumb|upright|&quot;Ai,&quot; the traditional [[Chinese character]] for love (愛) consists of a [[heart]] (心, middle) inside of &quot;accept,&quot; &quot;feel,&quot; or &quot;perceive,&quot; (受) which shows a graceful emotion. It can also be interpreted as a hand offering ones heart to another hand.]]
 
 Two philosophical underpinnings of love exist in the Chinese tradition, one from [[Confucianism]] which emphasized actions and duty while the other came from [[Mohism]] which championed a universal love.  A core concept to Confucianism is ''[[Ren (Confucianism)|Ren]]''  (&quot;benevolent love&quot;, 仁), which focuses on duty, action and attitude in a relationship rather than love itself.  In Confucianism, one displays benevolent love by performing actions such as filial piety from children, kindness from parent, loyalty to the king and so forth.
 
@@ -431,7 +344,7 @@ The concept of ''Ai'' (愛) was developed by the Chinese philosopher [[Mozi]] in
 In contemporary Chinese, ''Ai'' (愛) is often used as the equivalent of the Western concept of love. ''Ai'' is used as both a verb (e.g. ''wo ai ni'' 我愛你, or &quot;I love you&quot;) and a noun (such as ''aiqing'' 愛情, or &quot;romantic love&quot;). However, due to the influence of Confucian ''Ren'', the phrase ‘Wo ai ni’ (I love you) carries with it a very specific sense of responsibility, commitment and loyalty. Instead of frequently saying &quot;I love you&quot; as in some Western societies, the Chinese are more likely to express feelings of affection in a more casual way. Consequently, &quot;I like you&quot; (''Wo xihuan ni'', 我喜欢你) is a more common way of expressing affection in Chinese; it is more playful and less serious.&lt;ref&gt;JFK Miller, &quot;[http://shanghai.urbanatomy.com/index.php/i-ahearts-shanghai/85-i-love-shanghai/429-why-the-chinese-dont-say-qi-love-youq Why the Chinese Don't Say I Love You]&quot;&lt;/ref&gt; This is also true in Japanese (''suki da'', 好きだ). The Chinese are also more likely to say &quot;I love you&quot; in English or other foreign languages than they would in their mother tongue.
 
 ===Persian===
-[[Rumi]], [[Hafiz Shirazi|Hafiz]] and [[Saadi (poet)|Sa'di]] are icons of the passion and love that the [[Culture of Iran|Persian culture]] and language present. The Persian word for love is ''eshgh'' {{Citation needed|date=January 2012}}, derived from the Arabic ''ishq'', however is considered by most to be too stalwart a term for interpersonal love and is more commonly substituted for 'doost dashtan' ('liking'){{Citation needed|date=January 2012}}. In the Persian culture, everything is encompassed by love and all is for love, starting from loving friends and family, husbands and wives, and eventually reaching the divine love that is the ultimate goal in life {{cn|date=October 2012}}. Over seven centuries ago, Sa'di wrote:
+[[Rumi]], [[Hafiz Shirazi|Hafiz]] and [[Saadi (poet)|Sa'di]] are icons of the passion and love that the [[Culture of Iran|Persian culture]] and language present. The Persian word for love is ''eshgh'' {{Citation needed|date=January 2012}}, derived from the Arabic ''ishq'', however is considered by most to be too stalwart a term for interpersonal love and is more commonly substituted for 'doost dashtan' ('liking'){{Citation needed|date=January 2012}}. In the Persian culture, everything is encompassed by love and all is for love, starting from loving friends and family, husbands and wives, and eventually reaching the divine love that is the ultimate goal in life {{citation needed|date=October 2012}}. Over seven centuries ago, Sa'di wrote:
 
 ::::''The children of Adam are limbs of one body''
 ::::''Having been created of one essence.''
@@ -441,7 +354,7 @@ In contemporary Chinese, ''Ai'' (愛) is often used as the equivalent of the Wes
 ::::''You are not worthy to be called by the name of &quot;man.&quot;''
 
 ===Japanese===
-[[Image:Ohatu and tokubei.jpg|right|thumb|Ohatsu and Tokubei, characters of ''[[Sonezaki Shinjū]]'']]
+[[File:Ohatu and tokubei.jpg|right|thumb|Ohatsu and Tokubei, characters of ''[[Sonezaki Shinjū]]'']]
 In [[Japanese Buddhism]], ''ai'' (愛) is passionate caring love, and a fundamental desire. It can develop towards either selfishness or selflessness and enlightenment. ''[[Amae]]'' (甘え), a Japanese word meaning &quot;indulgent dependence,&quot; is part of the child-rearing [[culture of Japan]]. Japanese mothers are expected to hug and indulge their children, and children are expected to reward their mothers by clinging and serving. Some [[sociologist]]s have suggested that Japanese social interactions in later life are modeled on the mother-child amae.
 
 ===Turkish (Shaman and Islamic)===
@@ -449,8 +362,9 @@ In [[Turkish language|Turkish]], the word &quot;love&quot; comes up with several
 
 ==Religious views==
 {{main|Religious views on love}}
+
 ===Abrahamic religions===
-[[Image:Ahava.jpg|thumb|[[Robert Indiana]]'s 1977 [[Love (sculpture)|''Love'' sculpture]] spelling ''ahava''.]]
+[[File:Ahava.jpg|thumb|[[Robert Indiana]]'s 1977 [[Love (sculpture)|''Love'' sculpture]] spelling ''ahava''.]]
 
 ====Christianity====
 The Christian understanding is that love comes from God. The love of man and woman—''eros'' in Greek—and the unselfish love of others (''agape''), are often contrasted as &quot;ascending&quot; and &quot;descending&quot; love, respectively, but are ultimately the same thing.&lt;ref name=&quot;vatican1&quot;&gt;{{cite web
@@ -465,7 +379,7 @@ There are several Greek words for &quot;love&quot; that are regularly referred t
 
 [[Christianity|Christians]] believe that to ''Love God with all your heart, mind, and strength'' and ''Love your [[neighbourhood|neighbor]] as yourself'' are the two most important things in life (the [[Great Commandment|greatest commandment]] of the Jewish [[Torah]], according to [[Jesus]]; cf. [[Gospel of Mark]] chapter 12, verses 28–34). [[Augustine of Hippo|Saint Augustine]] summarized this when he wrote &quot;''Love God, and do as thou wilt''.&quot;
 
-[[Image:baglione.jpg|thumb|left|upright|''Sacred Love Versus Profane Love'' (1602–03) by [[Giovanni Baglione]]. Intended as an attack on his hated enemy the artist [[Caravaggio]], it shows a boy (hinting at Caravaggio's homosexuality) on one side, a devil with Caravaggio's face on the other, and between an angel representing pure, meaning non-erotic, love.]]
+[[File:baglione.jpg|thumb|left|upright|''Sacred Love Versus Profane Love'' (1602–03) by [[Giovanni Baglione]]. Intended as an attack on his hated enemy the artist [[Caravaggio]], it shows a boy (hinting at Caravaggio's homosexuality) on one side, a devil with Caravaggio's face on the other, and between an angel representing pure, meaning non-erotic, love.]]
 
 [[The Apostle Paul]] glorified love as the most important virtue of all. Describing love in the famous poem in [[First Epistle to the Corinthians|1 Corinthians]], he wrote, &quot;Love is patient, love is kind. It does not envy, it does not boast, it is not proud. It is not rude, it is not self-seeking, it is not easily angered, it keeps no record of wrongs. Love does not delight in evil but rejoices with the truth. It always protects, always trusts, always hopes, and always perseveres.&quot; ([[1 Corinthians|1 Cor.]] 13:4–7, [[NIV]])
 {{Close Relationships}}
@@ -488,7 +402,7 @@ Love encompasses the Islamic view of life as universal brotherhood that applies 
 
 The Qur'an exhorts Muslim believers to treat all people, those who have not persecuted them, with ''birr'' or &quot;deep kindness&quot; as stated in Surah {{Quran-usc|6|8-9|q=}}. ''Birr'' is also used by the Qur'an in describing the love and kindness that children must show to their parents.
 
-''[[Ishq]]'', or divine love, is the emphasis of [[Sufism]] in the Islamic tradition. Practitioners of Sufism believe that love is a projection of the essence of God to the universe. God desires to recognize beauty, and as if one looks at a mirror to see oneself, God &quot;looks&quot; at himself within the dynamics of nature. Since everything is a reflection of God, the school of Sufism practices to see the beauty inside the apparently ugly. Sufism is often referred to as the religion of love.{{Citation needed|date=April 2011}} God in Sufism is referred to in three main terms, which are the Lover, Loved, and Beloved, with the last of these terms being often seen in Sufi poetry. A common viewpoint of Sufism is that through love, humankind can get back to its inherent purity and grace. The saints of Sufism are infamous for being &quot;drunk&quot; due to their love of God; hence, the constant reference to wine in Sufi poetry and music.&lt;ref&gt;{{cite web|title=Article On Love|url=http://www.sccs.swarthmore.edu/users/08/ajb/tmve/wiki100k/docs/Love.html|accessdate=13 September 2011}}&lt;/ref&gt;
+''[[Ishq]]'', or divine love, is the emphasis of [[Sufism]] in the Islamic tradition. Practitioners of Sufism believe that love is a projection of the essence of God to the universe. God desires to recognize beauty, and as if one looks at a mirror to see oneself, God &quot;looks&quot; at himself within the dynamics of nature. Since everything is a reflection of God, the school of Sufism practices to see the beauty inside the apparently ugly. Sufism is often referred to as the religion of love.{{Citation needed|date=April 2011}} God in Sufism is referred to in three main terms, which are the Lover, Loved, and Beloved, with the last of these terms being often seen in Sufi poetry. A common viewpoint of Sufism is that through love, humankind can get back to its inherent purity and grace. The saints of Sufism are infamous for being &quot;drunk&quot; due to their love of God; hence, the constant reference to wine in Sufi poetry and music.&lt;ref&gt;{{cite web |title=Article On Love|url=http://www.sccs.swarthmore.edu/users/08/ajb/tmve/wiki100k/docs/Love.html|accessdate=13 September 2011}}&lt;/ref&gt;
 
 ===Eastern religions===
 ====Buddhism====
@@ -502,15 +416,15 @@ In [[Hinduism]], ''[[kāma]]'' is pleasurable, sexual love, personified by the g
 
 In contrast to ''kāma'', ''[[prem]]a''{{spaced ndash}}or ''prem''{{spaced ndash}}refers to elevated love. ''[[Karuṇā|Karuna]]'' is compassion and mercy, which impels one to help reduce the suffering of others. ''Bhakti'' is a [[Sanskrit]] term, meaning &quot;loving devotion to the supreme God.&quot; A person who practices ''bhakti'' is called a ''bhakta''. Hindu writers, theologians, and philosophers have distinguished nine forms of ''[[bhakti]]'', which can be found in the [[Bhagavata Purana]] and works by [[Tulsidas]]. The philosophical work ''[[Narada Bhakti Sutra]]s'', written by an unknown author (presumed to be [[Narada]]), distinguishes eleven forms of love.
 
-In certain Vaishnava sects within Hinduism, attaining unaldulterated, unconditional and incessant love for Godhead is considered the foremost goal of life. Gaudiya Vaishnavas who worship Krishna as the Supreme Personality of Godhead and the cause of all causes consider Love for Godhead (Prema) to act in two ways: sambhoga and vipralambha (union and separation) — two opposites .&lt;ref name=&quot;Krishna Prema&quot;&gt;{{cite web
+In certain Vaishnava sects within Hinduism, attaining unaldulterated, unconditional and incessant love for Godhead is considered the foremost goal of life. Gaudiya Vaishnavas who worship Krishna as the Supreme Personality of Godhead and the cause of all causes consider Love for Godhead (Prema) to act in two ways: sambhoga and vipralambha (union and separation)—two opposites .&lt;ref name=&quot;Krishna Prema&quot;&gt;{{cite web
 |url=https://www.facebook.com/note.php?note_id=10150168632408280|author=Gour Govinda Swami|title=Wonderful Characteristic of Krishna Prema, Gour Govinda Swami.}}&lt;/ref&gt;
 
-In the condition of separation, there is an acute yearning for being with the beloved and in the condition of union there is supreme happiness and nectarean. Gaudiya Vaishnavas consider that Krishna-prema (Love for Godhead) is not fire but that it still burns away one's material desires. They consider that Kṛṣṇa-prema is not a weapon, but it still pierces the heart. It is not water, but it washes away everything — one's pride, religious rules, and one's shyness. Krishna-prema is considered to make one drown in the ocean of transcendental ecstasy and pleasure. The love of Radha, a cowherd girl, for Krishna is often cited as the supreme example of love for Godhead by Gaudiya Vaishnavas. Radha is considered to be the internal potency of Krishna, and is the supreme lover of Godhead. Her example of love is considered to be beyond the understanding of material realm as it surpasses any form of selfish love or lust that is visibile in the material world. The reciprocal love between Radha (the supreme lover) and Krishna (God as the Supremely Loved) is the subject of many poetic compositions in India such as the [[Gita Govinda]] and Hari Bhakti Shuddhodhaya.
+In the condition of separation, there is an acute yearning for being with the beloved and in the condition of union there is supreme happiness and nectarean. Gaudiya Vaishnavas consider that Krishna-prema (Love for Godhead) is not fire but that it still burns away one's material desires. They consider that Kṛṣṇa-prema is not a weapon, but it still pierces the heart. It is not water, but it washes away everything—one's pride, religious rules, and one's shyness. Krishna-prema is considered to make one drown in the ocean of transcendental ecstasy and pleasure. The love of Radha, a cowherd girl, for Krishna is often cited as the supreme example of love for Godhead by Gaudiya Vaishnavas. Radha is considered to be the internal potency of Krishna, and is the supreme lover of Godhead. Her example of love is considered to be beyond the understanding of material realm as it surpasses any form of selfish love or lust that is visible in the material world. The reciprocal love between Radha (the supreme lover) and Krishna (God as the Supremely Loved) is the subject of many poetic compositions in India such as the [[Gita Govinda]] and Hari Bhakti Shuddhodhaya.
 
 In the Bhakti tradition within Hinduism, it is believed that execution of devotional service to God leads to the development of Love for God (taiche bhakti-phale krsne prema upajaya), and as love for God increases in the heart, the more one becomes free from material contamination (krishna-prema asvada haile, bhava nasa paya).  Being perfectly in love with God or Krishna makes one perfectly free from material contamination. and this is the ultimate way of salvation or liberation. In this tradition, salvation or liberation is considered inferior to love, and just an incidental by-product. Being absorbed in Love for God is considered to be the perfection of life.&lt;ref name=&quot;Perfect Love&quot;&gt;{{cite web |url=http://www.prabhupadanugas.eu/?p=23368 |author=A C Bhaktivedanta Swami|title=Being Perfectly in Love}}&lt;/ref&gt;
 
-== Political views ==
-=== Free love ===
+==Political views==
+===Free love===
 {{Main|Free love}}
 The term '''free love''' has been used &lt;ref&gt;[http://library.syr.edu/digital/collections/h/Hand-bookOfTheOneidaCommunity/ The Handbook] of the [[Oneida Community]] claims to have coined the term around 1850, and laments that its use was appropriated by [[socialist]]s to attack marriage, an institution that they felt protected women and children from abandonment&lt;/ref&gt; to describe a [[social movement]] that rejects [[marriage]], which is seen as a form of social bondage. The Free Love movement’s initial goal was to separate the state from sexual matters such as marriage, [[birth control]], and [[adultery]]. It claimed that such issues were the concern of the people involved, and no one else.&lt;ref&gt;McElroy, Wendy. &quot;The Free Love Movement and Radical Individualism.&quot; Libertarian Enterprise .19 (1996): 1.&lt;/ref&gt;
 
@@ -524,9 +438,9 @@ The term &quot;'''sex radical'''&quot; is also used interchangeably with the ter
 
 Laws of particular concern to free love movements have included those that prevent an unmarried couple from living together, and those that regulate [[adultery]] and [[divorce]], as well as [[age of consent]], [[birth control]], [[homosexuality]], [[abortion]], and sometimes [[prostitution]]; although not all free love advocates agree on these issues. The abrogation of individual rights in marriage is also a concern—for example, some jurisdictions do not recognize [[spousal rape]] or treat it less seriously than non-spousal rape. Free-love movements since the 19th century have also defended the right to publicly discuss sexuality and have battled [[obscenity]] laws.
 
-== Philosophical views ==
+==Philosophical views==
 {{Main|Philosophy of love}}
-Philosophy of love is the field of [[social philosophy]] and [[ethics]] which attempts to [[explanation|explain]] the nature of [[love]]. The philosophical investigation of love includes the tasks of distinguishing between the various kinds of personal love; asking if and how love is/can be justified; asking what the [[value (ethics)|value]] of love is; and what impact love has on the [[autonomy]] of both the lover and the beloved.
+Philosophy of love is the field of [[social philosophy]] and [[ethics]] which attempts to [[explanation|explain]] the nature of love. The philosophical investigation of love includes the tasks of distinguishing between the various kinds of personal love; asking if and how love is/can be justified; asking what the [[value (ethics)|value]] of love is; and what impact love has on the [[autonomy]] of both the lover and the beloved.
 
 There are many different theories which attempt to [[explanation|explain]] what love is, and what function it serves. It would be very difficult to explain love to a hypothetical person who had not himself or herself experienced love or being loved. In fact, to such a person love would appear to be quite strange if not outright irrational behavior. Among the prevailing types of theories that attempt to account for the existence of love there are: [[psychology|psychological]] theories, the vast majority of which consider love to be very healthy behavior; there are [[Evolutionary theory|evolutionary theories]] which hold that love is part of the process of [[natural selection]]; there are [[Spiritualism (beliefs)|spiritual theories]] which may, for instance consider love to be a gift from God; there are also theories that consider love to be an unexplainable mystery, very much like a [[mysticism|mystical experience]].
 
@@ -535,15 +449,16 @@ There are many different theories which attempt to [[explanation|explain]] what 
 
 ==Sources==
 {{Refbegin|30em}}
-*{{cite book|last=Chadwick|first=Henry|title=Saint Augustine Confessions|location=Oxford|publisher=Oxford University Press|year=1998|isbn=0-19-283372-3}}
-*{{cite book|last=Fisher|first=Helen|title=Why We Love: the Nature and Chemistry of Romantic Love|isbn=0-8050-6913-5}}
-*{{cite journal|author=Giles, James|title=A theory of love and sexual desire|year=1994|journal=Journal for the Theory of Social Behaviour|volume=24|pages=339–357|doi=10.1111/j.1468-5914.1994.tb00259.x|issue=4}}
-*Oord, Thomas Jay. [http://www.bakerpublishinggroup.com/ME2/dirmod.asp?sid=&amp;nm=&amp;type=PubCom&amp;mod=PubComProductCatalog&amp;mid=BF1316AF9E334B7BA1C33CB61CF48A4E&amp;tier=3&amp;id=28DD9865134A4B8C9FB020EB2331E80E Defining Love: A Philosophical, Scientific, and Theological Engagement] (Grand Rapids, Mich.: Brazos, 2010)
-*{{cite book|last=Singer|first=Irving|title=The Nature of Love|subtitle=in three volumes|publisher=Random House|year=1966|edition= v.1 reprinted and later volumes from The University of Chicago Press, 1984|isbn=0-226-76094-4}}
-*{{cite journal|author=Sternberg, R.J.|title=A triangular theory of love|year=1986|journal=Psychological Review|volume=93|pages=119–135|doi=10.1037/0033-295X.93.2.119|issue=2}}
-*{{cite journal|author=Sternberg, R.J.|title=Liking versus loving: A comparative evaluation of theories|year=1987|journal=Psychological Bulletin|volume=102|pages=331–345|doi=10.1037/0033-2909.102.3.331|issue=3}}
-*{{cite book|last=Tennov|first=Dorothy|title=Love and Limerence: the Experience of Being in Love|location=New York|publisher=Stein and Day|year=1979|isbn=0-8128-6134-5}}
-*{{cite book|author=Wood Samuel E., Ellen Wood and Denise Boyd|title=The World of Psychology|edition=5th|year=2005|publisher=Pearson Education|pages=402–403|isbn=0-205-35868-3}}
+*{{cite book |last=Chadwick|first=Henry|title=Saint Augustine Confessions|location=Oxford|publisher=Oxford University Press|year=1998|isbn=0-19-283372-3}}
+*{{cite book |last=Fisher|first=Helen|title=Why We Love: the Nature and Chemistry of Romantic Love|isbn=0-8050-6913-5}}
+*{{cite journal |author=Giles, James|title=A theory of love and sexual desire|year=1994|journal=Journal for the Theory of Social Behaviour|volume=24|pages=339–357|doi=10.1111/j.1468-5914.1994.tb00259.x|issue=4}}
+*{{cite book |last=Kierkegaard|first=Søren|title=Works of Love|location=New York City|publisher=Harper Perennial Modern Classics|year=2009|isbn=978-0-06-171327-9}}
+*{{cite book |last=Oord|first=Thomas Jay|title=Defining Love: A Philosophical, Scientific, and Theological Engagement|location=Grand Rapids, MI|publisher=Brazos|year=2010|isbn=978-1-58743257-6}}
+*{{cite book |last=Singer|first=Irving|title=The Nature of Love|subtitle=in three volumes|publisher=Random House|year=1966|edition= v.1 reprinted and later volumes from The University of Chicago Press, 1984|isbn=0-226-76094-4}}
+*{{cite journal |author=Sternberg, R.J.|title=A triangular theory of love|year=1986|journal=Psychological Review|volume=93|pages=119–135|doi=10.1037/0033-295X.93.2.119|issue=2}}
+*{{cite journal |author=Sternberg, R.J.|title=Liking versus loving: A comparative evaluation of theories|year=1987|journal=Psychological Bulletin|volume=102|pages=331–345|doi=10.1037/0033-2909.102.3.331|issue=3}}
+*{{cite book |last=Tennov|first=Dorothy|title=Love and Limerence: the Experience of Being in Love|location=New York|publisher=Stein and Day|year=1979|isbn=0-8128-6134-5}}
+*{{cite book |author=Wood Samuel E., Ellen Wood and Denise Boyd|title=The World of Psychology|edition=5th|year=2005|publisher=Pearson Education|pages=402–403|isbn=0-205-35868-3}}
 {{Refend}}
 
 ==External links==
@@ -562,119 +477,8 @@ There are many different theories which attempt to [[explanation|explain]] what 
 [[Category:Positive psychology]]
 
 {{Link GA|de}}
-{{Link GA|zh}}
-
-[[als:Liebe]]
-[[am:ፍቅር]]
-[[ang:Lufu]]
-[[ar:حب]]
-[[an:Aimor]]
-[[ast:Amor]]
-[[az:Heyran]]
-[[bn:ভালোবাসা]]
-[[be:Каханне]]
-[[be-x-old:Любоў]]
-[[bg:Любов]]
-[[bo:བརྩེ་དུང་།]]
-[[bs:Ljubav]]
-[[br:Karantez]]
-[[ca:Amor]]
-[[cv:Юрату]]
-[[cs:Láska]]
-[[co:Amore]]
-[[cy:Cariad]]
-[[da:Kærlighed]]
-[[de:Liebe]]
-[[et:Armastus]]
-[[el:Αγάπη]]
-[[es:Amor]]
-[[eo:Amo]]
-[[ext:Amol]]
-[[eu:Maitasun]]
-[[fa:عشق]]
-[[hif:Pyar]]
-[[fr:Amour]]
-[[fy:Leafde]]
-[[gd:Gràdh]]
-[[gl:Amor]]
-[[gan:愛]]
-[[gu:પ્રેમ]]
-[[ko:사랑]]
-[[hy:Սեր]]
-[[hr:Ljubav]]
-[[ig:Ihunanya]]
-[[id:Cinta]]
-[[ia:Amor]]
-[[iu:ᑕᑯᑦᓱᒍᓱᑉᐳᖅ]]
-[[is:Ást]]
-[[it:Amore]]
-[[he:אהבה]]
-[[kn:ಪ್ರೀತಿ]]
-[[ka:სიყვარული]]
-[[kk:Махаббат]]
-[[sw:Pendo]]
-[[ky:Сүйүү]]
-[[la:Amor]]
-[[lv:Mīlestība]]
-[[lt:Meilė]]
-[[li:Leefde]]
-[[ln:Bolingo]]
-[[hu:Szerelem]]
-[[mk:Љубов]]
-[[ml:സ്നേഹം]]
-[[mt:Imħabba]]
-[[mr:प्रेम]]
-[[arz:حب]]
-[[ms:Cinta]]
-[[cdo:Ái]]
-[[mn:Хайр]]
-[[my:အချစ်]]
-[[nah:Tlazohtiliztli]]
-[[nl:Liefde]]
-[[ne:माया]]
-[[new:मतिना]]
-[[ja:愛]]
-[[no:Kjærlighet]]
-[[nn:Kjærleik]]
-[[oc:Amor]]
-[[or:ପ୍ରେମ]]
-[[uz:Sevgi]]
-[[pnb:پیار]]
-[[pl:Miłość]]
-[[pt:Amor]]
-[[ksh:Leevde]]
-[[ro:Dragoste]]
-[[qu:Khuyay]]
-[[rue:Любов]]
-[[ru:Любовь]]
-[[sah:Таптал]]
-[[sq:Dashuria]]
-[[scn:Amuri]]
-[[si:ආදරය]]
-[[simple:Love]]
-[[sk:Láska]]
-[[sl:Ljubezen]]
-[[so:Jaceyl]]
-[[ckb:خۆشەویستی]]
-[[sr:Љубав]]
-[[sh:Ljubav]]
-[[fi:Rakkaus]]
-[[sv:Kärlek]]
-[[tl:Pag-ibig]]
-[[ta:காதல்]]
-[[te:ప్రేమ]]
-[[th:ความรัก]]
-[[tg:Ишқ]]
-[[tr:Aşk]]
-[[uk:Любов]]
-[[ur:محبت]]
-[[vi:Tình yêu]]
-[[war:Higugma]]
-[[yi:ליבע]]
-[[zh-yue:愛]]
-[[bat-smg:Meilė]]
-[[zh:愛]]</text>
-      <sha1>892koxjn38dreh8rc7cdic78wag37i8</sha1>
+{{Link GA|zh}}</text>
+      <sha1>366bfsju3tb3x2oqdnwv9jyuiu8l8a3</sha1>
       <model>wikitext</model>
       <format>text/x-wiki</format>
     </revision>
@@ -683,26 +487,23 @@ There are many different theories which attempt to [[explanation|explain]] what 
     <ns>0</ns>
     <id>33158</id>
     <revision>
-      <id>525412664</id>
-      <parentid>525412601</parentid>
-      <timestamp>2012-11-28T20:52:57Z</timestamp>
+      <id>549161674</id>
+      <parentid>549032229</parentid>
+      <timestamp>2013-04-07T14:41:40Z</timestamp>
       <contributor>
-        <username>Widr</username>
-        <id>13975403</id>
+        <ip>65.129.253.78</ip>
       </contributor>
-      <minor/>
-      <comment>Reverted edits by [[Special:Contributions/158.91.81.219|158.91.81.219]] ([[User talk:158.91.81.219|talk]]) to last revision by 192.17.213.63 ([[WP:HG|HG]])</comment>
-      <text xml:space="preserve" bytes="103020">{{Use dmy dates|date=September 2012}}
-{{About|war in general||War (disambiguation)|and|The War (disambiguation)}}
-{{War}}'''War''' is an organized, armed, and, often, a prolonged conflict that is carried on between [[State (polity)|states]], [[nation]]s, or other parties typified by extreme [[aggression]], [[Society|social]] disruption, and usually high mortality.&lt;ref name=AHD&gt;{{cite web|url=http://www.thefreedictionary.com/War |title=American Heritage Dictionary: War |publisher=Thefreedictionary.com |accessdate=2011-01-24}}&lt;/ref&gt;&lt;ref name=MWD&gt;{{cite web|url=http://www.merriam-webster.com/dictionary/war |title=Merriam Webster's Dictionary: War |publisher=Merriam-Webster |date=13 August 2010 |accessdate=2011-01-24}}&lt;/ref&gt; War should be understood as an actual, intentional and widespread armed conflict between political communities, and therefore is defined as a form of [[political violence]].&lt;ref name=AHD /&gt;&lt;ref&gt;{{cite web|url=http://plato.stanford.edu/entries/war/ |title=Stanford Encyclopedia of Philosophy}}&lt;/ref&gt; The set of techniques used by a group to carry out war is known as '''warfare'''. An absence of war (and other violence) is usually called [[peace]].
-
-When war is brought upon two different groups of people there is usually always a mission to achieve to feel as if war has been won on either side of the conflict. This can be a variety of missions taken during war like changing the government of a nation or state, eliminating a certain person, or defending the nation or state under attack.
+      <comment>...aspect of human &quot;culture.&quot; Culture is defined as one of the main reasons for the many divisions of our species. There is no human &quot;culture.&quot; Nature. All animals serve a purpose, and we destroy.</comment>
+      <text xml:space="preserve" bytes="103769">{{About|war in general||War (disambiguation)|and|The War (disambiguation)}}
+{{out of date|date=March 2013}}
+{{Use dmy dates|date=September 2012}}
+{{War}}'''War''' is an organized and often prolonged conflict that is carried out by [[State (polity)|states]] and/or [[non-state actors]]. It is characterised by extreme [[violence]], [[Society|social]] disruption, human suffering, and [[economy|economic]] destruction.&lt;ref name=AHD&gt;{{cite web|url=http://www.thefreedictionary.com/War |title=American Heritage Dictionary: War |publisher=Thefreedictionary.com |accessdate=2011-01-24}}&lt;/ref&gt;&lt;ref name=MWD&gt;{{cite web|url=http://www.merriam-webster.com/dictionary/war |title=Merriam Webster's Dictionary: War |publisher=Merriam-Webster |date=13 August 2010 |accessdate=2011-01-24}}&lt;/ref&gt; War should be understood as an actual, intentional and widespread armed conflict between political communities, and therefore is defined as a form of [[political violence]] or [[interventionism (politics)|intervention]].&lt;ref name=AHD /&gt;&lt;ref&gt;{{cite web|url=http://plato.stanford.edu/entries/war/ |title=Stanford Encyclopedia of Philosophy}}&lt;/ref&gt; The set of techniques used by a group to carry out war is known as '''warfare'''. An absence of war is usually called [[peace]].
 
 In 2003, Nobel Laureate [[Richard E. Smalley]] identified war as the sixth (of ten) biggest problem facing the society of mankind for the next fifty years.&lt;ref&gt;{{cite web |title=Smalley Institute Grand Challenges |first=Richard E. |last=Smalley |publisher=[[Rice University]] |year=2008 |accessdate=24 April 2011 |url=http://cnst.rice.edu/content.aspx?id=246}}&lt;/ref&gt; In the 1832 [[treatise]] ''[[On War]]'', Prussian military general and theoretician [[Carl von Clausewitz]] defined war as follows: &quot;War is thus an act of force to compel our enemy to do our will.&quot;&lt;ref&gt;{{cite book |last1= Clausewitz|first1= Carl von|authorlink1= Carl Von Clausewitz|editor1-first= Michael|editor1-last= Howard|editor1-link=Peter Paret|editor2-first= Peter|editor2-last= Paret |title= On War|trans_title= Vom Krieg |edition= Indexed |year= 1984 |origyear= 1832|publisher= Princeton University Press|location= New Jersey |isbn= 978-0-691-01854-6|page= 75}} Italics in original.&lt;/ref&gt;
 
-War can affect people around the dilemma in many ways good and bad. People that deal with loves one’s going off to war can get very stressed and emotional because the chances of death happening to a soldier. Soldiers can also become mentally ill during war and can lead to symptoms of combat stress reaction because some get traumatized from the violence they see during battles. On the other hand, war can affect people positively because individuals could get saved from a much disrupted society. Also, people can get very content when war is won on their side of the conflict.
+While some scholars see warfare as an inescapable and integral aspect of human nature, others argue that it is only inevitable under certain socio-cultural or ecological circumstances. Some scholars argue that the practice of war is not linked to any single type of political organization or society. Rather, as discussed by [[John Keegan]] in his ''History of Warfare'', war is a universal phenomenon whose form and scope is defined by the society that wages it.&lt;ref&gt;Keegan, John, (1901) ''A History of Warfare'', (Pimlico)&lt;/ref&gt; Another argument suggests that since there are human societies in which warfare does not exist, humans may not be naturally disposed for warfare, which emerges under particular circumstances.&lt;ref&gt;Societies at Peace (Howell and Willis 1989)&lt;/ref&gt; The ever changing technologies and potentials of war extend along a historical continuum. At the one end lies the [[endemic warfare]] of the [[Paleolithic]]{{Citation needed|date=July 2011}} with its stones and clubs, and the naturally limited loss of life associated with the use of such weapons. Found at the other end of this continuum is [[nuclear warfare]], along with the recently developed possible outcome of its use, namely the potential risk of the complete [[human extinction|extinction of the human species]].
 
-While some scholars see warfare as an inescapable and integral aspect of human culture, others argue that it is only inevitable under certain socio-cultural or ecological circumstances. Some scholars argue that the practice of war is not linked to any single type of political organization or society. Rather, as discussed by [[John Keegan]] in his ''History of Warfare'', war is a universal phenomenon whose form and scope is defined by the society that wages it.&lt;ref&gt;Keegan, John, (1901) ''A History of Warfare'', (Pimlico)&lt;/ref&gt; Another argument suggests that since there are human societies in which warfare does not exist, humans may not be naturally disposed for warfare, which emerges under particular circumstances.&lt;ref&gt;Societies at Peace (Howell and Willis 1989)&lt;/ref&gt; The ever changing technologies and potentials of war extend along a historical continuum. At the one end lies the [[endemic warfare]] of the [[Paleolithic]]{{Citation needed|date=July 2011}} with its stones and clubs, and the naturally limited loss of life associated with the use of such weapons. Found at the other end of this continuum is [[nuclear warfare]], along with the recently developed possible outcome of its use, namely the potential risk of the complete [[human extinction|extinction of the human species]].
+The largest still ongoing conflict, in terms of cumulative number of deaths since start, is the [[Second Congo War]], with 3–5 million deaths since 1998, nearly invisible in non-African media.&lt;ref&gt;Virgil Hawkins, [http://books.google.se/books?id=C98wjmRllAcC&amp;printsec=frontcover&amp;dq=Virgil+Hawkins+%E2%80%9DStealth+conflicts&amp;hl=sv&amp;sa=X&amp;ei=YrIDUZW9MKfA0QX_wYGgBQ&amp;redir_esc=y  Stealth Conflicts: How the World's Worst Violence Is Ignored], Ashgate Publishing, Ltd., 2008&lt;/ref&gt; As of 2013, the largest ongoing conflict in terms of deaths is the [[Mexican Drug War]] and the [[Syrian civil war]].{{cn|date=February 2013}}
 
 ==Etymology==
 [[File:Gari-Melchers-War-Highsmith.jpeg|thumb|right|350px|Mural of War (1896), by [[Gari Melchers]].]]
@@ -716,10 +517,12 @@ Before the dawn of civilization, war likely consisted of small-scale raiding. On
 In ''[[War Before Civilization]]'', Lawrence H. Keeley, a professor at the [[University of Illinois at Urbana–Champaign|University of Illinois]], says that approximately 90–95% of known societies throughout history engaged in at least occasional warfare,&lt;ref&gt;{{cite web|url=http://brneurosci.org/reviews/war.html |title=Review: War Before Civilization |publisher=Brneurosci.org |date=4 September 2006 |accessdate=2011-01-24}}&lt;/ref&gt; and many fought constantly.&lt;ref&gt;{{cite news|url=http://www.atimes.com/atimes/Front_Page/HG04Aa02.html|title=The fraud of primitive authenticity|last=Spengler|date=4 July 2006|work=Asia Times Online|accessdate=2009-06-08}}&lt;/ref&gt;
 [[File:MokoShuraiE-Kotoba IV.jpg|thumb|250px|Japanese [[samurai]] attacking a [[Mongol Empire|Mongol]] ship, 13th century]]
 
-Keeley explained several styles of primitive combat such as, small raids, large raids, and massacres. All of these forms of warfare were perpetrated by primitive societies. The use of the massacre by pre-state societies can be exhibited by the [[Dogrib people|Dogrib]] tribes of the subarctic in North America. The Dogrib tribe eventually destroyed the Yellowknife tribe by killing 4 men, 13 women, and 17 children which accounted for 20 percent of the population.&lt;ref name=&quot;Keeley&quot;/&gt; This was a devastating blow from which the Yellowknife tribe never recovered. Keeley further explains how small raids are not organized due to the lack of leadership and any formal training. This causes raids to be short and quick with relatively low numerical casualties but may significantly damage a percentage of a population. The deficit of resources also can account for a lack of fortifications and defensive structures in primitive prestate societies. The protection provided by a defensive could not justify the valuable resources used and labor implemented to build it.&lt;ref name=&quot;Keeley&quot;/&gt;
+Keeley explained several styles of primitive combat such as, small raids, large raids, and massacres. All of these forms of warfare were perpetrated by primitive societies. A finding that has been supported by more recent research looking at violence in the past.&lt;ref&gt;Martin, Debra L., Ryan P. Harrod, and Ventura R. Pérez, eds. 2012. The Bioarchaeology of Violence. Gainesville: University Press of Florida. http://www.upf.com/book.asp?id=MARTI002&lt;/ref&gt; The use of the massacre by pre-state societies can be exhibited by the [[Dogrib people|Dogrib]] tribes of the subarctic in North America. The Dogrib tribe eventually destroyed the Yellowknife tribe by killing 4 men, 13 women, and 17 children which accounted for 20 percent of the population.&lt;ref name=&quot;Keeley&quot;/&gt; This was a devastating blow from which the Yellowknife tribe never recovered. Keeley further explains how small raids are not organized due to the lack of leadership and any formal training. This causes raids to be short and quick with relatively low numerical casualties but may significantly damage a percentage of a population. The deficit of resources also can account for a lack of fortifications and defensive structures in primitive prestate societies. The protection provided by defensive structures could not justify the valuable resources used and labor implemented to build it.&lt;ref name=&quot;Keeley&quot;/&gt;
 
 [[William Rubinstein]] wrote that &quot;Pre-literate societies, even those organised in a relatively advanced way, were renowned for their studied cruelty ... 'archaeology yields evidence of prehistoric massacres more severe than any recounted in ethnography [ie, after the coming of the Europeans]'. At [[Crow Creek massacre|Crow Creek]], South Dakota, as noted, archaeologists found a [[mass grave]] of 'more than 500 men, women, and children who had been slaughtered, scalped, and mutilated during an attack on their village a century and a half before Columbus's arrival (ca. AD 1325)' &quot;.&lt;ref&gt;{{cite book|author=W. D. Rubinstein|title=Genocide: A History|url=http://books.google.com/books?id=nMMAk4VwLLwC&amp;pg=PA22|accessdate=31 May 2012|year=2004|publisher=Pearson Longman|isbn=978-0-582-50601-5|pages=22–50}}&lt;/ref&gt;
 
+It is problematic however to suggest that people in past societies are any more violent than people today. Martin and colleagues in their recent book have pulled together some of the foremost researchers studying violence in the past to show that though there may be events like massacres in the past, like today the use and manifestation of warfare varies greatly both within and between societies.
+ 
 In Western Europe, since the late 18th century, more than 150 conflicts and about 600 battles have taken place.&lt;ref name=War&gt;[http://www.ralphmag.org/CG/world-war-one2.html World War One – A New Kind of War | Part II], From ''14 – 18 Understanding the Great War'', by Stéphane Audoin-Rouzeau, Annette Becker&lt;/ref&gt;
 [[File:Custer Massacre At Big Horn, Montana June 25 1876.jpg|thumb|250px|According to the U.S. Bureau of the Census (1894), the [[American Indian Wars|Indian Wars]] of the 19th century cost the lives of about 19,000 whites and 30,000 Indians.&lt;ref&gt;Thornton, Russell (1990). ''American Indian Holocaust and Survival: A Population History since 1492''. University of Oklahoma Press. p. 48. ISBN 978-0-8061-2220-5&lt;/ref&gt;]]
 The [[Human Security Report 2005]] documented a significant decline in the number and severity of armed conflicts since the end of the [[Cold War]] in the early 1990s. However, the evidence examined in the 2008 edition of the Center for International Development and Conflict Management's &quot;Peace and Conflict&quot; study indicated that the overall decline in conflicts had stalled.&lt;ref&gt;Hewitt, Joseph, J. Wilkenfield and T. nevertheless the concept war is more than just a word but a signification to the meaning Death. Gurr ''[http://www.cidcm.umd.edu/pc/ Peace and Conflict 2008]'', Paradigm Publishers, 2007&lt;/ref&gt;
@@ -736,12 +539,7 @@ In 1947, in view of the rapidly increasingly destructive consequences of modern 
 &lt;/ref&gt;
 The anticipated costs of a possible third world war are currently no longer deemed as acceptable by most, thus little motivation currently seems to exist on an international level for such a war.
 
-Still since the close of World War II, limited non-nuclear conflicts continue, and surprisingly enough, some outspoken celebrities and politicians have even advocated for the proclamation of another world war.&lt;ref name = &quot;NewsCommentators&quot;&gt;{{cite web
-| year = 2006
-| url = http://mediamatters.org/research/200607140017
-| title= Right-wing media divided: Is U.S. now in World War III, IV, or V?
-| accessdate = 2010-02-04}} Discussion of attempts to proclaim World Wars III, IV and V
-&lt;/ref&gt; [[Mao Zedong]] urged the socialist camp not to fear nuclear war with the United States since, even if &quot;half of mankind died, the other half would remain while imperialism would be razed to the ground and the whole world would become socialist.&quot;&lt;ref&gt;&quot;[http://www.time.com/time/magazine/article/0,9171,946612-2,00.html Instant Wisdom: Beyond the Little Red Book]&quot;. ''Time''. 20 September 1976.&lt;/ref&gt;
+Still since the close of World War II, limited non-nuclear conflicts continue, and surprisingly enough, some outspoken celebrities and politicians have even advocated for the proclamation of another world war.&lt;ref&gt;NPR: [http://www.npr.org/templates/story/story.php?storyId=5593631 Has World War III Begun?] July 31, 2006.&lt;/ref&gt; [[Mao Zedong]] urged the socialist camp not to fear nuclear war with the United States since, even if &quot;half of mankind died, the other half would remain while imperialism would be razed to the ground and the whole world would become socialist.&quot;&lt;ref&gt;&quot;[http://www.time.com/time/magazine/article/0,9171,946612-2,00.html Instant Wisdom: Beyond the Little Red Book]&quot;. ''Time''. 20 September 1976.&lt;/ref&gt;
 
 &lt;div class=&quot;center&quot;&gt;
 &lt;gallery perrow=&quot;7&quot;&gt;
@@ -771,23 +569,23 @@ Three of the ten most costly wars, in terms of loss of life, have been waged in 
 ! Date
 ! War
 |-
-| 60–72 || 1939–1945 || [[World War II]] (see [[World War II casualties]])&lt;ref&gt;Wallinsky, David: ''David Wallechinsky's Twentieth Century: History With the Boring Parts Left Out'', Little Brown &amp; Co., 1996, ISBN 0-316-92056-8, ISBN 978-0-316-92056-8 – cited by [http://users.erols.com/mwhite28/warstat1.htm#Second White]&lt;/ref&gt;&lt;ref&gt;Brzezinski, Zbigniew: ''Out of Control: Global Turmoil on the Eve of the Twenty-first Century'', Prentice Hall &amp; IBD, 1994, ASIN B000O8PVJI – cited by [http://users.erols.com/mwhite28/warstat1.htm#Second White]&lt;/ref&gt;
+| 108 || 1939–1945 || [[World War II]] (see [[World War II casualties]])&lt;ref&gt;Wallinsky, David: ''David Wallechinsky's Twentieth Century: History With the Boring Parts Left Out'', Little Brown &amp; Co., 1996, ISBN 0-316-92056-8, ISBN 978-0-316-92056-8 – cited by [http://users.erols.com/mwhite28/warstat1.htm#Second White]&lt;/ref&gt;&lt;ref&gt;Brzezinski, Zbigniew: ''Out of Control: Global Turmoil on the Eve of the Twenty-first Century'', Prentice Hall &amp; IBD, 1994, ASIN B000O8PVJI – cited by [http://users.erols.com/mwhite28/warstat1.htm#Second White]&lt;/ref&gt;
 |-
-| 36 || 755–763 || [[An Shi Rebellion]]  (number exaggerated based on census system,but not considering the territorial shrink and inefficient census system afterwar）&lt;ref&gt;{{cite web|url=http://users.erols.com/mwhite28/warstat0.htm#AnLushan |title=Selected Death Tolls for Wars, Massacres and Atrocities Before the 20th Century |publisher=Users.erols.com |accessdate=2011-01-24}}&lt;/ref&gt;
-|-
-| 30–60 || 13th century || [[Mongol Empire|Mongol Conquests]] (see [[Mongol conquests|Mongol invasions]] and [[Tatar invasions]])&lt;ref&gt;Ping-ti Ho, &quot;An Estimate of the Total Population of Sung-Chin China&quot;, in ''Études Song'', Series 1, No 1, (1970) pp. 33–53.&lt;/ref&gt;&lt;ref&gt;{{cite web|url=http://users.erols.com/mwhite28/warstat0.htm#Mongol |title=Mongol Conquests |publisher=Users.erols.com |accessdate=2011-01-24}}&lt;/ref&gt;&lt;ref&gt;{{cite news|url=http://findarticles.com/p/articles/mi_m1510/is_1987_Fall/ai_5151514/pg_2 |title=The world's worst massacres Whole Earth Review |publisher=Findarticles.com |accessdate=2011-01-24 |year=1987}}&lt;/ref&gt;
+| 60 || 13th century || [[Mongol Empire|Mongol Conquests]] (see [[Mongol conquests|Mongol invasions]] and [[Tatar invasions]])&lt;ref&gt;Ping-ti Ho, &quot;An Estimate of the Total Population of Sung-Chin China&quot;, in ''Études Song'', Series 1, No 1, (1970) pp. 33–53.&lt;/ref&gt;&lt;ref&gt;{{cite web|url=http://users.erols.com/mwhite28/warstat0.htm#Mongol |title=Mongol Conquests |publisher=Users.erols.com |accessdate=2011-01-24}}&lt;/ref&gt;&lt;ref&gt;{{cite news|url=http://findarticles.com/p/articles/mi_m1510/is_1987_Fall/ai_5151514/pg_2 |title=The world's worst massacres Whole Earth Review |publisher=Findarticles.com |accessdate=2011-01-24 |year=1987}}&lt;/ref&gt;
 |- 25 || 1616–1662 || [[Qing dynasty]] conquest of [[Ming Dynasty|Ming dynasty]]&lt;ref&gt;McFarlane, Alan: ''The Savage Wars of Peace: England, Japan and the Malthusian Trap'', Blackwell 2003, ISBN 0-631-18117-2,
 ISBN 978-0-631-18117-0 – cited by [http://users.erols.com/mwhite28/warstat0.htm#Manchu17c White]&lt;/ref&gt;
 |-
-| 20 || 1914–1918 ||[[World War I]]  (see [[World War I casualties]])&lt;ref&gt;{{cite web|author= Michael Duffy |url=http://www.firstworldwar.com/features/casualties.htm |title=Military Casualties of World War One |publisher=Firstworldwar.com |date=22 August 2009 |accessdate=2011-01-24}}&lt;/ref&gt;
+| 40 || 1850–1864 || [[Taiping Rebellion]] (see [[Dungan revolt (1862–1877)|Dungan revolt]])&lt;ref&gt;{{cite web|url=http://concise.britannica.com/ebc/article-9380148/Taiping |title=Taiping Rebellion – Britannica Concise |publisher=Britannica |accessdate=2011-01-24}}&lt;/ref&gt;
 |-
-| 20 || 1850–1864 || [[Taiping Rebellion]] (see [[Dungan revolt (1862–1877)|Dungan revolt]])&lt;ref&gt;{{cite web|url=http://concise.britannica.com/ebc/article-9380148/Taiping |title=Taiping Rebellion – Britannica Concise |publisher=Britannica |accessdate=2011-01-24}}&lt;/ref&gt;
+| 39 || 1914–1918 ||[[World War I]]  (see [[World War I casualties]])&lt;ref&gt;{{cite web|author= Michael Duffy |url=http://www.firstworldwar.com/features/casualties.htm |title=Military Casualties of World War One |publisher=Firstworldwar.com |date=22 August 2009 |accessdate=2011-01-24}}&lt;/ref&gt;
+|-
+| 36 || 755–763 || [[An Shi Rebellion]]  (number exaggerated based on census system, but not considering the territorial shrink and inefficient census system afterwar）&lt;ref&gt;{{cite web|url=http://users.erols.com/mwhite28/warstat0.htm#AnLushan |title=Selected Death Tolls for Wars, Massacres and Atrocities Before the 20th Century |publisher=Users.erols.com |accessdate=2011-01-24}}&lt;/ref&gt;
 |-
 | 20 || 1937–1945 || [[Second Sino-Japanese War]]&lt;ref&gt;{{cite web|url=http://www.bbc.co.uk/history/worldwars/wwtwo/nuclear_01.shtml |title=Nuclear Power: The End of the War Against Japan |publisher=BBC News |accessdate=2011-01-24}}&lt;/ref&gt;
 |-
-| 8–12 || 1862–1877 || [[Dungan revolt (1862–1877)|Dungan revolt]]
+| 20 || 1370–1405 || Conquests of [[Tamerlane]]&lt;ref&gt;{{cite web|url=http://users.erols.com/mwhite28/warstat0.htm#Timur |title=Timur Lenk (1369–1405) |publisher=Users.erols.com |accessdate=2011-01-24}}&lt;/ref&gt;&lt;ref&gt;Matthew's White's website (a compilation of scholarly estimates) -[http://users.erols.com/mwhite28/warstat0.htm#Asian Miscellaneous Oriental Atrocities]&lt;/ref&gt;
 |-
-| 7–20 || 1370–1405 || Conquests of [[Tamerlane]]&lt;ref&gt;{{cite web|url=http://users.erols.com/mwhite28/warstat0.htm#Timur |title=Timur Lenk (1369–1405) |publisher=Users.erols.com |accessdate=2011-01-24}}&lt;/ref&gt;&lt;ref&gt;Matthew's White's website (a compilation of scholarly estimates) -[http://users.erols.com/mwhite28/warstat0.htm#Asian Miscellaneous Oriental Atrocities]&lt;/ref&gt;
+| 16 || 1862–1877 || [[Dungan revolt (1862–1877)|Dungan revolt]]
 |-
 | 5–9 || 1917–1922 || [[Russian Civil War|Russian Civil War and Foreign Intervention]]&lt;ref&gt;{{cite web|url=http://www.spartacus.schoolnet.co.uk/RUScivilwar.htm |title=Russian Civil War |publisher=Spartacus.schoolnet.co.uk |accessdate=2011-01-24}}&lt;/ref&gt;
 |}
@@ -812,6 +610,7 @@ Intentional air pollution in combat is one of a collection of techniques collect
 
 ===Warfare environment===
 The environment in which a war is fought has a significant impact on the type of combat which takes place, and can include within its area different types of terrain. This, in turn, means that soldiers have to be trained to fight in a specific types of environments and terrains that generally reflects troops' mobility and limitations.
+
 ===Types of warfare===
 {{col-begin}}
 {{col-2}}
@@ -841,7 +640,7 @@ The environment in which a war is fought has a significant impact on the type of
 
 ===Behaviour and conduct in war===
 {{rquote|right|The nature of warfare ''never'' changes, only its superficial manifestations. [[Joshua]] and [[David]], [[Hector]] and [[Achilles]] would recognize the combat that our soldiers and Marines have waged in the alleys of Somalia and Iraq. The uniforms evolve, bronze gives way to titanium, arrows may be replaced by laser-guided bombs, but the heart of the matter is still killing your enemies until any survivors surrender and do your will.|[[Ralph Peters]]&lt;ref&gt;Peters, Ralph. ''New Glory: Expanding America's Global Supremacy'', 2005. p. 30&lt;/ref&gt;}}
-The behaviour of troops in warfare varies considerably, both individually and as units or armies. In some circumstances, troops may engage in [[genocide]], [[war rape]] and [[ethnic cleansing]]. Commonly, however, the conduct of troops may be limited to posturing and sham attacks, leading to highly rule-bound and often largely symbolic combat in which casualties are much reduced from that which would be expected if soldiers were genuinely violent towards the enemy.&lt;ref name=&quot;autogenerated1996&quot;&gt;{{cite book|last=Lt. Col. Dave Grossman|title=On Killing – The Psychological Cost of Learning to Kill in War &amp; Society|publisher= Little, Brown &amp; Co., |year=1996}}&lt;/ref&gt; Situations of deliberate dampening of hostilities occurred in [[World War I]] by some accounts, e.g., a volley of gunfire being exchanged after a misplaced mortar hit the British line, after which a German soldier shouted an apology to British forces, effectively stopping a hostile exchange of gunfire.&lt;ref&gt;Axelrod, Robert. 1984. ''The Evolution of Cooperation.'' New York: Basic Books.&lt;/ref&gt; Other examples of non-aggression, also from [[World War I]], are detailed in &quot;[[Good-Bye to All That]].&quot; These include spontaneous ceasefires to rebuild defences and retrieve casualties, alongside behaviour such as refusing to shoot at enemy during ablutions and the taking of great risks (described as 1 in 20) to retrieve enemy wounded from the battlefield. The most notable spontaneous ceasefire of [[World War I]] was the [[Christmas truce]].
+The behaviour of troops in warfare varies considerably, both individually and as units or armies. In some circumstances, troops may engage in [[genocide]], [[war rape]] and [[ethnic cleansing]]. Commonly, however, the conduct of troops may be limited to posturing and sham attacks, leading to highly rule-bound and often largely symbolic combat in which casualties are much reduced from that which would be expected if soldiers were genuinely violent towards the enemy.&lt;ref name=&quot;autogenerated1996&quot;&gt;{{cite book|last=Lt. Col. Dave Grossman|title=On Killing – The Psychological Cost of Learning to Kill in War &amp; Society|publisher= Little, Brown &amp; Co., |year=1996}}&lt;/ref&gt; Situations of deliberate dampening of hostilities occurred in World War I by some accounts, e.g., a volley of gunfire being exchanged after a misplaced mortar hit the British line, after which a German soldier shouted an apology to British forces, effectively stopping a hostile exchange of gunfire.&lt;ref&gt;Axelrod, Robert. 1984. ''The Evolution of Cooperation.'' New York: Basic Books.&lt;/ref&gt; Other examples of non-aggression, also from World War I, are detailed in &quot;[[Good-Bye to All That]].&quot; These include spontaneous ceasefires to rebuild defences and retrieve casualties, alongside behaviour such as refusing to shoot at enemy during ablutions and the taking of great risks (described as 1 in 20) to retrieve enemy wounded from the battlefield. The most notable spontaneous ceasefire of World War I was the [[Christmas truce]].
 
 The psychological separation between combatants, and the destructive power of modern weaponry, may act to override this effect and facilitate participation by combatants in the mass slaughter of combatants or civilians, such as in the bombing of [[Bombing of Dresden in World War II|Dresden in World War II]].{{Citation needed|date=September 2009}} The unusual circumstances of warfare can incite apparently normal individuals to commit atrocities.&lt;ref&gt;{{cite book|last=Waller|first=James|title=Becoming Evil: How Ordinary People Commit Genocide and Mass Killing}}&lt;/ref&gt;
 
@@ -879,9 +678,10 @@ Additionally, it has been estimated that anywhere from 18% to 54% of Vietnam war
 
 Based on 1860 census figures, 8% of all white American males aged 13 to 43 died in the [[American Civil War]], including about 6% in the North and approximately 18% in the South.&lt;ref&gt;{{cite book|author=Maris Vinovskis|title=Toward a Social History of the American Civil War: Exploratory Essays|url=http://books.google.com/books?id=9D4TAwc93VoC|accessdate=31 May 2012|date=28 September 1990|publisher=Cambridge University Press|isbn=978-0-521-39559-5}}&lt;/ref&gt; The war remains the deadliest conflict in American history, resulting in the deaths of 620,000 soldiers. [[United States military casualties of war]] since 1775 have totaled over two million. Of the 60 million European soldiers who were mobilized in [[World War I]], 8 million were killed, 7 million were permanently disabled, and 15 million were seriously injured.&lt;ref&gt;Kitchen, Martin (2000), ''[http://www.jimmyatkinson.com/papers/versaillestreaty.html#endnotes The Treaty of Versailles and its Consequences]'', New York: Longman&lt;/ref&gt;
 [[File:Goya-Guerra (32).jpg|thumb|200px|'' Why?'', from ''[[The Disasters of War]]'' (''Los desastres de la guerra''), by [[Francisco Goya]], 1812–15. A collection of depictions of the brutalities of the [[Peninsular War|Napoleonic-Peninsular War]].]]
+[[File:DeadCrowIndians1874.jpg|thumb|200px|The remains of dead [[Crow Indians]] killed and scalped by Sioux c. 1874]]
+[[File:The Hanging by Jacques Callot.jpg|right|thumb|200px|''[[Les Grandes Misères de la guerre]]'' depict the destruction unleashed on civilians during the [[Thirty Years' War]].]]
 
 During [[Napoleon I of France|Napoleon]]'s retreat from Moscow, more French soldiers died of [[typhus]] than were killed by the Russians.&lt;ref&gt;[http://entomology.montana.edu/historybug/TYPHUS-Conlon.pdf The Historical Impact of Epidemic Typhus]. Joseph M. Conlon.&lt;/ref&gt; Felix Markham thinks that 450,000 crossed the [[Neman River|Neman]] on 25 June 1812, of whom less than 40,000 recrossed in anything like a recognizable military formation.&lt;ref&gt;See a large copy of the chart here: http://www.adept-plm.com/Newsletter/NapoleonsMarch.htm, but discussed at length in Edward Tufte, ''The Visual Display of Quantitative Information'' (London: Graphics Press, 1992)&lt;/ref&gt; More soldiers were killed from 1500–1914 by typhus than from all military action during that time combined.&lt;ref&gt;[http://www.time.com/time/magazine/article/0,9171,794989,00.html War and Pestilence]. ''TIME''.&lt;/ref&gt; In addition, if it were not for the modern medical advances there would be thousands of more dead from disease and infection. For instance, during the [[Seven Years' War]], the [[Royal Navy]] reported that it conscripted 184,899 sailors, of whom 133,708 died of disease or were 'missing'.&lt;ref&gt;A. S. Turberville (2006). ''Johnson's England: An Account of the Life &amp; Manners of His Age''. ISBN READ BOOKS. p.53. ISBN 1-4067-2726-1&lt;/ref&gt;
-[[File:The Hanging by Jacques Callot.jpg|right|thumb|200px|''[[Les Grandes Misères de la guerre]]'' depict the destruction unleashed on civilians during the [[Thirty Years' War]].]]
 
 It is estimated that 378,000 people died due to war each year between 1985 and 1994.&lt;ref&gt;{{cite journal |author=Obermeyer Z, Murray CJ, Gakidou E |title=Fifty years of violent war deaths from Vietnam to Bosnia: analysis of data from the world health survey programme |journal=BMJ |volume=336 |issue=7659 |pages=1482–6 |year=2008 |month=June |pmid=18566045 |pmc=2440905 |doi=10.1136/bmj.a137 |url=}}&lt;/ref&gt;
 
@@ -898,7 +698,7 @@ Estimates for the total [[World War II casualties|casualties of World War II]] v
 
 Once a war has ended, losing nations are sometimes required to pay [[war reparations]] to the victorious nations. In certain cases, land is ceded to the victorious nations. For example, the territory of [[Alsace-Lorraine]] has been traded between France and Germany on three different occasions.
 
-Typically speaking, war becomes very intertwined with the economy and many wars are partially or entirely based on economic reasons such as the [[American Civil War]]. In some cases war has stimulated a country's economy (World War II is often credited with bringing America out of the [[Great Depression]]) but in many cases, such as the wars of Louis XIV, the [[Franco-Prussian War]], and [[World War I]], warfare serves only to damage the economy of the countries involved. For example, Russia's involvement in World War I took such a toll on the Russian economy that it almost collapsed and greatly contributed to the start of the [[Russian Revolution of 1917]].
+Typically speaking, war becomes very intertwined with the economy and many wars are partially or entirely based on economic reasons such as the [[American Civil War]]. In some cases war has stimulated a country's economy (High government spending for World War II is often credited with bringing America out of the [[Great Depression]]) but in many cases, such as the wars of Louis XIV, the [[Franco-Prussian War]], and [[World War I]], warfare serves only to damage the economy of the countries involved. For example, Russia's involvement in World War I took such a toll on the Russian economy that it almost collapsed and greatly contributed to the start of the [[Russian Revolution of 1917]].
 
 ====World War II====
 One of the starkest illustrations of the effect of war upon economies is the [[Second World War]]. The [[Great Depression]] of the 1930s ended as nations increased their production of war materials to serve the [[war effort]].&lt;ref&gt;[http://memory.loc.gov/learn/features/timeline/depwwii/depwar.html Great Depression and World War II]. ''The Library of Congress''.&lt;/ref&gt; The financial cost of World War II is estimated at about a trillion U.S. dollars worldwide,&lt;ref&gt;Mayer, E. (2000) [http://emayzine.com/lectures/WWII.html &quot;World War II&quot;] course lecture notes on ''Emayzine.com'' (Victorville, California: Victor Valley College)&lt;/ref&gt;&lt;ref&gt;Coleman, P. (1999) [http://replay.web.archive.org/20080302153205/http://members.aol.com/forcountry/ww2/wc1.htm &quot;Cost of the War,&quot;] ''World War II Resource Guide'' (Gardena, California: The American War Library)&lt;/ref&gt; making it the most costly war in capital as well as lives.
@@ -918,82 +718,168 @@ Many other wars, however, have ended in complete destruction of the opposing ter
 
 Some wars or aggressive actions end when the military objective of the victorious side has been achieved. Others do not, especially in cases where the state structures do not exist, or have collapsed prior to the victory of the conqueror. In such cases, disorganised [[Guerrilla warfare|guerilla warfare]] may continue for a considerable period. In cases of complete surrender conquered territories may be brought under the permanent dominion of the victorious side. A raid for the purposes of [[looting]] may be completed with the successful capture of goods. In other cases an aggressor may decide to end hostilities to avoid continued losses and cease hostilities without obtaining the original objective, such as happened in the [[Iran–Iraq War]].
 
-Some hostilities, such as [[insurgency]] or civil war, may persist for long periods of time with only a low level of military activity. In some cases there is no negotiation of any official treaty, but fighting may trail off and eventually stop after the political demands of the belligerent groups have been reconciled, a political settlement has been negotiated, the combatants are gradually killed or decide the conflict is futile, or the belligerents cease active military engagement but still threaten each other. An example is the [[Chinese Civil War]] which essentially ceased by 1950 but the People's Republic of China fought diplomatically to isolate Taiwan, but it still threatens [[Republic of China]] (commonly known as [[Taiwan]]) with an invasion. For this reason, some historians consider the war not ended but continuing.
+Some hostilities, such as [[insurgency]] or civil war, may persist for long periods of time with only a low level of military activity. In some cases there is no negotiation of any official treaty, but fighting may trail off and eventually stop after the political demands of the belligerent groups have been reconciled, a political settlement has been negotiated, the combatants are gradually killed or decide the conflict is futile, or the belligerents cease active military engagement but still threaten each other. A good example is the [[Chinese Civil War]] which was essentially over by 1950, but in the second half of the 20th Century the People's Republic of China began fighting to isolate the [[Republic of China]] (commonly known as [[Taiwan]]) diplomatically, and still sporadically threatens the island with an invasion. For this reason, some historians consider the war not ended but continuing.
 
 ==List of ongoing wars==
 {{Main|List of ongoing conflicts}}
+Conflicts in the following list are currently causing at least 1,000 violent deaths per year, and therefore categorized as &quot;wars&quot; by the [[Uppsala Conflict Data Program]]&lt;ref&gt;{{cite web |url=http://www.pcr.uu.se/research/ucdp/definitions/|title=Definitions Uppsala Conflict Data Program |accessdate=2009-05-04}}&lt;/ref&gt;  and recognised by the [[United Nations]].&lt;ref&gt;{{cite web |url=http://www.globalsecurity.org/military/world/war/index.html |publisher=GlobalSecurity.org |title=The World at War |accessdate=2008-05-12}}&lt;/ref&gt;&lt;ref&gt;{{cite web |url=http://ochaonline.un.org/humanitariannegotiations/Chapter1-2.htm#FNfour |title=Humanitarian Negotiations with Armed Groups, A Manual &amp; Guidelines for Practitioners |accessdate=2009-05-04}}&lt;/ref&gt; The [[Uppsala Conflict Data Program]] recognizes three types of conflict (state-based, non-state and one-sided). The most violent armed conflict in 2011 are listed below with fatality estimates. 
 
-{{Incomplete|date=May 2011}}
-Conflicts in the following list are currently causing at least 1,000 violent deaths per year, a categorization used by the [[Uppsala Conflict Data Program]]&lt;ref&gt;{{cite web |url=http://www.pcr.uu.se/research/ucdp/definitions/|title=Definitions Uppsala Conflict Data Program |accessdate=2009-05-04}}&lt;/ref&gt; and recognised by the United Nations.&lt;ref&gt;{{cite web |url=http://www.globalsecurity.org/military/world/war/index.html |publisher=[[GlobalSecurity.org]] |title=The World at War |accessdate=2008-05-12}}&lt;/ref&gt;&lt;ref&gt;{{cite web |url=http://ochaonline.un.org/humanitariannegotiations/Chapter1-2.htm#FNfour |title=Humanitarian Negotiations with Armed Groups, A Manual &amp; Guidelines for Practitioners |accessdate=2009-05-04}}&lt;/ref&gt; The UN also use the term &quot;[[low intensity conflict]],&quot; which can overlap with the 1,000 violent deaths per year categorisation.&lt;ref&gt;{{cite web |url=http://www.startribune.com/nation/43815017.html?elr=KArks:DCiUMEaPc:UiacyKUUr |title=UN peacekeeping chief says Darfur 'a low-intensity conflict' with 150 deaths a month |accessdate=2009-05-07}} {{Dead link|date=October 2010|bot=H3llBot}}&lt;/ref&gt;
-
-{| class=&quot;wikitable sortable&quot;
-|-
+{| align=center class=&quot;wikitable sortable&quot;
+|+ State-Based Armed Conflicts Reaching the intensity of &quot;War&quot; in 2011
 ! Start of conflict
 ! War/conflict
 ! Location
-! Cumulative fatalities
-! Fatalities in 2010/11
+! Fatalities in 2010
+! Fatalities in 2011
+! Fatalities in 2012
 |-
-| style=&quot;text-align:center;&quot;| 1964
-| [[Colombian armed conflict (1964–present)|Colombian Armed Conflict]]
-| {{flag|Colombia}}
-| {{ntsh|150000}} 150,000–200,000&lt;ref&gt;{{cite news| url=http://www.guardian.co.uk/commentisfree/2011/nov/08/alfonso-cano-colombia-farc | location=London |work=The Guardian | first=Kristian | last=Herbolzheimer | title=After Alfonso Cano's death, Colombia must rethink its path to peace – Kristian Herbolzheimer | date=8 November 2011}}&lt;/ref&gt;
-| 1,000+&lt;ref&gt;{{cite web|url=http://www.colombiareports.com/colombia-news/news/17441-military-claims-to-have-killed-3500-criminals-in-2011.html |title=Colombian military claims to have killed 3,500 criminals in 2011 – Colombia news |publisher=Colombia Reports |date=6 July 2011 |accessdate=2011-10-23}}&lt;/ref&gt;
-|-
-| align=center | 1967
-| [[Naxalite–Maoist insurgency]]
-| {{flag|India}}
-| ~11,200
-| 1,174+&lt;ref&gt;{{cite news| url=http://news.bbc.co.uk/2/hi/south_asia/8529124.stm |work=BBC News | title=India's Maoists offer ceasefire | date=22 February 2010 | accessdate=2010-05-08}}&lt;/ref&gt;
-|-
-| align=center | 1978
-| [[Afghan Civil war]]
+| align=center | 2001
+| [[War in Afghanistan (2001–present)|War in Afghanistan]]
 | {{flag|Afghanistan}}
-| 600,000–2,000,000 {{Citation needed|date=November 2011}}
-| 10,461+&lt;ref&gt;[http://www.irishtimes.com/newspaper/breaking/2011/0116/breaking1.html] 2,412+ civilians, 711 foreign troops, 1,292 Afghan police, 821 Afghan soldiers and 5,225 insurgents kileld in 2010&lt;/ref&gt;
+| 6,377&lt;ref&gt;Uppsala Conflict Data Program data, Government of Afghanistan and Government of United States vs. Taleban, Hizb-i Islami-yi Afghanistan and al-Qaida, &quot;best estimate&quot; for 2010, http://www.pcr.uu.se/research/ucdp/datasets/ucdp_battle-related_deaths_dataset/&lt;/ref&gt;
+| 7,418&lt;ref&gt;Uppsala Conflict Data Program data, Government of Afghanistan and Government of United States vs. Taleban, Hizb-i Islami-yi Afghanistan and al-Qaida, &quot;best estimate&quot; for 2011, http://www.pcr.uu.se/research/ucdp/datasets/ucdp_battle-related_deaths_dataset/&lt;/ref&gt;
+| 7,396 &lt;ref&gt;Uppsala Conflict Data Program data, Government of Afghanistan and Government of United States vs. Taleban, &quot;best estimate&quot; for 2012, http://www.pcr.uu.se/research/ucdp/datasets/ucdp_battle-related_deaths_dataset/&lt;/ref&gt;
 |-
 | align=center | 1991
 | [[Somali Civil War]]
 | {{flag|Somalia}}
-| 300,000&lt;ref&gt;{{cite web|url=http://users.erols.com/mwhite28/warstat3.htm |title=Twentieth Century Atlas – Death Tolls and Casualty Statistics for Wars, Dictatorships and Genocides |publisher=Users.erols.com |accessdate=2011-03-21}}&lt;/ref&gt;–400,000&lt;ref&gt;{{cite web|author=John Pike |url=http://www.globalsecurity.org/military/library/news/2004/11/mil-041105-irin03.htm |title=Hundreds of thousands killed in years of war, says new president |publisher=Globalsecurity.org |date=5 November 2004 |accessdate=2011-03-21}}&lt;/ref&gt;
-| 2,318+&lt;ref&gt;{{cite web|url=http://www.irinnews.org/Report.aspx?ReportID=91267 |title=IRIN Africa &amp;#124; SOMALIA: Accusations traded over rising casualties at Mogadishu market &amp;#124; Human Rights |publisher=Irinnews.org |date=2 December 2010 |accessdate=2011-10-23}}&lt;/ref&gt;
+| 2,076&lt;ref&gt;Uppsala Conflict Data Program data, Government of Somalia vs. Al-Shabaab, &quot;best estimate&quot; for 2010, http://www.pcr.uu.se/research/ucdp/datasets/ucdp_battle-related_deaths_dataset/&lt;/ref&gt;
+| 1,938&lt;ref&gt;Uppsala Conflict Data Program data, Government of Somalia vs. Al-Shabaab, &quot;best estimate&quot; for 2011, http://www.pcr.uu.se/research/ucdp/datasets/ucdp_battle-related_deaths_dataset/&lt;/ref&gt;
+| 2,620&lt;ref&gt;Uppsala Conflict Data Program data, Government of Somalia vs. Al-Shabaab, &quot;best estimate&quot; for 2012, http://www.pcr.uu.se/research/ucdp/datasets/ucdp_battle-related_deaths_dataset/&lt;/ref&gt;
 |-
 | align=center | 2004
 | [[War in North-West Pakistan]]
 | {{flag|Pakistan}}
-| 30,452&lt;ref&gt;{{cite web|url=http://www.vamban.com/global-war-on-terror-claims-30000-pakistani-casualties|title=Global War on Terror Claims 30,000 Pakistani Casualties}}&lt;/ref&gt;
-| 7,435&lt;ref&gt;{{cite web|url=http://www.ploughshares.ca/content/pakistan-1992-first-combat-deaths |title=Pakistan (1992 – first combat deaths) &amp;#124; Project Ploughshares |publisher=Ploughshares.ca |date=30 April 2011 |accessdate=2011-10-23}}&lt;/ref&gt;
+| 4,858&lt;ref&gt;Uppsala Conflict Data Program data, Government of Pakistan vs. TTP, &quot;best estimate&quot; for 2010, http://www.pcr.uu.se/research/ucdp/datasets/ucdp_battle-related_deaths_dataset/&lt;/ref&gt;
+| 2,599&lt;ref&gt;Uppsala Conflict Data Program data, Government of Pakistan vs. TTP, &quot;best estimate&quot; for 2011, http://www.pcr.uu.se/research/ucdp/datasets/ucdp_battle-related_deaths_dataset/&lt;/ref&gt;
+| 2,705&lt;ref&gt;Uppsala Conflict Data Program data, Government of Pakistan vs. TTP, TTP-TA, and Lashkar-e-Islam, &quot;best estimate&quot; for 2012, http://www.pcr.uu.se/research/ucdp/datasets/ucdp_battle-related_deaths_dataset/&lt;/ref&gt;
 |-
 | align=center | 2004
-| [[Shia Insurgency in Yemen]]
+| [[Al-Qaeda insurgency in Yemen]]
 | {{flag|Yemen}} and {{flag|Saudi Arabia}}
-| 25,000&lt;ref&gt;{{cite book|author1=Barak A. Salmoni|author2=Bryce Loidolt|author3=Madeleine Wells|title=Regime and Periphery in Northern Yemen: The Huthi Phenomenon|url=http://books.google.com/books?id=Sj81Eaxz-2kC|accessdate=31 May 2012|date=16 June 2010|publisher=Rand Corporation|isbn=978-0-8330-4933-9}}&lt;/ref&gt;
-| 8,000
-|-
-| align=center | 2006
-| [[Mexican Drug War]]
-| {{flag|Mexico}}
-| 39,392+&lt;ref&gt;{{Cite news|url=http://www.bbc.co.uk/news/world-latin-america-10860614|title=Mexico says 28,000 killed in drugs war since 2006 |work=BBC News | date=4 August 2010}}&lt;/ref&gt;
-| 24,374&lt;ref&gt;{{cite news| url=http://www.jornada.unam.mx/ultimas/2011/07/28/201721657-en-2010-hubo-24-mil-374-homicidios-en-mexico-inegi/ | work=INEGI | title=Durante 2010 hubo 24 mil 374 homicidios en México: La Jornada | date=28 July 2011}}&lt;/ref&gt;
-|-
-| align=center | 2009
-| [[Sudanese nomadic conflicts]]
-| {{flag|Sudan}}
-| 2,000–2,500&lt;ref&gt;{{cite web|url=http://www.aljazeera.com/news/africa/2010/01/20101712175653198.html|title=Scores killed in Sudan tribal clash}}&lt;/ref&gt;
-| 708
+| 175&lt;ref&gt;Uppsala Conflict Data Program data, Government of Yemen vs. Al-Qaeda in the Arabian Peninsula, &quot;best estimate&quot; for 2010, http://www.pcr.uu.se/research/ucdp/datasets/ucdp_battle-related_deaths_dataset/&lt;/ref&gt;
+| 1,140&lt;ref&gt;Uppsala Conflict Data Program data, Government of Yemen vs. Al-Qaeda in the Arabian Peninsula, &quot;best estimate&quot; for 2010, http://www.pcr.uu.se/research/ucdp/datasets/ucdp_battle-related_deaths_dataset/&lt;/ref&gt;
+| -
 |-
 | align=center | 2011
-| [[Sudan–SPLM-N conflict (2011)|Sudan–SPLM-N conflict]]
-| {{flag|Sudan}}
-| 1,500+
-| 1,500+ {{Citation needed|date=November 2011}}
+| [[Libyan civil war]]
+| {{flag|Libya}}
+| -
+| 1,928&lt;ref&gt;Uppsala Conflict Data Program data, Government of Libya vs. National Transitional Council and Government of Libya vs. Forces of col. Muammar Gaddafi,  &quot;best estimate&quot; for 2011, http://www.pcr.uu.se/research/ucdp/datasets/ucdp_battle-related_deaths_dataset/&lt;/ref&gt;
+| -
 |-
 | align=center | 2011
-| [[Syrian civil war]]
+| [[Sudan–SPLM-N conflict (2011)|Sudananese Civil War]]
+| {{flag|Sudan}}
+| 931&lt;ref&gt;Uppsala Conflict Data Program data, Government of Sudan vs. SLM/A, JEM and SSDM/A,  &quot;best estimate&quot; for 2010, http://www.pcr.uu.se/research/ucdp/datasets/ucdp_battle-related_deaths_dataset/&lt;/ref&gt;
+| 1,248&lt;ref&gt;Uppsala Conflict Data Program data, Government of Sudan vs. SLM/A, JEM,SPLM/A, SPLM/A-North, SSDM(Forces of George Athor), SSLM/A, and SRF, &quot;best estimate&quot; for 2011, http://www.pcr.uu.se/research/ucdp/datasets/ucdp_battle-related_deaths_dataset/&lt;/ref&gt;
+| 1,119 &lt;ref&gt;Uppsala Conflict Data Program data, Government of Sudan vs. SRF, &quot;best estimate&quot; for 2012, http://www.pcr.uu.se/research/ucdp/datasets/ucdp_battle-related_deaths_dataset/&lt;/ref&gt;
+|-
+| align=center | 2011
+| [[Syrian Civil War]]
 | {{flag|Syria}}
-| 3,000+&lt;ref&gt;{{cite web|url=http://www.bbc.co.uk/news/world-middle-east-15304741 |title=Syria uprising: UN says protest death toll hits 3,000 |publisher=BBC News|date=14 October 2011 |accessdate=2011-10-23}}&lt;/ref&gt;
-| 3,000+
+| -
+| 842&lt;ref&gt;Uppsala Conflict Data Program data, Government of Syria vs. Free Syrian Army, &quot;best estimate&quot; for 2011, http://www.pcr.uu.se/research/ucdp/datasets/ucdp_battle-related_deaths_dataset/&lt;/ref&gt;
+| 15,055&lt;ref&gt;Uppsala Conflict Data Program data, Government of Syria vs. Free Syrian Army and Jabhat al-Nusra li al-Sham, &quot;best estimate&quot; for 2012, http://www.pcr.uu.se/research/ucdp/datasets/ucdp_battle-related_deaths_dataset/&lt;/ref&gt;
 |}
+{| align=center class=&quot;wikitable sortable&quot;
+|+ Major Non-State armed conflicts  in 2011&lt;ref&gt; &gt;Uppsala Conflict Data Program data, Best estimate figures given, http://www.pcr.uu.se/research/ucdp/datasets/ucdp_non-state_conflict_dataset_/&lt;/ref&gt;
+! Warring Parties 
+! Location
+! Fatalities in 2010
+! Fatalities in 2011
+! Fatalities in 2012
+|-
+| [[Juarez Cartel ]] vs. [[Sinaloa Cartel]] 
+| {{flag|Mexico}}
+| 2,515
+| 1,668
+|
+|-
+| [[Lou Nuer|Lou Nuer Tribe]] vs. [[Murle people|Murle Tribe]]
+| {{flag|Sudan}}
+| -
+| 1,415
+|
+|-
+| [[Christians]] vs. [[Muslims]]
+| {{flag|Nigeria}}
+| -
+| 830
+|
+|-
+| [[Anagutas]], [[Afisare]], and [[Berom people| Birom]] vs. [[Fulani]], [[Hausa people|Hausa]]
+| {{flag|Nigeria}}
+| 664
+| -
+|
+|-
+| [[Gulf Cartel]] vs. [[Los Zetas]]
+| {{flag|Mexico}}
+| 412
+| 345
+|
+|-
+| [[Misseria]] vs. [[Rizeigat Baggara]]
+| {{flag|Sudan}}
+| 342
+| -
+|
+|-
+|}
+{| align=center class=&quot;wikitable sortable&quot;
+|+ Major One-Sided armed conflicts  in 2011&lt;ref&gt; &gt;Uppsala Conflict Data Program data, Best estimate figures given, http://www.pcr.uu.se/research/ucdp/datasets/ucdp_one-sided_violence_dataset/&lt;/ref&gt;
+! Violence Perpetrator
+! Location
+! Fatalities in 2010
+! Fatalities in 2011
+! Fatalities in 2012
+|-
+| [[Islamic State of Iraq]] 
+| {{flag|Iraq}}
+| 707
+| 322
+|
+|-
+| [[Tehrik-i-Taliban Pakistan|Taleban Movement of Pakistan]]
+| {{flag|Pakistan}}
+| 549
+| 198
+|
+|-
+| [[Lord’s Resistance Army]]
+| {{flag|Uganda}}
+| 430
+| -
+|
+|-
+| [[Los Zetas]]
+| {{flag|Mexico}}
+| 86
+| 268
+|
+|-
+| [[Communist Party of India]]
+| {{flag|India}}
+| 337
+|184
+|
+|-
+| [[Government of Ivory Coast]]
+| {{flag|Ivory Coast}}
+| -
+|277  
+|
+|-
+| [[Government of Syria]]
+| {{flag|Syria}}
+| -
+|2,924
+|
+|-
+
+|}
+*Note: Fatality figures may be substantially lower than other stated estimates as UCDP data does not include fatalities from disease and/or war-time epidemics, or combine casualty figures between different types of armed conflicts. Additionally the figures in the tables represent the UCDP's &quot;best estimate&quot; figures and not its [http://www.ucdp.uu.se/gpdatabase/search.php#__utma=1.2093341673.1361462813.1361717506.1362395396.7&amp;__utmb=1.4.10.1362395396&amp;__utmc=1&amp;__utmx=-&amp;__utmz=1.1362395396.7.4.utmcsr=ucdp.uu.se|utmccn=(referral)|utmcmd=referral|utmcct=/gpdatabase/search.php&amp;__utmv=-&amp;__utmk=175407906 &quot;high estimate&quot; figures].
 
 ==Efforts to stop wars==
 [[File:1917 - Execution à Verdun lors des mutineries.jpg|thumb|Execution at Verdun at the time of the [[French Army Mutinies (1917)|mutinies]] of 1917, when parts of the French Army refused to conduct further offensive operations.]]
@@ -1181,7 +1067,7 @@ Military adventurism can sometimes be used by political leaders as a means of bo
 
 The seeming contradiction between warfare and morality has led to serious [[morality|moral]] questions, which have been the subject of debate for thousands of years.&lt;ref name=&quot;DeForrest&quot;&gt;{{cite web|last=DeForrest|first=Mark Edward|title=Conclusion|url=http://www.gonzagajil.org/content/view/72/26/|work=JUST WAR THEORY AND THE RECENT U.S. AIR STRIKES AGAINST IRAQ|publisher=Gonzaga Journal of International Law|accessdate=8/1/2011}}&lt;/ref&gt; The debate, generally speaking, has two main viewpoints: [[Pacifists]], who believe that war is inherently immoral and therefore is never justified regardless of circumstances, and those who believe that war is sometimes necessary and can be moral.
 
-There are two different aspects to ethics in war, according to the most prominent and influential thought on justice and war: The [[Just War Theory]].&lt;ref&gt;{{cite web|last=DeForrest|first=Mark Edward|title=GENERALLY RECOGNIZED PRINCIPLES OF JUST WAR THEORY|url=http://www.gonzagajil.org/content/view/72/26/|work=JUST WAR THEORY AND THE RECENT U.S. AIR STRIKES AGAINST IRAQ|publisher=Gonzaga Journal of International Law|accessdate=8/1/2011}}&lt;/ref&gt;&lt;ref name=&quot;Codevilla, Seabury 1989 304&quot;&gt;{{cite book|last=Codevilla, Seabury|first=Angelo, Paul|title=War: Ends and Means|year=1989|publisher=Basic Books|location=New York, NY|isbn=0-465-09067-2|page=304|url=http://www.amazon.com/gp/product/157488610X/ref=pd_lpo_k2_dp_sr_1?pf_rd_p=486539851&amp;pf_rd_s=lpo-top-stripe-1&amp;pf_rd_t=201&amp;pf_rd_i=0465090672&amp;pf_rd_m=ATVPDKIKX0DER&amp;pf_rd_r=0144DHEVCX1XCVMJXAZQ}}&lt;/ref&gt; First is [[Jus ad bellum]] (literally translated as &quot;right to war&quot;), which dictates which unfriendly acts and circumstances justify a proper authority in declaring war on another nation. There are six main criteria for the declaration of a just war: first, any just war must be declared by a lawful authority; second, it must be a just and righteous cause, with sufficient gravity to merit large-scale violence; third, the just belligerent must have rightful intentions – namely, that they seek to advance good and curtail evil; fourth, a just belligerent must have a reasonable chance of success; fifth, the war must be a last resort; and sixth, the ends being sought must be proportional to means being used.&lt;ref&gt;{{cite web|last=Aquinas|first=Thomas|title=Part II, Question 40|url=http://ethics.sandiego.edu/Books/Texts/Aquinas/JustWar.html|work=The Summa Theologica|publisher=Benziger Bros. edition, 1947|accessdate=8/1/2011}}&lt;/ref&gt;&lt;ref&gt;{{cite web|last=Mosley|first=Alexander|title=The Jus Ad Bellum Convention|url=http://www.iep.utm.edu/justwar/|work=Just War Theory|publisher=Internet Encyclopedia of Philosophy|accessdate=8/1/2011}}&lt;/ref&gt;
+There are two different aspects to ethics in war, according to the most prominent and influential thought on justice and war: the [[Just War Theory]].&lt;ref&gt;{{cite web|last=DeForrest|first=Mark Edward|title=GENERALLY RECOGNIZED PRINCIPLES OF JUST WAR THEORY|url=http://www.gonzagajil.org/content/view/72/26/|work=JUST WAR THEORY AND THE RECENT U.S. AIR STRIKES AGAINST IRAQ|publisher=Gonzaga Journal of International Law|accessdate=8/1/2011}}&lt;/ref&gt;&lt;ref name=&quot;Codevilla, Seabury 1989 304&quot;&gt;{{cite book|last=Codevilla, Seabury|first=Angelo, Paul|title=War: Ends and Means|year=1989|publisher=Basic Books|location=New York, NY|isbn=0-465-09067-2|page=304|url=http://www.amazon.com/gp/product/157488610X/ref=pd_lpo_k2_dp_sr_1?pf_rd_p=486539851&amp;pf_rd_s=lpo-top-stripe-1&amp;pf_rd_t=201&amp;pf_rd_i=0465090672&amp;pf_rd_m=ATVPDKIKX0DER&amp;pf_rd_r=0144DHEVCX1XCVMJXAZQ}}&lt;/ref&gt; First is [[Jus ad bellum]] (literally translated as &quot;right to war&quot;), which dictates which unfriendly acts and circumstances justify a proper authority in declaring war on another nation. There are six main criteria for the declaration of a just war: first, any just war must be declared by a lawful authority; second, it must be a just and righteous cause, with sufficient gravity to merit large-scale violence; third, the just belligerent must have rightful intentions – namely, that they seek to advance good and curtail evil; fourth, a just belligerent must have a reasonable chance of success; fifth, the war must be a last resort; and sixth, the ends being sought must be proportional to means being used.&lt;ref&gt;{{cite web|last=Aquinas|first=Thomas|title=Part II, Question 40|url=http://ethics.sandiego.edu/Books/Texts/Aquinas/JustWar.html|work=The Summa Theologica|publisher=Benziger Bros. edition, 1947|accessdate=8/1/2011}}&lt;/ref&gt;&lt;ref&gt;{{cite web|last=Mosley|first=Alexander|title=The Jus Ad Bellum Convention|url=http://www.iep.utm.edu/justwar/|work=Just War Theory|publisher=Internet Encyclopedia of Philosophy|accessdate=8/1/2011}}&lt;/ref&gt;
 
 Once a just war has been declared, the second standard, or aspect, is put into effect. [[Jus in bello]], which literally translates to &quot;right in war&quot;, are the ethical rules of conduct when conducting war. The two main principles in ''jus in bello'' are proportionality and discrimination. Proportionality regards how much force is necessary and morally appropriate to the ends being sought and the injustice suffered.&lt;ref name=&quot;Moseley&quot;&gt;{{cite web|last=Moseley|first=Alexander|title=The Principles Of Jus In Bello|url=http://www.iep.utm.edu/justwar/|work=Just War Theory|publisher=Internet Encyclopedia of Philosophy|accessdate=8/1/2011}}&lt;/ref&gt; The principle of Discrimination determines who are the legitimate targets in a war, and specifically makes a separation between combatants, who it is permissible to kill, and non-combatants, who it is not.&lt;ref name=&quot;Moseley&quot;/&gt; Failure to follow these rules can result in the loss of legitimacy for the just war belligerent, and so thereby forfeit the moral right and justice of their cause.&lt;ref name=&quot;Codevilla, Seabury 1989 304&quot;/&gt;
 [[File:RIAN archive 324 In besieged Leningrad.jpg|thumb|210px|In besieged [[Leningrad]]. &quot;Hitler ordered that Moscow and Leningrad were to be razed to the ground; their inhabitants were to be annihilated or driven out by starvation. These intentions were part of the '[[General Plan East]]'.&quot;  – ''The Oxford Companion to World War II.''&lt;ref&gt;[[I.C.B. Dear|Ian Dear]], [[M.R.D. Foot|Michael Richard Daniell Foot]] (2001). ''The Oxford Companion to World War II.'' Oxford University Press. p.88. ISBN 0-19-860446-7&lt;/ref&gt;]]
@@ -1205,7 +1091,6 @@ Fascism, and the ideals it encompasses, such as [[Pragmatism]], Racism, and [[So
 * [[List of active autonomist and secessionist movements|Breakaway states]]
 * [[Casus belli]]
 * [[Fault line war]]
-* [[Islam and war]]
 * [[Horses in warfare]]
 * [[War cycles]]
 * [[Nuclear warfare|Nuclear war]]
@@ -1257,6 +1142,7 @@ Fascism, and the ideals it encompasses, such as [[Pragmatism]], Racism, and [[So
 * Rafael Karsten, ''Blood revenge, war, and victory feasts among the Jibaro Indians of eastern Ecuador'' (1923).
 * S. A. LeBlanc, ''Prehistoric Warfare in the American Southwest'', University of Utah Press (1999).
 * Duane M. Capulla, ''War Wolf'', University of Pili (2008)
+
 &lt;/div&gt;
 
 ==External links==
@@ -1284,136 +1170,14 @@ Fascism, and the ideals it encompasses, such as [[Pragmatism]], Racism, and [[So
 * [http://www.icrc.org/web/eng/siteeng0.nsf/htmlall/section_ihl_customary_humanitarian_law Customary international humanitarian law] International Committee of the Red Cross
 * [http://www.icrc.org/ihl International humanitarian law database] – Treaties and States Parties
 * [http://www.icrc.org/customary-ihl/eng/docs/home Customary IHL Database]
-
-[[Category:War| ]]
-[[Category:Violence]]
+* {{Wikivoyage-inline|War zone safety}}
+[[Category:Dispute resolution]]
 [[Category:Ethics]]
+[[Category:Violence]]
+[[Category:War| ]]
 
-{{Link FA|sh}}
-
-[[af:Oorlog]]
-[[ar:حرب]]
-[[an:Guerra]]
-[[arc:ܩܪܒܐ]]
-[[az:Müharibə]]
-[[bn:যুদ্ধ]]
-[[zh-min-nan:Chiàn-cheng]]
-[[map-bms:Perang]]
-[[be:Вайна]]
-[[be-x-old:Вайна]]
-[[bg:Война]]
-[[bo:དམག་འཁྲུག]]
-[[bs:Rat]]
-[[br:Brezel]]
-[[ca:Guerra]]
-[[cv:Вăрçă]]
-[[ceb:Gubat]]
-[[cs:Válka]]
-[[ch:Gera]]
-[[sn:Hondo]]
-[[cy:Rhyfel]]
-[[da:Krig]]
-[[pdc:Grieg]]
-[[de:Krieg]]
-[[et:Sõda]]
-[[el:Πόλεμος]]
-[[es:Guerra]]
-[[eo:Milito]]
-[[ext:Guerra]]
-[[eu:Gerra]]
-[[fa:جنگ]]
-[[hif:Yudh]]
-[[fr:Guerre]]
-[[fy:Oarloch]]
-[[fur:Vuere]]
-[[ga:Cogadh]]
-[[gd:Cogadh]]
-[[gl:Guerra]]
-[[gan:打仗]]
-[[ko:전쟁]]
-[[hy:Պատերազմ]]
-[[hi:संग्राम]]
-[[hr:Rat]]
-[[id:Perang]]
-[[ia:Guerra]]
-[[iu:ᐊᑭᕋᖅᑑᑎᔪᑦ]]
-[[xh:Imfazwe]]
-[[is:Stríð]]
-[[it:Guerra]]
-[[he:מלחמה]]
-[[jv:Perang]]
-[[kn:ಯುದ್ಧ]]
-[[krc:Къазауат]]
-[[ka:ომი]]
-[[kk:Соғыс]]
-[[sw:Vita]]
-[[kv:Тыш]]
-[[kg:Vita]]
-[[ht:Lagè]]
-[[ku:Şer]]
-[[ky:Согуш]]
-[[la:Bellum]]
-[[lv:Karš]]
-[[lb:Krich]]
-[[lt:Karas]]
-[[hu:Háború]]
-[[mk:Војна]]
-[[ml:യുദ്ധം]]
-[[mr:युद्ध]]
-[[arz:حرب]]
-[[ms:Peperangan]]
-[[mwl:Guerra]]
-[[mn:Дайн]]
-[[nl:Oorlog]]
-[[nds-nl:Kraig]]
-[[new:हताः]]
-[[ja:戦争]]
-[[no:Krig]]
-[[nn:Krig]]
-[[nrm:Dgèrre]]
-[[oc:Guèrra]]
-[[mhr:Сар]]
-[[pnb:لڑائی]]
-[[ps:جګړه]]
-[[nds:Krieg]]
-[[pl:Wojna]]
-[[pt:Guerra]]
-[[ksh:Kreech]]
-[[ro:Război]]
-[[qu:Maqanakuy]]
-[[rue:Война]]
-[[ru:Война]]
-[[sa:युद्धम्]]
-[[sq:Lufta]]
-[[scn:Guerra]]
-[[si:යුද්ධය]]
-[[simple:War]]
-[[sk:Vojna]]
-[[sl:Vojna]]
-[[so:Dagaalada]]
-[[sr:Рат]]
-[[sh:Rat]]
-[[fi:Sota]]
-[[sv:Krig]]
-[[tl:Digmaan]]
-[[ta:போர்]]
-[[tt:Сугыш]]
-[[te:యుద్ధం]]
-[[th:สงคราม]]
-[[tr:Savaş]]
-[[uk:Війна]]
-[[ur:جنگ]]
-[[vec:Guera]]
-[[vi:Chiến tranh]]
-[[fiu-vro:Sõda]]
-[[wa:Guere]]
-[[war:Gerá]]
-[[yi:מלחמה]]
-[[yo:Ogun]]
-[[zh-yue:打仗]]
-[[bat-smg:Vaina]]
-[[zh:战争]]</text>
-      <sha1>jp7lazyoqj3mharalvv9aopncxjth2v</sha1>
+{{Link FA|sh}}</text>
+      <sha1>39nc4mbx3mkhnzz189jbg35tn0rgm0p</sha1>
       <model>wikitext</model>
       <format>text/x-wiki</format>
     </revision>

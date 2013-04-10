@@ -8,8 +8,15 @@ Created on Oct 15, 2012
 from subprocess import Popen, PIPE
 import gzip
 import urllib2 
-from model.logger import *
- 
+
+import logging
+_log = logging.getLogger(__name__)
+
+import os
+def ensure_dir(f):
+    d = os.path.dirname(f)
+    if not os.path.exists(d):
+        os.makedirs(d)
 
 base_xml_url = "http://en.wikipedia.org/wiki/Special:Export/"
 
@@ -59,11 +66,11 @@ def get_wiki_xmlpage_urllib(url):
 
 def get_wiki_xmlpage(url):
     try:
-        DEBUG("Try using get_wiki_xmlpage_urllib:{}".format(url))
+        _log.debug("Try using get_wiki_xmlpage_urllib:{}".format(url))
         return get_wiki_xmlpage_urllib(url)
     except Exception as e:
-        WARNING("Failed to get wiki page using urllib.\n Reason: {}".format(e))
-        WARNING("trying using wget")
+        _log.warning("Failed to get wiki page using urllib.\n Reason: {}".format(e))
+        _log.warning("trying using wget")
         
         return get_wiki_xmlpage_wget(url)
 
@@ -86,6 +93,7 @@ def make_articles_dump(titles, outstream):
     outstream.write('\n</mediawiki>\n')
 
 _NS = 'http://www.mediawiki.org/xml/export-0.8/'
+
 def mk_tag(tag):
     return "{%s}%s" % (_NS, tag)
 
@@ -96,6 +104,8 @@ def articles_dump_to_file(titles, filename, compress=False, compresslevel=9):
     level of compression; 1 is fastest and produces the least compression,
     and 9 is slowest and produces the most compression.  The default here is 9.
     """
+    
+    ensure_dir(filename)
     if compress: 
         dump = gzip.open(filename + ".gzip", 'w', compresslevel=compresslevel) 
     else:
