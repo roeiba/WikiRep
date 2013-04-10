@@ -5,14 +5,15 @@ Created on Oct 23, 2012
 '''
 import logging
 
-def DEBUG(msg):
-    logging.debug(msg)
-def INFO(msg):
-    logging.info(msg)
-def WARNING(msg):
-    logging.warning(msg)
-def ERROR(msg):
-    logging.error(msg)
+_log = logging.getLogger("MAIN")
+mainlog = _log  #alias
 
-def log_text(text):
-    return text[:80] + "... total chars {}".format(len(text))
+def DEBUG(msg):
+    _log.debug(msg)
+def INFO(msg):
+    _log.info(msg)
+def WARNING(msg):
+    _log.warning(msg)
+def ERROR(msg):
+    _log.error(msg)
+

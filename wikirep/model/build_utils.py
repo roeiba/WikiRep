@@ -7,6 +7,8 @@ import scipy as np
 from math import log
 from scipy.sparse import csr_matrix as matrix
 
+import logging
+_log = logging.getLogger(__name__)
 
 def build_index_by_words(word_list):
     ''' converts list of word to dictionary {word => it's index} '''
