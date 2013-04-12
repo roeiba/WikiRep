@@ -23,7 +23,7 @@ class DbBuilder(object):
     
     '''
 
-    def __init__(self,stemmer):
+    def __init__(self, stemmer):
         '''
         Constructor
         '''
@@ -31,6 +31,7 @@ class DbBuilder(object):
         self.stemmer = stemmer
         self.concepts_list = []
         self.ids = set()
+        self.word_index = None
 
     def _generate_concept_id(self, doc):
         ''' 
@@ -48,7 +49,7 @@ class DbBuilder(object):
         
         return doc.id
         
-    def add_document(self,doc):
+    def add_document(self, doc):
         """ Converts document to concept 
             @param doc: should have doc_id, rev_id, title and raw_text
         """
@@ -57,16 +58,16 @@ class DbBuilder(object):
         new_concept = Concept(cid, doc.title, word_list, doc.rev_id)
         self.concepts_list.append(new_concept)
         self.ids.add(doc.id)
-         
-    def build(self,wf=None):
+    
+    def build(self, wf=None):
         ''' Builds DatabaseWrapper according to algorithm
-        @param wf: workflow for denug purpuses
+        @param wf: workflow for debug purpuses
         '''
         #unique enumeration of words
-        word_index = build_word_index(self.concepts_list)
+        self.word_index = build_word_index(self.concepts_list)
         
         #word => index in word_index
-        index_by_word = build_index_by_words(word_index)
+        index_by_word = build_index_by_words(self.word_index)
         
         # docs per word
         df_vec = build_df(index_by_word, self.concepts_list)
@@ -77,10 +78,10 @@ class DbBuilder(object):
         #DEBUG: if wf: wf.tf_mat = _build_wieght_table_tfi_only(df_vec, index_by_word, self.concepts_list)
         
         #TODO: add normalization
-        db = DatabaseWrapper(T, self.concepts_list, word_index)
+        db = DatabaseWrapper(T, self.concepts_list, self.word_index)
         
         if wf: 
-            wf.word_index = word_index
+            wf.word_index = self.word_index
             #workaround to force returned wf to be sparse
             wf.df_vec = matrix(df_vec)
             wf.wieghts_mat = T
@@ -89,6 +90,10 @@ class DbBuilder(object):
         
     def get_concepts_list(self):
         return self.concepts_list
-        
+    
+    def get_word_index(self):
+        if self.word_index is None:
+            return build_word_index(self.concepts_list)
+        return self.word_index
 
                 

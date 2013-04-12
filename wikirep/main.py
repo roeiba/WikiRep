@@ -21,6 +21,12 @@ class colors(object):
     MAGENTA = '\x1b[35m'
     RED = '\x1b[31m'
     
+#####################################################################################
+# Parser methods
+# 
+# Each method is name action_parser
+#####################################################################################
+    
 def makedump_parser(subparsers):
     # create the parser for the "make" command
     parser_makedump = subparsers.add_parser('makedump', 
@@ -30,7 +36,6 @@ def makedump_parser(subparsers):
     parser_makedump.add_argument("-dump", type=str, default=DConfig.dump_path,
                         help="output file name", dest="dumpfile")
     parser_makedump.set_defaults(func=handlers.makedump)
-
 
 def download_parser(subparsers):
     # create the parser for the "download" command

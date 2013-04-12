@@ -11,8 +11,8 @@ import logging
 _log = logging.getLogger(__name__)
 
 def build_index_by_words(word_list):
-    ''' converts list of word to dictionary {word => it's index} '''
-    index_by_word = dict([(word,i) for i,word in enumerate(word_list)])
+    ''' converts list of words to dictionary {word => it's index} '''
+    index_by_word = {word:i for i,word in enumerate(word_list)}
     return index_by_word
 
 

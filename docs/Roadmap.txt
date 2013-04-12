@@ -33,6 +33,7 @@ Terms and definitions
 		Text after parsing the Wiki text
 	* Stemmed text
 		Text after stemming the clean text
+		
 main modules
 --------------
 * WikiKnowledge
