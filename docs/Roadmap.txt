@@ -5,6 +5,10 @@ Tasks to be completed for first phase
 3. Serializing/DeSerializing DatabaseWrapper
 5. Download and use the original wiki dump, which was used for the article
 6. Download the texts benchmark (bunch of texts manually compared by person)
+	* See short article, section 3.1
+	* WordSimilarity-353 collection for words similarity
+		http://www.cs.technion.ac.il/~gabl/resources/data/wordsim355
+	* 50 documents collection from the Asutralian Broadcaseting
 7. Run Empirical evalution 
 
 Future Roadmap
@@ -22,7 +26,13 @@ Future Roadmap
 
 System description
 ====================
-
+Terms and definitions
+	* Wiki Text
+		Original raw text including wiki markup language
+	* Clean text
+		Text after parsing the Wiki text
+	* Stemmed text
+		Text after stemming the clean text
 main modules
 --------------
 * WikiKnowledge
@@ -43,7 +53,7 @@ main modules
 					- Add the concept to DB concept list
 			- build the DB
 				- build word_index (iterate all concepts and create the overall words index)
-				- build index_by_word 
+				- build index_by_word (convert list of words to dictionary {word => it's index})
 				- build wieght table
 		- Use SemanticIntepreter in order to calucalte a given text vector according to the created words database
 			- Note the SemanticIntepreter is created with a stemmer, which will be used for stemming the input text
