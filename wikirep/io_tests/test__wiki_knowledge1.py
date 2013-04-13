@@ -6,8 +6,9 @@ Created on Oct 21, 2012
 import unittest
 import os
 
-from model.wiki_knowledge import WikiKnowledge
-from model.stop_words_stemmer import StopWordsStemmer
+from wiki_knows import wiki_knowledge 
+from model.stemmers import StopWordsStemmer
+from parsers import parse_tools
 from model.logger import *
 import test.test_utils as test_utils
 from io_test_utils import getOutputFile
@@ -28,41 +29,43 @@ class Test(unittest.TestCase):
         """ This is not exactly a test, but a program execution..."""
         text1 = "i love to learn"
         text2 = "the world we know"
-        wiki_knowledge = test_utils.Factory.build_wiki_knowledge(self.expected_articles, self.tmp_dump_file)
+
+        dump_file = self.tmp_dump_file
+
+        wiki_knowledge.make_dump(dump_file, self.expected_articles, compress=False)
+        pparsed_xml_path = dump_file +".parsed"
+        wiki_knowledge.parse_dump(dump_file, pparsed_xml_path)
+        db_wrapper = wiki_knowledge.build_database_wrapper(pparsed_xml_path, StopWordsStemmer([]))
+                             
+        #wiki_knowledge = test_utils.Factory.build_wiki_knowledge()
         #clean up file created by factory at end
         self.addCleanup(os.remove, self.tmp_dump_file)
-        correlation = wiki_knowledge.compare(text1, text2)
+        
+
+        correlation = db_wrapper.compare(text1, text2)
         INFO(test_utils.get_texts_correlation_message(text1, text2, correlation))
     
     def test__make_dump(self):
         #create the dump file
-        test_utils.Factory.build_wiki_knowledge(self.expected_articles, self.tmp_dump_file)
+        article_title=["Rain"]
+        articles_expected_set = set(article_title)
+        wiki_knowledge.make_dump(self.tmp_dump_file,*article_title)
         
-        #compare with expected
-        with open(self.expected_xml_path) as exp:
-            with open(self.tmp_dump_file) as act:
-                expected = exp.readlines()
-                actual =  act.readlines()
-                self.assertEqual(expected, actual, "Mismatch dumps")
-    
+        actual_titles_set = {wikidoc.title for wikidoc in parse_tools.iterate_wiki_pages(self.tmp_dump_file)}
+        self.assertEqual(actual_titles_set, articles_expected_set, "title mismatch")
+
+        
     def test__parse_dumps_to_cocepts(self):
         self.skipTest("Implement this test!")
         test_utils.get_db_builder(self.expected_xml_path)
         
     def test__save_and_load(self):
-        self.skipTest("Until save and load is implemented")
-        wiki_knowledge = WikiKnowledge()
-        wiki_knowledge.build(self.expected_xml_path, None)      
-        wiki_knowledge.save_to_disk(self.tmp_wdb_file)
-        with open(self.tmp_wdb_file) as act:
-            with open(self.expected_wdb_path) as exp:
-                expected = exp.readlines()
-                actual =  act.readlines()
-                self.assertEqual(expected, actual, "Mismatch dumps")
-        
-        loaded_wiki_knowledge = WikiKnowledge()
-        loaded_wiki_knowledge.load(self.wdb_file)
-        self.assertEqual(wiki_knowledge, loaded_wiki_knowledge, "Mismatch WikiKnowledges")
+        parsed_xml =self.expected_xml_path + ".parsed"
+        wiki_knowledge.parse_dump(self.expected_xml_path, parsed_xml)
+        expected_db = wiki_knowledge.build_database_wrapper(parsed_xml, StopWordsStemmer([]))
+        wiki_knowledge.save_db_wrapper_to_wdb(expected_db, self.tmp_wdb_file)                
+        actual = wiki_knowledge.load_db_wrapper_from_wdb(self.tmp_wdb_file) 
+        self.assertEqual(expected_db, actual, "Mismatch WikiKnowledges")
         
     def test__run_from_dump(self):
         pass

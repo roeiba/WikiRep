@@ -72,6 +72,7 @@ def build_wieght_table(df_vec,index_by_word,concepts_list):
     
     n = float(len(concepts_list))
     m = len(df_vec)
+    assert int(m) != 0 and int(n) != 0
     T = matrix((m,n))
     for j, concept in enumerate(concepts_list):
         words = concept.get_all_words()

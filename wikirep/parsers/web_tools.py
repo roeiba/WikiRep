@@ -10,11 +10,14 @@ import gzip
 import urllib2 
 
 import logging
-_log = logging.getLogger(__name__)
+import model.logger as lg
+_log = lg.getLogger(__name__)  #lg.mainlog # logging.getLogger("webtools")#__name__)
 
 import os
 def ensure_dir(f):
     d = os.path.dirname(f)
+    if len(d)== 0:
+        return
     if not os.path.exists(d):
         os.makedirs(d)
 

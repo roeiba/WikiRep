@@ -1,31 +1,38 @@
 import math_utils 
 from database_wrapper import DatabaseWrapper
+import logging
 
-class SemanticInterpreter(object):
-    def __init__(self, database, stemmer):
+logger = logging.getLogger("Comparer")
+
+class SemanticComparer(object):
+    def __init__(self, db_wrapper, compare_method=None):
         """
         @param DatabaseWrapper database: Words inverted table
-        @param stemmer: Used for stemming input text when weight vector is caluclated.
+        @param compare_method: Method comparing vecors if None
+        
         """
-        assert type(database) == DatabaseWrapper, "DatabaseWrapper class is expected as database" 
-        self.db = database
-        self.stemmer = stemmer
+        assert type(db_wrapper) == DatabaseWrapper, "DatabaseWrapper class is expected as database" 
+        self.db = db_wrapper
+        
+        self.compare_method = compare_method if compare_method else math_utils.cosine_metrics
 
-    def get_weight_vector(self, word):
-        """ Return:
-                row representation of the word in Wiki concepts
+    def compare(self, text1, text2):
         """
-        #if word is not in corpus: 
-        return self.db.get_word_vector(word)
-    
-    def build_weighted_vector(self, text):
-        """ Gets a text and returns its weighted vector according the database """
-        words_vectors = []
-        words = self.stemmer.process_text(text)
-
-        for word in words:
-            word_wieght_vec = self.get_weight_vector(word)
-            words_vectors.append(word_wieght_vec)
-            
-        return math_utils.get_vectors_centroid(words_vectors)
+            Compares two texts in wikipedia space.
+            @param db: WikiRep database filename
+        """
+        #semantic_interpreter = SemanticInterpreter(database)
+        #generate weighted vectors
+        msg_format = "Text: {text}\nWieght vector: {vector}"
+        
+        w_vector_1 = self.get_text_value(text1)
+        logger.debug( msg_format.format(text=text1, vector=w_vector_1) )
+        
+        w_vector_2 = self.get_text_value(text2)
+        logger.debug( msg_format.format(text=text2, vector=w_vector_2) )
+        
+        #compare vectors
+        correlation = self.compare_method(w_vector_1, w_vector_2)
+        logger.debug( "correlation is: {}".format(correlation) )
+        return correlation
         

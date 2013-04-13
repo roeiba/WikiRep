@@ -51,19 +51,20 @@ class DbBuilder(object):
         
     def add_document(self, doc):
         """ Converts document to concept 
-            @param doc: should have doc_id, rev_id, title and raw_text
+            @param doc: should have doc_id, rev_id, title and clean_text
         """
         cid = self._generate_concept_id(doc)
-        word_list = self.stemmer.process_text(doc.raw_text)
+        word_list = self.stemmer.process_text(doc.clean_text)
         new_concept = Concept(cid, doc.title, word_list, doc.rev_id)
         self.concepts_list.append(new_concept)
         self.ids.add(doc.id)
     
     def build(self, wf=None):
         ''' Builds DatabaseWrapper according to algorithm
-        @param wf: workflow for debug purpuses
+            @param wf: workflow for debug purpuses
+            @returns: DatabaseWrapper
         '''
-        #unique enumeration of words
+        #unique enumeration of words (list of words and index is a posiioin of the word in list)
         self.word_index = build_word_index(self.concepts_list)
         
         #word => index in word_index
@@ -78,7 +79,7 @@ class DbBuilder(object):
         #DEBUG: if wf: wf.tf_mat = _build_wieght_table_tfi_only(df_vec, index_by_word, self.concepts_list)
         
         #TODO: add normalization
-        db = DatabaseWrapper(T, self.concepts_list, self.word_index)
+        db = DatabaseWrapper(T, self.concepts_list, self.word_index, self.stemmer)
         
         if wf: 
             wf.word_index = self.word_index

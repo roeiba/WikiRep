@@ -83,10 +83,10 @@ class TestMakeDump(unittest.TestCase):
 
 
     def test__articles_dump_to_file(self):
-        
+         
         titles = ['Ross_Ice_Shelf', 'Southern_Cross_Expedition', 'Ice_shelf']
         webtools.articles_dump_to_file(titles, 'test.xml.tmp')
-        root = parser.parse('test.xml.tmp') 
+        root = parser.parse_xml('test.xml.tmp') 
         pages = root.findall(webtools.mk_tag('page'))
         self.assertEqual(len(pages), len(titles))
 

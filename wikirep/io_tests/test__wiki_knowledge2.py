@@ -4,12 +4,8 @@ Created on Nov 28, 2012
 @author: inesmeya
 '''
 import unittest
-import model.wiki_knowledge as mwn
-import io_test_utils as io_tu
-
-
-
-
+import wiki_knows.wiki_knowledge as wn
+import io_tests.io_test_utils as io_tu
 
 class Test(unittest.TestCase):
 
@@ -23,7 +19,6 @@ class Test(unittest.TestCase):
 
 
     def test__parse_dump(self):
-        wn = mwn.getWikiKnowledge()
         wiki_dump_path =  io_tu.getInputFile(io_tu.FilesList.test__parse_tools)
         wiki_parsed_dump_path =  io_tu.getOutputFile(io_tu.FilesList.test__parse_tools)
         

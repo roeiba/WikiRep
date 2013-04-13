@@ -4,10 +4,10 @@ from model.concept import Concept
 import unittest
 import test_utils
 from model import db_builder
-from model import stop_words_stemmer
-from model.stop_words_stemmer import StopWordsStemmer
-from model.semantic_interpreter import SemanticInterpreter
-from model.simple_splitter import SimpleSplitter
+from model import stemmers
+from model.stemmers import StopWordsStemmer
+from model.semantic_interpreter import SemanticComparer
+
 
 #those concepts have distinct set of words
 distinct_concepts = [
@@ -73,12 +73,10 @@ class TestSimpleConcepts(test_utils.TestBase):
             
         db = builder.build()
         
-        si = SemanticInterpreter(db, stemmer)
-        
         texts = [technology_text, business_text, entertainment_text]
         
         #act:
-        actual_vectors = map(si.build_weighted_vector, texts)
+        actual_vectors = map(db.get_text_centroid, texts)
         
         # this is example of results
         #[ 0.01241579  0.          0.        ]
@@ -107,7 +105,7 @@ class TestSimpleConcepts(test_utils.TestBase):
     def test_intersection_concepts(self):
         #splitter = SimpleSplitter()
         
-        stemmer = stop_words_stemmer.get_default_stemmer()
+        stemmer = stemmers.get_default_stemmer()
         
         tech_set = set(stemmer.process_text(technology_text))
         busi_set = set(stemmer.process_text(business_text))

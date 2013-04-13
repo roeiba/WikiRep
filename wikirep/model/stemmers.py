@@ -13,18 +13,22 @@ default_stop_words_list = stop_words = [
     'because', 'end', 'since', 'get', 'you', 'has', 'its', 'will',  's', 'are'
 ]
 
+
+
+
 def get_default_stemmer():
     return ComplexStemmer(LowerStemmer(), StopWordsStemmer(default_stop_words_list), PorterStemmer())
 
 class BaseStemmer(object):
+    
     splitter = SimpleSplitter()
         
-    def process_text(self,raw_text):
-        ''' @param raw_text: string
+    def process_text(self,clean_text):
+        ''' @param clean_text: string
             @return: list of words, 
         
         '''
-        raw_words = self.splitter.split(raw_text)
+        raw_words = self.splitter.split(clean_text)
         stemed_words = []
         for word in  raw_words:
             stemed_word = self.process_word(word)
@@ -34,7 +38,8 @@ class BaseStemmer(object):
     
     def process_word(self,word):
         raise NotImplementedError("this is base class: BaseStemmer")
-        
+    def get_name(self):
+        return self.__class__    
     
 class StopWordsStemmer(BaseStemmer):
     '''
@@ -44,7 +49,7 @@ class StopWordsStemmer(BaseStemmer):
         '''
         @param stop_words_list: list of words to drop
         '''
-        self.stop_words_list = stop_words_list or []                                    
+        self.stop_words_list = default_stop_words_list if stop_words_list is None else stop_words_list                                    
         
     def process_word(self, word):
         """ @return: None if word in stop_word_list, otherwise word itself
@@ -82,4 +87,15 @@ class ComplexStemmer(BaseStemmer):
             word = stemmer.process_word(word)
         
         return word
-    
+
+
+_steammers_list = [ BaseStemmer(), StopWordsStemmer(), PorterStemmer() ]    
+_steammers_map =  { stemmer.get_name():stemmer for stemmer in _steammers_list }
+
+def get_stemmer_by_name(name):
+    """ @param name: name of stemmer
+        @return: instance correnponding stemmer or None if not found
+    """
+    stemmer =  _steammers_map.get(name)
+    return stemmer
+

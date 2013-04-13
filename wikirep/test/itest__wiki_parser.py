@@ -2,13 +2,13 @@
 Created on Oct 1, 2012
 
 @author: roeib
-'''
+
 import os 
 import unittest
 
 import test_utils as test_utils
 from parsers import wrappers
-
+ not working due to wikipage changes on server
 class TestWikiParser(test_utils.TestBase):
 
     def test__get_wiki_page(self):
@@ -46,3 +46,4 @@ class TestWikiParser(test_utils.TestBase):
 if __name__ == "__main__":
     unittest.main()
 
+'''

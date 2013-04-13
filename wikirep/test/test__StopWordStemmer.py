@@ -3,7 +3,7 @@ Created on Sep 27, 2012
 
 @author: roeib
 '''
-from model.stop_words_stemmer import StopWordsStemmer
+from model.stemmers import StopWordsStemmer
 import unittest
 from test_utils import TestBase
  

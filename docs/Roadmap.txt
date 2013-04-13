@@ -60,3 +60,7 @@ main modules
 			- Note the SemanticIntepreter is created with a stemmer, which will be used for stemming the input text
 			  The stemmer used here is unrelated to stemmer used for building the database
 			   
+WikiDocument
+	wiki_text
+	clean_text
+	stemed_text

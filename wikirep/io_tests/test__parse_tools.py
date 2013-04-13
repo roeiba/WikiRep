@@ -22,9 +22,9 @@ class Test(unittest.TestCase):
         
         test__parse_tools_xml =  getInputFile(FilesList.test__parse_tools)
         
-        actual = [(wdoc.id, wdoc.title, len(wdoc.raw_text)) 
-                  for wdoc
-                  in pt.extract_pages(test__parse_tools_xml)]        
+        actual = [(wdoc.id, wdoc.title, len(wdoc.wiki_text)) 
+            for wdoc
+            in pt.iterate_wiki_pages(test__parse_tools_xml)] #  extract_pages(test__parse_tools_xml)]        
 
         self.assertSequenceEqual(actual, expected, "Assertion failure: \nActual={}\nExpected={}".format(actual, expected))
 

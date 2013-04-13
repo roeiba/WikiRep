@@ -5,7 +5,7 @@ Created on Sep 28, 2012
 '''
 import unittest
 from model.db_builder import DbBuilder
-from model.stop_words_stemmer import StopWordsStemmer
+from model.stemmers import StopWordsStemmer
 import test_utils
 import math
 

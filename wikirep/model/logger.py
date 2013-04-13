@@ -5,8 +5,13 @@ Created on Oct 23, 2012
 '''
 import logging
 
+#logging.basicConfig()
+
 _log = logging.getLogger("MAIN")
 mainlog = _log  #alias
+
+def getLogger(name):
+    return logging.getLogger(name)
 
 def DEBUG(msg):
     _log.debug(msg)

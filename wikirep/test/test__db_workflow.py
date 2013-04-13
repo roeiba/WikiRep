@@ -7,13 +7,14 @@ import unittest
 from scipy import vectorize
 from scipy import log
 from numpy.testing import assert_allclose
-import inspect
-from model.db_builder import DbBuilder
-from model.stop_words_stemmer import StopWordsStemmer
-import model.math_utils as math_utils
-import test_utils
 from scipy.sparse import csr_matrix as matrix
 from numpy import array
+
+import inspect
+from model.db_builder import DbBuilder
+from model.stemmers import StopWordsStemmer
+import model.math_utils as math_utils
+import test_utils
 
 class WorkFlow(object):
     docs = None
