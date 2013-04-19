@@ -114,7 +114,7 @@ class Test(unittest.TestCase):
 
         expected_wf = simple_wf()
         
-        builder = DbBuilder(StopWordsStemmer())
+        builder = DbBuilder(StopWordsStemmer([]))
         for doc in expected_wf.docs:
             builder.add_document(doc)
         
