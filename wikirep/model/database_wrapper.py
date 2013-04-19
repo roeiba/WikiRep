@@ -80,8 +80,17 @@ class DatabaseWrapper(object):
             
         return math_utils.get_vectors_centroid(words_vectors)
     
-    def save(self, output):
-        pass
+    def get_word_dict(self,word):
+        """ Returns dictionary with concept=>value """
+        d = {}
+        v = self.get_word_vector(word)
+        for i,t in enumerate(self.title_index):
+            d[t] = v[0,i]
+        return d
     
-    def load(self, src):
-        pass
+    def to_dict_repr(self):
+        """ Returns dictianry representation of db wrapper
+            word => { Concept:value }
+        """
+        d = {w:self.get_word_dict(w) for w in self.words_index}
+        return d

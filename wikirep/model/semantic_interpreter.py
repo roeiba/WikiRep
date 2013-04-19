@@ -25,10 +25,10 @@ class SemanticComparer(object):
         #generate weighted vectors
         msg_format = "Text: {text}\nWieght vector: {vector}"
         
-        w_vector_1 = self.get_text_value(text1)
+        w_vector_1 = self.db.get_text_centroid(text1)
         logger.debug( msg_format.format(text=text1, vector=w_vector_1) )
         
-        w_vector_2 = self.get_text_value(text2)
+        w_vector_2 = self.db.get_text_centroid(text2)
         logger.debug( msg_format.format(text=text2, vector=w_vector_2) )
         
         #compare vectors

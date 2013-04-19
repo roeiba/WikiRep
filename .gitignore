@@ -6,3 +6,6 @@ wikirep/data_output/*
 .pydevproject
 .settings/*
 
+wikirep/io_tests/data_output
+wikirep/io_tests/data_output/test__parse_tools.xml
+wikirep/io_tests/data_output/wiki_knowledge_output.xml

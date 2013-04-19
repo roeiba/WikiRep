@@ -85,15 +85,17 @@ def load_db_wrapper_from_wdb(path):
     @param path: path to pickle file DbContant object
     @return: DatabaseWrapper
     """
-    db_content = pickle.load(path)
+    
+    with open(path, 'rb') as infile:
+        db_content = pickle.load(infile)
     stemmer = stemmers.get_stemmer_by_name(db_content.stemmer_name)
     db_wrapper = DatabaseWrapper(
-                   db_content.wieght_matrix,
+                   db_content.weight_matrix,
                    db_content.concepts_index,
                    db_content.words_index,
                    stemmer )    
     return db_wrapper
-
+    
 def save_db_wrapper_to_wdb(db_wrapper, path):
     """ Saves provided dw_wrapper to path wdb file"
     @param dw_wrapper: DatabaseWrapper to save
@@ -103,8 +105,10 @@ def save_db_wrapper_to_wdb(db_wrapper, path):
                    db_wrapper.wieght_matrix,
                    db_wrapper.concepts_index,
                    db_wrapper.words_index,
-                   db_wrapper.stemmer.get_name() )    
-    pickle.dump(db_content, path)
+                   db_wrapper.stemmer.get_name() )
+    with open(path, 'wb') as outfile:
+        pickle.dump(db_content, outfile, pickle.HIGHEST_PROTOCOL)
+        
 
 
 ###################################################################################

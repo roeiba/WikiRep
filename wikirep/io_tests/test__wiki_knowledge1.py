@@ -12,6 +12,7 @@ from parsers import parse_tools
 from model.logger import *
 import test.test_utils as test_utils
 from io_test_utils import getOutputFile
+from model import semantic_interpreter
 
 class Test(unittest.TestCase):
     def setUp(self):
@@ -41,15 +42,15 @@ class Test(unittest.TestCase):
         #clean up file created by factory at end
         self.addCleanup(os.remove, self.tmp_dump_file)
         
-
-        correlation = db_wrapper.compare(text1, text2)
+        comparer = semantic_interpreter.SemanticComparer(db_wrapper)
+        correlation = comparer.compare(text1, text2)
         INFO(test_utils.get_texts_correlation_message(text1, text2, correlation))
     
     def test__make_dump(self):
         #create the dump file
         article_title=["Rain"]
         articles_expected_set = set(article_title)
-        wiki_knowledge.make_dump(self.tmp_dump_file,*article_title)
+        wiki_knowledge.make_dump(self.tmp_dump_file,article_title)
         
         actual_titles_set = {wikidoc.title for wikidoc in parse_tools.iterate_wiki_pages(self.tmp_dump_file)}
         self.assertEqual(actual_titles_set, articles_expected_set, "title mismatch")
@@ -65,7 +66,8 @@ class Test(unittest.TestCase):
         expected_db = wiki_knowledge.build_database_wrapper(parsed_xml, StopWordsStemmer([]))
         wiki_knowledge.save_db_wrapper_to_wdb(expected_db, self.tmp_wdb_file)                
         actual = wiki_knowledge.load_db_wrapper_from_wdb(self.tmp_wdb_file) 
-        self.assertEqual(expected_db, actual, "Mismatch WikiKnowledges")
+        self.assertEqual(expected_db.words_num, actual.words_num, "Mismatch WikiKnowledges number of words")
+        self.assertEqual(expected_db.title_index, actual.title_index, "Mismatch WikiKnowledges titles")
         
     def test__run_from_dump(self):
         pass

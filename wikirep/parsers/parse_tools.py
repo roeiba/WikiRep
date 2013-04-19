@@ -23,7 +23,7 @@ def _cut_text(text):
 
 
 _PAGE_TAG = wt.mk_tag('page')
-_DOC_TAG = wt.mk_tag('doc')
+_DOC_TAG = 'doc'
 
 def my_xfind(doc, xp):
     new_xp = xp.replace('/', '/{{{}}}'.format(wt._NS))
