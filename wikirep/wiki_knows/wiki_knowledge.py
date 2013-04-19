@@ -21,7 +21,7 @@ def ensure_dir(f):
     if not os.path.exists(d):
         os.makedirs(d)
 
-def make_dump(wiki_dump, *articles_titles, **kwargs):
+def make_dump(wiki_dump, articles_titles, compress=False):
     """ Download specified articles from Wikipedia site, 
         merges them into one file, compresses it as Wikipedia dump file
         @param articles_titles: article's canonic name on Wikipedia web page
@@ -30,7 +30,7 @@ def make_dump(wiki_dump, *articles_titles, **kwargs):
     INFO('Executing makedump process on articles: {}'.format(articles_titles))
     INFO('Dump path: {}'.format(wiki_dump))
        
-    web_tools.articles_dump_to_file(articles_titles, wiki_dump, **kwargs)
+    web_tools.articles_dump_to_file(articles_titles, wiki_dump, compress)
     
 def _parse_dump(dump_reader,parsed_xml_writer):
     """ Parses wiki_dump.    
