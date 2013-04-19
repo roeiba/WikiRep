@@ -9,15 +9,17 @@ import os
 from wiki_knows import wiki_knowledge 
 from model.stemmers import StopWordsStemmer
 from parsers import parse_tools
-from model.logger import *
 import test.test_utils as test_utils
 from io_test_utils import getOutputFile
 from model import semantic_interpreter
+
+from model.logger import *
 
 class Test(unittest.TestCase):
     def setUp(self):
         self.tmp_dump_file = getOutputFile("wiki_knowledge_output.xml")
         self.tmp_wdb_file = getOutputFile("wiki_knowledge_output.wdb")
+        self.tmp_parse_file = getOutputFile("wiki_knowledge_output.parsed.xml")
         
         self.expected_articles = ['Knowledge', 'Love', 'War'] 
         self.expected_xml_path = os.path.join(os.path.dirname(__file__) ,"expected_results/expected_xml_Knowledge_Love_War.xml")
@@ -34,9 +36,8 @@ class Test(unittest.TestCase):
         dump_file = self.tmp_dump_file
 
         wiki_knowledge.make_dump(dump_file, self.expected_articles, compress=False)
-        pparsed_xml_path = dump_file +".parsed"
-        wiki_knowledge.parse_dump(dump_file, pparsed_xml_path)
-        db_wrapper = wiki_knowledge.build_database_wrapper(pparsed_xml_path, StopWordsStemmer([]))
+        wiki_knowledge.parse_dump(dump_file, self.tmp_parse_file)
+        db_wrapper = wiki_knowledge.build_database_wrapper(self.tmp_parse_file, StopWordsStemmer([]))
                              
         #wiki_knowledge = test_utils.Factory.build_wiki_knowledge()
         #clean up file created by factory at end
@@ -61,9 +62,9 @@ class Test(unittest.TestCase):
         test_utils.get_db_builder(self.expected_xml_path)
         
     def test__save_and_load(self):
-        parsed_xml =self.expected_xml_path + ".parsed"
-        wiki_knowledge.parse_dump(self.expected_xml_path, parsed_xml)
-        expected_db = wiki_knowledge.build_database_wrapper(parsed_xml, StopWordsStemmer([]))
+
+        wiki_knowledge.parse_dump(self.expected_xml_path, self.tmp_parse_file)
+        expected_db = wiki_knowledge.build_database_wrapper(self.tmp_parse_file, StopWordsStemmer([]))
         wiki_knowledge.save_db_wrapper_to_wdb(expected_db, self.tmp_wdb_file)                
         actual = wiki_knowledge.load_db_wrapper_from_wdb(self.tmp_wdb_file) 
         self.assertEqual(expected_db.words_num, actual.words_num, "Mismatch WikiKnowledges number of words")
