@@ -1,5 +1,8 @@
 *.pyc
+wikirep/io_tests/data_output
 wikirep/io_tests/data_output/*
 wikirep/data_output/*
-
+.project
+.pydevproject
+.settings/*
 
