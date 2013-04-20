@@ -1,7 +1,5 @@
-from scipy import dot
 from scipy.linalg import norm
 from scipy.sparse import csr_matrix as matrix
-from scipy.sparse import issparse
 from math import log
 
 from model.logger import getLogger
