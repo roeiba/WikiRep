@@ -1,8 +1,11 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-from model.logger import *
+
 import xml.etree.ElementTree as etxml
 import StringIO
+
+from model.logger import getLogger
+_log = getLogger(__name__)
 
 class WdNames:
     CLEAN_TEXT = 'clean_text'
@@ -33,6 +36,10 @@ def wiki_doc_to_xml(wiki_doc):
 class WikiDocument(object):
     """ 
     This class represents a document from wikipedia.
+    Currently is half baked object, since it used on 
+        1. wiki parsed  doc construction: then clean_text = None
+        2. wiki cleaned doc: when wiki_text transformed to normal text
+    When loaded from xml parsed dump file, wiki_text == None
     """
     def __init__(self, doc_id, title, wiki_text, rev_id=None, clean_text = None):
         self.id = doc_id
@@ -41,26 +48,8 @@ class WikiDocument(object):
         self.rev_id = rev_id
         self.meta = {}
         self.clean_text = clean_text
-        DEBUG("Created WikiDocument: {}".format(self))
+        _log.debug("Created WikiDocument: {}".format(self))
     
-#     def __repr__(self):
-#         text = self.wiki_text
-#         if text is None:
-#             text = self.clean_text
-#         if text != None:
-#             text = (text)[:80]
-#                   
-#         retval = """
-#             doc_id = {id} 
-#             title = {title} 
-#             wiki_text = {wiki_text} 
-#             rev_id = {rev_id}""".format(
-#                    id=self.id, 
-#                    title=self.title,
-#                    wiki_text=text, 
-#                    rev_id=self.rev_id)
-#         return retval 
-
     def __repr__(self):
         retval = "{title}:{id}".format(id=self.id, title=self.title)
         return retval 

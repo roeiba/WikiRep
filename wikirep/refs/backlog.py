@@ -1,7 +1,5 @@
 '''
-Created on Apr 20, 2013
-
-@author: Bayana
+Here are we save all peaces of code that we remove from project
 '''
 #TODO: Do we need this?
 # def download_parser(subparsers):
@@ -12,10 +10,26 @@ Created on Apr 20, 2013
 #     parser_download.set_defaults(func=handlers.download)
 #     
 
+#     def __repr__(self):
+#         text = self.wiki_text
+#         if text is None:
+#             text = self.clean_text
+#         if text != None:
+#             text = (text)[:80]
+#                   
+#         retval = """
+#             doc_id = {id} 
+#             title = {title} 
+#             wiki_text = {wiki_text} 
+#             rev_id = {rev_id}""".format(
+#                    id=self.id, 
+#                    title=self.title,
+#                    wiki_text=text, 
+#                    rev_id=self.rev_id)
+#         return retval 
 
-import bz2
-
-c = bz2.compress("wnload.add_argument(")
+#import bz2
+#c = bz2.compress("wnload.add_argument(")
 
 
 '''    
