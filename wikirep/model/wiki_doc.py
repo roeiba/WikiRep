@@ -43,24 +43,28 @@ class WikiDocument(object):
         self.clean_text = clean_text
         DEBUG("Created WikiDocument: {}".format(self))
     
+#     def __repr__(self):
+#         text = self.wiki_text
+#         if text is None:
+#             text = self.clean_text
+#         if text != None:
+#             text = (text)[:80]
+#                   
+#         retval = """
+#             doc_id = {id} 
+#             title = {title} 
+#             wiki_text = {wiki_text} 
+#             rev_id = {rev_id}""".format(
+#                    id=self.id, 
+#                    title=self.title,
+#                    wiki_text=text, 
+#                    rev_id=self.rev_id)
+#         return retval 
+
     def __repr__(self):
-        text = self.wiki_text
-        if text is None:
-            text = self.clean_text
-        if text != None:
-            text = (text)[:80]
-                  
-        retval = """
-            doc_id = {id} 
-            title = {title} 
-            wiki_text = {wiki_text} 
-            rev_id = {rev_id}""".format(
-                   id=self.id, 
-                   title=self.title,
-                   wiki_text=text, 
-                   rev_id=self.rev_id)
+        retval = "{title}:{id}".format(id=self.id, title=self.title)
         return retval 
-    
+        
     def __str__(self):
         return self.__repr__()
     
