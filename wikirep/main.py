@@ -6,8 +6,6 @@ from argparse import ArgumentParser
 from model.logger import mainlog as _log
 from wiki_knows import wiki_knowledge
 
-#from scipy.lib.decorator import DEF
-
 # ------------------- Default configuration ----------------------------------------
 class DConfig:
     dump_path = "data_output/wikidump.xml"
@@ -26,19 +24,8 @@ class colors(object):
     RED = '\x1b[31m'
     
 #####################################################################################
-# Parser methods
-# 
-# Each method is name action_parser
+# Parser methods: Each method is name action_parser
 #####################################################################################
-
-#TODO: Do we need this?
-# def download_parser(subparsers):
-#     # create the parser for the "download" command
-#     parser_download = subparsers.add_parser('download', help='Downloads Wikipedia dump file from Wikipedia site')
-#     parser_download.add_argument("-s", "--source", type=str, help='url of dump file path')
-#     parser_download.add_argument("-o", "--output", type=str, help='output dump file path')
-#     parser_download.set_defaults(func=handlers.download)
-#     
 
 def makedump_parser(subparsers):
     # create the parser for the "make" command
@@ -139,8 +126,8 @@ def create_argument_parser():
 
 # ------------------------------ AUX -------------------------------------------------
 def _error(msg):
-    print("{}{}{}".format(colors.RED, msg, colors.RESET))
-    
+    print("{}\n{}\n{}\n".format(colors.RED, msg, colors.RESET))
+  
 def print_failure_info():
     _error("\n")
     _error("-"*80)
