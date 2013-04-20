@@ -89,13 +89,16 @@ def iterate_xml(f,tag_name):
     
     context = etree.iterparse(f, events=["end"], parser=etree.XMLParser(encoding='utf-8'))
     context = iter(context)       # turn it into an iterator
-    event, root = context.next()  #get the root element
+    
+    # this is not get us the root, but the first element
+    #TODO: investigate
+    #event, root = context.next()  #get the root element
     
     for event, elem in context:     
         if event == "end" and elem.tag == tag_name:
             yield elem           
             elem.clear()     
-            root.clear()
+            #root.clear()
 '''
 
 #--------------------------------------------------------

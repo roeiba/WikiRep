@@ -4,15 +4,15 @@
 import bz2
 from model.db_builder import DbBuilder
 from model import stemmers
-from model.wiki_doc import WikiDocument, wiki_doc_to_xml, doc_from_xml
+from model.wiki_doc import wiki_doc_to_xml
 from model.semantic_interpreter import SemanticComparer
 
 from parsers import web_tools
 from parsers import parse_tools
 import codecs
 
-from model.logger import *
-
+from model.logger import getLogger
+_log = getLogger("WikiKnows")
 
 import os
 import pickle
@@ -28,9 +28,10 @@ def make_dump(wiki_dump, articles_titles, compress=False):
         @param articles_titles: article's canonic name on Wikipedia web page
         @param wiki_dump: output filename (if not specified default is used)
     """
-    INFO('Executing makedump process on articles: {}'.format(articles_titles))
-    INFO('Dump path: {}'.format(wiki_dump))
-       
+    _log.debug("-"*80)
+    _log.info('Executing makedump process on articles: {}'.format(articles_titles))
+    _log.info('Dump path: {}'.format(wiki_dump))
+      
     web_tools.articles_dump_to_file(articles_titles, wiki_dump, compress)
     
 def _parse_dump(dump_reader,parsed_xml_writer):
@@ -40,21 +41,26 @@ def _parse_dump(dump_reader,parsed_xml_writer):
         @return: parsed xml pages
     """ 
     docs = parse_tools.iterate_clean_pages(dump_reader, parse_tools.cleaner_WikiTextProcessor)
+    
     doc_number = 0
     for doc in docs:
-        INFO("Done parsing document #{}:{}".format(doc_number, doc.title))
+        doc_number+=1 
+        _log.info("Done parsing document #{}:{}".format(doc_number, doc.title))
+        
         doc_tag = wiki_doc_to_xml(doc)
         parsed_xml_writer.write(doc_tag)
-        INFO("Finish parsing. Total documents: #{}".format(doc_number))
-        doc_number+=1                                                     
+
+    _log.info("Finish parsing. Total documents: #{}".format(doc_number))
+                                                    
         
 def parse_dump(wiki_dump_path, parsed_xml_path):
     """ Parses wiki_dump.
     @param wiki_dump: input wikipedia dump filename  
             @param parsed_xml_path: output xml filename 
     """
-    INFO('Executing parse process on dump: {}'.format(wiki_dump_path))
-    INFO('Output to Dump path: {}'.format(parsed_xml_path))
+    _log.debug("-"*80)
+    _log.info('Executing parse process on dump: {}'.format(wiki_dump_path))
+    _log.info('Output to Dump path: {}'.format(parsed_xml_path))
    
     ensure_dir(parsed_xml_path)
     
@@ -117,8 +123,6 @@ def save_db_wrapper_to_wdb(db_wrapper, path):
     with open(path, 'wb') as outfile:
         pickle.dump(db_content, outfile, pickle.HIGHEST_PROTOCOL)
         
-
-
 ###################################################################################
 # methods for building database, with two main usages:
 # 1. Build an instance of db_wrapper for testing and simple executions
@@ -129,17 +133,23 @@ def build_database_wrapper(parsed_dump, stemmer=None):
         @param parsed_dump: Wikipedia parced xml (etc. wikiparsed.xml)
         @return: db wrapper
     """
+    _log.debug("-"*80)
+    _log.info("Building DB from parsed dump:{0}".format(parsed_dump))
+    
     if stemmer is None: stemmer = stemmers.StopWordsStemmer()
     db_builder = DbBuilder(stemmer)
     if not os.path.isfile(parsed_dump):
-        raise Exception("File ")
+        raise Exception("Parsed dump doesnt exists: File {0}".format(parsed_dump))
             
     #TODO: add parsed page reader
     xml_pages = parse_tools.iterate_wiki_doc(parsed_dump)
+    doc_count = 0
     for doc in xml_pages:
+        doc_count+=1
+        _log.debug("Adding document #{0}:{0}".format(doc_count, doc.title))
         db_builder.add_document(doc)
     db = db_builder.build()
-    INFO("Database was created")
+    _log.info("Database was created with #{0} documents".format(doc_count))
     return db
     
 def build_database_wrapper_to_file(parsed_dump, build_wdb_path, stemmer=None):
@@ -149,137 +159,9 @@ def build_database_wrapper_to_file(parsed_dump, build_wdb_path, stemmer=None):
     """
     db_wrapper = build_database_wrapper(parsed_dump, stemmer)
     ensure_dir(build_wdb_path)
+    _log.info("Saving to file: {0}".format(build_wdb_path))
     save_db_wrapper_to_wdb(db_wrapper, build_wdb_path)
 
 
-def download_all(self, wiki_dump=None):
-    """ Download whole wikipedia into dump file.
-        @param src_url: url of dump file (if not specified default is used)
-        @param wiki_dump: output dump filename, etc. wikidump.bz2 (if not specified default is used)
-    """
-    raise NotImplemented()
-        
-'''    
-These methods can be deleted, the are here just as a reminder of old usage 
 
-class WikiKnowledge(object):
-    """
-        Example
-        --------
-        >>> wiki_knowledge = WikiKnowledge()
         
-        >>> wiki_knowledge.make_dump(dump_file, *articles, compress=False)            
-                create dump from articles list (if a dump already exist, this step may be skipped)
-        
-        >>> wiki_knowledge.build(dump_file, None)
-                builds SemanticIntepreter according to dump file
-                
-        >>> wiki_knowledge.compare(text1, text2)
-                Compares two texts in wikipedia space.
-
-        >>> wiki_knowledge.get_text_value(text)
-                returns the text vector in wikipedia space. 
-    """
-    def __init__(self, 
-                 stemmer=None, 
-                 compare_method=None):
-        self.stemmer = stemmer
-        self.default_compare = compare_method
-        self.init()
-
-    def init(self):
-        if self.default_compare is None: self.default_compare = math_utils.cosine_metrics
-        if self.stemmer is None: self.stemmer = stop_words_stemmer.get_default_stemmer()
-        self.semantic_intepreter = None
-        
-    
-    def build(self, parsed_dump, builed_wdb, stemmer=None):
-        ensure_dir(builed_wdb)
-       
-    def build_dbw(self, parsed_dump, stemmer=None):
-        """ builds WikiRep database.
-            @param parsed_dump: Wikipedia source xml (etc. wikiparsed.xml)
-            @return: db wrapper
-        """
-        if not os.path.isfile(parsed_dump):
-            raise Exception("File ")
-                
-        #TODO: add parsed page reader
-        xml_pages = parse_tools.iterate_wiki_doc(parsed_dump)
-        for doc in xml_pages:
-            self.db_builder.add_document(doc)
-        db = self.db_builder.build()
-        return db
-
-            
-
-    
-    def save_to_disk(self, output):
-        """
-            Saves the SemanticInterpreter database to disk
-            @param output: WikiRep database output file
-        """
-        self.db_builder.save(output)
-    
-    def load_from_disk(self, src):
-        self.init()
-        self.db_builder.load_concepts(src)
-        self._build_semantic_interpreter()
-    
-    def analize(self, text1, db):
-        """
-            #TODO: Define method and implement
-            @param db: WikiRep database filename
-        """
-        pass
-    
-    def _build_semantic_interpreter(self):
-        db = self.db_builder.build()
-        self.semantic_intepreter = SemanticInterpreter(db, self.stemmer)
-        
-#==========================================================================================
-
-_defaultWikiKnowledge = WikiKnowledge()
-
-def getWikiKnowledge():
-    return _defaultWikiKnowledge
-    
-
-    def parse2(self,dump_reader, parsed_xml_writer):
-        """ Parses wiki_dump.
-            @param wiki_dump: input wikipedia dump filename  
-            @param parsed_xml_path: output xml filename 
-        """
-        #INFO('Executing parse process on dump: {}'.format(wiki_dump_path))
-        INFO('Output to Dump path: {}'.format(parsed_xml_path))
- 
-        #ensure_dir(parsed_xml_path)
- 
-        #open wikipedia dump according to format (compressed or not)       
-        if wiki_dump_path.endswith('.bz2'):
-            dump_file = bz2.BZ2File(wiki_dump_path, 'r')
-        else:
-            dump_file = open(wiki_dump_path, 'r')
-        
-        #open parsed wikipedia
-        parsed_xml = codecs.open(parsed_xml_path, 'w',encoding="UTF-8") 
-        
-        #parse all pages
-        parsed_xml.write('<?xml version="1.0" ?>\n')
-        parsed_xml.write('<wikirep>\n')
-        #for doc in gen_apply(iterate_wiki_pages(wik)
-        parsed_xml.write('</wikirep>\n')
-        
-        #close files
-        dump_file.close()
-        parsed_xml.close()
-        
-        
-    def parse(self, src_wiki_dump, output=None):
-        """ Parses wiki_dump.
-            @param wiki_dump: input wikipedia dump filename  
-            @param output: output xml filename 
-            @return: parsed xml pages
-        """
-        return parse_tools.extract_clean_pages(src_wiki_dump, keep_sections=False, keep_links=False)
-''' 
