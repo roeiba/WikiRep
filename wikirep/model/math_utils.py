@@ -3,14 +3,21 @@ from scipy.linalg import norm
 from scipy.sparse import csr_matrix as matrix
 from scipy.sparse import issparse
 from math import log
-from model.logger import *
-'''
-Created on Sep 19, 2012
 
-@author: roeib
-'''
-def cosine_metrics(v1, v2):        
-    similarity  = v1.dot(v2.T) / (norm(v1.data) * norm(v2.data)) 
+from model.logger import getLogger
+_log = getLogger(__name__)
+
+def cosine_metrics(v1, v2):
+    # for same vectors
+    if v1 == v2: return 1.0
+    
+    # treat zero vectors
+    denom = norm(v1.todense()) * norm(v2.todense()) 
+    if denom == 0.0:
+        _log.warning("One of the vectors is zero!")
+        return 0.0
+        _
+    similarity  = v1.dot(v2.T) / denom
     return float(similarity[0,0])
 
 def get_vectors_centroid(list_of_vectors):
@@ -21,7 +28,7 @@ def get_vectors_centroid(list_of_vectors):
     shape = list_of_vectors[0].shape
     ret_vec = matrix(shape)
     for vector in list_of_vectors:
-        DEBUG("get_vectors_centroid: Adding vector {}".format(vector))
+        _log.debug("get_vectors_centroid: Adding vector {}".format(vector))
         ret_vec = ret_vec + vector
     ret_vec = ret_vec * (1.0 / n) 
     return ret_vec 
