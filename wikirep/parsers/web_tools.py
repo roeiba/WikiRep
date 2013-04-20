@@ -1,19 +1,14 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-'''
-Created on Oct 15, 2012
 
-@author: inesmeya
-'''
-from subprocess import Popen, PIPE
+import os
 import gzip
 import urllib2 
+from subprocess import Popen, PIPE
 
-import logging
 import model.logger as lg
 _log = lg.getLogger(__name__)  #lg.mainlog # logging.getLogger("webtools")#__name__)
 
-import os
 def ensure_dir(f):
     d = os.path.dirname(f)
     if len(d)== 0:
@@ -94,12 +89,6 @@ def make_articles_dump(titles, outstream):
             end   = xml.find('</page>') + len('</page>')
             outstream.write(xml[start:end])
     outstream.write('\n</mediawiki>\n')
-
-_NS = 'http://www.mediawiki.org/xml/export-0.8/'
-
-def mk_tag(tag):
-    return "{%s}%s" % (_NS, tag)
-
 
 def articles_dump_to_file(titles, filename, compress=False, compresslevel=9):
     """

@@ -5,7 +5,7 @@ Created on Oct 15, 2012
 '''
 import unittest
 import parsers.web_tools as webtools
-import parsers.parse_tools as parser
+from parsers import parse_tools
 import StringIO
 import xml.etree.ElementTree as etree
 import os
@@ -77,7 +77,7 @@ class TestMakeDump(unittest.TestCase):
         output.close()
 
         root = etree.fromstring(content)
-        pages = root.findall(webtools.mk_tag('page'))
+        pages = root.findall(parse_tools.PAGE_TAG)
 
         self.assertEqual(len(pages), len(titles))
 
@@ -86,8 +86,8 @@ class TestMakeDump(unittest.TestCase):
          
         titles = ['Ross_Ice_Shelf', 'Southern_Cross_Expedition', 'Ice_shelf']
         webtools.articles_dump_to_file(titles, 'test.xml.tmp')
-        root = parser.parse_xml('test.xml.tmp') 
-        pages = root.findall(webtools.mk_tag('page'))
+        root = parse_tools.parse_xml('test.xml.tmp') 
+        pages = root.findall(parse_tools.PAGE_TAG)
         self.assertEqual(len(pages), len(titles))
 
 if __name__ == "__main__":

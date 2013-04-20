@@ -1,6 +1,78 @@
 '''
 Here are we save all peaces of code that we remove from project
 '''
+#=================================================================
+
+'''
+
+#--------------------------------------------------------
+
+
+def extract_pages(f):
+    """Extract pages from Wikimedia database dump.
+
+    Parameters
+    ----------
+    f : file-like or str
+        (Path to) a file containing a page dump in XML format; e.g.
+        <lang>wiki-<data>-pages-articles.xml.
+
+    Returns
+    -------
+    pages : iterable over (int, str, str)
+        Generates (page_id, title, content, revision_id) triples.
+    """
+    
+    context = etree.iterparse(f, events=["end"], parser=etree.XMLParser(encoding='utf-8'))
+    
+    # turn it into an iterator
+    context = iter(context)
+    
+    # get the root element
+    event, root = context.next()
+    
+    for event, elem in context:     
+        if event == "end" and elem.tag == _PAGE_TAG:
+            tid    = my_xfind(elem,'./id').text
+            title  = my_xfind(elem,'./title').text
+            text   = my_xfind(elem,'./revision/text').text   
+            rev_id = my_xfind(elem,'./revision/id').text         
+            
+            wk_doc = WikiDocument(int(tid), title, text,int(rev_id))
+            
+            _log.info("page extracted: {}".format(title) )
+            yield wk_doc
+            
+            elem.clear()     
+            root.clear()
+
+def extract_clean_pages(src_wiki_dump, keep_sections=False,keep_links=False):
+    """ Wrapper for extract_pages that output clean text according to parameters
+    @param keep_sections: preserve sections
+    @param keep_links: preserve links
+    """
+    for wdoc in extract_pages(src_wiki_dump):
+        tid, title, text, rev_id = wdoc.id, wdoc.title, wdoc.raw_text, wdoc.rev_id
+        clean_text =  WikiExtractor.clean(text)
+        
+        _log.debug("""
+        Original text:
+        {separator} Start {separator}
+        {text} 
+        {separator} END {separator}
+        Clean text:
+        {separator} Start {separator}
+        {clean_text}
+        {separator} END {separator} 
+        """.format(separator = "-"*20, 
+                   text=_cut_text(text) , 
+                   clean_text=_cut_text(clean_text))
+        )
+        
+        yield tid, title, clean_text, rev_id
+        
+'''       
+
 #TODO: Do we need this?
 # def download_parser(subparsers):
 #     # create the parser for the "download" command

@@ -12,7 +12,7 @@ setup(
     description='Python implementation of Semantic Intepreter',
     long_description=open('README.txt').read(),
     install_requires=[
-        "numpy >= 1.6.0",
+        "numpy >= 1.6.0", "mwparserfromhell"
     ],
 )
 
