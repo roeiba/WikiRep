@@ -2,7 +2,9 @@
 WikiRep
 ===========
 
-sample execution:
+Sample execution
+----------------
+
 ```sh
 python main.py -vvv makedump Love War Rain Tree God
 python main.py -vvv parse
