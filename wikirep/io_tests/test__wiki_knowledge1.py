@@ -1,8 +1,3 @@
-'''
-Created on Oct 21, 2012
-
-@author: roeib
-'''
 import unittest
 import os
 
@@ -13,7 +8,8 @@ import test.test_utils as test_utils
 from io_test_utils import getOutputFile
 from model import semantic_interpreter
 
-from model.logger import *
+from model import logger
+_log = logger.getLogger(__name__)
 
 class Test(unittest.TestCase):
     def setUp(self):
@@ -45,7 +41,8 @@ class Test(unittest.TestCase):
         
         comparer = semantic_interpreter.SemanticComparer(db_wrapper)
         correlation = comparer.compare(text1, text2)
-        INFO(test_utils.get_texts_correlation_message(text1, text2, correlation))
+        _log.info(test_utils.get_texts_correlation_message(text1, text2, correlation))
+
     
     def test__make_dump(self):
         #create the dump file
@@ -70,22 +67,6 @@ class Test(unittest.TestCase):
         self.assertEqual(expected_db.words_num, actual.words_num, "Mismatch WikiKnowledges number of words")
         self.assertEqual(expected_db.title_index, actual.title_index, "Mismatch WikiKnowledges titles")
         
-    def test__run_from_dump(self):
-        pass
-#    def test__download(self):
-#        pass
-#    
-#    def test__parse(self):
-#        pass
-#    def test__build(self):
-#        pass
-#    def test__compare(self):
-#        pass
-#    def test__get_text_value(self):
-#        pass
-#    def test__analize(self):
-#        pass
-
 if __name__ == "__main__":
     #import sys;sys.argv = ['', 'Test.testName']
     unittest.main()

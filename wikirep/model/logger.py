@@ -10,8 +10,18 @@ import logging
 _log = logging.getLogger("MAIN")
 mainlog = _log  #alias
 
+logtest  = logging.getLogger("TEST")
+logtest.setLevel(logging.DEBUG)
+
 def getLogger(name):
-    return logging.getLogger(name)
+    log = logging.getLogger(name)
+    return log
+
+def getTestLogger(name):
+    logging.basicConfig(level=logging.DEBUG)
+    log = logging.getLogger(name)
+    log.setLevel(level=logging.DEBUG)
+    return log
 
 def DEBUG(msg):
     _log.debug(msg)
