@@ -1,12 +1,7 @@
-'''
-Created on Oct 4, 2012
-
-@author: inesmeya
-'''
 import unittest
 from scipy import vectorize
 from scipy import log
-from numpy.testing import assert_allclose
+from numpy.testing import assert_allclose 
 from scipy.sparse import csr_matrix as matrix
 from numpy import array
 
