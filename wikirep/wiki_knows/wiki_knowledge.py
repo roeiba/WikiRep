@@ -5,6 +5,7 @@ import bz2
 from model.db_builder import DbBuilder
 from model import stemmers
 from model.wiki_doc import WikiDocument, wiki_doc_to_xml, doc_from_xml
+from model.semantic_interpreter import SemanticComparer
 
 from parsers import web_tools
 from parsers import parse_tools
@@ -78,7 +79,13 @@ def parse_dump(wiki_dump_path, parsed_xml_path):
     #close files
     dump_file.close()
     parsed_xml.close()
-                    
+
+def compare(path, text1, text2):
+    wdb = load_db_wrapper_from_wdb(path)
+    comparer = SemanticComparer(wdb)
+    corelation = comparer.compare(text1, text2)
+    return corelation
+                        
 def load_db_wrapper_from_wdb(path):
     """ 
     loads Database from pickle file DbContant object
@@ -101,6 +108,7 @@ def save_db_wrapper_to_wdb(db_wrapper, path):
     @param dw_wrapper: DatabaseWrapper to save
     @note: loading is by load_db_wrapper_from_wdb. Stemmer saved by name, and then loaded by load function
     """
+    ensure_dir(path)
     db_content = DbContant(
                    db_wrapper.wieght_matrix,
                    db_wrapper.concepts_index,
@@ -134,14 +142,15 @@ def build_database_wrapper(parsed_dump, stemmer=None):
     INFO("Database was created")
     return db
     
-def build_database_wrapper_to_file(parsed_dump, build_wdb_path, stemmer):
+def build_database_wrapper_to_file(parsed_dump, build_wdb_path, stemmer=None):
     """ builds WikiRep database and save it to pickle file
         @param parsed_dump: Wikipedia parced xml (etc. wikiparsed.xml)
         @return: db wrapper
     """
     db_wrapper = build_database_wrapper(parsed_dump, stemmer)
     ensure_dir(build_wdb_path)
-    db_wrapper.save(build_wdb_path); 
+    save_db_wrapper_to_wdb(db_wrapper, build_wdb_path)
+
 
 def download_all(self, wiki_dump=None):
     """ Download whole wikipedia into dump file.

@@ -1,10 +1,14 @@
 #!/usr/bin/env python2.7
-from wiki_knows.wiki_knowledge import WikiKnowledge
-import handlers 
+
 import sys
 import logging
-from scipy.lib.decorator import DEF
+from argparse import ArgumentParser
+from model.logger import mainlog as _log
+from wiki_knows import wiki_knowledge
 
+#from scipy.lib.decorator import DEF
+
+# ------------------- Default configuration ----------------------------------------
 class DConfig:
     dump_path = "data_output/wikidump.xml"
     parsed_path ="data_output/wikiparsed.xml"
@@ -26,23 +30,30 @@ class colors(object):
 # 
 # Each method is name action_parser
 #####################################################################################
-    
+
+#TODO: Do we need this?
+# def download_parser(subparsers):
+#     # create the parser for the "download" command
+#     parser_download = subparsers.add_parser('download', help='Downloads Wikipedia dump file from Wikipedia site')
+#     parser_download.add_argument("-s", "--source", type=str, help='url of dump file path')
+#     parser_download.add_argument("-o", "--output", type=str, help='output dump file path')
+#     parser_download.set_defaults(func=handlers.download)
+#     
+
 def makedump_parser(subparsers):
     # create the parser for the "make" command
-    parser_makedump = subparsers.add_parser('makedump', 
-                        help="Download specified articles from wikipedia site," + 
-                             "merges them into one file and compress it as wikipedia dump file")
+    parser_makedump = subparsers.add_parser('makedump',
+         help="""Download specified articles from wikipedia site, 
+                 merges them into one file and compress it as wikipedia dump file""")
     parser_makedump.add_argument("article", nargs="+", help="List of articles for download" )
-    parser_makedump.add_argument("-dump", type=str, default=DConfig.dump_path,
-                        help="output file name", dest="dumpfile")
-    parser_makedump.set_defaults(func=handlers.makedump)
+    parser_makedump.add_argument("-dump", help="output file name", dest="dumpfile", default=DConfig.dump_path)
+    
+    def makedump(args):
+        _log.debug("run makedump with args={}".format(args))
+        wiki_knowledge.make_dump(args.dumpfile, args.article)
+    
+    parser_makedump.set_defaults(func=makedump)
 
-def download_parser(subparsers):
-    # create the parser for the "download" command
-    parser_download = subparsers.add_parser('download', help='Downloads Wikipedia dump file from Wikipedia site')
-    parser_download.add_argument("-s", "--source", type=str, help='url of dump file path')
-    parser_download.add_argument("-o", "--output", type=str, help='output dump file path')
-    parser_download.set_defaults(func=handlers.download)
 
 def parse_parser(subparsers):
     # create the parser for the "parse" command
@@ -54,38 +65,62 @@ def parse_parser(subparsers):
         rev_id: - Wikipedia concept's revision""")
     parser_parse.add_argument("-d", "--dump",   help='input dump file path', default=DConfig.dump_path)
     parser_parse.add_argument("-o", "--output", help='output XML file path',default=DConfig.parsed_path)
-    parser_parse.set_defaults(func=handlers.parse)
+    
+    def parse(args):
+        _log.debug("run parse with args={}".format(args))
+        wiki_knowledge.parse_dump(args.dump, args.output)
+    
+    parser_parse.set_defaults(func=parse)
 
 def build_parser(subparsers):
     # create the parser for the "build" command
     parser_build = subparsers.add_parser('build', 
         help="Iterates all WikiDocuments found in src and builds a words database (DatabaseWrapper) and saves it to dst")
-    parser_build.add_argument("src", type=str, help='input parsed file path', default=DConfig.parsed_path)
-    parser_build.add_argument("dst", type=str, help='output wdb filename',default=DConfig.wdb_path)
-    parser_build.set_defaults(func=handlers.build)
+    parser_build.add_argument("--src", type=str, help='input parsed file path', default=DConfig.parsed_path)
+    parser_build.add_argument("--dst", type=str, help='output wdb filename',default=DConfig.wdb_path)
+    
+    def build(args):
+        _log.debug("run build with args={}".format(args))
+        wiki_knowledge.build_database_wrapper_to_file(args.src, args.dst)
+        
+    parser_build.set_defaults(func=build)
     
 def compare_parser(subparsers):
     # create the parser for the "compare" command
     parser_compare = subparsers.add_parser('compare', 
         help="Compares two texts according to words database at 'wikibuild.wdb'")
-    parser_compare.add_argument("--word-db", type=str, nargs=1, default=DConfig.wdb_path,
+    parser_compare.add_argument("--dbpath", type=str, nargs=1, default=DConfig.wdb_path,
         help='word database path')
-    parser_compare.add_argument("--text1", type=str, nargs='*', help='first text')
-    parser_compare.add_argument("--text2", type=str, nargs='*', help='second text')
-    parser_compare.set_defaults(func=handlers.compare)
+    parser_compare.add_argument("--text1", type=str, help='first text')
+    parser_compare.add_argument("--text2", type=str,  help='second text')
+    
+    def compare(args):
+        _log.debug("run build with args={}".format(args))
+        correlation = wiki_knowledge.compare(args.dbpath, args.text1, args.text2)
+        _log.info("correlation = {0}".format(correlation))
+    
+    parser_compare.set_defaults(func=compare)
     
 def get_value_parser(subparsers):
     # create the parser for the "get_value" command
     parser_get_value = subparsers.add_parser('get_value', 
         help="Calculates the text vector in Wikipedia concepts space according to workds database at 'wikibuild.wdb'")
-    parser_get_value.add_argument("--word-db", type=str, nargs=1, default=DConfig.wdb_path,
+    parser_get_value.add_argument("--dbpath", type=str, nargs=1, default=DConfig.wdb_path,
         help='word database path')
-    parser_get_value.add_argument("text", type=str, nargs='*', help='text for value calculation')
-    parser_get_value.set_defaults(func=handlers.get_value) 
+    parser_get_value.add_argument("text", type=str, help='text for value calculation')
     
-
+    def get_value(args):
+        _log.debug("run build with args={}".format(args))
+        wdb = wiki_knowledge.load_db_wrapper_from_wdb(args.dbpath)
+        v = wdb.get_text_centroid(args.text)
+        
+        _log.info("vector = {0}".format(v.data))
+            
+    parser_get_value.set_defaults(func=get_value) 
+    
+# ------------------------------ Top Level Parser -------------------------------------------------
 def create_argument_parser():
-    from argparse import ArgumentParser
+    # from argparse import ArgumentParser
     # create the top-level parser
     parser = ArgumentParser(prog='WikiRep', description='wikipedia dump creator. ')
     parser.add_argument('-v', action='append_const', const=1, dest='verbose', default=[])
@@ -95,13 +130,14 @@ def create_argument_parser():
     subparsers = parser.add_subparsers(help='sub-command help', title='Sub-commands', 
                         description='The valid commands are:')
     makedump_parser(subparsers)
-    download_parser(subparsers)
+    #download_parser(subparsers)
     parse_parser(subparsers)
     build_parser(subparsers)
     compare_parser(subparsers)
     get_value_parser(subparsers)
     return parser
 
+# ------------------------------ AUX -------------------------------------------------
 def _error(msg):
     print("{}{}{}".format(colors.RED, msg, colors.RESET))
     
@@ -121,7 +157,7 @@ def _configure_logging(args):
         level = logging.DEBUG
     logging.basicConfig(level=level)
     
-        
+# ------------------------------ MAIN: Entry Point -------------------------------------------------        
 def main(argv=None):
     try:
         print "Starting..."
