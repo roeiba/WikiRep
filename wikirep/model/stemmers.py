@@ -4,7 +4,7 @@ Created on Sep 27, 2012
 @author: inesmeya
 '''
 from simple_splitter import SimpleSplitter
-from refs.porter import PorterStemmer as RefPorterStemmer
+from model.porter import PorterStemmer as RefPorterStemmer
 
 default_stop_words_list = stop_words = [ 
     'i', 'in', 'a', 'to', 'the', 'it', 'have', 'haven\'t', 'was', 'but', 'is',
