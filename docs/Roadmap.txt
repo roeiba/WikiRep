@@ -11,6 +11,17 @@ Tasks to be completed for first phase
 	* 50 documents collection from the Asutralian Broadcaseting
 7. Run Empirical evalution 
 
+
+Sparse Matrixes tricks
+--------------
+norms. accroding to: http://stackoverflow.com/questions/12569695/norm-of-sparse-python-vectors
+It's actually a pretty huge difference: on a 4M elt vector with 150 random non-zeros, 
+I got 
+	6.56 ms for m.T.dot(m), 
+	36.7 ms for m.multiply(m).sum(), and 
+	10.6 us for (m.data**2).sum().
+
+
 Future Roadmap
 ================= 
 * Use real database

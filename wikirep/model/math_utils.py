@@ -5,6 +5,7 @@ from math import log
 from model.logger import getLogger
 _log = getLogger(__name__)
 
+#TODO: use scipy.spatial.distance for metrics  
 def cosine_metrics(v1, v2):
     # for same vectors
     if v1 == v2: return 1.0
@@ -36,3 +37,22 @@ def count_to_tf(count):
         return 0
     else:          
         return 1 + log(count)
+    
+#TODO: normalization can be improved by using  (row.data**2).sum()
+def normL2(T,row):
+    i = row
+    _,m = T.shape
+    s = 0
+    for l in xrange(m): 
+        s += T[i,l]*T[i,l]
+    the_norm = s**0.5
+    return the_norm
+    
+def normalize(T):   
+    n,m = T.shape
+    for i in xrange(n):
+        denom = normL2(T,i)
+        if denom == 0.0: continue    
+        for j in xrange(m): 
+            T[i,j] = T[i,j]/ denom
+    

@@ -3,6 +3,20 @@ Here are we save all peaces of code that we remove from project
 '''
 #=================================================================
 
+import scipy.spatial.distance as spd
+import scipy.sparse as sp
+
+v1 = sp.csr_matrix([1,2,3])
+v2 = v1.transpose(copy=True)
+
+print v1.shape
+print v2.shape
+
+c = spd.cosine(v1, v1.T)
+
+print c
+
+
 '''
 
 #--------------------------------------------------------

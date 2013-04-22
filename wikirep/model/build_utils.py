@@ -79,7 +79,7 @@ def build_wieght_table(df_vec,index_by_word,concepts_list):
         for word in words:
             i =  index_by_word[word]
             tf_ij = concept.get_tf(word)
-            
+                
             T[i,j] = tf_ij * log( n / df_vec[i] )
     return T 
 
