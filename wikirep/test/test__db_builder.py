@@ -63,7 +63,7 @@ class Test(test_utils.TestBase):
             expceted_wieghts_matrix.append(normalized_row)
             
         #create db
-        actual_db = self.db_builder.build()
+        actual_db = self.db_builder.build(normalization=False)
         self.assert_dbs_equal(actual_db, expected_titles_index, expected_words_index, wieghts_matrix)
         
         #TODO: use the normalized matrix for comparison once db_builder supports normalization

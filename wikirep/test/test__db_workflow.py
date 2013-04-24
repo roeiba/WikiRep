@@ -115,7 +115,7 @@ class Test(unittest.TestCase):
         
         actual_wf = WorkFlow()
         
-        builder.build(actual_wf) 
+        builder.build(wf=actual_wf, normalization=False) 
         #workaround to handle dimensions mismatch
         expected_wf.df_vec = matrix(expected_wf.df_vec)
         assert_allclose(actual_wf.df_vec.todense(), expected_wf.df_vec.todense())    
