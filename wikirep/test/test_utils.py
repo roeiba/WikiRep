@@ -11,6 +11,7 @@ import wiki_knows.wiki_knowledge as wiki_knowledge
 from parsers import parse_tools
 #from model.logger import *
 from parsers import WikiExtractor 
+from parsers.parse_tools import cleaner_Both, cleaner_WikiExtractor
 
 class TestBase(unittest.TestCase):
     pass
@@ -28,7 +29,7 @@ class DocumentStub(object):
 
 def get_db_builder(dump_file, stemmer):
     db_builder = DbBuilder(stemmer)
-    clean_docs = parse_tools.iterate_clean_pages(dump_file, WikiExtractor.clean)#    (dump_file, keep_sections=False, keep_links=False)
+    clean_docs = parse_tools.iterate_wikidocs_from_dump(dump_file, cleaner_WikiExtractor)#    (dump_file, keep_sections=False, keep_links=False)
     for doc in clean_docs:
         db_builder.add_document(doc)
     return db_builder

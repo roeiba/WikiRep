@@ -54,5 +54,10 @@ class Concept(object):
         """ @return: set of all words
         """
         return self._words_occurenece.keys()
-
+    
+    def interate_words(self):
+        return self._words_occurenece.iterkeys()
+    
+    def get_words_dict(self):
+        return self._words_occurenece
     

@@ -6,7 +6,7 @@ Created on Sep 28, 2012
 
 from concept import Concept 
 from model.database_wrapper import DatabaseWrapper
-from model.build_utils import build_word_index, build_index_by_words, build_df, build_wieght_table
+from model.build_utils import build_word_index, build_index_by_words, build_df, build_wieght_table, build_wieght_table_dok
 from scipy.sparse import csr_matrix as matrix
 from model.math_utils import normalize 
 
@@ -86,7 +86,7 @@ class DbBuilder(object):
         _log.info("DF vector build is DONE")
                     
         # weight table not normalized
-        T = build_wieght_table(df_vec, index_by_word, self.concepts_list)
+        T = build_wieght_table_dok(df_vec, index_by_word, self.concepts_list)
         _log.info("ID-TDF vector build is DONE")
                 
         if normalization:

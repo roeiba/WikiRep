@@ -1,5 +1,6 @@
 from scipy.linalg import norm
 from scipy.sparse import csr_matrix as matrix
+import scipy.sparse as sps
 from math import log
 
 from model.logger import getLogger
@@ -47,12 +48,33 @@ def normL2(T,row):
         s += T[i,l]*T[i,l]
     the_norm = s**0.5
     return the_norm
-    
-def normalize(T):   
+
+def normalize_regular(T):   
     n,m = T.shape
     for i in xrange(n):
         denom = normL2(T,i)
         if denom == 0.0: continue    
         for j in xrange(m): 
             T[i,j] = T[i,j]/ denom
+
+def normalize_csr(T):
+    """ Optimized for time version of normalize for csr matrix"""   
+    n,_ = T.shape
+    for i in xrange(n):
+        row_data = T.data[T.indptr[i]:T.indptr[i+1]]
+        denom =  (row_data**2).sum()**0.5
+        if denom == 0.0: continue 
+        T.data[T.indptr[i]:T.indptr[i+1]]= row_data / denom  
+
+def normalize(T):    
+    if isinstance(T, sps.csr_matrix):
+        return normalize_csr(T)
+    else:
+        return normalize_regular(T)
+    
+    
+    
+    
+    
+    
     

@@ -48,8 +48,8 @@ def doc_from_wikipagexml(page_tag):
 
 def cleaner_WikiTextProcessor(wikidoc):
     wp = WikiTextProcessor(wikidoc.wiki_text)
-    #wdoc.raw_text = wp.get_clean_text()
-    wikidoc.clean_text = wp.get_text_only()
+    wikidoc.clean_text = wp.get_clean_text()
+    #wikidoc.clean_text = wp.get_text_only()
     wikidoc.meta[WdNames.LINKS] = wp.get_links()
     return wikidoc
 
@@ -57,7 +57,17 @@ def cleaner_WikiExtractor(wikidoc):
     wikidoc.clean_text = WikiExtractor.clean(wikidoc.wiki_text)
     return wikidoc
 
-def iterate_clean_pages(f,clean_tarnform):
+def cleaner_Both(wikidoc):
+    '''Use WikiExtractor for cleaning
+       Use Parser from hell for links
+    '''
+    wikidoc.clean_text = WikiExtractor.clean(wikidoc.wiki_text)
+    wp = WikiTextProcessor(wikidoc.wiki_text)
+    wikidoc.meta[WdNames.LINKS] = wp.get_links()
+    return wikidoc
+
+
+def iterate_wikidocs_from_dump(f,clean_tarnform):
     pages = iterate_xml(f, PAGE_TAG)
     return gen_apply(pages, doc_from_wikipagexml, clean_tarnform)
 

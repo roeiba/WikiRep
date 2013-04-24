@@ -75,10 +75,16 @@ class DatabaseWrapper(object):
         words = self.stemmer.process_text(text)
 
         for word in words:
-            word_wieght_vec = self.get_word_vector(word)
-            words_vectors.append(word_wieght_vec)
+            if word in self.index_by_word: #filter terms, which not appear in the db
+                word_wieght_vec = self.get_word_vector(word)
+                words_vectors.append(word_wieght_vec)
             
         return math_utils.get_vectors_centroid(words_vectors)
+    
+    def get_readable_centroid(self,text):
+        v = self.get_text_centroid(text).todense()[0]
+        d = {self.title_index[i]: v[0,i] for i in xrange(self.concepts_num)}
+        return d
     
     def get_word_dict(self,word):
         """ Returns dictionary with concept=>value """

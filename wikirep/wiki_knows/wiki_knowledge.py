@@ -40,7 +40,7 @@ def _parse_dump(dump_reader,parsed_xml_writer):
         @param output: output xml filename 
         @return: parsed xml pages
     """ 
-    docs = parse_tools.iterate_clean_pages(dump_reader, parse_tools.cleaner_WikiTextProcessor)
+    docs = parse_tools.iterate_wikidocs_from_dump(dump_reader, parse_tools.cleaner_Both)
     
     doc_number = 0
     for doc in docs:
@@ -128,10 +128,11 @@ def save_db_wrapper_to_wdb(db_wrapper, path):
 # 1. Build an instance of db_wrapper for testing and simple executions
 # 2. Build a real database based on a wiki dump, for production usages 
 ###################################################################################
-def build_database_wrapper(parsed_dump, stemmer=None):
+
+def add_docs_from_parsed_xml_to_builder(parsed_dump, stemmer=None):
     """ builds WikiRep database.
         @param parsed_dump: Wikipedia parced xml (etc. wikiparsed.xml)
-        @return: db wrapper
+        @return: db_builder
     """
     _log.debug("-"*80)
     _log.info("Building DB from parsed dump:{0}".format(parsed_dump))
@@ -147,11 +148,21 @@ def build_database_wrapper(parsed_dump, stemmer=None):
     for doc in xml_pages:
         doc_count+=1
         _log.debug("Adding document #{0}:{0}".format(doc_count, doc.title))
-        db_builder.add_document(doc)
-    db = db_builder.build()
-    _log.info("Database was created with #{0} documents".format(doc_count))
-    return db
+        db_builder.add_document(doc)   
+    _log.info("Added #{0} documents".format(doc_count))
+    return db_builder 
     
+def build_database_wrapper(parsed_dump, stemmer=None):
+    """ builds WikiRep database.
+        @param parsed_dump: Wikipedia parced xml (etc. wikiparsed.xml)
+        @return: db wrapper
+    """    
+    db_builder = add_docs_from_parsed_xml_to_builder(parsed_dump, stemmer)
+    db = db_builder.build()
+    _log.info("Database was created")
+    return db
+
+         
 def build_database_wrapper_to_file(parsed_dump, build_wdb_path, stemmer=None):
     """ builds WikiRep database and save it to pickle file
         @param parsed_dump: Wikipedia parced xml (etc. wikiparsed.xml)
