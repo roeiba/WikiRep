@@ -6,7 +6,7 @@ Created on Oct 1, 2012
 import os 
 import unittest
 
-import test_utils as test_utils
+from test import test_utils as test_utils
 from parsers import wrappers
  not working due to wikipage changes on server
 class TestWikiParser(test_utils.TestBase):

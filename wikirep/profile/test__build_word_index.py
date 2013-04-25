@@ -4,7 +4,7 @@ Created on Oct 24, 2012
 @author: roeib
 '''
 import unittest
-import test_utils 
+from test import test_utils 
 from model import build_utils
 import os
 import timeit
