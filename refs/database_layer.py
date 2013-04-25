@@ -59,7 +59,7 @@ class WordsDb(object):
         """ Updates the words list by inserting all the words in all concepts to a set """
         self.all_words = set()
         for concept in self.concepts:
-            for word in concept.get_all_words():
+            for word in concept.interate_words():
                 self.all_words.add(word)
         print "Updated words list..." + self.all_words
         

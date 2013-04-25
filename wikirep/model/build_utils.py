@@ -26,7 +26,7 @@ def build_word_index_back(concepts_list):
     """
     words_set = set()
     for concept in concepts_list:
-        words = concept.get_all_words()
+        words = concept.interate_words()
         words_set.update(words)
     return list(words_set)
 
@@ -40,7 +40,7 @@ def build_word_index(concepts_list):
     words_set = set()
     words_list = []
     for concept in concepts_list:
-        for word in concept.get_all_words():
+        for word in concept.interate_words():
             if  word not in words_set:
                 words_list.append(word)
                 words_set.add(word)
@@ -57,7 +57,7 @@ def build_df(index_by_word,concepts_list):
     '''
     df_vec = [0]*len(index_by_word)
     for concept in concepts_list:
-        words = concept.get_all_words()
+        words = concept.interate_words()
         for word in words:
             i = index_by_word[word]
             df_vec[i]+=1
@@ -76,7 +76,7 @@ def build_wieght_table(df_vec,index_by_word,concepts_list):
     assert int(m) != 0 and int(n) != 0
     T = csr_matrix((m,n))
     for j, concept in enumerate(concepts_list):
-        words = concept.get_all_words()
+        words = concept.interate_words()
         for word in words:
             i =  index_by_word[word]
             tf_ij = concept.get_tf(word)
@@ -98,7 +98,7 @@ def build_wieght_table_dok(df_vec,index_by_word,concepts_list):
     assert int(m) != 0 and int(n) != 0
     T = dok_matrix((m,n))
     for j, concept in enumerate(concepts_list):
-        words = concept.get_all_words()
+        words = concept.interate_words()
         for word in words:
             i =  index_by_word[word]
             tf_ij = concept.get_tf(word)
