@@ -28,7 +28,7 @@ def get_vectors_centroid(list_of_vectors):
     shape = list_of_vectors[0].shape
     ret_vec = matrix(shape)
     for vector in list_of_vectors:
-        _log.debug("get_vectors_centroid: Adding vector {}".format(vector))
+        #_log.debug("get_vectors_centroid: Adding vector {}".format(vector))
         ret_vec = ret_vec + vector
     ret_vec = ret_vec * (1.0 / n) 
     return ret_vec 

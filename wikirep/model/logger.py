@@ -10,9 +10,6 @@ import logging
 _log = logging.getLogger("MAIN")
 mainlog = _log  #alias
 
-logtest  = logging.getLogger("TEST")
-logtest.setLevel(logging.DEBUG)
-
 def getLogger(name):
     log = logging.getLogger(name)
     return log

@@ -5,6 +5,7 @@ import logging
 from argparse import ArgumentParser
 from model.logger import mainlog as _log
 from wiki_knows import wiki_knowledge
+from model.utilits import get_top 
 
 # ------------------- Default configuration ----------------------------------------
 class DConfig:
@@ -98,13 +99,38 @@ def get_value_parser(subparsers):
     
     def get_value(args):
         _log.debug("run build with args={}".format(args))
+        if isinstance(args.dbpath , list):
+            args.dbpath=args.dbpath[0]
         wdb = wiki_knowledge.load_db_wrapper_from_wdb(args.dbpath)
         v = wdb.get_text_centroid(args.text)
         
         _log.info("vector = {0}".format(v.data))
             
     parser_get_value.set_defaults(func=get_value) 
+
+
+def get_top_topics_parser(subparsers):
+    # create the parser for the "get_value" command
+    p = subparsers.add_parser('get_top_topics', 
+        help="at 'wikibuild.wdb'")
+    p.add_argument("--dbpath", type=str, nargs=1, default=DConfig.wdb_path,
+        help='word database path')
+    p.add_argument("--text_path", type=str, help='file with text for value calculation')
     
+    def get_top_topics(args):
+        _log.debug("run build with args={}".format(args))
+        if isinstance(args.dbpath , list):
+            args.dbpath=args.dbpath[0]
+        if isinstance(args.text_path , list):
+            args.text_path=args.text_path[0]
+        d = wiki_knowledge.get_value_from_file(args.dbpath, args.text_path)
+        top = get_top(d,5)
+        print "closests topics:"
+        for t,v in top:
+            print "{}:{:2.4f}".format(t,v)
+        
+    p.set_defaults(func=get_top_topics) 
+        
 # ------------------------------ Top Level Parser -------------------------------------------------
 def create_argument_parser():
     # from argparse import ArgumentParser
@@ -122,6 +148,7 @@ def create_argument_parser():
     build_parser(subparsers)
     compare_parser(subparsers)
     get_value_parser(subparsers)
+    get_top_topics_parser(subparsers)
     return parser
 
 # ------------------------------ AUX -------------------------------------------------

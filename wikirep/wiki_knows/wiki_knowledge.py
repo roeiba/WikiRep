@@ -91,7 +91,17 @@ def compare(path, text1, text2):
     comparer = SemanticComparer(wdb)
     corelation = comparer.compare(text1, text2)
     return corelation
-                        
+
+
+def get_value_from_file(wdb_path, text_path):
+    with open(text_path, 'r') as textfile:
+        text = textfile.read()
+    _log.info("loaded text from: %s",  text_path)
+    dbw = load_db_wrapper_from_wdb(wdb_path)
+    
+    c = dbw.get_readable_centroid(text)
+    return c
+                    
 def load_db_wrapper_from_wdb(path):
     """ 
     loads Database from pickle file DbContant object
